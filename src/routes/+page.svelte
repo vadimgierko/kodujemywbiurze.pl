@@ -13,6 +13,7 @@
 		Eksperymentalna darmowa interaktywna strona edukacyjna do nauki programowania webowego dla
 		pracowników biurowych
 	</p>
+	<a href="/podstawy-javascript">Jeśli chcesz już zacząć pisać kod, kliknij w ten link!</a>
 	<hr />
 </header>
 
@@ -24,7 +25,7 @@
 		<li>
 			jesteś ciekaw/a, czy kodowanie/programowanie może być równie dobrym wypełniaczem Twojego mniej
 			produktywnego czasu w pracy jak, np. skrolowanie Facebooka, Instagrama, portali informacyjnych
-			czy Zalando lub też pisanie wiadomości/ rozmawianie przez telefon.
+			czy sklepów internetowych lub też pisanie wiadomości/ rozmawianie przez telefon.
 		</li>
 	</ul>
 
@@ -52,10 +53,11 @@
 
 	<ul>
 		<li>siedzieć godzinami przed komputerem,</li>
-		<li>gapić się godzinami w ekran komputera,</li>
 		<li>stukać palcami w klawiaturę,</li>
-		<li>potrafisz czytać, pisać, dodawać, odejmować, mnożyć i dzielić,</li>
-		<li>jesteś co najmniej przeciętnie inteligentny/a.</li>
+		<li>czytać i pisać,</li>
+		<li>
+			dodawać i odejmować dwucyfrowe liczby oraz mnożyć i dzielić w zakresie tabliczki mnożenia.
+		</li>
 	</ul>
 
 	<p>
@@ -64,20 +66,21 @@
 	</p>
 
 	<p>
-		Moim celem nie jest nauczenie Cię programowania webowego (czyli pisania kodu w takich językach
-		programowania, jak HTML, CSS i JavaScript), tylko pobudzenie Twojej ciekawości i nie
-		zniechęcenie Cię do dalszych odkryć.
+		Celem niniejszej strony jest przede wszystkim pobudzenie Twojej ciekawości i nie zniechęcenie
+		Cię do dalszych odkryć w zakresie programowania, a dopiero potem nauczenie Cię podstaw
+		programowania webowego (czyli pisania kodu w takich językach programowania, jak HTML, CSS i
+		JavaScript).
 	</p>
 
 	<p>
 		Piszę niniejszy interaktywny tutorial z myślą o osobach, które pracują w biurach, czyli mających
 		dostęp do pewnych sprzętów/ zasobów w pracy, ale nie w pełnym zakresie, dlatego kurs ten nie
-		będzie wymagał pobierania żadnego oprgoramowania (np. edytora kodu), ani zakładania (na razie)
-		konta w edytorach kodu dostępnych w chmurze. Będziesz mógł/mogła pisać kod (a dokładnie
-		JavaScript)... w przeglądarce, pozostając na stronie, którą widzisz!
+		będzie wymagał (na samym początku) pobierania żadnego oprogramowania (np. edytora kodu), ani
+		zakładania (na razie) konta w edytorach kodu dostępnych w chmurze. Będziesz mógł/mogła pisać kod
+		(a dokładnie JavaScript)... w przeglądarce, pozostając na stronie, którą widzisz!
 	</p>
 
-	<p>Do usłyszenia!</p>
+	<p>Happy Coding!</p>
 </main>
 
 <footer>
@@ -98,5 +101,13 @@
 
 	hr {
 		border-color: rgb(150, 150, 150);
+	}
+
+	a {
+		color: white;
+	}
+
+	a:hover {
+		color: rgba(255, 255, 255, 0.7);
 	}
 </style>
