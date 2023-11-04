@@ -1,5 +1,7 @@
 # Podstawy JavaScript | Od razu na głęboką wodę
 
+Poznaj podstawy języka JavaScript, takie jak zmienne, wartości, tablice, funkcje poprzez stworzenie prostej aplikacji do zarządzania zadaniami, która działa w konsoli przeglądarki. Celem niniejszego tutoriala jest zachęcenie do spróbowania pisania i uruchomienia kodu bez potrzeby instalowania edytora kodu, tworzenia plików lub korzystania z edytorów kodu online. Wszystko będzie działa tutaj, na tej stronie.
+
 ---
 
 ## Plan działania. Co stworzymy i czego się nauczymy

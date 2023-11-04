@@ -2,7 +2,7 @@
 	<title>Kodujemy w biurze</title>
 	<meta
 		name="description"
-		content="Eksperymentalna darmowa interaktywna strona edukacyjna do nauki programowania webowego dla
+		content="Eksperymentalna darmowa interaktywna strona edukacyjna do zachęcenia do nauki programowania webowego dla
   pracowników biurowych"
 	/>
 </svelte:head>
@@ -10,14 +10,14 @@
 <header>
 	<h1>Kodujemy w biurze <span style="color: grey;">(strona w budowie... 👨🏽‍💻)</span></h1>
 	<p>
-		Eksperymentalna darmowa interaktywna strona edukacyjna do nauki programowania webowego dla
-		pracowników biurowych
+		Eksperymentalna darmowa interaktywna strona edukacyjna do nauki podstaw programowania webowego
+		dla pracowników biurowych
 	</p>
 	<a href="/podstawy-javascript">Jeśli chcesz już zacząć pisać kod, kliknij w ten link!</a>
 	<hr />
 </header>
 
-<main>
+<article>
 	<p>Skoro zajrzałeś/aś tutaj, to znaczy, że:</p>
 
 	<ul>
@@ -81,22 +81,11 @@
 	</p>
 
 	<p>Happy Coding!</p>
-</main>
-
-<footer>
-	<hr />
-	<p>&copy; 2023 Vadim Gierko</p>
-</footer>
+</article>
 
 <style>
-	header,
-	footer,
-	h2 {
+	header {
 		text-align: center;
-	}
-
-	main {
-		flex-grow: 1;
 	}
 
 	hr {
