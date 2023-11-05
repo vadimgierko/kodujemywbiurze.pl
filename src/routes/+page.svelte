@@ -91,12 +91,4 @@
 	hr {
 		border-color: rgb(150, 150, 150);
 	}
-
-	a {
-		color: white;
-	}
-
-	a:hover {
-		color: rgba(255, 255, 255, 0.7);
-	}
 </style>
