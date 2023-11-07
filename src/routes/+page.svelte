@@ -15,6 +15,32 @@
 	/>
 </svelte:head>
 
+<header>
+	<h1>Witaj na stronie <em>Kodujemy w biurze</em>!</h1>
+	<hr />
+	<p style="text-align: center;">
+		<strong>
+			Spędź wolne chwile w biurze, poznając w przystępny i interaktywny sposób podstawy
+			programowania webowego (w najbardziej popularnym języku programowania <em>JavaScript</em>), zamieniając swoją przeglądarkę w edytor
+			kodu i prostą aplikację do zarządzania zadaniami!
+		</strong>
+	</p>
+</header>
+
+<figure>
+	<img
+		src="/img/kodujemy-w-biurze-baner-vadim-gierko.jpg"
+		width="100%"
+		alt="baner strony kodujemy w biurze pl z laptopem, kawą i notesem na biurku"
+	/>
+	<figcaption>
+		źródło obrazka: <a
+			href="https://pl.freepik.com/darmowe-zdjecie/uzgodnienie-z-laptopem-i-roslina_8989399.htm#query=coffee%20computer&position=10&from_view=search&track=ais"
+			target="_blank">Freepik</a
+		>
+	</figcaption>
+</figure>
+
 <article>
 	{@html marked(content)}
 </article>

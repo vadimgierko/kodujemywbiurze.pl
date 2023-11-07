@@ -1,29 +1,13 @@
-# Witaj na stronie *Kodujemy w biurze*!
-
-<p style="text-align: center;">
-  <strong>
-   Spędź wolne chwile w biurze, poznając w przystępny i interaktywny sposób podstawy programowania webowego (w języku <em>JavaScript</em>), zamieniając swoją przeglądarkę w edytor kodu i tworząc prostą aplikację do zarządzania zadaniami!
-  </strong>
-</p>
-
----
-
 - Pracujesz w biurze?
 - Masz do dyspozycji komputer/ laptop, Internet i kubek kawy/ herbaty?
-- Jesteś ciekaw/a, czy kodowanie/programowanie może być równie dobrym wypełniaczem Twoich	wolnych chwil w pracy jak, np. skrolowanie mediów społecznościowych, portali informacyjnych czy sklepów internetowych?
-- Chciałbyś/abyć spróbować napisać jakiś natychmiast działający kod i przekonać się, czy programowanie jest dla Ciebie, ale nie chcesz od razu brnąć w jakiś długi kurs ani instalować żadnych edytorów kodu?
 
-Jeśli odpowiedzią na większość powyższych pytań brzmi *tak*, to ta eksperymentalna darmowa interaktywna	strona edukacyjna do nauki podstaw programowania webowego dla pracowników biurowych jest dla Ciebie!
+A może tak spróbujesz przekonać się, czy **kodowanie może być równie dobrym wypełniaczem Twojego czasu w biurze, jak skrollowanie Fejsa czy Insta**?
 
----
+*Kodujemy w biurze* powstało w ramach eksperymentu i impulsu, by zachęcić pracowników biurowych do spróbowania swoich sił w kodowaniu webowym w przyjazny i nie wymagający żadnych konfiguracji sposób.
 
-Niniejszy tutorial został stworzony z myślą o osobach, które pracują w biurach i chciałyby w prosty i przyjazny sposób spróbować czegoś nowego i napisać działający kod (w obecnej chwili będzie to kod	napisany w najbardziej popularnym języku programowania - JavaScript).
+W trakcie tego krótkiego kursu napiszemy i odpalimy prosty kod w najbardziej popularnym języku programowania (*JavaScript*) bezpośrednio w przeglądarce (dokładnie tutaj, na tej stronie) i przy okazji poznamy wybrane podstawy tego języka.
 
-Dlatego też kurs ten (w odróżnieniu od innych dostępnych w Internecie) uwzględnia specyfikę pracy biurowej i nie będzie wymagał pobierania żadnego oprogramowania (np. edytora kodu), zakładania konta w edytorach kodu dostępnych w chmurze, ani oglądania długich	filmów.
-
-Będziesz mógł/mogła pisać kod... bezpośrednio w przeglądarce, pozostając na stronie, którą widzisz!
-
-Celem niniejszej strony jest przede wszystkim pobudzenie Twojej ciekawości i pokazanie, że pisanie kodu może być zabawą i jest dostępne dla każdego!
+Chodzi mi przede wszystkim o pobudzenie Twojej ciekawości i pokazanie, że pisanie kodu jest dostępne dla każdego i może być świetną zabawą (w szczególności w biurze)!
 
 *Happy Coding!*
 
@@ -31,7 +15,7 @@ Celem niniejszej strony jest przede wszystkim pobudzenie Twojej ciekawości i po
 
 ## Plan działania: co stworzymy i czego się nauczymy?
 
-W ramach tego krótkiego kursu stworzymy prostą aplikację do zarządzania listą zadań do zrobienia, która będzie działać w konsoli naszej przeglądarki *(za chwilę dowiesz się, czym jest konsola i jak z niej korzystac)*. Aplikacja, którą stworzymy, umożliwi nam: zapisywanie, przechowywanie, wyświetlanie oraz dodawanie zadań do zrobienia za pomocą poleceń napisanych kodem JavaScript w konsoli.
+W ramach tego krótkiego kursu stworzymy prostą aplikację do zarządzania listą zadań do zrobienia, która będzie działać w konsoli naszej przeglądarki *(za chwilę dowiesz się, czym jest konsola i jak z niej korzystać)*. Aplikacja, którą stworzymy, umożliwi nam: zapisywanie, przechowywanie, wyświetlanie oraz dodawanie zadań do zrobienia za pomocą poleceń napisanych przez nas kodem JavaScript w konsoli.
 
 Ponieważ zakładam, że nigdy nie napisałeś/aś żadnego kodu i nie masz pojęcia, jak to w ogóle działa, przy okazji tworzenia aplikacji opanujemy wybrane podstawy języka JavaScript! Osobiście wolę uczyć się nowych rzeczy w praktyce, widząc natychmiastowe rezultaty mojej nauki i pracy, dlatego w trakcie lektury zdobędziesz dokładnie tyle wiedzy, ile jest potrzebne, by stworzyć wspomniane funkcjonalności, i niczego ponad to.
 
@@ -41,15 +25,25 @@ Powodzenia!
 
 ---
 
-## Czym jest programowanie?
+## Czym jest JavaScript?
 
-Programowanie to nic innego, jak pisanie poleceń w języku programowania zrozumiałym dla komputera/ urządzenia/ programu/ przeglądarki, które określają, co urządzenie/ program ma wyświetlić, jak to wyświetlić, jak ma reagować na działania użytkownika, skąd ma pobrać dane lub gdzie je zapisać itd.
+<figure>
+	<img
+		src="/img/kodujemy-w-biurze-czym-jest-programowanie.jpg"
+		width="100%"
+		alt="zdjęcie laptopa z kodem na ekranie"
+	/>
+	<figcaption>
+		źródło obrazka: <a
+			href="https://pl.freepik.com/darmowe-zdjecie/koncepcja-kolazu-html-i-css-z-osoba_36295463.htm#page=2&query=computer%20code%20javascript&position=34&from_view=search&track=ais"
+			target="_blank">Freepik</a
+		>
+	</figcaption>
+</figure>
 
----
+JavaScript jest obecnie najbardziej popularnym językiem programowania. Programowanie to nic innego, jak pisanie poleceń w języku programowania zrozumiałym dla komputera/ urządzenia/ programu/ przeglądarki, które określają, co urządzenie/ program ma wyświetlić, jak to wyświetlić, jak ma reagować na działania użytkownika, skąd ma pobrać dane lub gdzie je zapisać itd.
 
-## Czym jest JavaScript (oraz HTML i CSS)?
-
-JavaScript jest obecnie najbardziej popularnym językiem programowania, który w połączeniu z dwoma innymi językami - HTML i CSS - służy do tworzenia stron i aplikacji webowych (czyli aplikacji, które działają w przeglądarce):
+JavaScript w połączeniu z dwoma innymi językami - HTML i CSS - służy do tworzenia stron i aplikacji webowych (czyli aplikacji, które działają w przeglądarce):
 
 - HTML tworzy strukturę strony www (tutaj jest nagłówek, tam lista, w innym miejscu zdjęcie itd.),
 - CSS nadaje stronom i aplikacjom ładnego wyglądu (nagłówek jest wyśrodkowany, wyróżnione słowa mają inny kolor, a tło ma być ciemnoszarego koloru), natomiast
