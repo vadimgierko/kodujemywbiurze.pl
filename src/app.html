@@ -5,6 +5,10 @@
 		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<style>
+			html {
+				scroll-behavior: smooth;
+				scroll-padding-top: 40px;
+			}
 			/* LIGHT/DARK MODE */
 
 			:root, html[data-theme='light'] {
@@ -144,6 +148,54 @@
 					document.documentElement.setAttribute('data-theme', 'dark');
 				}
 			}
+
+			//======================= FOR SCROLLING =========================//
+
+			// Smooth scroll to anchor links
+			document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+				anchor.addEventListener('click', function (e) {
+					e.preventDefault();
+
+					const targetId = this.getAttribute('href').substring(1);
+					const targetElement = document.getElementById(targetId);
+
+					if (targetElement) {
+						window.scrollTo({
+							behavior: 'smooth',
+							top: targetElement.offsetTop,
+						});
+					}
+				});
+			});
+
+			window.addEventListener('load', () => {
+				if (window.location.hash) {
+					const targetId = window.location.hash.substring(1);
+					const targetElement = document.getElementById(targetId);
+
+					if (targetElement) {
+						window.scrollTo({
+							behavior: 'smooth',
+							top: targetElement.offsetTop,
+						});
+					}
+				}
+			});
+
+			window.addEventListener('popstate', () => {
+				if (window.location.hash) {
+					const targetId = window.location.hash.substring(1);
+					const targetElement = document.getElementById(targetId);
+
+					if (targetElement) {
+						window.scrollTo({
+							behavior: 'smooth',
+							top: targetElement.offsetTop,
+						});
+					}
+				}
+			});
+
 		</script>
 	</body>
 </html>
