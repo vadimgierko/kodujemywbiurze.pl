@@ -1,13 +1,15 @@
-- Pracujesz w biurze?
-- Masz do dyspozycji komputer/ laptop, Internet i kubek kawy/ herbaty?
+## Wprowadzenie
+
+- **Pracujesz w biurze?**
+- **Masz do dyspozycji komputer/ laptop, Internet i kubek kawy/ herbaty?**
 
 A może tak spróbujesz przekonać się, czy **kodowanie może być równie dobrym wypełniaczem Twojego czasu w biurze, jak skrollowanie Fejsa czy Insta**?
 
-*Kodujemy w biurze* powstało w ramach eksperymentu i impulsu, by zachęcić pracowników biurowych do spróbowania swoich sił w kodowaniu webowym w przyjazny i nie wymagający żadnych konfiguracji sposób.
+*Kodujemy w biurze* powstało w ramach eksperymentu i impulsu, by **zachęcić pracowników biurowych do spróbowania swoich sił w kodowaniu** webowym w przyjazny i nie wymagający żadnych konfiguracji sposób.
 
-W trakcie tego krótkiego kursu napiszemy i odpalimy prosty kod w najbardziej popularnym języku programowania (*JavaScript*) bezpośrednio w przeglądarce (dokładnie tutaj, na tej stronie) i przy okazji poznamy wybrane podstawy tego języka.
+W trakcie tego krótkiego kursu napiszemy i odpalimy prosty kod w najbardziej popularnym języku programowania (***JavaScript***) bezpośrednio w przeglądarce (dokładnie tutaj, na tej stronie) i przy okazji poznamy wybrane podstawy tego języka.
 
-Chodzi mi przede wszystkim o pobudzenie Twojej ciekawości i pokazanie, że pisanie kodu jest dostępne dla każdego i może być świetną zabawą (w szczególności w biurze)!
+Chodzi mi przede wszystkim o **pobudzenie Twojej ciekawości** i pokazanie, że **pisanie kodu jest dostępne dla każdego** i może być świetną **zabawą** (w szczególności w biurze)!
 
 *Happy Coding!*
 
@@ -187,7 +189,7 @@ Teraz, kiedy ponownie sprawdzimy wartość `tasks[0]` w konsoli, to wyświetli n
 
 Świetnie! Potrafimy tworzyć listę zadań, uzyskiwać dostęp do poszczególnych elementów z listy i modyfikować je oraz dodawać nowe elementy do listy/ tablicy. Teraz nadszedł czas na pisanie reużywalnego kodu, który będzie wykonywał pewne powtarzalne zadania - dodawanie nowych zadań!
 
-## Wstęp do funckji | Wyświetlamy listę zadań (znowu)
+## Wstęp do funkcji | Wyświetlamy listę zadań (znowu)
 
 Każdorazowe dodawanie zadań do listy zadań poprzez użycie kodu, z którego wcześniej korzystaliśmy (`tasks.push("nowe zadanie")`), działa, ale programiści "opakowują" kod, z którego często korzystamy (a będziemy często dodawać zadania do listy), w reużywalne "kawałki" kodu, które nazywają się funkcjami.
 

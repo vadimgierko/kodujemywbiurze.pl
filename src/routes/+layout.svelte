@@ -5,15 +5,6 @@
 
 <Navbar />
 
-<main>
-	<slot />
-</main>
+<slot />
 
 <Footer />
-
-<style>
-	main {
-		margin-top: 40px;
-		flex-grow: 1;
-	}
-</style>
