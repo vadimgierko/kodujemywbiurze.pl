@@ -17,4 +17,10 @@
 	footer {
 		text-align: center;
 	}
+
+	@media screen and (min-width: 992px) {
+		footer {
+			margin-left: 30%;
+		}
+	}
 </style>

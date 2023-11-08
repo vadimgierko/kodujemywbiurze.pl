@@ -69,33 +69,6 @@
 		color: rgba(255, 255, 255, 0.7);
 	}
 
-	/* Styles for screens with a minimum width of 1200px (typical desktop) */
-	@media screen and (min-width: 1200px) {
-		/* Your desktop-specific CSS styles here */
-		.header-content {
-			max-width: 1140px;
-			margin: 0 auto;
-		}
-	}
-
-	/* Styles for screens with a minimum width of 992px (typical laptop) */
-	@media screen and (min-width: 992px) and (max-width: 1199px) {
-		/* Your laptop-specific CSS styles here */
-		.header-content {
-			max-width: 970px;
-			margin: 0 auto;
-		}
-	}
-
-	/* Styles for screens with a maximum width of 991px (typical mobile) */
-	@media screen and (max-width: 991px) {
-		/* Your mobile-specific CSS styles here */
-		.header-content {
-			max-width: 90vw;
-			margin: 0 auto;
-		}
-	}
-
 	#theme-icon {
 		cursor: pointer;
 	}
