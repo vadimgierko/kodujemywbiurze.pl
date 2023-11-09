@@ -13,8 +13,6 @@ Chodzi mi przede wszystkim o **pobudzenie Twojej ciekawości** i pokazanie, że 
 
 *Happy Coding!*
 
----
-
 ## Plan działania: co stworzymy i czego się nauczymy?
 
 W ramach tego krótkiego kursu stworzymy prostą aplikację do zarządzania listą zadań do zrobienia, która będzie działać w konsoli naszej przeglądarki *(za chwilę dowiesz się, czym jest konsola i jak z niej korzystać)*. Aplikacja, którą stworzymy, umożliwi nam: zapisywanie, przechowywanie, wyświetlanie oraz dodawanie zadań do zrobienia za pomocą poleceń napisanych przez nas kodem JavaScript w konsoli.
@@ -24,8 +22,6 @@ Ponieważ zakładam, że nigdy nie napisałeś/aś żadnego kodu i nie masz poj�
 Mam nadzieję, że kiedy dobrniesz do końca tego tutoriala, to będziesz chciał/a więcej! Jeśli tak będzie, to daj mi znać, że jesteś zainteresowany/a dalszymi lekcjami w tym samym stylu *(zakładam, że będziemy dalej rozwijać naszą aplikację do zadań, dodając coraz to nowsze funkcjonalności oraz poznając również podstawy HTML i CSS, by wyjść poza konsolę i stworzyć stronę/ aplikację internetową z prawdziwego zdarzenia)*.
 
 Powodzenia!
-
----
 
 ## Czym jest JavaScript?
 
@@ -53,8 +49,6 @@ JavaScript w połączeniu z dwoma innymi językami - HTML i CSS - służy do two
 
 To właśnie dzięki JavaScript strony i aplikacje są dynamiczne i interaktywne - jest on silnikiem napędzającym stronę.
 
----
-
 ## Zaczynamy pisać kod! Czym jest konsola i jak jej używać?
 
 Niniejsza strona, jak większość innych w Internecie, używa JavaScript. Każda przeglądarka również rozumie i przetwarza kod JavaScript, a ponadto umożliwia nam pisanie kodu bezpośrednio w przeglądarce, a dokładniej w konsoli. Konsola jest jednym z wielu wbudowanych narzędzi każdej przeglądarki. Przekonajmy się o tym i otwórzmy konsolę przeglądarki!
@@ -78,8 +72,6 @@ Jeśli wszystko wpisałeś/aś poprawnie, konsola wyświetliła napis *Hello, Wo
 Dlaczego akurat użyłem określenia *Hello, World!*? Jest to taka niepisana tradycja wśród programistów - tego określenia używamy np. kiedy testujemy nowe narzędzia, języki itd.
 
 Ok, więc wiemy już, czym jest konsola, jak ją otworzyć, a nawet wpisaliśmy i uruchomiliśmy nasze pierwsze polecenie. Jak już wspomniałem wcześniej, konsola umożliwia nam m. in. pisanie i uruchamianie kodu JavaScript, chociaż nie jest to jej główny cel - każdy edytor kodu jest zdecydowanie lepszym narzędziem do pisania kodu. Natomiast na razie nie chcemy żadnego edytora kodu. Chcemy po prostu napisać kilka linijek kodu i zobaczyć, jak to działa oraz *złapać bakcyla*. Jedziemy!
-
----
 
 ## Stwórzmy pierwsze zadanie w naszej aplikacji | Zmienne, wartości i słowo kluczowe `let`
 
@@ -302,8 +294,6 @@ function addTask(newTask) {
 
 Spróbuj teraz opowiedzieć swoimi słowami koleżance/koledze z biura, co robi/ co się dzieje w każdej z linijek powyśzego kodu.
 
-Powodzenia!
+Gratuluję jeszcze raz!
 
----
-
-PS. Gratuluję jeszcze raz! Właśnie dobrnąłeś/aś do końca tego krótkiego tutoriala. Spodobało się? Chcesz więcej? Jeśli tak, to daj mi znać, że jesteś zainteresowany/a dalszymi lekcjami w tym samym stylu *(zakładam, że będziemy dalej rozwijać naszą aplikację do zadań, dodając coraz to nowsze funkcjonalności oraz poznając również podstawy HTML i CSS, by wyjść poza konsolę i stworzyć stronę/ aplikację internetową z prawdziwego zdarzenia)*.
+Właśnie dobrnąłeś/aś do końca tego krótkiego tutoriala. Spodobało się? Chcesz więcej? Jeśli tak, to daj mi znać, że jesteś zainteresowany/a dalszymi lekcjami w tym samym stylu *(zakładam, że będziemy dalej rozwijać naszą aplikację do zadań, dodając coraz to nowsze funkcjonalności oraz poznając również podstawy HTML i CSS, by wyjść poza konsolę i stworzyć stronę/ aplikację internetową z prawdziwego zdarzenia)*.

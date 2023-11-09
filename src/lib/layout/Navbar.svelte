@@ -1,7 +1,10 @@
 <script lang="ts">
-	import MoonIcon from '$lib/components/icons/MoonIcon.svelte';
-	import SunIcon from '$lib/components/icons/SunIcon.svelte';
+	import MoonIcon from '$lib/icons/MoonIcon.svelte';
+	import SunIcon from '$lib/icons/SunIcon.svelte';
+	import ThreeDotsVertical from '$lib/icons/ThreeDotsVertical.svelte';
+	import ThreeDotsHorizontal from '$lib/icons/ThreeDotsHorizontal.svelte';
 	import { onMount } from 'svelte';
+	import { showOffset } from '$lib/stores';
 
 	let theme: 'light' | 'dark';
 
@@ -26,11 +29,26 @@
 	<div class="header-content">
 		<div><a href="/" id="nav-brand"><strong>Kodujemy w biurze</strong></a></div>
 		<div>
-			<span on:click={switchMode} id="theme-icon">
+			<!-- THEME TOGGLE -->
+			<span on:click={switchMode} class="icon" id="theme-toggle">
 				{#if theme === 'dark'}
 					<SunIcon />
 				{:else}
 					<MoonIcon />
+				{/if}
+			</span>
+
+			<!-- MENU TOGGLE -->
+			<span
+				on:click={() => showOffset.set(!$showOffset)}
+				style="margin-left: 0.5em;"
+				class="icon"
+				id="menu-toggle"
+			>
+				{#if $showOffset}
+					<ThreeDotsHorizontal />
+				{:else}
+					<ThreeDotsVertical />
 				{/if}
 			</span>
 		</div>
@@ -60,16 +78,28 @@
 	}
 
 	.header-content a,
-	#theme-icon {
+	.icon {
 		color: white;
 	}
 
 	.header-content a:hover,
-	#theme-icon:hover {
+	.icon:hover {
 		color: rgba(255, 255, 255, 0.7);
 	}
 
-	#theme-icon {
-		cursor: pointer;
+	/* Styles for screens with a minimum width of 992px (typical laptop) */
+	@media screen and (min-width: 992px) {
+		/* Your laptop-specific CSS styles here */
+		#menu-toggle {
+			display: none;
+		}
+	}
+
+	/* Styles for screens with a maximum width of 991px (typical mobile) */
+	@media screen and (max-width: 991px) {
+		/* Your mobile-specific CSS styles here */
+		#menu-toggle {
+			display: inline;
+		}
 	}
 </style>
