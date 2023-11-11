@@ -4,7 +4,7 @@
 	import ThreeDotsVertical from '$lib/icons/ThreeDotsVertical.svelte';
 	import ThreeDotsHorizontal from '$lib/icons/ThreeDotsHorizontal.svelte';
 	import { onMount } from 'svelte';
-	import { showOffset } from '$lib/stores';
+	import { showOffset, isIndexPage } from '$lib/stores';
 
 	let theme: 'light' | 'dark';
 
@@ -39,18 +39,20 @@
 			</span>
 
 			<!-- MENU TOGGLE -->
-			<span
-				on:click={() => showOffset.set(!$showOffset)}
-				style="margin-left: 0.5em;"
-				class="icon"
-				id="menu-toggle"
-			>
-				{#if $showOffset}
-					<ThreeDotsHorizontal />
-				{:else}
-					<ThreeDotsVertical />
-				{/if}
-			</span>
+			{#if !$isIndexPage}
+				<span
+					on:click={() => showOffset.set(!$showOffset)}
+					style="margin-left: 0.5em;"
+					class="icon"
+					id="menu-toggle"
+				>
+					{#if $showOffset}
+						<ThreeDotsHorizontal />
+					{:else}
+						<ThreeDotsVertical />
+					{/if}
+				</span>
+			{/if}
 		</div>
 	</div>
 </header>
