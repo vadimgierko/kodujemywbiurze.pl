@@ -1,9 +1,10 @@
 <script>
+	import { isIndexPage } from '$lib/stores';
 	import GitHubIcon from '../icons/GitHubIcon.svelte';
 	import LinkedInIcon from '../icons/LinkedInIcon.svelte';
 </script>
 
-<footer>
+<footer style={$isIndexPage ? 'margin-left: 0' : 'margin-left: 30%'}>
 	<hr />
 	<p>
 		&copy; 2023 <a href="https://vadimgierko.com" target="_blank">Vadim Gierko</a>
@@ -16,11 +17,5 @@
 <style>
 	footer {
 		text-align: center;
-	}
-
-	@media screen and (min-width: 992px) {
-		footer {
-			margin-left: 30%;
-		}
 	}
 </style>

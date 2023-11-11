@@ -25,7 +25,7 @@ Powodzenia!
 
 ## Czym jest JavaScript?
 
-<figure>
+<!-- <figure>
 	<img
 		src="/img/kodujemy-w-biurze-czym-jest-programowanie.jpg"
 		width="100%"
@@ -37,7 +37,7 @@ Powodzenia!
 			target="_blank">Freepik</a
 		>
 	</figcaption>
-</figure>
+</figure> -->
 
 JavaScript jest obecnie najbardziej popularnym językiem programowania. Programowanie to nic innego, jak pisanie poleceń w języku programowania zrozumiałym dla komputera/ urządzenia/ programu/ przeglądarki, które określają, co urządzenie/ program ma wyświetlić, jak to wyświetlić, jak ma reagować na działania użytkownika, skąd ma pobrać dane lub gdzie je zapisać itd.
 

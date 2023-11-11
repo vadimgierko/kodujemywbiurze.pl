@@ -14,3 +14,5 @@ isScreenLessThan992.subscribe((value) => {
 		showOffset.set(false);
 	}
 });
+
+export const isIndexPage = writable(true);
