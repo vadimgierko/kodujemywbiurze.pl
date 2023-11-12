@@ -2,6 +2,10 @@
 	import { isIndexPage } from '$lib/stores';
 	import { onMount } from 'svelte';
 
+	export let data;
+
+	const { firstHeaderSlug } = data;
+
 	onMount(() => isIndexPage.set(true));
 </script>
 
@@ -46,9 +50,11 @@
 			</strong>
 		</p>
 
-		<a href="/wprowadzenie">
-			<button>Zacznij zabawę z kodem!</button>
-		</a>
+		{#if firstHeaderSlug}
+			<a href={firstHeaderSlug}>
+				<button>Zacznij zabawę z kodem!</button>
+			</a>
+		{/if}
 	</header>
 </main>
 
