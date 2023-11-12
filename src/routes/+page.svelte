@@ -34,11 +34,15 @@
 
 		<hr />
 
-		<p style="text-align: center;">
+		<p>
+			<strong>Nauka programowania webowego w przerwach między zadaniami w biurze?</strong>
+		</p>
+
+		<p>Z kodujemywbiurze.pl jest to możliwe!</p>
+		<p>
 			<strong>
-				Spędź wolne chwile w biurze, poznając w przystępny i interaktywny sposób podstawy
-				programowania webowego (w najbardziej popularnym języku programowania <em>JavaScript</em>),
-				zamieniając swoją przeglądarkę w edytor kodu i prostą aplikację do zarządzania zadaniami!
+				Zacznij programować od razu bezpośrednio w przeglądarce, tworząc <em>(na początek)</em> prostą
+				aplikację do zarządzania Twoimi zadaniami!
 			</strong>
 		</p>
 

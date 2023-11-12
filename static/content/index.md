@@ -1,4 +1,4 @@
-## Wprowadzenie
+## Wprowadzenie. Co stworzymy i czego się nauczymy?
 
 - **Pracujesz w biurze?**
 - **Masz do dyspozycji komputer/ laptop, Internet i kubek kawy/ herbaty?**
@@ -7,23 +7,30 @@ A może tak spróbujesz przekonać się, czy **kodowanie może być równie dobr
 
 *Kodujemy w biurze* powstało w ramach eksperymentu i impulsu, by **zachęcić pracowników biurowych do spróbowania swoich sił w kodowaniu** webowym w przyjazny i nie wymagający żadnych konfiguracji sposób.
 
-W trakcie tego krótkiego kursu napiszemy i odpalimy prosty kod w najbardziej popularnym języku programowania (***JavaScript***) bezpośrednio w przeglądarce (dokładnie tutaj, na tej stronie) i przy okazji poznamy wybrane podstawy tego języka.
-
 Chodzi mi przede wszystkim o **pobudzenie Twojej ciekawości** i pokazanie, że **pisanie kodu jest dostępne dla każdego** i może być świetną **zabawą** (w szczególności w biurze)!
+
+W ramach tego krótkiego kursu **stworzymy i odpalimy prostą aplikację do zarządzania listą zadań do zrobienia, która będzie działać w konsoli naszej przeglądarki** *(za chwilę dowiesz się, czym jest konsola i jak z niej korzystać)*.
+
+Aplikacja, którą stworzymy, umożliwi nam:
+
+- zapisywanie,
+- przechowywanie,
+- wyświetlanie oraz
+- dodawanie
+
+zadań do zrobienia za pomocą poleceń napisanych przez nas kodem JavaScript w konsoli.
+
+Ponieważ zakładam, że nigdy nie napisałeś/aś żadnego kodu i nie masz pojęcia, jak to w ogóle działa, **przy okazji** tworzenia aplikacji **opanujemy wybrane podstawy języka JavaScript**! Osobiście wolę uczyć się nowych rzeczy w praktyce, widząc natychmiastowe rezultaty mojej nauki i pracy, dlatego w trakcie lektury zdobędziesz dokładnie tyle wiedzy, ile jest potrzebne, by stworzyć wspomniane funkcjonalności, i niczego ponad to.
+
+Jak na razie, aplikacja ta będzie w pewnym sensie "tajna", czyli będzie dostępna tylko dla Ciebie w Twojej przeglądarce i tylko na tej stronie oraz... nikt inny z dostępem do Twojej przeglądarki raczej nie będzie w stanie z niej skorzystać, ponieważ na początku będziemy zarządzać naszymi zadaniami za pomocą poleceń, które sami napiszemy. Jeśli ktoś nie zna poleceń, to nie odkryje Twoich tajnych i bardzo ważnych zadań w biurze ;-)
+
+Potem, w ramach rozbudowy niniejszej strony (co zależy od zainteresowania projektem), będziemy przekształcać i dalej rozwijać tę aplikację w aplikację z pełnego zdarzenia - z interfacem użytkownika, bazą danych, rejestracją użytkowników itd. *Sky is the limit*, aczkolwiek na razie w ramach eksperymentu ograniczymy się do funkcjonalności, które umożliwia nasza przeglądarka.
+
+Mam nadzieję, że kiedy dobrniesz do końca tego tutoriala, to będziesz chciał/a więcej! Jeśli tak będzie, to daj mi znać, że jesteś zainteresowany/a dalszymi lekcjami w tym samym stylu.
 
 *Happy Coding!*
 
-## Plan działania: co stworzymy i czego się nauczymy?
-
-W ramach tego krótkiego kursu stworzymy prostą aplikację do zarządzania listą zadań do zrobienia, która będzie działać w konsoli naszej przeglądarki *(za chwilę dowiesz się, czym jest konsola i jak z niej korzystać)*. Aplikacja, którą stworzymy, umożliwi nam: zapisywanie, przechowywanie, wyświetlanie oraz dodawanie zadań do zrobienia za pomocą poleceń napisanych przez nas kodem JavaScript w konsoli.
-
-Ponieważ zakładam, że nigdy nie napisałeś/aś żadnego kodu i nie masz pojęcia, jak to w ogóle działa, przy okazji tworzenia aplikacji opanujemy wybrane podstawy języka JavaScript! Osobiście wolę uczyć się nowych rzeczy w praktyce, widząc natychmiastowe rezultaty mojej nauki i pracy, dlatego w trakcie lektury zdobędziesz dokładnie tyle wiedzy, ile jest potrzebne, by stworzyć wspomniane funkcjonalności, i niczego ponad to.
-
-Mam nadzieję, że kiedy dobrniesz do końca tego tutoriala, to będziesz chciał/a więcej! Jeśli tak będzie, to daj mi znać, że jesteś zainteresowany/a dalszymi lekcjami w tym samym stylu *(zakładam, że będziemy dalej rozwijać naszą aplikację do zadań, dodając coraz to nowsze funkcjonalności oraz poznając również podstawy HTML i CSS, by wyjść poza konsolę i stworzyć stronę/ aplikację internetową z prawdziwego zdarzenia)*.
-
-Powodzenia!
-
-## Czym jest JavaScript?
+## Czym jest JavaScript i dlaczego warto?
 
 <!-- <figure>
 	<img
@@ -39,23 +46,26 @@ Powodzenia!
 	</figcaption>
 </figure> -->
 
-JavaScript jest obecnie najbardziej popularnym językiem programowania. Programowanie to nic innego, jak pisanie poleceń w języku programowania zrozumiałym dla komputera/ urządzenia/ programu/ przeglądarki, które określają, co urządzenie/ program ma wyświetlić, jak to wyświetlić, jak ma reagować na działania użytkownika, skąd ma pobrać dane lub gdzie je zapisać itd.
+JavaScript jest obecnie **najbardziej popularnym językiem programowania**. Programowanie to nic innego, jak pisanie poleceń w języku programowania zrozumiałym dla komputera/ urządzenia/ programu/ przeglądarki, które określają, co urządzenie/ program ma wyświetlić, jak to wyświetlić, jak ma reagować na działania użytkownika, skąd ma pobrać dane lub gdzie je zapisać itd.
 
 JavaScript w połączeniu z dwoma innymi językami - HTML i CSS - służy do tworzenia stron i aplikacji webowych (czyli aplikacji, które działają w przeglądarce):
 
-- HTML tworzy strukturę strony www (tutaj jest nagłówek, tam lista, w innym miejscu zdjęcie itd.),
-- CSS nadaje stronom i aplikacjom ładnego wyglądu (nagłówek jest wyśrodkowany, wyróżnione słowa mają inny kolor, a tło ma być ciemnoszarego koloru), natomiast
-- JavaScript dodaje szczyptę magii: reaguje na działania użytkownika, tj.: kliknięcia w przycisk, współdziała z bazą danych, pobierając i wysyłając dane, może nawet dynamicznie zmieniać istniejący kod HTML i CSS (np. zmieniać kolor jakiegoś elementu, dodawać nowe elementy, które wcześniej nie istniały itd.) oraz mnóstwo innych rzeczy - możliwości są nieograniczone!
+- **HTML pozwala stworzyć strukturę strony www** (tutaj jest nagłówek, tam lista, w innym miejscu zdjęcie itd.),
+- **CSS pozwala nadać stronom i aplikacjom ładnego wyglądu** (nagłówek jest wyśrodkowany, wyróżnione słowa mają inny kolor, a tło ma być ciemnoszarego koloru), natomiast
+- **JavaScript dodaje szczyptę magii**:
+  - reaguje na działania użytkownika, tj.: kliknięcia w przycisk, współdziała z bazą danych, pobierając i wysyłając dane,
+	- może nawet dynamicznie zmieniać istniejący kod HTML i CSS (np. zmieniać kolor jakiegoś elementu, dodawać nowe elementy, które wcześniej nie istniały itd.) oraz 
+	- mnóstwo innych rzeczy - możliwości są nieograniczone!
 
 To właśnie dzięki JavaScript strony i aplikacje są dynamiczne i interaktywne - jest on silnikiem napędzającym stronę.
 
-## Zaczynamy pisać kod! Czym jest konsola i jak jej używać?
+## Zaczynamy pisać kod! Czym jest konsola, jak jej używać i co to jest *Hello, World!*?
 
 Niniejsza strona, jak większość innych w Internecie, używa JavaScript. Każda przeglądarka również rozumie i przetwarza kod JavaScript, a ponadto umożliwia nam pisanie kodu bezpośrednio w przeglądarce, a dokładniej w konsoli. Konsola jest jednym z wielu wbudowanych narzędzi każdej przeglądarki. Przekonajmy się o tym i otwórzmy konsolę przeglądarki!
 
 Używam przeglądarki *Google Chrome* i żeby w niej otworzyć konsolę, należy w prawym górnym rogu przeglądarki kliknąć ikonkę menu (3 kropki ustawione w pionie), wybrać opcję *Więcej narzędzi*, a potem wybrać opcję *Narzędzia dla developerów*. Możesz też po prostu użyć skrótu klawiszowego `Ctrl+Shift+I`. Polecam korzystać z przeglądarki *Google Chrome*, którą można pobrać i zainstalować nie mając nawet uprawnień administratora na swoim komputerze ;-)
 
-Jeśli z kolei używasz *Mozilli*, to w prawym górnym rogu kliknij ikonkę menu (tzw. hamburger, czyli 3 poziome linie), potem wybierze opcję *Dla twórców stron*, potem kliknij w *Konsola WWW*. Możesz także użyć skrótu klawiszowego `Ctrl+Shift+I` lub `Ctrl+Shift+K`.
+Jeśli z kolei używasz *Mozilli*, to w prawym górnym rogu kliknij ikonkę menu (tzw. hamburger, czyli 3 poziome linie), potem wybierz opcję *Dla twórców stron*, potem kliknij w *Konsola WWW*. Możesz także użyć skrótu klawiszowego `Ctrl+Shift+I` lub `Ctrl+Shift+K`.
 
 Ok, więc teraz powinieneś/ powinnaś zobaczyć nowe dodatkowe okienko w Twojej przeglądarce - witaj w konsoli! Wpisz teraz następujące polecenie w konsoli i kliknij Enter:
 
@@ -65,7 +75,13 @@ console.log("Hello, World!")
 
 Jeśli wszystko wpisałeś/aś poprawnie, konsola wyświetliła napis *Hello, World!* w następnej linijce. Gratuluję, właśnie wywołałeś/aś swoje pierwsze polecenie napisane w języku JavaScript!
 
-`console.log()` jest wbudowanym poleceniem (jednym z wielu), które wyświetla dowolną zawartość umieszczoną w nawiasach (w naszym poprzednim przykładzie był nią ciąg tekstowy "Hello, World!"). Tak jak prawdziwi programiści, będziemy często korzystać z tego polecenia.
+`console.log()` jest wbudowanym poleceniem *(jednym z wielu, a z niektórych z nich będziemy korzystać później w tym tutorialu)*, które wyświetla dowolną zawartość umieszczoną w nawiasach (w naszym poprzednim przykładzie był nią ciąg tekstowy "Hello, World!"). Tak jak prawdziwi programiści, będziemy często korzystać z tego polecenia.
+
+A gdybyście byli ciekawi, jakich jeszcze ciekawych poleceń możemy użyć w konsoli, to spróbujcie wpisać następujący kod i kliknąć Enter:
+
+```
+alert("Hej, jestem wyskakującym okienkiem, które czasami denerwuje użytkowników ;-)")
+```
 
 *PS. zdradzę Ci tajemnicę: programiści bardzo często używają polecenia `console.log()` w swoim kodzie, by sprawdzić, co się dzieje z niektórymi zmiennymi w trakcie działania programu. Dzięki temu można sprawdzić, czy nasz kod działa poprawnie lub też odkryć, że zawiera błąd. Ten chwyt odnosi się do szerszego pojęcia w programowaniu, które się nazywa "debugowanie", czyli wyszukiwanie i naprawianie błędów.*
 
@@ -297,3 +313,15 @@ Spróbuj teraz opowiedzieć swoimi słowami koleżance/koledze z biura, co robi/
 Gratuluję jeszcze raz!
 
 Właśnie dobrnąłeś/aś do końca tego krótkiego tutoriala. Spodobało się? Chcesz więcej? Jeśli tak, to daj mi znać, że jesteś zainteresowany/a dalszymi lekcjami w tym samym stylu *(zakładam, że będziemy dalej rozwijać naszą aplikację do zadań, dodając coraz to nowsze funkcjonalności oraz poznając również podstawy HTML i CSS, by wyjść poza konsolę i stworzyć stronę/ aplikację internetową z prawdziwego zdarzenia)*.
+
+## Darmowe źródła do samodzielnej nauki
+
+Poniżej znajdziesz listę sprawdzonych źródeł do samodzielnej nauki *JavaScript* i nie tylko.
+
+Niestety, większość nie jest dostępna (przetłumaczona) w języku polskim, aczkolwiek zachęcam do nauki w języku angielskim, nawet jeśli Twój angielski nie jest na najwyższym poziomie, ponieważ tutoriale są zwykle pisane bardzo postym językiem:
+
+- https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics
+- https://javascript.info/
+- https://www.geeksforgeeks.org/javascript/
+- https://www.codecademy.com/resources/docs/javascript
+- https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/
