@@ -27,33 +27,28 @@
 
 <header class="header-container">
 	<div class="header-content">
-		<div><a href="/" id="nav-brand"><strong>Kodujemy w biurze</strong></a></div>
-		<div>
-			<!-- THEME TOGGLE -->
-			<span on:click={switchMode} class="icon" id="theme-toggle">
-				{#if theme === 'dark'}
-					<SunIcon />
+		<!-- MENU TOGGLE -->
+		{#if !$isIndexPage}
+			<span on:click={() => showOffset.set(!$showOffset)} class="icon" id="menu-toggle">
+				{#if $showOffset}
+					<ThreeDotsHorizontal />
 				{:else}
-					<MoonIcon />
+					<ThreeDotsVertical />
 				{/if}
 			</span>
+		{/if}
 
-			<!-- MENU TOGGLE -->
-			{#if !$isIndexPage}
-				<span
-					on:click={() => showOffset.set(!$showOffset)}
-					style="margin-left: 0.5em;"
-					class="icon"
-					id="menu-toggle"
-				>
-					{#if $showOffset}
-						<ThreeDotsHorizontal />
-					{:else}
-						<ThreeDotsVertical />
-					{/if}
-				</span>
+		<!-- NAV BRAND -->
+		<a href="/" id="nav-brand"><strong>Kodujemy w biurze</strong></a>
+
+		<!-- THEME TOGGLE -->
+		<span on:click={switchMode} class="icon" id="theme-toggle">
+			{#if theme === 'dark'}
+				<SunIcon />
+			{:else}
+				<MoonIcon />
 			{/if}
-		</div>
+		</span>
 	</div>
 </header>
 
@@ -77,6 +72,7 @@
 	#nav-brand {
 		text-decoration: none;
 		font-size: large;
+		padding-top: 3px;
 	}
 
 	.header-content a,
@@ -93,7 +89,7 @@
 	@media screen and (min-width: 992px) {
 		/* Your laptop-specific CSS styles here */
 		#menu-toggle {
-			display: none;
+			visibility: hidden;
 		}
 	}
 
@@ -101,7 +97,7 @@
 	@media screen and (max-width: 991px) {
 		/* Your mobile-specific CSS styles here */
 		#menu-toggle {
-			display: inline;
+			visibility: visible;
 		}
 	}
 </style>

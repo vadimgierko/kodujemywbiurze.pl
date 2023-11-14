@@ -393,7 +393,7 @@ Metoda `splice()` w tym przypadku potrzebuje przekazania do niej dwóch argument
 - pierwszy (w naszym przykładzie jest to `4`) jest indeksem elementu, który chcemy usunąć,
 - drugi z kolei wskazuje na ilość elementów, które chcemy usunąć, zaczynając od tego indeksu (my chcemy usunąć tylko jedno zadanie, więc napiszemy `1`).
 
-Oczywistym jest, że nie będziemy usuwać elementów bezpośrednio w ten sposób, tylko... no zgadnij... dokładnie - napiszemy dedykowaną reużywalną funkcję! No bo kto by pamiętał za każdym razem, jakie argumenty i w jakiej kolejności mamy przekazać do metody `slice()`? Zresztą, kto by pamiętał w ogóle, jak nazywa się ta metoda.
+Oczywistym jest, że nie będziemy usuwać elementów bezpośrednio w ten sposób, tylko... no zgadnij... dokładnie - napiszemy dedykowaną reużywalną funkcję! No bo kto by pamiętał za każdym razem, jakie argumenty i w jakiej kolejności mamy przekazać do metody `splice()`? Zresztą, kto by w ogóle pamiętał, jak nazywa się ta metoda.
 
 Stwórzmy więc funkcję `deleteTask(index)`:
 
@@ -436,14 +436,14 @@ Poniżej znajduje się cały kod naszej aplikacji, który możemy skopiować i w
 let tasks = [];
 
 function showTasks() {
-  console.log(tasks);
+	console.log(tasks);
 }
 
 function addTask(newTask) {
 	tasks.push(newTask);
-
+	
 	console.log("Do Twoich zadań zostało dodane nowe zadanie:", newTask);
-
+	
 	showTasks();
 }
 
@@ -453,8 +453,8 @@ function deleteTask(index) {
 	// ponieważ po usunięciu nie będziemy mieć do niego dostępu:
 
 	let deletedTask = tasks[index];
-
-  tasks.splice(index, 1);
+	
+	tasks.splice(index, 1);
 
 	console.log("Zadanie", deletedTask, "zostało usunięte...");
 
@@ -476,7 +476,7 @@ A co byśmy zrobili w następnej kolejności? No na przykład to:
 
 Na razie nasze zadania są przechowywane w przeglądarce tylko dopóki nie zresetujemy tej strony. Jest to w pewnym sensie dobre, ponieważ jutro nie przytłoczy Cię nadmiar zapisanych zadań! Aczkolwiek fajnie by było, gdyby nasze zadania pozostawały zapisane tak długo, jak chcemy.
 
-Możemy to zrobić za pomocą wbudowanego narzędzia każdej przeglądarki `localStorage`, które jest czymś w rodzaju magazynu, w którymi możemy przechowywać pewne ilości danych.
+Możemy to zrobić za pomocą wbudowanego narzędzia każdej przeglądarki `localStorage`, które jest czymś w rodzaju magazynu, w którym możemy przechowywać pewne ilości danych.
 
 Jeśli więc chcesz zrobić ten kolejny i następne kroki, daj znać!
 

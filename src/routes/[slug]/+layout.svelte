@@ -20,7 +20,9 @@
 		<ul>
 			{#each articles as { title, slug }}
 				<li>
-					<a href={`/${slug}`}>{title}</a>
+					<a href={`/${slug}`} class={$page.url.pathname.includes(slug) ? 'active-link' : ''}
+						>{title}</a
+					>
 				</li>
 				<hr />
 			{/each}
@@ -33,6 +35,18 @@
 </main>
 
 <style>
+	.active-link {
+		font-weight: bold;
+	}
+
+	:global(html[data-theme='light'] .active-link) {
+		color: black;
+	}
+
+	:global(html[data-theme='dark'] .active-link) {
+		color: yellow;
+	}
+
 	ul {
 		list-style: none;
 		padding-left: 0;
