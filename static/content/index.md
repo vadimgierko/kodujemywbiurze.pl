@@ -318,61 +318,11 @@ addTask("położyć jogurt na grzejniku, by się zacieplił")
 
 Jeśli wszystko poszło zgodnie z planem, to za każdym razem po dodaniu zadania, wyświtla Ci się komunikat oraz coraz to dłuża lista - ileż to my mamy do zrobienia dzisiaj w biurze!
 
-## Podstawy podstaw za nami! | Kod dotychczasowej aplikacji w całości
-
-Gratuluję! Właśnie stworzyłeś/aś aplikację w języku JavaScript, która działa w konsoli Twojej przeglądarki, może przechowywać listę Twoich zadań do zrobienia oraz umożliwia dodawanie zadań do tej listy! Przy okazji poznałeś/aś pewne podstawowe pojęcia jeżyka JavaScript:
-
-- zmienna i wartość
-- tablica
-- funkcja
-
-Poniżej znajduje się cały kod naszej aplikacji, który możemy skopiować i wkleić do konsoli, dzięki czemu aplikacja będzie działać *(kodu jest o wiele mniej, niż dotychczas napisaliśmy, ponieważ znajdują się w nim jedynie niezbędne funkcjonalności - taki starter, którego będziemy używać, by przechowywać, dodawać i wyświetlać zadania)*:
-
-```
-let tasks = []
-
-function showTasks() {
-  console.log(tasks)
-}
-
-function addTask(newTask) {
-	tasks.push(newTask);
-
-	console.log("Do Twoich zadań zostało dodane nowe zadanie:", newTask);
-
-	showTasks();
-}
-
-// teraz możesz wywoływać funckję addTask(), by dodawać zadania
-// (pamiętaj, by wpisać zadanie jako argument funkcji w nawiasach!)
-// oraz funkcję showTasks(), by sprawdzić zapisane zadania.
-```
-
-Spróbuj teraz opowiedzieć swoimi słowami koleżance/koledze z biura, co robi/ co się dzieje w każdej z linijek powyśzego kodu.
-
-Gratuluję jeszcze raz!
-
-Właśnie dobrnąłeś/aś do końca tego krótkiego tutoriala. Spodobało się? Chcesz więcej? Jeśli tak, to daj mi znać, że jesteś zainteresowany/a dalszymi lekcjami w tym samym stylu *(zakładam, że będziemy dalej rozwijać naszą aplikację do zadań, dodając coraz to nowsze funkcjonalności oraz poznając również podstawy HTML i CSS, by wyjść poza konsolę i stworzyć stronę/ aplikację internetową z prawdziwego zdarzenia)*.
-
-PS. Zerknij do kolejnych artykułów, bo już zacząłem dodawać kolejne rzeczy (to nadal podstawy)!
-
-## Darmowe źródła do samodzielnej nauki
-
-Poniżej znajdziesz listę sprawdzonych źródeł do samodzielnej nauki *JavaScript* i nie tylko.
-
-Niestety, większość nie jest dostępna (przetłumaczona) w języku polskim, aczkolwiek zachęcam do nauki w języku angielskim, nawet jeśli Twój angielski nie jest na najwyższym poziomie, ponieważ tutoriale są zwykle pisane bardzo postym językiem:
-
-- https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics
-- https://javascript.info/
-- https://www.geeksforgeeks.org/javascript/
-- https://www.codecademy.com/resources/docs/javascript
-- https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/
-
-## Wyświetlanie zadań po kolei | Pętla `for`
+## Wyświetlanie zadań po kolei | Pętla `for`, długość tablicy `length`
 
 A co powiesz na to, że zamiast wyświetlać całą tablicę zadań, wyświetlimy każde zadanie w osobnej linijce, dzięki czemu lista będzie bardziej przejrzysta?
 
-Możemy to osiągnąć na wiele spososób, ale wykorzystamy w tym celu starą dobrą klasyczną metodę - pętlę `for`. Czym jest pętla?
+Możemy to osiągnąć na wiele sposobów, ale wykorzystamy w tym celu starą dobrą klasyczną metodę - pętlę `for`. Czym jest pętla?
 
 Pętla jest poleceniem, które wykonuje pewne zadanie raz po raz, dopóki pewien warunek jest spełniony. Ogólnie początkujący programiści czasami mają problem ze zrozumieniem działania pętli, więc w razie czego, nie poddawaj się od razu ;-)
 
@@ -412,6 +362,132 @@ function loopTasks() {
 }
 ```
 
-## TODO
+W powyższym kodzie iterujemy po naszych zadaniach z listy, dopóki zmienna `i` jest mniejsza od długości listy, do której mamy dostęp sprawdzając długość tablicy `tasks.length` (możesz to osobno sprawdzić, wpisując ten kod do konsoli). Dlaczego nie sprawdzimy długości listy w konsoli i nie użyjemy tej konkretnej liczby w naszej pętli? Takie podejście nie ma sensu, ponieważ długość listy będzie najprawdopobniej się zmieniać (np. za chwilę stworzymy funckję do usuwania zadań z listy), a właściwość `length` zawsze dynamicznie zwróci nam realną długość każdej tablicy.
 
-- [ ] local storage
+Z drugiej strony zwróć uwagę na to, w jaki sposób uzyskujemy dostęp do każdego zadania za pomocą indeksu tablicy. Robiliśmy to już wcześniej, kiedy omawialiśmy tablice i indeksy, np. kiedy pisaliśmy kod `tasks[0]`, żeby zwrócić pierwszy element z listy. Teraz używamy dynamicznej zmiennej `i`, która każdorazowo automatycznie podstawia kolejny indeks poprzez `tasks[i]` - jeśli `i` w danej chwili będzie równe 5, to program potraktuje nasz dynamiczny kod jako `tasks[5]`.
+
+No i ciekawostka: jak uzyskać ostatni element z listy, której długości nie znamy? Nie wiemy przecież, jaką wartość indeksu mamy wpisać w `tasks[?]`... Otóż możemy to robić na kilka sposobów (jak zwykle w programowaniu), natomiast na początek w tym celu możemy użyć nowo poznanej właściwości `length` w ten sposób:
+
+```
+tasks[tasks.length - 1];
+```
+
+Co się dzieje w powyższym kodzie? Ponieważ nie znamy długości listy, ale wiemy, że właściwość `length` zawsze zwraca atkualną długość tablicy, dynamicznie obliczyliśmy indeks ostatniego elementu odejmując od długości jedynkę.
+
+Może się to wydawać zagmatwane, więc przyjrzyjmy się temu lepiej. Pamiętasz mówiłem, że indeksy zaczynają się od 0, a nie od 1? Jeśli więc mamy listę, która zawiera np. 10 elementów, to indeksem ostatniego elementu będzie... 9! Jeśli z kolei sprawdzimy, co zwraca właściwość `length`, to zwróci ona... 10! Dzieje się tak dlatego, że długość tablicy równa się liczbie elementów, które przechowuje. W związku z tym, jeśli chcemy uzyskać dostęp do ostatniego (dziesiątego) elementu tej listy, musimy użyć indeksu 9: `tenElementsList[9]`. Żeby uzyskać 9, musimy od (długości) 10 odjąć 1. W związku z tym, żeby uzyskać dostęp do ostatniego elementu tablicy o dowolnej nieznanej długości, korzystamy z kodu `list[list.length - 1]` (zamiast `list` podstawiamy oczywiście nazwę naszej zmiennej).
+
+## Usuwanie zadań z listy | Metoda `splice()`
+
+Ok, więc inicjujemy listę zadań, dodajemy i przechowujemy zadania w kodzie, czas więc na kolejną funkcjonalność - usuwanie zadania z listy. Powinniśmy być w stanie usunąć zadanie, które jest już nieaktualne albo wykonane z naszej listy, że się nie rozpraszać oraz widzieć nasz progres.
+
+Usuwanie konkretnego elementu z tablicy może dokonać na kilka sposobów. Ze względu na to, że wiemy, czym są indeksy oraz nasza lista pozwala na wyświetlenie indeksów każdego z zadań, najłatwiej będzie sprawdzić, jaki jest indeks zadania, które chcemy usunąć, a potem użyć wbudowanej metody tablicy `splice()` w ten sposób:
+
+```
+// załóżmy, że chcemy usunąć zadanie o indeksie 4:
+
+tasks.splice(4, 1);
+```
+
+Metoda `splice()` w tym przypadku potrzebuje przekazania do niej dwóch argumentów:
+
+- pierwszy (w naszym przykładzie jest to `4`) jest indeksem elementu, który chcemy usunąć,
+- drugi z kolei wskazuje na ilość elementów, które chcemy usunąć, zaczynając od tego indeksu (my chcemy usunąć tylko jedno zadanie, więc napiszemy `1`).
+
+Oczywistym jest, że nie będziemy usuwać elementów bezpośrednio w ten sposób, tylko... no zgadnij... dokładnie - napiszemy dedykowaną reużywalną funkcję! No bo kto by pamiętał za każdym razem, jakie argumenty i w jakiej kolejności mamy przekazać do metody `slice()`? Zresztą, kto by pamiętał w ogóle, jak nazywa się ta metoda.
+
+Stwórzmy więc funkcję `deleteTask(index)`:
+
+```
+function deleteTask(index) {
+  tasks.splice(index, 1);
+	
+	// możemy tutaj dodać komunikat o tym, że zadanie zostało usunięte:
+	// haha, ale nie napiszę jak to zrobić, ponieważ robiliśmy już podobne rzeczy ;-)
+	// musisz więc sam/a się z tym uporać, ale...
+	// podpowiem, że jest to zadanie z pewnym haczykiem ;-)
+
+	// możemy też wyświetlić zaktualizowaną listę naszych zadań:
+	// to też wiesz, jak zrobić ;-)
+}
+```
+
+Po przepisaniu tej funkcji do konsoli (oraz opcjonalnym samodzielnym dopisaniu dwóch linijek kodu, o których wspominam w komentarzach), spróbuj usunąć kilka zadań, uprzednio sprawdzając, jakie indeksy chcesz usunąć.
+
+Spróbuj teraz stworzyć funckję o nazwie `deleteAllTasks()`, która usuwa od razu wszystkie zadania. Można to oczywiście zrobić na wiele sposobów:
+
+- można to zrobić bardzo, ale to bardzo łatwo (właśnie tego od Ciebie oczekuję),
+- ale można też zaszaleć i w tym celu użyć pętli, a nawet pętli, która wykorzystuje już wcześniej stworzoną funkcję `deleteTask()`, która by usuwała każde zadanie po kolei, przy okazji wyrzucała do konsoli każde usunięte zadanie.
+
+## Podstawy podstaw za nami! | Kod dotychczasowej aplikacji w całości
+
+No teraz nasza aplikacja jest już naprawdę zaawansowana! I przy okazji zobacz, ile już wiemy nt. *JavaScript*!
+
+Gratuluję! Właśnie stworzyłeś/aś aplikację w języku JavaScript, która działa w konsoli Twojej przeglądarki, może przechowywać listę Twoich zadań do zrobienia oraz umożliwia dodawanie zadań do tej listy! Przy okazji poznałeś/aś pewne podstawowe pojęcia jeżyka JavaScript:
+
+- zmienna i wartość
+- tablica, indeks, `push()`, `length`, `splice()`
+- funkcje i `console.log()`
+
+Poniżej znajduje się cały kod naszej aplikacji, który możemy skopiować i wkleić do konsoli, dzięki czemu aplikacja będzie działać - pamiętaj tylko, by odświeżyć stronę, żeby usunąć z konsoli dotychczasowy kod.
+
+*UWAGA: kodu jest o wiele mniej, niż dotychczas napisaliśmy, ponieważ znajdują się w nim jedynie niezbędne funkcjonalności:*
+
+```
+let tasks = [];
+
+function showTasks() {
+  console.log(tasks);
+}
+
+function addTask(newTask) {
+	tasks.push(newTask);
+
+	console.log("Do Twoich zadań zostało dodane nowe zadanie:", newTask);
+
+	showTasks();
+}
+
+function deleteTask(index) {
+	// jeśli chcemy wyświetlić zadanie, które zostało usunięte,
+	// to najpierw musimy je przechować w zmiennej,
+	// ponieważ po usunięciu nie będziemy mieć do niego dostępu:
+
+	let deletedTask = tasks[index];
+
+  tasks.splice(index, 1);
+
+	console.log("Zadanie", deletedTask, "zostało usunięte...");
+
+	showTasks();
+}
+```
+
+Możesz teraz dodawać zadania za pomocą kodu `addTask("jakieś zadanie")`, a potem je usuwać, sprawdzając uprzednio ich indeks: `deleteTask(3)`.
+
+Spróbuj teraz opowiedzieć swoimi słowami koleżance/koledze z biura, co robi/ co się dzieje w każdej z linijek powyśzego kodu.
+
+Jeśli nie masz, komu to opowiedzieć lub po prostu nie chcesz dzielić się swoją tajną wiedzą, możesz opowiedzieć to swoim kwiatkom na parapecie/ biurku lub, tak jak niektórzy programiści, żółtej gumowej kaczce ;-)
+
+Gratuluję jeszcze raz!
+
+Właśnie dobrnąłeś/aś do końca tego krótkiego tutoriala. Spodobało się? Chcesz więcej? Jeśli tak, to daj mi znać, że jesteś zainteresowany/a dalszymi lekcjami w tym samym stylu *(zakładam, że będziemy dalej rozwijać naszą aplikację do zadań, dodając coraz to nowsze funkcjonalności oraz poznając również podstawy HTML i CSS, by wyjść poza konsolę i stworzyć stronę/ aplikację internetową z prawdziwego zdarzenia)*.
+
+A co byśmy zrobili w następnej kolejności? No na przykład to:
+
+Na razie nasze zadania są przechowywane w przeglądarce tylko dopóki nie zresetujemy tej strony. Jest to w pewnym sensie dobre, ponieważ jutro nie przytłoczy Cię nadmiar zapisanych zadań! Aczkolwiek fajnie by było, gdyby nasze zadania pozostawały zapisane tak długo, jak chcemy.
+
+Możemy to zrobić za pomocą wbudowanego narzędzia każdej przeglądarki `localStorage`, które jest czymś w rodzaju magazynu, w którymi możemy przechowywać pewne ilości danych.
+
+Jeśli więc chcesz zrobić ten kolejny i następne kroki, daj znać!
+
+## Darmowe źródła do samodzielnej nauki
+
+Poniżej znajdziesz listę sprawdzonych źródeł do samodzielnej nauki *JavaScript* i nie tylko.
+
+Niestety, większość nie jest dostępna (przetłumaczona) w języku polskim, aczkolwiek zachęcam do nauki w języku angielskim, nawet jeśli Twój angielski nie jest na najwyższym poziomie, ponieważ tutoriale są zwykle pisane bardzo postym językiem:
+
+- https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics
+- https://javascript.info/
+- https://www.geeksforgeeks.org/javascript/
+- https://www.codecademy.com/resources/docs/javascript
+- https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/
