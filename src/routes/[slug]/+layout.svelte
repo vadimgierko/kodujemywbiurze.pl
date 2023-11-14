@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { page } from '$app/stores';
 	import { showOffset, isScreenLessThan992 } from '$lib/stores';
 
 	export let data;
@@ -21,6 +22,7 @@
 				<li>
 					<a href={`/${slug}`}>{title}</a>
 				</li>
+				<hr />
 			{/each}
 		</ul>
 	</nav>
@@ -31,10 +33,22 @@
 </main>
 
 <style>
+	ul {
+		list-style: none;
+		padding-left: 0;
+		text-align: center;
+	}
 	aside {
+		box-sizing: border-box;
 		font-size: smaller;
 		height: calc(100% - 40px);
+		padding: 0 2em;
 	}
+
+	aside a {
+		text-decoration: none;
+	}
+
 	/* Styles for screens with a minimum width of 992px (typical laptop) */
 	@media screen and (min-width: 992px) {
 		/* Your laptop-specific CSS styles here */
@@ -55,7 +69,7 @@
 		main {
 			/* margin-top: 40px; */
 			margin-left: 30%; /* Same as the width of the sidenav */
-			padding: 0 1em;
+			padding: 0 2em;
 		}
 	}
 
@@ -78,8 +92,8 @@
 
 		main {
 			width: auto;
-			margin-left: 1em;
-			margin-right: 1em;
+			margin-left: 2em;
+			margin-right: 2em;
 		}
 	}
 </style>

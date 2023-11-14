@@ -13,7 +13,9 @@
 	$: nextArticleSlug =
 		articleIndex !== data.articles.length - 1 ? data.articles[articleIndex + 1].slug : null;
 
-	onMount(() => isIndexPage.set(false));
+	onMount(() => {
+		isIndexPage.set(false);
+	});
 </script>
 
 <svelte:head>

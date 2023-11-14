@@ -18,20 +18,6 @@
 	/>
 </svelte:head>
 
-<!-- <figure>
-	<img
-		src="/img/kodujemy-w-biurze-baner-vadim-gierko.jpg"
-		width="100%"
-		alt="baner strony kodujemy w biurze pl z laptopem, kawą i notesem na biurku"
-	/>
-	<figcaption>
-		źródło obrazka: <a
-			href="https://pl.freepik.com/darmowe-zdjecie/uzgodnienie-z-laptopem-i-roslina_8989399.htm#query=coffee%20computer&position=10&from_view=search&track=ais"
-			target="_blank">Freepik</a
-		>
-	</figcaption>
-</figure> -->
-
 <main>
 	<header>
 		<h1>Witaj na stronie <em>Kodujemy w biurze</em>!</h1>
@@ -52,13 +38,14 @@
 
 		{#if firstHeaderSlug}
 			<a href={firstHeaderSlug}>
-				<button>Zacznij zabawę z kodem!</button>
+				<button id="cta-btn">Zacznij zabawę z kodem!</button>
 			</a>
 		{/if}
 	</header>
 </main>
 
 <style>
+
 	/* figure {
 		position: absolute;
 		left: 0;
@@ -68,6 +55,7 @@
 	} */
 
 	main {
+		flex-grow: 1;
 		width: 60%;
 		margin: 0 auto;
 		text-align: center;
@@ -77,19 +65,17 @@
 		font-size: large;
 		padding: 24px 48px;
 		border-radius: 10px;
-		background-color: rgb(0, 21, 255);
-		border-color: rgb(0, 21, 255);
 		color: white;
-	}
-
-	button:hover {
-		background-color: rgba(0, 21, 255, 0.8);
 	}
 
 	@media screen and (max-width: 900px) {
 		main {
 			width: auto;
 			margin: 0 1em;
+		}
+
+		h1 {
+			font-size: 2.074rem;
 		}
 	}
 </style>

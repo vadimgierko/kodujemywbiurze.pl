@@ -1,0 +1,138 @@
+/* html {
+				scroll-behavior: smooth;
+				scroll-padding-top: 40px;
+			} */
+/* LIGHT/DARK MODE */
+
+:root {
+    --primary: hsl(192, 90%, 60%);
+    --primary-hover: hsla(192, 90%, 60%, 0.801);
+    --black-100: hsl(192, 0%, 0%);
+    --black-90: hsl(192, 0%, 10%);
+    --black-80: hsl(192, 0%, 20%);
+    --black-75: hsl(192, 0%, 25%);
+    --black-50: hsl(192, 0%, 50%);
+    --black-25: hsl(192, 0%, 75%);
+    --black-10: hsl(192, 0%, 90%);
+}
+
+:root,
+html[data-theme='light'] {
+    --background-color: white;
+    --text-color: var(--black-100);
+    --link-color: var(--black-80);
+    --link-color-on-hover: var(--black-50);
+    --header-background-color: var(--black-90);
+    --code-background-color: var(--black-10);
+    --code-color: var(--black-100);
+    --aside-background-color: var(--black-10);
+}
+
+html[data-theme='dark'] {
+    --background-color: var(--black-90);
+    --text-color: var(--black-10);
+    --link-color: white;
+    --link-color-on-hover: var(--primary-hover);
+    --header-background-color: var(--black-100);
+    --code-background-color: var(--black-80);
+    --code-color: white;
+    --aside-background-color: var(--black-80);
+}
+
+/* GLOBAL CSS */
+
+body {
+    transition: background-color 0.3s ease-out, color 0.3s ease-out;
+
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+        Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
+    line-height: 1.5em;
+    width: 100%;
+    min-width: 375px;
+}
+
+.header-container,
+.header-content {
+    background-color: var(--header-background-color);
+}
+
+h1,
+h2 {
+    text-align: center;
+}
+
+code {
+    background-color: var(--code-background-color);
+    color: var(--code-color);
+    font-size: 15px;
+    border-radius: 5px;
+}
+
+pre {
+    background-color: var(--code-background-color);
+    color: var(--code-color);
+    padding: 1em 1em;
+    overflow: auto;
+    border-radius: 5px;
+}
+
+aside {
+    background-color: var(--aside-background-color);
+    color: var(--aside-color)
+}
+
+a {
+    color: var(--link-color);
+}
+
+a:hover {
+    color: var(--link-color-on-hover)
+}
+
+hr {
+    border-color: rgb(193, 193, 193);
+    border-bottom: none;
+}
+
+figure {
+    margin: 0;
+    font-size: small;
+}
+
+.icon {
+    vertical-align: -0.2em;
+    cursor: pointer;
+}
+
+#cta-btn {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+#cta-btn:hover {
+    background-color: var(--primary-hover);
+    border-color: var(--primary);
+}
+
+@media screen and (min-width: 992px) {
+    h2 {
+        font-size: 2.488rem;
+        line-height: 1.5em;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    h2 {
+        font-size: 2.074rem;
+        line-height: 1.2em;
+    }
+
+}
