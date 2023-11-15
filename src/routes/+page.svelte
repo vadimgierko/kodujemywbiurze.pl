@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { isIndexPage } from '$lib/stores';
 	import { onMount } from 'svelte';
+	import heroImg from './hero-img.png';
 
 	export let data;
 
@@ -18,64 +19,249 @@
 	/>
 </svelte:head>
 
-<main>
-	<header>
-		<h1>Witaj na stronie <em>Kodujemy w biurze</em>!</h1>
+<main class="container">
+	<div id="content-container">
+		<h1>
+			Witaj na stronie
+			<br />
+			<span id="page-name">Kodujemy w biurze!</span>
+		</h1>
 
-		<hr />
+		<img src={heroImg} alt="mężczyzna siedzący przy biurku przed komputerem z kubkiem" />
 
-		<p>
-			<strong>Nauka programowania webowego w przerwach między zadaniami w biurze?</strong>
-		</p>
+		<p>Naucz się programowania webowego<br />w przerwach między zadaniami w biurze!</p>
 
-		<p>Z kodujemywbiurze.pl jest to możliwe!</p>
-		<p>
-			<strong>
-				Zacznij programować od razu bezpośrednio w przeglądarce, tworząc <em>(na początek)</em> prostą
-				aplikację do zarządzania Twoimi zadaniami!
-			</strong>
-		</p>
+		<p>Zacznij pisać kod bezpośrednio w swojej przeglądarce!</p>
 
 		{#if firstHeaderSlug}
 			<a href={firstHeaderSlug}>
-				<button id="cta-btn">Zacznij zabawę z kodem!</button>
+				<button class="bg-primary" id="cta-btn">Zacznij kodować w biurze!</button>
 			</a>
 		{/if}
-	</header>
+	</div>
 </main>
 
-<style>
-
-	/* figure {
-		position: absolute;
-		left: 0;
-		right: 0;
-		top: 40px;
-		z-index: 1;
-	} */
+<style scoped>
+	/* STYLES NOT DEPENDENT ON SCREEN SIZE */
 
 	main {
 		flex-grow: 1;
-		width: 60%;
-		margin: 0 auto;
+		line-height: normal;
+		overflow: hidden;
+	}
+
+	/* MEDIA QUERIES */
+
+	/* MOBILE */
+	main {
 		text-align: center;
+		display: flex;
+		flex-direction: column;
+		height: calc(100dvh - 40px - 90px);
+		min-height: calc(100dvh - 40px - 90px);
+		justify-content: center;
+	}
+
+	h1 {
+		font-size: 18px;
+		margin-top: 1rem;
+	}
+
+	#page-name {
+		font-size: 32px;
+		font-weight: 800;
 	}
 
 	button {
-		font-size: large;
-		padding: 24px 48px;
-		border-radius: 10px;
-		color: white;
+		margin-top: 18px;
+
+		font-size: 16px;
+		font-weight: 600;
+		padding: 12px 24px;
+		border-radius: 20px;
+		color: rgb(0, 0, 0);
 	}
 
-	@media screen and (max-width: 900px) {
+	img {
+		width: 100%;
+		max-width: 400px;
+		margin-top: -72px;
+		margin-bottom: -32px;
+	}
+
+	/* Small devices (landscape phones, 576px and up) */
+	@media screen and (min-width: 576px) {
+		/* this is here to not fuck up styles... */
 		main {
-			width: auto;
-			margin: 0 1em;
+			/* RESET MOBILE STYLES */
+			line-height: normal;
+			text-align: start;
+			display: block;
+			position: relative;
+			width: 100%;
 		}
 
+		/* Styles for small devices */
 		h1 {
-			font-size: 2.074rem;
+			text-align: start;
+			font-size: 18px;
+			margin-bottom: 40px;
+		}
+
+		#page-name {
+			font-size: 52px;
+			font-weight: 800;
+		}
+
+		p {
+			width: 60%;
+			font-size: 16px;
+			margin-bottom: 20px;
+		}
+
+		button {
+			margin-top: 20px;
+
+			font-size: 16px;
+			font-weight: 600;
+			padding: 12px 24px;
+			border-radius: 20px;
+			color: rgb(0, 0, 0);
+		}
+
+		img {
+			position: absolute;
+			right: 0px;
+			top: 0px;
+			z-index: -1;
+			width: 600px;
+			max-width: 600px;
+			margin-right: -64px;
+			margin-top: 32px;
+			margin-bottom: 0px;
+		}
+	}
+
+	/* Medium devices (tablets, 768px and up) */
+	@media screen and (min-width: 768px) {
+		/* Styles for medium devices */
+		h1 {
+			font-size: 20px;
+			margin-bottom: 48px;
+		}
+
+		#page-name {
+			font-size: 56px;
+			font-weight: 800;
+		}
+
+		p {
+			width: 70%;
+			font-size: 18px;
+			margin-bottom: 24px;
+		}
+
+		button {
+			margin-top: 24px;
+
+			font-size: 16px;
+			font-weight: 600;
+			padding: 16px 32px;
+			border-radius: 20px;
+			color: rgb(0, 0, 0);
+		}
+
+		img {
+			position: absolute;
+			right: 0px;
+			top: 0px;
+			z-index: -1;
+			width: 600px;
+			max-width: 600px;
+			margin-right: -64px;
+			margin-top: 32px;
+		}
+	}
+
+	/* Large devices (desktops, 992px and up) */
+	@media screen and (min-width: 992px) {
+		/* Styles for large devices */
+		h1 {
+			font-size: 24px;
+			margin-bottom: 56px;
+		}
+
+		#page-name {
+			font-size: 64px;
+			font-weight: 800;
+		}
+
+		p {
+			width: 60%;
+			font-size: 18px;
+			margin-bottom: 32px;
+		}
+
+		button {
+			margin-top: 32px;
+
+			font-size: 18px;
+			font-weight: 600;
+			padding: 20px 40px;
+			border-radius: 20px;
+			color: rgb(0, 0, 0);
+		}
+
+		img {
+			position: absolute;
+			right: 0px;
+			top: 0px;
+			z-index: -1;
+			width: 700px;
+			max-width: 700px;
+			margin-right: -60px;
+			margin-top: -80px;
+		}
+	}
+
+	/* Extra large devices (large desktops, 1200px and up) */
+	@media screen and (min-width: 1200px) {
+		/* Styles for extra large devices */
+		h1 {
+			font-size: 32px;
+			margin-bottom: 48px;
+		}
+
+		#page-name {
+			font-size: 72px;
+			font-weight: 800;
+		}
+
+		p {
+			width: 60%;
+			font-size: 20px;
+			margin-bottom: 24px;
+		}
+
+		button {
+			margin-top: 24px;
+
+			font-size: 20px;
+			font-weight: 600;
+			padding: 24px 48px;
+			border-radius: 20px;
+			color: rgb(0, 0, 0);
+		}
+
+		img {
+			position: absolute;
+			right: 0px;
+			top: 0px;
+			z-index: -1;
+			width: 770px;
+			max-width: 770px;
+			margin-right: -80px;
+			margin-top: -120px;
 		}
 	}
 </style>

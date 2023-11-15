@@ -1,8 +1,8 @@
 /* LIGHT/DARK MODE */
 
 :root {
-    --primary: hsl(192, 90%, 60%);
-    --primary-hover: hsla(192, 90%, 60%, 0.801);
+    --primary: hsl(47, 100%, 50.2%);
+    --primary-hover: hsla(47, 100%, 50.2%, 0.801);
     --black-100: hsl(192, 0%, 0%);
     --black-90: hsl(192, 0%, 10%);
     --black-80: hsl(192, 0%, 20%);
@@ -35,6 +35,29 @@ html[data-theme='dark'] {
     --aside-background-color: var(--black-80);
 }
 
+/* HELPER CLASSES */
+
+.container {
+    margin: 0 1.5em; /* this is for phones */
+    /* + different max-width/ margin depending on media queries */
+}
+
+.text-primary {
+    color: var(--primary)
+}
+
+.text-primary:hover {
+    color: var(--primary-hover)
+}
+
+.bg-primary {
+    background-color: var(--primary)
+}
+
+.bg-primary:hover {
+    background-color: var(--primary-hover)
+}
+
 /* GLOBAL CSS */
 
 body {
@@ -55,13 +78,18 @@ body {
     min-width: 375px;
 }
 
-.header-container,
-.header-content {
+header {
     background-color: var(--header-background-color);
     line-height: 2em;
+    height: 40px;
+    position: fixed;
+    z-index: 99;
+    width: 100%;
 }
 
-h1,
+header .header-content {
+    background-color: var(--header-background-color);}
+
 h2 {
     text-align: center;
 }
@@ -71,6 +99,7 @@ code {
     color: var(--code-color);
     font-size: 15px;
     border-radius: 5px;
+    
 }
 
 pre {
@@ -119,17 +148,37 @@ figure {
     border-color: var(--primary);
 }
 
-@media screen and (min-width: 992px) {
-    h2 {
-        font-size: 2.488rem;
-        line-height: 1.5em;
+/* MEDIA QUERIES */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+    /* Styles for small devices */
+    .container {
+        margin: 0 auto;
+        max-width: 540px;
     }
 }
 
-@media screen and (max-width: 991px) {
-    h2 {
-        font-size: 2.074rem;
-        line-height: 1.2em;
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    /* Styles for medium devices */
+    .container {
+        max-width: 720px;
     }
+}
 
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    /* Styles for large devices */
+    .container {
+        max-width: 960px;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    /* Styles for extra large devices */
+    .container {
+        max-width: 1140px;
+    }
 }

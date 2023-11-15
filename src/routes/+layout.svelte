@@ -1,5 +1,5 @@
 <script lang="ts">
-	import "../app.css"
+	import '../app.css';
 	import Footer from '$lib/layout/Footer.svelte';
 	import Navbar from '$lib/layout/Navbar.svelte';
 	import { isScreenLessThan992 } from '$lib/stores';
@@ -26,14 +26,14 @@
 
 <Navbar />
 
-<div class="container">
+<div>
 	<slot />
 </div>
 
 <Footer />
 
 <style>
-	.container {
+	div {
 		margin-top: 40px;
 		flex-grow: 1;
 		display: flex;
