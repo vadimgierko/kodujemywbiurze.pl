@@ -25,30 +25,35 @@
 	});
 </script>
 
-<header class="header-container">
-	<div class="header-content">
-		<!-- MENU TOGGLE -->
-		{#if !$isIndexPage}
-			<span on:click={() => showOffset.set(!$showOffset)} class="icon" id="menu-toggle">
+<header>
+	<div class="container">
+		<div class="header-content">
+			<!-- MENU TOGGLE -->
+			<span
+				style={$isIndexPage ? 'visibility: hidden' : ''}
+				on:click={() => showOffset.set(!$showOffset)}
+				class="icon"
+				id="menu-toggle"
+			>
 				{#if $showOffset}
 					<ThreeDotsHorizontal />
 				{:else}
 					<ThreeDotsVertical />
 				{/if}
 			</span>
-		{/if}
 
-		<!-- NAV BRAND -->
-		<a href="/" id="nav-brand"><strong>Kodujemy w biurze</strong></a>
+			<!-- NAV BRAND -->
+			<a href="/" id="nav-brand"><strong>Kodujemy w biurze</strong></a>
 
-		<!-- THEME TOGGLE -->
-		<span on:click={switchMode} class="icon" id="theme-toggle">
-			{#if theme === 'dark'}
-				<SunIcon />
-			{:else}
-				<MoonIcon />
-			{/if}
-		</span>
+			<!-- THEME TOGGLE -->
+			<span on:click={switchMode} class="icon" id="theme-toggle">
+				{#if theme === 'dark'}
+					<SunIcon />
+				{:else}
+					<MoonIcon />
+				{/if}
+			</span>
+		</div>
 	</div>
 </header>
 
@@ -57,9 +62,6 @@
 		position: fixed;
 		left: 0;
 		right: 0;
-		padding: 0 1em;
-
-		width: auto;
 		height: 40px;
 	}
 

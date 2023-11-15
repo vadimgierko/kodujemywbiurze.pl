@@ -24,16 +24,4 @@
 	footer {
 		text-align: center;
 	}
-
-	/* @media screen and (min-width: 992px) {
-		footer {
-			margin-left: 30%;
-		}
-	}
-
-	@media screen and (max-width: 991px) {
-		footer {
-			margin-left: 0;
-		}
-	} */
 </style>

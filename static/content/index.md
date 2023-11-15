@@ -1,5 +1,7 @@
 ## Wprowadzenie. Co stworzymy i czego się nauczymy?
 
+---
+
 - **Pracujesz w biurze?**
 - **Masz do dyspozycji komputer/ laptop, Internet i kubek kawy/ herbaty?**
 - A może tak spróbujesz przekonać się, czy **kodowanie może być równie dobrym wypełniaczem Twojego czasu w biurze, jak skrollowanie Fejsa czy Insta**?
@@ -33,6 +35,8 @@ Mam nadzieję, że kiedy dobrniesz do końca tego tutoriala, to będziesz chcia�
 
 ## Czym jest JavaScript i dlaczego warto się go uczyć?
 
+---
+
 JavaScript jest obecnie **najbardziej popularnym językiem programowania**. Programowanie to nic innego, jak pisanie poleceń w języku programowania zrozumiałym dla komputera/ urządzenia/ programu/ przeglądarki, które określają, co urządzenie/ program ma wyświetlić, jak to wyświetlić, jak ma reagować na działania użytkownika, skąd ma pobrać dane lub gdzie je zapisać itd.
 
 JavaScript w połączeniu z dwoma innymi językami - HTML i CSS - służy do tworzenia stron i aplikacji webowych (czyli takich, które działają w przeglądarce):
@@ -49,6 +53,8 @@ Możliwości są nieograniczone!
 To właśnie dzięki JavaScript strony i aplikacje są dynamiczne i interaktywne - jest on silnikiem napędzającym stronę.
 
 ## Zaczynamy pisać kod! Czym jest konsola, jak jej używać i co to jest *Hello, World!*?
+
+---
 
 Niniejsza strona, jak większość innych w Internecie, używa JavaScript. Każda **przeglądarka** również **rozumie i przetwarza kod JavaScript**, a ponadto umożliwia nam pisanie kodu bezpośrednio w przeglądarce, a dokładniej w konsoli. Konsola jest jednym z wielu wbudowanych narzędzi każdej przeglądarki. Przekonajmy się o tym i otwórzmy konsolę przeglądarki!
 
@@ -79,6 +85,8 @@ Dlaczego akurat użyłem określenia *Hello, World!*? Jest to taka niepisana tra
 Ok, więc wiemy już, czym jest konsola, jak ją otworzyć, a nawet wpisaliśmy i uruchomiliśmy nasze pierwsze polecenie. Jak już wspomniałem wcześniej, konsola umożliwia nam m. in. pisanie i uruchamianie kodu JavaScript, chociaż nie jest to jej główny cel - każdy edytor kodu jest zdecydowanie lepszym narzędziem do pisania kodu. Natomiast na razie nie chcemy żadnego edytora kodu. Chcemy po prostu napisać kilka linijek kodu i zobaczyć, jak to działa oraz *złapać bakcyla*.
 
 ## Stwórzmy pierwsze zadanie w naszej aplikacji | Zmienne, wartości i słowo kluczowe `let`
+
+---
 
 Jeśli mamy jakieś ważne zadanie do zrobienia, to najprawdopodobniej zapiszemy go na jakiejś kartce i umieścimy w widocznym miejscu. Podobnie działa to w programowaniu.
 
@@ -112,6 +120,8 @@ Możesz też napisać `task`, a potem kliknąć Enter. W tej sytuacji konsola zw
 
 ## Zmieńmy nasze zadanie | Nadpisywanie wartości zmiennych
 
+---
+
 Ok, zrobiliśmy kawę, więc zadanie zostało odhaczone i teraz chcemy go zmienić na kolejne zadanie. Możemy więc nadpisać (zmienić, zaktualizować) wartość naszego `task`'a w następujący sposób:
 
 ```
@@ -125,6 +135,8 @@ W powyższym kodzie przypisaliśmy do naszej zmiennej nową wartość, w związk
 Możemy tak przypisywać nowe wartości do tej samej zmiennej mnóstwo razy, a po poprzednich nie pozostanie ani śladu, o czym należy pamiętać.
 
 ## Dobre praktyki w nazewnictwie zmiennych
+
+---
 
 Dobrą praktyką jest nazywanie zmiennych w taki sposób, aby nazwy te niewątpliwie odzwierciedlały charakter wartości tych zmiennych. Każdy, kto rozumie znaczenie słowa *task*, będzie się spodziewał, że jest to jakieś zadanie, a nie na przykład numer telefonu. Gdybyśmy chcieli przechować numer telefonu w zmiennej, nazwalibyśmy ją `phoneNumber`:
 
@@ -141,6 +153,8 @@ Natomiast to, że nasze zadania, które przechowujemy w kodzie, są zapisane w j
 Z kolei sposób łączenia słów w jedną całość w kodzie w ten sposób: `phoneNumber` nazywa się `camelCase`. Taki sposób zapisu rozwiązuje jeden problem: nazwa zmiennej musi być ciągiem znaków, nie mogą to być dwa oddzielone od siebie wyrazy. Możemy też zapisać nazwę zmiennej na kilka innych sposobów (które są właściwe w niektórych sytuacjach): `phone_number` lub `phone-number`, najczęściej jednak w JavaScripcie używamy pisowni `camelCase`.
 
 ## Tworzymy listę zadań | Tablica, metoda `push()`, indeksy i modyfikacja elementów w tablicy
+
+---
 
 Ok, więc potrafimy już utworzyć nową zmienną, by przechować jej wartość w naszym kodzie, potrafimy też tę wartość zmodyfikować/ nadpisać. Natomiast posiadanie tylko jednej zmiennej `task`, którą będziemy ciągle modyfikować, jest bardzo niepraktyczne i nie do tego dążymy. Chcemy utworzyć listę zadań (masz przecież dużo zadań do zrobienia w biurze, także związanych bezpośrednio z pracą ;-), do której będziemy mogli dodawać zadania, usuwać je, lub też wyświetlić listę zadań w całości!
 
@@ -193,6 +207,8 @@ Teraz, kiedy ponownie sprawdzimy wartość `tasks[0]` w konsoli, to wyświetli n
 Świetnie! Potrafimy tworzyć listę zadań, uzyskiwać dostęp do poszczególnych elementów z listy i modyfikować je oraz dodawać nowe elementy do listy/ tablicy. Teraz nadszedł czas na pisanie reużywalnego kodu, który będzie wykonywał pewne powtarzalne zadania - dodawanie nowych zadań!
 
 ## Wstęp do funkcji | Wyświetlamy listę zadań (znowu)
+
+---
 
 Każdorazowe dodawanie zadań do listy zadań poprzez użycie kodu, z którego wcześniej korzystaliśmy (`tasks.push("nowe zadanie")`), działa, ale programiści "opakowują" kod, z którego często korzystamy (a będziemy często dodawać zadania do listy), w reużywalne "kawałki" kodu, które nazywają się funkcjami.
 
@@ -258,6 +274,8 @@ aczkolwiek zwrócona wartość jest wynikiem działania funkcji, więc funkcja m
 
 ## Funkcja dodająca zadanie | Argumenty funkcji, wywoływanie innych funkcji wewnątrz funkcji oraz komentarze
 
+---
+
 Wcześniej dodawaliśmy nasze zadania używając tego kodu: `tasks.push("jakieś tam zadanie")`. Zwróć uwagę na to, że `"jakieś tam zadanie"` znajduje się w nawiasach funkcji, w związku z tym `"jakieś tam zadanie"` zostało przekazane funkcji `push()` jako argument (pewien zasób/ wartość/ informacja), który zostanie przez tę funkcję wykorzystany.
 
 Nasza funkcja `showTasks()` nie ma żadnych argumentów w nawiasach, ponieważ ich nie potrzebuje - ma dostęp do zadań, gdyż zmienna `tasks` istnieje już w naszym kodzie i zawsze mamy do niej dostęp z poziomu każdej funkcji (innymi słowy, jest zmienną globalną). Czyli wiemy, że funkcja może w ogóle nie mieć żadnych argumentów.
@@ -293,7 +311,7 @@ Po drugie, pewnie zauważyłeś/aś, że w kodzie znalazły się linijki z tekst
 Dzięki komentarzom możemy też "wyłączyć" pewien fragment kodu, czyli go "zakomentować", jeśli z jakiegoś powodu nie chcemy, by akurat zadziałał. Wystarczy, że zakomentujemy kod w następujący sposób:
 
 ```
-// addTask("To zadanie nie zostanie dodane, ponieważ polecenie addTask w ogóle nie zostanie wywołane...");
+// addTask("To zadanie nie zostanie dodane");
 ```
 
 Po trzecie, zauważ, że w funkcji `addTask()` nie tylko dodajemy zadanie do listy, ale także wyświetlamy komunikat w konsoli o tym, że zostało dodane nowe zadanie, przy czym wyświetlamy także samo zadanie. Dzieje się tak dlatego, że tym razem przekazaliśmy `console.log()` zarówno pewną wiadomość: `"Do Twoich zadań zostało dodane nowe zadanie:"`, a potem po przecinku przekazaliśmy samą zmienną, reprezentującą nowe zadanie, w związku z czym konsola wyświetli wiadomość oraz wartość zmiennej przechowującej nowe zadanie (treść nowego zadania):
@@ -319,6 +337,8 @@ addTask("położyć jogurt na grzejniku, by się zacieplił")
 Jeśli wszystko poszło zgodnie z planem, to za każdym razem po dodaniu zadania, wyświtla Ci się komunikat oraz coraz to dłuża lista - ileż to my mamy do zrobienia dzisiaj w biurze!
 
 ## Wyświetlanie zadań po kolei | Pętla `for`, długość tablicy `length`
+
+---
 
 A co powiesz na to, że zamiast wyświetlać całą tablicę zadań, wyświetlimy każde zadanie w osobnej linijce, dzięki czemu lista będzie bardziej przejrzysta?
 
@@ -378,6 +398,8 @@ Może się to wydawać zagmatwane, więc przyjrzyjmy się temu lepiej. Pamiętas
 
 ## Usuwanie zadań z listy | Metoda `splice()`
 
+---
+
 Ok, więc inicjujemy listę zadań, dodajemy i przechowujemy zadania w kodzie, czas więc na kolejną funkcjonalność - usuwanie zadania z listy. Powinniśmy być w stanie usunąć zadanie, które jest już nieaktualne albo wykonane z naszej listy, że się nie rozpraszać oraz widzieć nasz progres.
 
 Usuwanie konkretnego elementu z tablicy może dokonać na kilka sposobów. Ze względu na to, że wiemy, czym są indeksy oraz nasza lista pozwala na wyświetlenie indeksów każdego z zadań, najłatwiej będzie sprawdzić, jaki jest indeks zadania, które chcemy usunąć, a potem użyć wbudowanej metody tablicy `splice()` w ten sposób:
@@ -419,6 +441,8 @@ Spróbuj teraz stworzyć funckję o nazwie `deleteAllTasks()`, która usuwa od r
 - ale można też zaszaleć i w tym celu użyć pętli, a nawet pętli, która wykorzystuje już wcześniej stworzoną funkcję `deleteTask()`, która by usuwała każde zadanie po kolei, przy okazji wyrzucała do konsoli każde usunięte zadanie.
 
 ## Podstawy podstaw za nami! | Kod dotychczasowej aplikacji w całości
+
+---
 
 No teraz nasza aplikacja jest już naprawdę zaawansowana! I przy okazji zobacz, ile już wiemy nt. *JavaScript*!
 
@@ -481,6 +505,8 @@ Możemy to zrobić za pomocą wbudowanego narzędzia każdej przeglądarki `loca
 Jeśli więc chcesz zrobić ten kolejny i następne kroki, daj znać!
 
 ## Darmowe źródła do samodzielnej nauki
+
+---
 
 Poniżej znajdziesz listę sprawdzonych źródeł do samodzielnej nauki *JavaScript* i nie tylko.
 

@@ -30,7 +30,10 @@
 	</nav>
 </aside>
 
-<main on:click={() => ($isScreenLessThan992 && $showOffset ? hideOffset() : null)}>
+<main
+	class="container"
+	on:click={() => ($isScreenLessThan992 && $showOffset ? hideOffset() : null)}
+>
 	<slot />
 </main>
 
@@ -52,6 +55,7 @@
 		padding-left: 0;
 		text-align: center;
 	}
+
 	aside {
 		box-sizing: border-box;
 		font-size: smaller;
@@ -102,12 +106,6 @@
 			top: 0;
 			left: 0;
 			overflow-x: hidden;
-		}
-
-		main {
-			width: auto;
-			margin-left: 2em;
-			margin-right: 2em;
 		}
 	}
 </style>
