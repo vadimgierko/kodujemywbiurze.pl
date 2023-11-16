@@ -30,7 +30,7 @@
 		<div class="header-content">
 			<!-- MENU TOGGLE -->
 			<span
-				style={$isIndexPage ? 'visibility: hidden' : ''}
+				style={$isIndexPage ? 'display: none' : 'display: block'}
 				on:click={() => showOffset.set(!$showOffset)}
 				class="icon"
 				id="menu-toggle"
@@ -43,7 +43,7 @@
 			</span>
 
 			<!-- NAV BRAND -->
-			<a href="/" id="nav-brand"><strong>Kodujemy w biurze</strong></a>
+			<a href="/" id="nav-brand"><strong>kodujemywbiurze.pl</strong></a>
 
 			<!-- THEME TOGGLE -->
 			<span on:click={switchMode} class="icon" id="theme-toggle">
@@ -58,13 +58,6 @@
 </header>
 
 <style>
-	.header-container {
-		position: fixed;
-		left: 0;
-		right: 0;
-		height: 40px;
-	}
-
 	.header-content {
 		display: flex;
 		justify-content: space-between;

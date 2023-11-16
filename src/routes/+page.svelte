@@ -20,248 +20,291 @@
 </svelte:head>
 
 <main class="container">
-	<div id="content-container">
+	<div class="hero-wrapper">
 		<h1>
 			Witaj na stronie
 			<br />
 			<span id="page-name">Kodujemy w biurze!</span>
 		</h1>
 
-		<img src={heroImg} alt="mężczyzna siedzący przy biurku przed komputerem z kubkiem" />
+		<div class="hero-content">
+			<div class="left">
+				<p>Naucz się programowania webowego<br />w przerwach między zadaniami w biurze!</p>
 
-		<p>Naucz się programowania webowego<br />w przerwach między zadaniami w biurze!</p>
+				<p>Zacznij pisać kod bezpośrednio w swojej przeglądarce!</p>
 
-		<p>Zacznij pisać kod bezpośrednio w swojej przeglądarce!</p>
+				{#if firstHeaderSlug}
+					<a href={firstHeaderSlug}>
+						<button class="bg-primary" id="cta-btn">Zacznij kodować w biurze!</button>
+					</a>
+				{/if}
+			</div>
 
-		{#if firstHeaderSlug}
-			<a href={firstHeaderSlug}>
-				<button class="bg-primary" id="cta-btn">Zacznij kodować w biurze!</button>
-			</a>
-		{/if}
+			<img class="right" src={heroImg} />
+		</div>
 	</div>
 </main>
 
 <style scoped>
 	/* STYLES NOT DEPENDENT ON SCREEN SIZE */
-
 	main {
-		flex-grow: 1;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		min-height: calc(100dvh - 40px - 90px);
 		line-height: normal;
 		overflow: hidden;
+		/* margin: 0 auto; */
+	}
+
+	.hero-wrapper {
+		text-align: center;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
 	}
 
 	/* MEDIA QUERIES */
 
 	/* MOBILE */
-	main {
-		text-align: center;
-		display: flex;
-		flex-direction: column;
-		height: calc(100dvh - 40px - 90px);
-		min-height: calc(100dvh - 40px - 90px);
-		justify-content: center;
-	}
 
 	h1 {
-		font-size: 18px;
-		margin-top: 1rem;
+		font-size: 1rem;
+		margin: 1.5em 0;
 	}
 
 	#page-name {
-		font-size: 32px;
+		font-size: 2rem;
 		font-weight: 800;
 	}
 
-	button {
-		margin-top: 18px;
+	p {
+		margin: 1em 0;
+	}
 
-		font-size: 16px;
+	button {
+		margin-top: 2em;
+		font-size: 1rem;
 		font-weight: 600;
-		padding: 12px 24px;
-		border-radius: 20px;
+		padding: 1em 2em;
+		border-radius: 18px;
 		color: rgb(0, 0, 0);
 	}
 
 	img {
+		position: relative;
+		z-index: -1;
+		margin-top: -3em;
 		width: 100%;
 		max-width: 400px;
-		margin-top: -72px;
-		margin-bottom: -32px;
 	}
 
 	/* Small devices (landscape phones, 576px and up) */
-	@media screen and (min-width: 576px) {
-		/* this is here to not fuck up styles... */
-		main {
-			/* RESET MOBILE STYLES */
-			line-height: normal;
-			text-align: start;
-			display: block;
-			position: relative;
-			width: 100%;
-		}
 
-		/* Styles for small devices */
+	@media screen and (min-width: 576px) {
 		h1 {
-			text-align: start;
-			font-size: 18px;
-			margin-bottom: 40px;
+			font-size: 1.2rem;
+			margin-bottom: 2.2em;
 		}
 
 		#page-name {
-			font-size: 52px;
+			font-size: 3.2rem;
 			font-weight: 800;
 		}
 
 		p {
-			width: 60%;
-			font-size: 16px;
-			margin-bottom: 20px;
-		}
-
-		button {
-			margin-top: 20px;
-
-			font-size: 16px;
-			font-weight: 600;
-			padding: 12px 24px;
-			border-radius: 20px;
-			color: rgb(0, 0, 0);
+			font-size: 1.3rem;
 		}
 
 		img {
-			position: absolute;
-			right: 0px;
-			top: 0px;
-			z-index: -1;
+			margin-top: -5em;
 			width: 600px;
 			max-width: 600px;
-			margin-right: -64px;
-			margin-top: 32px;
-			margin-bottom: 0px;
 		}
 	}
 
 	/* Medium devices (tablets, 768px and up) */
-	@media screen and (min-width: 768px) {
-		/* Styles for medium devices */
+	@media screen and (min-width: 768px) and (orientation: portrait) {
 		h1 {
-			font-size: 20px;
-			margin-bottom: 48px;
+			font-size: 1.5rem;
+			margin-bottom: 1em;
 		}
 
 		#page-name {
-			font-size: 56px;
+			font-size: 4rem;
 			font-weight: 800;
 		}
 
 		p {
-			width: 70%;
-			font-size: 18px;
-			margin-bottom: 24px;
-		}
-
-		button {
-			margin-top: 24px;
-
-			font-size: 16px;
-			font-weight: 600;
-			padding: 16px 32px;
-			border-radius: 20px;
-			color: rgb(0, 0, 0);
+			font-size: 1.3rem;
+			text-align: center;
 		}
 
 		img {
-			position: absolute;
-			right: 0px;
-			top: 0px;
-			z-index: -1;
-			width: 600px;
-			max-width: 600px;
-			margin-right: -64px;
-			margin-top: 32px;
+			width: 100%;
+		}
+	}
+
+	@media screen and (min-width: 768px) and (orientation: landscape) {
+		.hero-content {
+			display: flex;
+			flex-direction: row;
+			text-align: start;
+		}
+
+		.left {
+			width: 40%;
+		}
+
+		.right {
+			width: 60%;
+		}
+
+		h1 {
+			font-size: 1.5rem;
+			margin-bottom: 2em;
+		}
+
+		#page-name {
+			font-size: 4rem;
+			font-weight: 800;
+		}
+
+		p {
+			font-size: 1.3rem;
+			text-align: start;
+		}
+
+		img {
+			width: 100%;
 		}
 	}
 
 	/* Large devices (desktops, 992px and up) */
-	@media screen and (min-width: 992px) {
-		/* Styles for large devices */
+	@media screen and (min-width: 992px) and (orientation: portrait) {
 		h1 {
-			font-size: 24px;
-			margin-bottom: 56px;
+			margin-top: 1em;
+			font-size: 1.6rem;
+			margin-bottom: 1em;
 		}
 
 		#page-name {
-			font-size: 64px;
+			font-size: 4.2rem;
 			font-weight: 800;
 		}
 
 		p {
-			width: 60%;
-			font-size: 18px;
-			margin-bottom: 32px;
+			font-size: 1.6rem;
 		}
 
 		button {
 			margin-top: 32px;
 
-			font-size: 18px;
+			font-size: 1.2rem;
 			font-weight: 600;
-			padding: 20px 40px;
+			padding: 1.2em 2.4em;
 			border-radius: 20px;
 			color: rgb(0, 0, 0);
 		}
 
 		img {
-			position: absolute;
-			right: 0px;
-			top: 0px;
-			z-index: -1;
-			width: 700px;
+			margin-top: -8em;
 			max-width: 700px;
-			margin-right: -60px;
-			margin-top: -80px;
+			width: 100%;
 		}
 	}
 
-	/* Extra large devices (large desktops, 1200px and up) */
-	@media screen and (min-width: 1200px) {
-		/* Styles for extra large devices */
+	@media screen and (min-width: 992px) and (orientation: landscape) {
+		.hero-content {
+			display: flex;
+			flex-direction: row;
+			text-align: start;
+		}
+
+		.left {
+			width: 45%;
+		}
+
+		.right {
+			width: 55%;
+		}
+
 		h1 {
-			font-size: 32px;
-			margin-bottom: 48px;
+			margin-top: 1em;
+			font-size: 1.6rem;
+			margin-bottom: 1em;
 		}
 
 		#page-name {
-			font-size: 72px;
+			font-size: 4.2rem;
 			font-weight: 800;
 		}
 
 		p {
-			width: 60%;
-			font-size: 20px;
-			margin-bottom: 24px;
+			font-size: 1.6rem;
+			text-align: start;
 		}
 
 		button {
-			margin-top: 24px;
+			margin-top: 32px;
 
-			font-size: 20px;
+			font-size: 1.2rem;
 			font-weight: 600;
-			padding: 24px 48px;
+			padding: 1.2em 2.4em;
 			border-radius: 20px;
 			color: rgb(0, 0, 0);
 		}
 
 		img {
-			position: absolute;
-			right: 0px;
-			top: 0px;
-			z-index: -1;
-			width: 770px;
-			max-width: 770px;
-			margin-right: -80px;
-			margin-top: -120px;
+			margin-top: -8em;
+			max-width: 700px;
+			width: 100%;
+		}
+	}
+
+	/* Extra large devices (large desktops, 1200px and up) */
+	@media screen and (min-width: 1200px) and (orientation: landscape) {
+		.left {
+			width: 45%;
+		}
+
+		.right {
+			width: 55%;
+		}
+
+		h1 {
+			font-size: 1.6rem;
+			margin-bottom: 1em;
+		}
+
+		#page-name {
+			font-size: 4.2rem;
+			font-weight: 800;
+		}
+
+		p {
+			font-size: 1.8rem;
+			text-align: start;
+		}
+
+		button {
+			margin-top: 32px;
+
+			font-size: 1.2rem;
+			font-weight: 600;
+			padding: 1.2em 2.4em;
+			border-radius: 20px;
+			color: rgb(0, 0, 0);
+		}
+
+		img {
+			margin-top: -9em;
+			max-width: 700px;
+			width: 100%;
 		}
 	}
 </style>
