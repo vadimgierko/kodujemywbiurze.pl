@@ -94,6 +94,19 @@ h2 {
     text-align: center;
 }
 
+article {
+    & h2 {
+        font-size: 2rem;
+        line-height: normal;
+    }
+
+    & p {
+        font-size: 1.2rem;
+        line-height: 1.8rem;
+        margin-bottom: 1.5em;
+    }
+}
+
 code {
     background-color: var(--code-background-color);
     color: var(--code-color);

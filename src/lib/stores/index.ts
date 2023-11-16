@@ -16,3 +16,4 @@ isScreenLessThan992.subscribe((value) => {
 });
 
 export const isIndexPage = writable(true);
+// isIndexPage.subscribe((v) => console.log('isIndexPage:', v));
