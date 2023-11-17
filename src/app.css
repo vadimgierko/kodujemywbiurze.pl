@@ -35,45 +35,29 @@ html[data-theme='dark'] {
     --aside-background-color: var(--black-80);
 }
 
-/* HELPER CLASSES */
-
-.container {
-    margin: 0 1.5em; /* this is for phones */
-    /* + different max-width/ margin depending on media queries */
-}
-
-.text-primary {
-    color: var(--primary)
-}
-
-.text-primary:hover {
-    color: var(--primary-hover)
-}
-
-.bg-primary {
-    background-color: var(--primary)
-}
-
-.bg-primary:hover {
-    background-color: var(--primary-hover)
-}
-
 /* GLOBAL CSS */
 
 body {
+    /* RESET DEFAULT BROWSER STYLES */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    /* SMOOTH TEXT & BG COLOR TRANSITIONS */
     transition: background-color 0.3s ease-out, color 0.3s ease-out;
 
     background-color: var(--background-color);
     color: var(--text-color);
+
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
         Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 16px;
-    margin: 0;
-    padding: 0;
+    line-height: 1.5em;
+    
+    /* SET PAGE HEIGHT MIN 100 VH & PUSH FOOTER TO BOTTOM */
     display: flex;
     flex-direction: column;
     min-height: 100dvh;
-    line-height: 1.5em;
     width: 100%;
     min-width: 375px;
 }
@@ -159,39 +143,4 @@ figure {
 #cta-btn:hover {
     background-color: var(--primary-hover);
     border-color: var(--primary);
-}
-
-/* MEDIA QUERIES */
-
-/* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) {
-    /* Styles for small devices */
-    .container {
-        margin: 0 auto;
-        max-width: 540px;
-    }
-}
-
-/* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {
-    /* Styles for medium devices */
-    .container {
-        max-width: 720px;
-    }
-}
-
-/* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {
-    /* Styles for large devices */
-    .container {
-        max-width: 960px;
-    }
-}
-
-/* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
-    /* Styles for extra large devices */
-    .container {
-        max-width: 1140px;
-    }
 }

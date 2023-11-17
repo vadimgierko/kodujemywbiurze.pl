@@ -12,10 +12,11 @@
 </script>
 
 <aside
+	class="text-center"
 	id={$isScreenLessThan992 && $showOffset ? 'offset' : 'aside'}
 	on:click={() => ($isScreenLessThan992 && $showOffset ? hideOffset() : null)}
 >
-	<h3 style="text-align: center;">Spis treści</h3>
+	<h3>Spis treści</h3>
 	<nav>
 		<ul>
 			{#each articles as { title, slug }}
@@ -47,13 +48,12 @@
 	}
 
 	:global(html[data-theme='dark'] .active-link) {
-		color: yellow;
+		color: var(--primary);
 	}
 
 	ul {
 		list-style: none;
 		padding-left: 0;
-		text-align: center;
 	}
 
 	aside {

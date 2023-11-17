@@ -1,4 +1,5 @@
 <script lang="ts">
+	import '../custom-framework.css';
 	import '../app.css';
 	import Footer from '$lib/layout/Footer.svelte';
 	import Navbar from '$lib/layout/Navbar.svelte';

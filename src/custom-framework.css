@@ -1,0 +1,100 @@
+.container {
+  margin: 0 1.5em; /* this is for phones */
+  /* + different max-width/ margin depending on media queries */
+}
+
+/* TEXT ALIGN */
+
+.text-center {
+  text-align: center;
+}
+
+.text-start {
+  text-align: start;
+}
+
+.text-end {
+  text-align: end;
+}
+
+/* TEXT COLOR */
+
+.text-primary {
+  color: var(--primary)
+}
+
+.text-primary:hover {
+  color: var(--primary-hover)
+}
+
+/* BG COLOR */
+
+.bg-primary {
+  background-color: var(--primary)
+}
+
+.bg-primary:hover {
+  background-color: var(--primary-hover)
+}
+
+/* GRID */
+
+/* clear cols floats: */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+[class*="col-"] {
+  float: left;
+  /* padding: 15px; */
+}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+/* MEDIA QUERIES */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  /* Styles for small devices */
+  .container {
+      margin: 0 auto;
+      max-width: 540px;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  /* Styles for medium devices */
+  .container {
+      max-width: 720px;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  /* Styles for large devices */
+  .container {
+      max-width: 960px;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  /* Styles for extra large devices */
+  .container {
+      max-width: 1140px;
+  }
+}
