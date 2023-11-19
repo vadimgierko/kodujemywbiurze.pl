@@ -1,3 +1,4 @@
+import type { Article } from '$lib/types/index.js';
 import slugify from 'slugify';
 
 function customSlugify(text: string) {
@@ -14,7 +15,7 @@ function convertMarkdownIntoArticlesArray(mdContent: string) {
 
 	if (!mdContent || !headersFromMd || !articlesFromMd) return [];
 
-	const articles = headersFromMd.map((h, i) => ({
+	const articles: Article[] = headersFromMd.map((h, i) => ({
 		title: h,
 		slug: customSlugify(h),
 		content: articlesFromMd[i]

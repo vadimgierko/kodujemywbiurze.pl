@@ -15,8 +15,6 @@
 
 	onMount(() => {
 		isIndexPage.set(false);
-
-		console.log({ data });
 	});
 </script>
 
@@ -27,15 +25,15 @@
 
 {#if article}
 	<PrevNextArticle
-		prevSlug={`dokumentacja/javascript/${prevArticleSlug}`}
-		nextSlug={`dokumentacja/javascript/${nextArticleSlug}`}
+		prevSlug={prevArticleSlug ? `dokumentacja/javascript/${prevArticleSlug}` : null}
+		nextSlug={nextArticleSlug ? `dokumentacja/javascript/${nextArticleSlug}` : null}
 	/>
 	<article>
 		{@html marked(article.content)}
 	</article>
 	<PrevNextArticle
-		prevSlug={`dokumentacja/javascript/${prevArticleSlug}`}
-		nextSlug={`dokumentacja/javascript/${nextArticleSlug}`}
+		prevSlug={prevArticleSlug ? `dokumentacja/javascript/${prevArticleSlug}` : null}
+		nextSlug={nextArticleSlug ? `dokumentacja/javascript/${nextArticleSlug}` : null}
 	/>
 {:else}
 	<p style="text-align: center; color: red">Niestety nie ma takiego artykułu...</p>
