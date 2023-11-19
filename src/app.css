@@ -62,18 +62,6 @@ body {
     min-width: 375px;
 }
 
-header {
-    background-color: var(--header-background-color);
-    line-height: 2em;
-    height: 40px;
-    position: fixed;
-    z-index: 99;
-    width: 100%;
-}
-
-header .header-content {
-    background-color: var(--header-background-color);}
-
 h2 {
     text-align: center;
 }
@@ -131,8 +119,10 @@ figure {
 }
 
 .icon {
-    vertical-align: -0.2em;
+    /* vertical-align: -0.2em; */
     cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 #cta-btn {
