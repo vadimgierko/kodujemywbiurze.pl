@@ -16,7 +16,7 @@
 	onMount(() => {
 		isIndexPage.set(false);
 
-		console.log({ data });
+		// console.log({ data });
 	});
 </script>
 

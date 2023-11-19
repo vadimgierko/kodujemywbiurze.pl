@@ -85,9 +85,11 @@
 		}
 
 		main {
+			box-sizing: border-box;
 			/* margin-top: 40px; */
 			margin-left: 30%; /* Same as the width of the sidenav */
 			padding: 0 2em;
+			max-width: calc(100vw - 30%);
 		}
 	}
 
