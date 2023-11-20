@@ -4,8 +4,6 @@
 	import { isScreenLessThan992, showOffset } from '$lib//stores';
 
 	export let articles: Article[];
-
-	$: console.log($page);
 </script>
 
 <aside
