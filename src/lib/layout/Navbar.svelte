@@ -5,6 +5,8 @@
 	import ThreeDotsHorizontal from '$lib/icons/ThreeDotsHorizontal.svelte';
 	import { onMount } from 'svelte';
 	import { showOffset, isIndexPage, isScreenLessThan992 } from '$lib/stores';
+	import FacebookIcon from '$lib/icons/FacebookIcon.svelte';
+	import LinkedInIcon from '$lib/icons/LinkedInIcon.svelte';
 
 	let theme: 'light' | 'dark';
 
@@ -51,7 +53,7 @@
 
 			<div class="center-section">
 				<!-- NAV BRAND -->
-				<a href="/" class="nav-link" id="nav-brand"><strong>kodujemywbiurze.pl</strong></a>
+				<a href="/" id="nav-brand" class="nav-link"><strong>kodujemywbiurze.pl</strong></a>
 			</div>
 
 			<div class="right-section">
@@ -61,13 +63,20 @@
 				{/if}
 
 				<!-- THEME TOGGLE -->
-				<span on:click={switchMode} class="icon" id="theme-toggle">
+				<span on:click={switchMode} class="icon nav-link" id="theme-toggle">
 					{#if theme === 'dark'}
 						<SunIcon />
 					{:else}
 						<MoonIcon />
 					{/if}
 				</span>
+
+				<a href="https://www.facebook.com/kodujemywbiurze" target="_blank" class="nav-link"
+					><FacebookIcon /></a
+				>
+				<a href="https://www.linkedin.com/company/kodujemywbiurze" target="_blank" class="nav-link"
+					><LinkedInIcon /></a
+				>
 
 				<!-- NAVBAR TOGGLE -->
 				<span
@@ -96,6 +105,7 @@
 				<a href="/dokumentacja/javascript/wprowadzenie" class="nav-link" on:click={toggleNavbar}
 					>dokumentacja</a
 				>
+				<hr style="visibility: hidden;" />
 			</div>
 		{/if}
 	</div>
@@ -134,7 +144,10 @@
 
 	.nav-link {
 		text-decoration: none;
-		padding: 0 0.5em;
+	}
+
+	.right-section .nav-link {
+		padding-left: 0.5em;
 	}
 
 	.header-content,

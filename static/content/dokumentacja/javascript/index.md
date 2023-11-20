@@ -1,5 +1,7 @@
 ## Wprowadzenie
 
+---
+
 ### Czym jest dokumentacja?
 
 W odróżnieniu od tutoriali, w których poznajemy jakąś technologię/ język programowania przy okazji tworzenia jakiegoś projektu lub rozwiązywania określonego projektu, **dokumentacja** jest zbiorem informacji, instrukcji, przykładów i wiedzy nt. tego, w jaki sposób korzysta się z danego języka/ technologii. Możesz ją potraktować jako swego rodzaju **słownik, instrukcję lub encyklopedię**.
@@ -26,6 +28,8 @@ Dlatego najlepszym kompromisem będzie **zacząć od tutoriali, przy jednoczesny
 
 ## Typy danych
 
+---
+
 W JavaScript istnieje kilka typów danych, którymi możemy operować w naszym programie/ kodzie: **typy proste i referencyjne**.
 
 ### Proste typy danych (primitive types)
@@ -43,6 +47,8 @@ W JavaScript istnieje kilka typów danych, którymi możemy operować w naszym p
 - **function** - <a href="/dokumentacja/javascript/funkcje" target="_blank">funkcje</a>, np. `function showMessage(message) { console.log(message); }`.
 
 ## Konsola
+
+---
 
 Konsola przeglądarki (ang. *browser console*) to **narzędzie** (deweloperskie - czyli stworzone z myślą o twórcach stron i programistach) **wbudowane w większość współczesnych przeglądarek internetowych**.
 
@@ -104,6 +110,8 @@ Gdy wywołasz `console.clear()`, wszystkie wcześniej wyświetlone komunikaty w 
 Wszelkie wcześniej zdefiniowane zmienne, funkcje czy inne zasoby będą wciąż dostępne i przechowywane w pamięci przeglądarki, nawet po użyciu `console.clear()`.
 
 ## Zmienne
+
+---
 
 W JavaScript, zmienne są symbolicznymi nazwami używanymi do przechowywania danych. Definicja zmiennej w JavaScript polega na zadeklarowaniu nazwy, którą można używać do odwoływania się do określonej wartości. Te wartości mogą być liczbami, tekstem, obiektami, tablicami lub innymi <a href="/dokumentacja/javascript/typy-danych" target="_blank">typami danych</a>.
 
@@ -173,6 +181,8 @@ console.log("local variable:", localVariable);
 ```
 
 ## Tablice
+
+---
 
 Tablica w JavaScript to struktura danych służąca do przechowywania wielu elementów w jednym miejscu. Może zawierać różne <a href="/dokumentacja/javascript/typy-danych" target="_blank">typy danych</a>, takie jak liczby, ciągi znaków czy nawet inne tablice. Elementy tablicy są umieszczane pomiędzy klamrami kwadratowymi `[]` i są oddzielane przecinkami.
 
@@ -270,6 +280,8 @@ Metoda `splice()` jest bardzo przydatna do dynamicznej modyfikacji tablic w Java
 
 ## Funkcje
 
+---
+
 Funkcje w JavaScript są blokami kodu, które wykonują określone zadanie po wywołaniu. Są one definiowane za pomocą słowa kluczowego `function` i mogą przyjmować argumenty oraz zwracać wartości.
 
 ### Argumenty funkcji
@@ -318,6 +330,8 @@ console.log(sum); // wyświetla 8
 ```
 
 ## Pętle
+
+---
 
 Pętla for w JavaScript jest konstrukcją umożliwiającą wielokrotne wykonanie określonych instrukcji lub bloków kodu. Jest używana do iteracji przez elementy <a href="/dokumentacja/javascript/tablice" target="_blank">tablic</a>, kolekcji oraz do powtarzania określonych działań (np. <a href="/dokumentacja/javascript/funkcje" target="_blank">funkcji</a>) przez określoną liczbę razy.
 
@@ -385,6 +399,8 @@ Metoda forEach jest przydatna do iterowania po elementach tablicy i wykonania ok
 
 ## Instrukcje warunkowe
 
+---
+
 Instrukcje warunkowe w JavaScript pozwalają na wykonanie określonych fragmentów kodu w zależności od spełnienia warunków logicznych.
 
 ### if/else
@@ -416,6 +432,8 @@ if (grade >= 90) {
 ```
 
 ## Operatory
+
+---
 
 Operatory są narzędziami do porównywania, łączenia <a href="/dokumentacja/javascript/instrukcje-warunkowe" target="_blank">warunków</a> czy wykonywania operacji arytmetycznych.
 
