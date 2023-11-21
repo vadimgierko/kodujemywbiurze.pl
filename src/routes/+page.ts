@@ -20,7 +20,7 @@ function getFirstHeaderSlug(mdContent: string) {
 }
 
 export async function load({ fetch }) {
-	const res = await fetch('/content/index.md');
+	const res = await fetch('/content/kursy/podstawy-javascript/index.md');
 	const mdContent = await res.text();
 
 	const firstHeaderSlug = getFirstHeaderSlug(mdContent);

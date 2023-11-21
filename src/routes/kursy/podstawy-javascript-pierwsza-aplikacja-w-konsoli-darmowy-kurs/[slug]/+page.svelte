@@ -24,11 +24,25 @@
 </svelte:head>
 
 {#if article}
-	<PrevNextArticle prevSlug={prevArticleSlug} nextSlug={nextArticleSlug} />
+	<PrevNextArticle
+		prevSlug={prevArticleSlug
+			? `kursy/podstawy-javascript-pierwsza-aplikacja-w-konsoli-darmowy-kurs/${prevArticleSlug}`
+			: null}
+		nextSlug={nextArticleSlug
+			? `kursy/podstawy-javascript-pierwsza-aplikacja-w-konsoli-darmowy-kurs/${nextArticleSlug}`
+			: null}
+	/>
 	<article>
 		{@html marked(article.content)}
 	</article>
-	<PrevNextArticle prevSlug={prevArticleSlug} nextSlug={nextArticleSlug} />
+	<PrevNextArticle
+		prevSlug={prevArticleSlug
+			? `kursy/podstawy-javascript-pierwsza-aplikacja-w-konsoli-darmowy-kurs/${prevArticleSlug}`
+			: null}
+		nextSlug={nextArticleSlug
+			? `kursy/podstawy-javascript-pierwsza-aplikacja-w-konsoli-darmowy-kurs/${nextArticleSlug}`
+			: null}
+	/>
 {:else}
 	<p style="text-align: center; color: red">Niestety nie ma takiego artykułu...</p>
 {/if}

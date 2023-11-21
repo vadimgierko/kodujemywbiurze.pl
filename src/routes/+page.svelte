@@ -34,7 +34,7 @@
 				<p>Zacznij pisać kod bezpośrednio w swojej przeglądarce!</p>
 
 				{#if firstHeaderSlug}
-					<a href={firstHeaderSlug}>
+					<a href={`/kursy/podstawy-javascript-pierwsza-aplikacja-w-konsoli-darmowy-kurs`}>
 						<button class="bg-primary" id="cta-btn">Zacznij kodować w biurze!</button>
 					</a>
 				{/if}

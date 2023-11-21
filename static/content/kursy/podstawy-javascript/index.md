@@ -1,4 +1,4 @@
-## Wprowadzenie. Co stworzymy i czego się nauczymy?
+## Wprowadzenie
 
 ---
 
@@ -10,24 +10,27 @@
 
 Chodzi mi przede wszystkim o **pobudzenie Twojej ciekawości** i pokazanie, że **pisanie kodu jest dostępne dla każdego** i może być świetną **zabawą** (w szczególności w biurze)!
 
-W ramach tego krótkiego kursu **stworzymy i odpalimy prostą aplikację do zarządzania listą zadań do zrobienia, która będzie działać w konsoli naszej przeglądarki** *(za chwilę dowiesz się, czym jest konsola i jak z niej korzystać)*.
+W ramach tego *(pierwszego na tej stronie)* krótkiego kursu **stworzymy i odpalimy prostą aplikację do zarządzania listą zadań do zrobienia, która będzie działać w konsoli naszej przeglądarki bezpośrednio na tej stronie** *(za chwilę dowiesz się, <a href="/dokumentacja/javascript/konsola" target="_blank">czym jest konsola i jak z niej korzystać</a>)*.
+
+Ponieważ zakładam, że nigdy nie napisałeś/aś żadnego kodu i nie masz pojęcia, jak to w ogóle działa, **przy okazji** tworzenia aplikacji **opanujemy wybrane podstawy języka JavaScript** - <a href="https://bulldogjob.pl/readme/najpopularniejsze-jezyki-programowania-2020" target="_blank">najbardziej popularnego języka programowania</a>.
 
 Aplikacja, którą stworzymy, umożliwi nam:
 
 - zapisywanie,
 - przechowywanie,
-- wyświetlanie oraz
-- dodawanie
+- wyświetlanie
+- dodawanie oraz
+- usuwanie
 
 zadań do zrobienia za pomocą poleceń napisanych przez nas kodem JavaScript w konsoli.
 
-Ponieważ zakładam, że nigdy nie napisałeś/aś żadnego kodu i nie masz pojęcia, jak to w ogóle działa, **przy okazji** tworzenia aplikacji **opanujemy wybrane podstawy języka JavaScript**!
+Osobiście wolę **uczyć się nowych rzeczy w praktyce, widząc natychmiastowe rezultaty** mojej nauki i pracy, dlatego w trakcie lektury zdobędziesz **dokładnie tyle wiedzy, ile jest potrzebne w niniejszym kursie, by stworzyć wspomniane funkcjonalności**, i niczego ponad to.
 
-Osobiście wolę **uczyć się nowych rzeczy w praktyce, widząc natychmiastowe rezultaty** mojej nauki i pracy, dlatego w trakcie lektury zdobędziesz **dokładnie tyle wiedzy, ile jest potrzebne, by stworzyć wspomniane funkcjonalności**, i niczego ponad to.
+Jeśli z kolei będziesz chciał/a poszerzyć swoją wiedzę nt. poszczególnych pojęć omawianych w tym kursie, zapraszam do zapoznania się z <a href="/dokumentacja/javascript/konsola" target="_blank">dokumentacją</a>, która jest *de facto* osobnym, bardziej "suchym" tutorialem i *słownikiem* języka JavaScript.
 
 Jak na razie, aplikacja ta będzie w pewnym sensie "tajna", czyli będzie dostępna tylko dla Ciebie w Twojej przeglądarce i tylko na tej stronie oraz... nikt inny z dostępem do Twojej przeglądarki raczej nie będzie w stanie z niej skorzystać, ponieważ na początku będziemy zarządzać naszymi zadaniami za pomocą poleceń, które sami napiszemy. Jeśli ktoś nie zna tych poleceń, to nie odkryje Twoich tajnych i bardzo ważnych zadań w biurze ;-)
 
-Potem, w ramach rozbudowy niniejszej strony (co zależy od Waszego zainteresowania projektem), będziemy przekształcać i dalej rozwijać tę aplikację w aplikację z pełnego zdarzenia - z interfacem użytkownika, bazą danych, rejestracją użytkowników itd. *Sky is the limit*, aczkolwiek na razie w ramach eksperymentu ograniczymy się do funkcjonalności, którymi dysponuje nasza przeglądarka.
+Potem, w ramach rozbudowy niniejszej strony i dodawania kolejnych lekcji i kursów (co zależy od Waszego zainteresowania projektem, dlatego zachęcam do zapisania się do newslettera i śledzenia profilu na <a href="https://www.facebook.com/kodujemywbiurze" target="_blank">Facebooku</a> i <a href="https://www.linkedin.com/company/kodujemywbiurze" target="_blank">LinkedIn</a>), będziemy przekształcać i dalej rozwijać tę aplikację w aplikację z pełnego zdarzenia - z interfacem użytkownika, bazą danych, rejestracją użytkowników itd. *Sky is the limit*, aczkolwiek na razie w ramach eksperymentu ograniczymy się do funkcjonalności, którymi dysponuje nasza przeglądarka.
 
 Mam nadzieję, że kiedy dobrniesz do końca tego tutoriala, to będziesz chciał/a więcej! Jeśli tak będzie, to daj mi znać, że jesteś zainteresowany/a dalszymi lekcjami w tym samym stylu.
 
@@ -37,7 +40,7 @@ Mam nadzieję, że kiedy dobrniesz do końca tego tutoriala, to będziesz chcia�
 
 ---
 
-JavaScript jest obecnie **najbardziej popularnym językiem programowania**. Programowanie to nic innego, jak pisanie poleceń w języku programowania zrozumiałym dla komputera/ urządzenia/ programu/ przeglądarki, które określają, co urządzenie/ program ma wyświetlić, jak to wyświetlić, jak ma reagować na działania użytkownika, skąd ma pobrać dane lub gdzie je zapisać itd.
+JavaScript jest obecnie **<a href="https://bulldogjob.pl/readme/najpopularniejsze-jezyki-programowania-2020" target="_blank">najbardziej popularnym językiem programowania</a>**. Programowanie to nic innego, jak pisanie poleceń w języku programowania zrozumiałym dla komputera/ urządzenia/ programu/ przeglądarki, które określają, co urządzenie/ program ma wyświetlić, jak to wyświetlić, jak ma reagować na działania użytkownika, skąd ma pobrać dane lub gdzie je zapisać itd.
 
 JavaScript w połączeniu z dwoma innymi językami - HTML i CSS - służy do tworzenia stron i aplikacji webowych (czyli takich, które działają w przeglądarce):
 
@@ -56,33 +59,71 @@ To właśnie dzięki JavaScript strony i aplikacje są dynamiczne i interaktywne
 
 ---
 
-Niniejsza strona, jak większość innych w Internecie, używa JavaScript. Każda **przeglądarka** również **rozumie i przetwarza kod JavaScript**, a ponadto umożliwia nam pisanie kodu bezpośrednio w przeglądarce, a dokładniej w konsoli. Konsola jest jednym z wielu wbudowanych narzędzi każdej przeglądarki. Przekonajmy się o tym i otwórzmy konsolę przeglądarki!
+Niniejsza strona, jak większość innych w Internecie, używa JavaScript. Każda **przeglądarka** również **rozumie i przetwarza kod JavaScript**, a ponadto umożliwia nam pisanie kodu bezpośrednio w przeglądarce, a dokładniej w konsoli. <a href="/dokumentacja/javascript/konsola" target="_blank">Konsola</a> jest jednym z wielu wbudowanych narzędzi każdej przeglądarki i dzięki temu, że możemy w niej pisać kod (a nawet przechowywać pliki z kodem, co też zrobimy później), będzie naszym podstawowym narzędziem kodowania i nauki w tym kursie. Przekonajmy się o tym i otwórzmy konsolę w naszej przeglądarce!
 
-Używam przeglądarki *Google Chrome* i żeby w niej otworzyć konsolę, należy w prawym górnym rogu przeglądarki kliknąć ikonkę menu (3 kropki ustawione w pionie), wybrać opcję *Więcej narzędzi*, a potem wybrać opcję *Narzędzia dla developerów*. Możesz też po prostu użyć skrótu klawiszowego `Ctrl+Shift+I`. Polecam korzystać z przeglądarki *Google Chrome*, którą można pobrać i zainstalować nie mając nawet uprawnień administratora na swoim komputerze ;-)
+---
 
-Jeśli z kolei używasz *Mozilli*, to w prawym górnym rogu kliknij ikonkę menu (tzw. hamburger, czyli 3 poziome linie), potem wybierz opcję *Dla twórców stron*, potem kliknij w *Konsola WWW*. Możesz także użyć skrótu klawiszowego `Ctrl+Shift+I` lub `Ctrl+Shift+K`.
+### Konsola w Google Chrome *(zalecana przeglądarka w niniejszym kursie)*
+
+Na co dzień oraz w tym i wszystkich kolejnych kursach oraz dokumentacji używam przeglądarki ***Google Chrome***, w związku z tym polecam korzystanie z tej przeglądarki w trakcie kursu. Ponadto, Chrome (oraz Microsoft Edge) posiada niezbędną dla niniejszego funkcjonalność *snippets*, bez której, owszem, można przejść kurs, ale w pewnym momencie pisanie kodu będzie mniej wygodne, dlatego naprawdę polecam tę przeglądarkę.
+
+Jeśli nie masz zainstalowanej przeglądarki Google Chrome, możesz ją za darmo pobrać <a href="https://www.google.pl/chrome/" target="_blank">tutaj</a>. Jeśli podczas instalacji Chrome wyświetli Ci się komunikat, że potrzebujesz uprawnienia administratora, zignoruj je, ponieważ później i tak wyświetli Ci się komunikat o tym, że mimo braku uprawnień, możesz ją zainstalować ;-) Jeśli z kolei masz Chrome, to polecam jego zaktualizowanie do najnowszej wersji przed rozpoczęciem niniejszego kursu.
+
+Żeby otworzyć konsolę w Chrome, należy:
+
+- w prawym górnym rogu przeglądarki kliknąć ikonkę menu (3 kropki ustawione w pionie),
+- wybrać opcję *Więcej narzędzi*, a potem
+- wybrać opcję *Narzędzia dla developerów*.
+
+Możesz też po prostu użyć skrótu klawiszowego `Ctrl+Shift+I`.
+
+### Konsola w Microsoft Edge *(druga w kolejności zalecana przeglądarka w niniejszym kursie)*
+
+Żeby otworzyć konsolę w Edge, należy:
+
+- w prawym górnym rogu przeglądarki kliknąć ikonkę menu (3 kropki ułożone w poziomie),
+- wybrać opcję *Więcej narzędzi*, a potem
+- wybrać opcję *Narzędzia programistyczne* (oraz może trzeba będzie dodatkowo kliknąć w *Konsola* lub *Console*).
+
+Możesz też po prostu użyć skrótu klawiszowego `Ctrl+Shift+I`.
+
+### Konsola w Mozilla Firefox *(nie polecam, ponieważ brakuje niezbędnej dla kursu funkcjonalności)*
+
+Ogólnie Firefox jest świetną przeglądarką (w niektórych aspektach lepszą od Chrome), niemniej jednak nie ma ona jednej istotnej w tym kursie funkcjonalności, w związku z tym nie polecam korzystania z niej w niniejszym kursie (aczkolwiek nawet bez tej funkcjonalności również możesz pracować z tym kursem, tyle że będzie trochę trudniej oraz w ostateczności nie będziesz mógł/mogła zapisać kodu w postaci pliku w przeglądarce).
+
+Jeśli jednak używasz *Mozilli*, to aby otworzyć konsolę:
+
+- w prawym górnym rogu kliknij ikonkę menu (tzw. hamburger, czyli 3 poziome linie),
+- wybierz opcję *Dla twórców stron*, potem
+- kliknij w *Konsola WWW*.
+
+Możesz także użyć skrótu klawiszowego `Ctrl+Shift+I` lub `Ctrl+Shift+K`.
+
+---
 
 Ok, więc teraz powinieneś/ powinnaś zobaczyć nowe dodatkowe okienko w Twojej przeglądarce - witaj w konsoli! Wpisz teraz następujące polecenie w konsoli i kliknij Enter:
 
 ```
-console.log("Hello, World!")
+console.log("Hello, World!");
 ```
 
 Jeśli wszystko wpisałeś/aś poprawnie, konsola wyświetliła napis *Hello, World!* w następnej linijce. Gratuluję, właśnie wywołałeś/aś swoje pierwsze polecenie napisane w języku JavaScript!
 
 `console.log()` jest wbudowanym poleceniem *(jednym z wielu - z niektórych z nich będziemy korzystać później w tym tutorialu)*, które wyświetla dowolną zawartość umieszczoną w nawiasach (w naszym poprzednim przykładzie był nią ciąg tekstowy "Hello, World!"). Tak jak prawdziwi programiści, będziemy często korzystać z tego polecenia.
 
-A gdybyście byli ciekawi, jakich jeszcze ciekawych poleceń możemy użyć w konsoli, to spróbujcie wpisać następujący kod i kliknąć Enter:
+A gdybyście byli ciekawi, jakich jeszcze ciekawych poleceń możemy użyć w konsoli, to spróbujcie np. wpisać następujący kod i kliknąć Enter:
 
 ```
-alert("Hej, jestem wyskakującym okienkiem, które czasami denerwuje użytkowników ;-)")
+alert("Hej, jestem wyskakującym okienkiem!");
 ```
 
 *PS. zdradzę Ci tajemnicę: programiści bardzo często używają polecenia `console.log()` w swoim kodzie, by sprawdzić, co się dzieje z niektórymi zmiennymi w trakcie działania programu. Dzięki temu można sprawdzić, czy nasz kod działa poprawnie lub też odkryć, że zawiera błąd. Ten chwyt odnosi się do szerszego pojęcia w programowaniu - "debugowania", czyli wyszukiwania i naprawiania błędów.*
 
 Dlaczego akurat użyłem określenia *Hello, World!*? Jest to taka niepisana tradycja wśród programistów - tego określenia używamy np. kiedy testujemy nowe narzędzia, języki itd.
 
-Ok, więc wiemy już, czym jest konsola, jak ją otworzyć, a nawet wpisaliśmy i uruchomiliśmy nasze pierwsze polecenie. Jak już wspomniałem wcześniej, konsola umożliwia nam m. in. pisanie i uruchamianie kodu JavaScript, chociaż nie jest to jej główny cel - każdy edytor kodu jest zdecydowanie lepszym narzędziem do pisania kodu. Natomiast na razie nie chcemy żadnego edytora kodu. Chcemy po prostu napisać kilka linijek kodu i zobaczyć, jak to działa oraz *złapać bakcyla*.
+Ok, więc wiemy już, czym jest konsola, jak ją otworzyć, a nawet wpisaliśmy i uruchomiliśmy nasze pierwsze polecenie.
+
+Jak już wspomniałem wcześniej, konsola umożliwia nam m. in. pisanie i uruchamianie kodu JavaScript, chociaż nie jest to jej główny cel - każdy edytor kodu jest zdecydowanie lepszym narzędziem do pisania kodu. Natomiast na razie nie chcemy żadnego osobnego edytora kodu. Chcemy po prostu napisać kilka linijek kodu i zobaczyć, jak to działa oraz *złapać bakcyla*. Co prawda, w pewnym momencie w tym kursie zaczniemy korzystać z dodatkowej funkcjonalności w przeglądarce, która ułatwi nam pisanie kodu, ale na razie pozostajemy w "czystej" konsoli. Z kolei w kolejnych kursach będziemy najprawdopodbniej korzystać z edytorów kodu dostępnych online.
 
 ## Stwórzmy pierwsze zadanie w naszej aplikacji | Zmienne, wartości i słowo kluczowe `let`
 
@@ -92,7 +133,7 @@ Jeśli mamy jakieś ważne zadanie do zrobienia, to najprawdopodobniej zapiszemy
 
 Jeśli chcemy przechowywać nasze zadania (lub cokolwiek innego) w kodzie, musimy stworzyć dla nich dedykowane miejsce (odpowiednik naszej kartki). Na razie nasza konsola (czyli de facto nasz prosty program) nie przechowuje niczego.
 
-Zanim przechowamy wiele zadań, spróbujmy najpierw stworzyć 1 zadanie *(jest typowe podejście dla programisty - rozbijamy problem na mniejsze problemy)*. Żeby to zrobić, należy **stworzyć zmienną i przypisać do niej pewne wartości**. Co to znaczy?
+Zanim przechowamy wiele zadań, spróbujmy najpierw stworzyć 1 zadanie *(jest typowe podejście dla programisty - rozbijamy problem na mniejsze problemy)*. Żeby to zrobić, należy **stworzyć <a href="/dokumentacja/javascript/zmienne" target="_blank">zmienną</a> i przypisać do niej pewne wartości**. Co to znaczy?
 
 Zanim wytłumaczę, czym jest zmienna i wartości:
 
@@ -106,11 +147,11 @@ let task = "zrobić kawę"
 console.log(task)
 ```
 
-W powyższym kodzie utworzyliśmy/ zadeklarowaliśmy za pomocą słowa kluczowego `let` nową zmienną o nazwie `task` (z ang. *zadanie*) i przypisaliśmy do niej wartość `zrobić kawę`. Zmienna to nic innego, jak swego rodzaju podpisane pudełko, które w środku może coś zawierać. Sama nazwa zmiennej nie ulega zmianie - nie możemy jej zmienić. Możemy natomiast zmienić wartość, przypisaną do tej zmiennej.
+W powyższym kodzie utworzyliśmy/ zadeklarowaliśmy za pomocą słowa kluczowego `let` nową zmienną o nazwie `task` (ang. *zadanie*) i przypisaliśmy do niej wartość `zrobić kawę`. Zmienna to nic innego, jak swego rodzaju podpisane pudełko, które w środku może coś zawierać. Sama nazwa zmiennej nie ulega zmianie - nie możemy jej zmienić. Możemy natomiast zmienić wartość, przypisaną do tej zmiennej.
 
 Mamy więc pudełko o nazwie `task`, które w środku może przechowywać jakiekolwiek zadanie - w naszym przypadku jest to ciąg tekstowy `zrobić kawę` (zdecydowanie najważniejsza i podstawowa rzecz do zrobienia podczas pracy w biurze, najlepiej kilkakrotnie w ciągu dnia), ale równie dobrze mogłoby to być *sprawdzić maila* lub *zajrzeć na stronę kodujemywbiurze.pl*.
 
-Zmienne mogą przechowywać wiele typów danych (liczby, obiekty, funkcje itd.), nie tylko ciągi tekstowe, natomiast nie musimy na raize wiedzieć za wiele na ten temat.
+Zmienne mogą przechowywać wiele <a href="/dokumentacja/javascript/typy-danych" target="_blank">typów danych</a> (liczby, obiekty, <a href="/dokumentacja/javascript/funkcje" target="_blank">funkcje</a> itd.), nie tylko ciągi tekstowe, natomiast nie musimy na razie wiedzieć za wiele na ten temat *(jeśli natomiast już chcesz wiedzieć więcej nt. zmiennych, to zajrzyj <a href="/dokumentacja/javascript/zmienne" target="_blank">do dokumentacji</a>)*.
 
 Nasz program wie już o istnieniu zmiennej `task` i będzie o niej pamiętał. W każdej chwili możemy się do niej odwołać na kilka sposobów, np. poprzez wywołanie `console.log(task)`.
 
@@ -128,7 +169,7 @@ Ok, zrobiliśmy kawę, więc zadanie zostało odhaczone i teraz chcemy go zmieni
 task = "sprawdzić maila"
 ```
 
-Zwróć uwagę na to, że tym razem nie użyliśmy **słowa kluczowego `let`**, ponieważ **używamy** go **tylko raz, kiedy tworzymy nową zmienną**, żeby powiedzieć programowi, że *oto jest nowa zmienna, będę w niej coś przechowywał/a, nie zapomnij o tym oraz daj mi do niej dostęp za każdym razem, kiedy będę tego potrzebował/a*. Później posługujemy się już tylko samą nazwą zmiennej.
+Zwróć uwagę na to, że tym razem nie użyliśmy **słowa kluczowego `let`**, ponieważ **używamy** go **tylko raz, kiedy tworzymy nową <a href="/dokumentacja/javascript/zmienne" target="_blank">zmienną</a>**, żeby powiedzieć programowi, że *oto jest nowa zmienna, będę w niej coś przechowywał/a, nie zapomnij o tym oraz daj mi do niej dostęp za każdym razem, kiedy będę tego potrzebował/a*. Później posługujemy się już tylko samą nazwą zmiennej.
 
 W powyższym kodzie przypisaliśmy do naszej zmiennej nową wartość, w związku z czym nasz program zapamięta i wyświetli nową wartość, jeśli wpiszemy nazwę zmiennej w konsoli (spróbuj to zrobić).
 
@@ -138,7 +179,7 @@ Możemy tak przypisywać nowe wartości do tej samej zmiennej mnóstwo razy, a p
 
 ---
 
-Dobrą praktyką jest nazywanie zmiennych w taki sposób, aby nazwy te niewątpliwie odzwierciedlały charakter wartości tych zmiennych. Każdy, kto rozumie znaczenie słowa *task*, będzie się spodziewał, że jest to jakieś zadanie, a nie na przykład numer telefonu. Gdybyśmy chcieli przechować numer telefonu w zmiennej, nazwalibyśmy ją `phoneNumber`:
+Dobrą praktyką jest nazywanie <a href="/dokumentacja/javascript/zmienne" target="_blank">zmiennych</a> w taki sposób, aby nazwy te niewątpliwie odzwierciedlały charakter wartości tych zmiennych. Każdy, kto rozumie znaczenie słowa *task*, będzie się spodziewał, że jest to jakieś zadanie, a nie na przykład numer telefonu. Gdybyśmy chcieli przechować numer telefonu w zmiennej, nazwalibyśmy ją `phoneNumber`:
 
 ```
 let phoneNumber = "666-999-666"
@@ -156,7 +197,7 @@ Z kolei sposób łączenia słów w jedną całość w kodzie w ten sposób: `ph
 
 ---
 
-Ok, więc potrafimy już utworzyć nową zmienną, by przechować jej wartość w naszym kodzie, potrafimy też tę wartość zmodyfikować/ nadpisać. Natomiast posiadanie tylko jednej zmiennej `task`, którą będziemy ciągle modyfikować, jest bardzo niepraktyczne i nie do tego dążymy. Chcemy utworzyć listę zadań (masz przecież dużo zadań do zrobienia w biurze, także związanych bezpośrednio z pracą ;-), do której będziemy mogli dodawać zadania, usuwać je, lub też wyświetlić listę zadań w całości!
+Ok, więc potrafimy już utworzyć nową <a href="/dokumentacja/javascript/zmienne" target="_blank">zmienną</a>, by przechować jej wartość w naszym kodzie, potrafimy też tę wartość zmodyfikować/ nadpisać. Natomiast posiadanie tylko jednej zmiennej `task`, którą będziemy ciągle modyfikować, jest bardzo niepraktyczne i nie do tego dążymy. Chcemy utworzyć listę zadań *(masz przecież dużo zadań do zrobienia w biurze, także związanych bezpośrednio z pracą ;-)*, do której będziemy mogli dodawać zadania, usuwać je, lub też wyświetlić listę zadań w całości!
 
 Stwórzmy zatem najpierw pustą listę zadań, którą przypiszemy do nowej zmiennej:
 
@@ -164,7 +205,7 @@ Stwórzmy zatem najpierw pustą listę zadań, którą przypiszemy do nowej zmie
 let tasks = []
 ```
 
-Zauważ, że tym razem wartością zmiennej nie jest ciąg znaków (czyli słowa, zdania, znaki zawarte pomiędzy cudzysłowami, jak w np.: "zrobić kawę"), tylko dwa nawiasy kwadratowe `[]`. Jest to `tablica` (po angielsku `array`), która jest niczym innym, jak kontenerem/ listą różnych elementów, które znajdą się w środku.
+Zauważ, że tym razem wartością zmiennej nie jest ciąg znaków (czyli słowa, zdania, znaki zawarte pomiędzy cudzysłowami, jak w np.: "zrobić kawę"), tylko dwa nawiasy kwadratowe `[]`. Jest to <a href="/dokumentacja/javascript/tablice" target="_blank">tablica</a> (ang. `array`), która jest niczym innym, jak kontenerem/ listą różnych elementów, które znajdą się w środku.
 
 Na razie nasza tablica/ lista `tasks` jest pusta (pomiędzy kwadratowymi nawiasami nie ma żadnych elementów). Gdybyśmy chcieli dodać do niej manualnie (ręcznie wpisując) nasze zadania, to moglibyśmy to zrobić np. na kilka sposobów:
 
@@ -210,7 +251,7 @@ Teraz, kiedy ponownie sprawdzimy wartość `tasks[0]` w konsoli, to wyświetli n
 
 ---
 
-Każdorazowe dodawanie zadań do listy zadań poprzez użycie kodu, z którego wcześniej korzystaliśmy (`tasks.push("nowe zadanie")`), działa, ale programiści "opakowują" kod, z którego często korzystamy (a będziemy często dodawać zadania do listy), w reużywalne "kawałki" kodu, które nazywają się funkcjami.
+Każdorazowe dodawanie zadań do listy zadań poprzez użycie kodu, z którego wcześniej korzystaliśmy (`tasks.push("nowe zadanie")`), działa, ale programiści "opakowują" kod, z którego często korzystamy (a będziemy często dodawać zadania do listy), w reużywalne "kawałki" kodu, które nazywają się <a href="/dokumentacja/javascript/funkcje" target="_blank">funkcjami</a>.
 
 **Funkcja to pewien zakmnięty w sobie fragment kodu, który wykonuje pewne zadania/ polecenia w nim zdefiniowane za każdym razem, kiedy go wywołamy.**
 
@@ -218,7 +259,7 @@ Tak naprawdę, już korzystaliśmy z wbudowanych funkcji, tj. `console.log()`, `
 
 Spróbujmy zatem stworzyć naszą pierwszą funkcję, by zrozumieć, o co w tym chodzi. Stworzymy funkcję, która będzie wyświetlała nam listę wszystkich naszych zadań.
 
-Owszem, wcześniej już wyświetlaliśmy nasze zadania poprzez wpisanie w konsoli zmiennej `tasks` lub poprzez wywołanie funkcji `console.log(tasks)`, ale teraz zrobimy to w sposób bardziej ucywilizowany:
+Owszem, wcześniej już wyświetlaliśmy nasze zadania poprzez wpisanie w konsoli zmiennej `tasks` lub poprzez wywołanie funkcji `console.log(tasks)`, ale teraz zrobimy to w sposób bardziej profesjonalny:
 
 ```
 function showTasks() {
@@ -226,19 +267,49 @@ function showTasks() {
 }
 ```
 
-***Uwaga!*** W zależności od przeglądarki, może się okazać, że żeby napisać kilkulinijkowy kod w konsoli, musimy zamiast Enter używać kombinacji klawiszy Shift+Enter, żeby przejść do następnej linii, ponieważ wciśnięcie klawisza Enter spowoduje wywołanie tego kodu, który już napisałeś/aś, co najprawdopodobniej wywoła błąd w konsoli, ponieważ kod nie jest ukończony.
+Zanim wytłumaczę, co się dzieje w powyższym kodzie, chciałbym poruszyć kwestię pisania wielolinijkowego kodu w konsoli (jak w powyższym przykładzie), błędów oraz utracie kodu po odświeżeniu strony.
 
-Jeśli to się zdarzy (pojawi się komunikat błędu) i po ponownym poprawnym wpisaniu kodu nie uda się zainicjować funkcji (ponieważ została niepoprawnie zaincjowana niekompletnym, przedwcześnie wywołanym kodem), odśwież stronę, co wyczyści pamięć konsoli i wpis kod jeszcze raz. Ale pamiętaj, że lista zadań `let tasks = ["zrobić kawę", "sprawdzić maila", "zajrzeć na stronę kodujemywbiurze.pl"]` również zniknęła, więc najpierw musisz ją ponownie wpisać, zanim napiszesz powyższą funkcję.
+W związku z tym polecę też korzystanie z wbudowanej funkcjonalności Chrome i Edge o nazwie `snippets` do zapisywania kodu bezpośrednio w przeglądarce, dzięki czemu go nie utracimy. Są to ważne kwestie, które sprawią, że pisanie kodu w przeglądarce będzie bardziej przyjemne, mniej podatne na błędy oraz zapewni pewną funkcjonalność aplikacji, którą budujemy. Czytaj dalej!
 
-W powyższym kodzie używając słowa kluczowego `function` zdefiniowaliśmy nową funckję o nazwie `showTasks`, która... (jak sama nazwa wskazuje) wyświetla listę naszych zadań. 
+### Kilkulinijkowy kod w konsoli oraz zalecenie korzystania ze snippets
+
+***Uwaga!*** W zależności od przeglądarki, **może się okazać**, że żeby napisać kilkulinijkowy kod w konsoli (taki, jak w powyższej funkcji), musimy **zamiast Enter używać kombinacji klawiszy Shift+Enter**, żeby przejść do następnej linii, ponieważ wciśnięcie klawisza Enter spowoduje wywołanie tego kodu, który już napisałeś/aś, co najprawdopodobniej wywoła błąd w konsoli, ponieważ kod nie jest ukończony.
+
+Jeśli to się zdarzy (pojawi się komunikat błędu) i po ponownym poprawnym wpisaniu kodu nie uda się zainicjować funkcji (ponieważ została niepoprawnie zaincjowana niekompletnym, przedwcześnie wywołanym kodem), odśwież stronę, co wyczyści pamięć konsoli i wpisz kod jeszcze raz.
+
+Ale pamiętaj, że lista zadań `let tasks = ["zrobić kawę", "sprawdzić maila", "zajrzeć na stronę kodujemywbiurze.pl"]` również zniknęła, więc najpierw musisz ją ponownie wpisać, zanim napiszesz powyższą funkcję.
+
+Dlatego też proponuję, byśmy skorzystali z wbudowanej funkcjonalności Chrome i Edge o nazwie `snippets` do zapisywania kodu bezpośrednio w przeglądarce! Jest to świetne narzędzie, o czym się zaraz przekonamy.
+
+Żeby otworzyć *snippets*, musisz kliknąć *Sources*, które znajdują się tuż obok *Console*, a tak wybrać *Snippets*. Teraz możemy kliknąć ikonkę ze znakiem plus i napisem *New snippet*, co utworzy nowy plik z domyślną nazwą, którą możemy zmienić na np. `todo-app`.
+
+Ten plik będzie teraz zapisany w naszej przeglądarce i zawsze będziemy mieli do niego dostęp. Ponadto, plik ten możemy uruchomić w naszej konsoli, która będzie miała dostęp zarówno do pliku, jak i do zawartości strony (co nam przyda się w kolejnych kursach).
+
+Możemy teraz przepisać do tego pliku dotychczasowy kod naszej aplikacji (potrzebne nam są tylko zadeklarowanie zmiennej `tasks` oraz definicja poprzedniej funkcji `showTasks()`, którą zaraz omówimy):
+
+```
+// todo-app file:
+
+let tasks = ["zrobić kawę", "sprawdzić maila", "zajrzeć na stronę kodujemywbiurze.pl"];
+
+function showTasks() {
+  console.log(tasks)
+}
+```
+
+Będziemy teraz pisać kod zarówno w tym pliku (tylko ten niezbędny dla aplikacji; w komentarzu w przykładach kodu zawrę ten zapis: `// todo-app file:`, który będzie odróżniał kod aplikacji od innego testowego kodu w konsoli) oraz czasami w samej konsoli, by coś tam przetestować lub wywołać funkcje z pliku.
+
+Możesz też nie korzystać z tej funkcjonalności i dalej pisać kod wyłącznie w konsoli, ale pamiętaj o sytuacjach, które opisałem powyżej, które mogą mieć miejsce i zakłócić Twoją pracę z kodem.
+
+Wracając do naszej funkcji, w powyższym kodzie używając słowa kluczowego `function` zdefiniowaliśmy nową funckję o nazwie `showTasks`, która... (jak sama nazwa wskazuje) wyświetla listę naszych zadań. 
 
 Jak widzisz, polecenie `console.log(tasks)`, którego wcześniej używaliśmy osobno, zostało "opakowane" w funkcję, której nazwa ewidentnie wskazuje na to, czego możemy się od niej spodziewać, w związku z czym ktoś, kto nie widział całości naszego kodu, ani nie wie, co jest w środku tej funkcji, raczej się domyśli, co ta funkcja robi i sam będzie mógł jej użyć.
 
-Ponadto, jeśli wrócisz do swojego kodu za kilka dni lub tygodni, to mimo, że nie będziesz pamiętał/a, co znajduje się w środku funkcji `showTasks()`, to zdecydowanie zrozumiesz, co ona robi. Uwierz mi, że programiści o wiele częściej dosłownie czytają kod, niż go piszą, dlatego trafne nazwy zarówno zmiennych, jak i funkcji, niezwykle ułatwiają jego zrozumienie, mimo że nie zna się/ nie pamięta się szczegółów.
+Ponadto, jeśli wrócisz do swojego kodu za kilka dni lub tygodni, to mimo, że nie będziesz pamiętał/a, co znajduje się w środku funkcji `showTasks()`, to zdecydowanie zrozumiesz, co ona robi. Uwierz mi, że programiści o wiele częściej dosłownie czytają kod, niż go piszą, dlatego <a href="/dobre-praktyki-w-nazewnictwie-zmiennych" target="_blank">trafne nazwy</a> zarówno zmiennych, jak i funkcji, niezwykle ułatwiają jego zrozumienie, mimo że nie zna się/ nie pamięta się szczegółów.
 
 Żeby nasza funkcja zadziałała i wyświetliła nasze zadania, musimy ją wywołać poprzez wpisanie w konsoli `showTasks()` i kliknąć Enter. Dzięki temu, nie musimy pamiętać, jak wyświetlić nasze zadania w konsoli, wystarczy wywołać funkcję `showTasks()`.
 
-Na pierwszy rzut oka może się wydawać, że wykonaliśmy zbędną pracę - definicja funkcji zajęła nam 3 linijki kodu! Ale, po pierwsze, uczyniła nasz kod bardziej zrozumiałym i reużywalnym, a po drugie, większość funkcji będzie bardziej rozbudowana, będą tam miały miejsce różne procesy, być może będą tam w środku też inne funkcje i tymczasowe zmienne, więc w tym przypadku oszczędność czasu będzie ogromna. Poza tym, musieliśmy tylko raz się zastanowić nad tym, jak wyświetlić nasze zadania, tworząc funkcję i nie będziemy musieli znowu się nad tym zastanawiać, co miałoby miejsce, gdybyśmy każdorazowo pisali `console.log(tasks)`.
+Na pierwszy rzut oka może się wydawać, że wykonaliśmy zbędną pracę - definicja funkcji zajęła nam 3 linijki kodu! Ale, po pierwsze, uczyniła nasz kod bardziej zrozumiałym, czytelnym i reużywalnym, a po drugie, większość funkcji będzie bardziej rozbudowana, będą tam miały miejsce różne procesy, być może będą tam w środku też inne funkcje i tymczasowe zmienne, więc w tym przypadku oszczędność czasu będzie ogromna. Poza tym, musieliśmy tylko raz się zastanowić nad tym, jak wyświetlić nasze zadania, tworząc funkcję i nie będziemy musieli znowu się nad tym zastanawiać, co miałoby miejsce, gdybyśmy każdorazowo pisali `console.log(tasks)`.
 
 Warto też zwrócić uwagę na samą konstrukcję funkcji:
 
@@ -257,7 +328,7 @@ aczkolwiek taki zapis nie jest czytelny, dlatego lepiej używać wielolinijkoweg
 
 Ogólnie funkcje możemy zadeklarować też na kilka innych sposobów, ale na razie wystarczy nam ten jeden.
 
-Zanim stworzymy kolejne funkcje, chciałbym zwrócić Twoją uwagę na nazewnictwo funkcji. Pamiętasz, że nazwa zmiennej powinna odzwierciedlać to, jaką wartość przechowuje? Z funkcjami jest podobnie, tyle że funkcje nie reprezentują jakieś wartości, tylko czynności - funkcja coś "robi". W związku z tym, jeśli funkcja powinna wyświetlić zadania, to należy ją nazwać `showTasks` lub `displayTasks`, albo też `logTasks`. Te nazwy brzmią jak komendy: "pokaż/ wyświetl zadania!" i tak właśnie jest z funkcjami - są one poleceniami dla komputera/ przeglądarki.
+Zanim stworzymy kolejne funkcje, chciałbym zwrócić Twoją uwagę na nazewnictwo funkcji. Pamiętasz, że <a href="/dobre-praktyki-w-nazewnictwie-zmiennych" target="_blank">nazwa zmiennej powinna odzwierciedlać to, jaką wartość przechowuje</a>? Z funkcjami jest podobnie, tyle że funkcje nie reprezentują jakieś wartości, tylko czynności - funkcja coś "robi". W związku z tym, jeśli funkcja powinna wyświetlić zadania, to należy ją nazwać `showTasks` lub `displayTasks`, albo też `logTasks`. Te nazwy brzmią jak komendy: "pokaż/ wyświetl zadania!" i tak właśnie jest z funkcjami - są one poleceniami dla komputera/ przeglądarki.
 
 Owszem, funkcja może również zwracać wartość, np. w tym przypadku:
 
@@ -268,9 +339,13 @@ function calculateSum(a, b) {
 
 	return sum;
 }
+
+// teraz inicjujemy zmienną,
+// do której przypisujemy wartość zwróconą przez calculateSum():
+let sum = calculateSum(3, 5);
 ```
 
-aczkolwiek zwrócona wartość jest wynikiem działania funkcji, więc funkcja musiała "coś zrobić", by "wyprodukować" wartość, którą zwraca.
+aczkolwiek zwrócona wartość jest wynikiem działania funkcji, więc funkcja musiała "coś zrobić", by "wyprodukować" wartość, którą zwraca *(więcej na ten temat przeczytasz w <a href="/dokumentacja/javascript/funkcje" target="_blank">dokumentacji</a>)*.
 
 ## Funkcja dodająca zadanie | Argumenty funkcji, wywoływanie innych funkcji wewnątrz funkcji oraz komentarze
 
@@ -278,7 +353,7 @@ aczkolwiek zwrócona wartość jest wynikiem działania funkcji, więc funkcja m
 
 Wcześniej dodawaliśmy nasze zadania używając tego kodu: `tasks.push("jakieś tam zadanie")`. Zwróć uwagę na to, że `"jakieś tam zadanie"` znajduje się w nawiasach funkcji, w związku z tym `"jakieś tam zadanie"` zostało przekazane funkcji `push()` jako argument (pewien zasób/ wartość/ informacja), który zostanie przez tę funkcję wykorzystany.
 
-Nasza funkcja `showTasks()` nie ma żadnych argumentów w nawiasach, ponieważ ich nie potrzebuje - ma dostęp do zadań, gdyż zmienna `tasks` istnieje już w naszym kodzie i zawsze mamy do niej dostęp z poziomu każdej funkcji (innymi słowy, jest zmienną globalną). Czyli wiemy, że funkcja może w ogóle nie mieć żadnych argumentów.
+Nasza funkcja `showTasks()` nie ma żadnych argumentów w nawiasach, ponieważ ich nie potrzebuje - ma dostęp do zadań, gdyż zmienna `tasks` istnieje już w naszym kodzie i zawsze mamy do niej dostęp z poziomu każdej funkcji (innymi słowy, jest zmienną globalną). Czyli wiemy już, że funkcja może w ogóle nie mieć żadnych argumentów.
 
 Wyobraźmy natomiast, że chcemy dodać nowe zadanie, które nie istnieje nigdzie w kodzie w postaci zmiennej, wiemy także, że dysponujemy funkcją o nazwie `addTask()` (za chwilę ją napiszemy, ale na razie wyobraźmy, że ktoś już ją napisał). Jak możemy to zrobić?
 
