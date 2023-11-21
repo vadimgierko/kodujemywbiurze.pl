@@ -59,7 +59,7 @@
 			<div class="right-section">
 				{#if !$isScreenLessThan992}
 					<a
-						href="/kursy/podstawy-javascript-pierwsza-aplikacja-w-konsoli-darmowy-kurs/wprowadzenie"
+						href="/kursy/podstawy-javascript-pierwsza-aplikacja-w-konsoli-darmowy-kurs"
 						class="nav-link">kurs</a
 					>
 					<a href="/dokumentacja/javascript/wprowadzenie" class="nav-link">dokumentacja</a>

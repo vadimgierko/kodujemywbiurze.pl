@@ -1,11 +1,14 @@
 <script>
+	import { page } from '$app/stores';
+
 	import { isIndexPage, isScreenLessThan992, showOffset } from '$lib/stores';
 	import GitHubIcon from '../icons/GitHubIcon.svelte';
 	import LinkedInIcon from '../icons/LinkedInIcon.svelte';
 </script>
 
 <footer
-	style={$isIndexPage
+	style={$isIndexPage ||
+	$page.route.id === '/kursy/podstawy-javascript-pierwsza-aplikacja-w-konsoli-darmowy-kurs'
 		? 'margin-left: 0'
 		: $isScreenLessThan992
 		? 'margin-left: 0'
