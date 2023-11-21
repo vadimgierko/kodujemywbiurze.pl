@@ -1,4 +1,4 @@
-## Wprowadzenie. Co stworzymy i czego się nauczymy?
+## Wprowadzenie
 
 ---
 

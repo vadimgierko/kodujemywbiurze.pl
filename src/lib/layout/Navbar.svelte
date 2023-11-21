@@ -58,7 +58,10 @@
 
 			<div class="right-section">
 				{#if !$isScreenLessThan992}
-					<a href="/wprowadzenie-co-stworzymy-i-czego-sie-nauczymy" class="nav-link">tutorial</a>
+					<a
+						href="/kursy/podstawy-javascript-pierwsza-aplikacja-w-konsoli-darmowy-kurs/wprowadzenie"
+						class="nav-link">kurs</a
+					>
 					<a href="/dokumentacja/javascript/wprowadzenie" class="nav-link">dokumentacja</a>
 				{/if}
 
@@ -98,9 +101,9 @@
 			<hr />
 			<div class="expanded-nav-section">
 				<a
-					href="/wprowadzenie-co-stworzymy-i-czego-sie-nauczymy"
+					href="/kursy/podstawy-javascript-pierwsza-aplikacja-w-konsoli-darmowy-kurs/wprowadzenie"
 					class="nav-link"
-					on:click={toggleNavbar}>tutorial</a
+					on:click={toggleNavbar}>kurs</a
 				>
 				<a href="/dokumentacja/javascript/wprowadzenie" class="nav-link" on:click={toggleNavbar}
 					>dokumentacja</a
