@@ -74,12 +74,14 @@
 					{/if}
 				</span>
 
+				{#if !$isScreenLessThan992}
 				<a href="https://www.facebook.com/kodujemywbiurze" target="_blank" class="nav-link"
 					><FacebookIcon /></a
 				>
 				<a href="https://www.linkedin.com/company/kodujemywbiurze" target="_blank" class="nav-link"
 					><LinkedInIcon /></a
 				>
+				{/if}
 
 				<!-- NAVBAR TOGGLE -->
 				<span
@@ -107,6 +109,13 @@
 				>
 				<a href="/dokumentacja/javascript/wprowadzenie" class="nav-link" on:click={toggleNavbar}
 					>dokumentacja</a
+				>
+				<hr />
+				<a href="https://www.facebook.com/kodujemywbiurze" target="_blank" class="nav-link"
+					><FacebookIcon /></a
+				>
+				<a href="https://www.linkedin.com/company/kodujemywbiurze" target="_blank" class="nav-link"
+					><LinkedInIcon /></a
 				>
 				<hr style="visibility: hidden;" />
 			</div>
