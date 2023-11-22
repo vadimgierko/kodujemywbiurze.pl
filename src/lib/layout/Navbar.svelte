@@ -60,9 +60,11 @@
 				{#if !$isScreenLessThan992}
 					<a
 						href="/kursy/podstawy-javascript-pierwsza-aplikacja-w-konsoli-darmowy-kurs"
-						class="nav-link">kurs</a
+						class="nav-link">kurs javascript</a
 					>
-					<a href="/dokumentacja/javascript/wprowadzenie" class="nav-link">dokumentacja</a>
+					<a href="/dokumentacja/javascript" class="nav-link"
+						>dokumentacja javascript</a
+					>
 				{/if}
 
 				<!-- THEME TOGGLE -->
@@ -75,12 +77,14 @@
 				</span>
 
 				{#if !$isScreenLessThan992}
-				<a href="https://www.facebook.com/kodujemywbiurze" target="_blank" class="nav-link"
-					><FacebookIcon /></a
-				>
-				<a href="https://www.linkedin.com/company/kodujemywbiurze" target="_blank" class="nav-link"
-					><LinkedInIcon /></a
-				>
+					<a href="https://www.facebook.com/kodujemywbiurze" target="_blank" class="nav-link"
+						><FacebookIcon /></a
+					>
+					<a
+						href="https://www.linkedin.com/company/kodujemywbiurze"
+						target="_blank"
+						class="nav-link"><LinkedInIcon /></a
+					>
 				{/if}
 
 				<!-- NAVBAR TOGGLE -->
@@ -103,12 +107,12 @@
 			<hr />
 			<div class="expanded-nav-section">
 				<a
-					href="/kursy/podstawy-javascript-pierwsza-aplikacja-w-konsoli-darmowy-kurs/wprowadzenie"
+					href="/kursy/podstawy-javascript-pierwsza-aplikacja-w-konsoli-darmowy-kurs"
 					class="nav-link"
-					on:click={toggleNavbar}>kurs</a
+					on:click={toggleNavbar}>kurs javascript</a
 				>
-				<a href="/dokumentacja/javascript/wprowadzenie" class="nav-link" on:click={toggleNavbar}
-					>dokumentacja</a
+				<a href="/dokumentacja/javascript" class="nav-link" on:click={toggleNavbar}
+					>dokumentacja javascript</a
 				>
 				<hr />
 				<a href="https://www.facebook.com/kodujemywbiurze" target="_blank" class="nav-link"

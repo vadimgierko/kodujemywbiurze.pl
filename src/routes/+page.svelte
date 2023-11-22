@@ -13,15 +13,17 @@
 	/>
 </svelte:head>
 
-<HeroSection
-	h1FirstSmallText="Witaj na stronie"
-	h1LargeText="Kodujemy w biurze!"
-	descriptionParagraphs={[
-		'Naucz się programowania webowego w przerwach między zadaniami w biurze!',
-		'Zacznij pisać kod bezpośrednio w swojej przeglądarce!'
-	]}
-	btnHref="/kursy/podstawy-javascript-pierwsza-aplikacja-w-konsoli-darmowy-kurs"
-	btnCTA="Zacznij kodować w biurze!"
-	imgSrc={heroImg}
-	handleMount={() => isIndexPage.set(true)}
-/>
+<main class="container">
+	<HeroSection
+		h1FirstSmallText="Witaj na stronie"
+		h1LargeText="Kodujemy w biurze!"
+		descriptionParagraphs={[
+			'Naucz się programowania webowego w przerwach między zadaniami w biurze!',
+			'Zacznij pisać kod bezpośrednio w swojej przeglądarce!'
+		]}
+		btnHref="/kursy/podstawy-javascript-pierwsza-aplikacja-w-konsoli-darmowy-kurs"
+		btnCTA="Zacznij kodować w biurze!"
+		imgSrc={heroImg}
+		handleMount={() => isIndexPage.set(true)}
+	/>
+</main>

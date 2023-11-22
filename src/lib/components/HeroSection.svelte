@@ -1,52 +1,53 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 
-    // we need to pass this to the component:
-    export let imgSrc: string
+	// we need to pass this to the component:
+	export let imgSrc: string;
 
-    export let btnHref: string
-    export let btnCTA: string
+	export let btnHref: string;
+	export let btnCTA: string;
 
-    export let h1FirstSmallText: string
-    export let h1LargeText: string
+	export let h1FirstSmallText: string;
+	export let h1LargeText: string;
 
-    export let descriptionParagraphs: string[]
-    
-    export let handleMount: () => void
+	export let descriptionParagraphs: string[];
+
+	export let handleMount: () => void;
 
 	onMount(() => handleMount());
 </script>
 
-<main class="container">
+<div class="hero-section">
 	<div class="hero-wrapper">
 		<h1>
-			{h1FirstSmallText}
-			<br />
+			{#if h1FirstSmallText.length}
+				{h1FirstSmallText}
+				<br />
+			{/if}
 			<span id="page-name">{h1LargeText}</span>
 		</h1>
 
 		<div class="hero-content">
 			<div class="left">
 				{#each descriptionParagraphs as p}
-                    <p>{p}</p>
-                {/each}
+					<p>{p}</p>
+				{/each}
 
-					<a href={btnHref}>
-						<button class="bg-primary" id="cta-btn">{btnCTA}</button>
-					</a>
-			
+				<a href={btnHref}>
+					<button class="bg-primary" id="cta-btn">{btnCTA}</button>
+				</a>
 			</div>
 
 			<div class="right">
-                <img src={imgSrc} width="100%" />
-            </div>
+				<img src={imgSrc} width="100%" />
+			</div>
 		</div>
 	</div>
-</main>
+</div>
 
 <style scoped>
 	/* STYLES NOT DEPENDENT ON SCREEN SIZE */
-	main {
+	.hero-section {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -94,9 +95,9 @@
 		color: rgb(0, 0, 0);
 	}
 
-    .right {
-        margin-top: 2em;
-    }
+	.right {
+		margin-top: 2em;
+	}
 
 	img {
 		max-width: 400px;
@@ -142,7 +143,7 @@
 		}
 	}
 
-    /* !!! HERE .hero-content becomes flex !!! */
+	/* !!! HERE .hero-content becomes flex !!! */
 	@media screen and (min-width: 768px) and (orientation: landscape) {
 		.hero-content {
 			display: flex;
@@ -156,7 +157,7 @@
 
 		.right {
 			width: 40%;
-            margin-top: 0;
+			margin-top: 0;
 		}
 
 		h1 {
