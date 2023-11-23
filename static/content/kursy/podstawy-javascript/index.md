@@ -520,19 +520,15 @@ Stwórzmy więc funkcję `deleteTask(index)`:
 
 ```
 function deleteTask(index) {
+  // usuwamy 1 zadanie zlokalizowane pod przekazanym indeksem:
   tasks.splice(index, 1);
-	
-	// możemy tutaj dodać komunikat o tym, że zadanie zostało usunięte:
-	// haha, ale nie napiszę jak to zrobić, ponieważ robiliśmy już podobne rzeczy ;-)
-	// musisz więc sam/a się z tym uporać, ale...
-	// podpowiem, że jest to zadanie z pewnym haczykiem ;-)
-	
-	// możemy też wyświetlić zaktualizowaną listę naszych zadań:
-	// to też wiesz, jak zrobić ;-)
+
+	// wyświetlamy zaktualizowaną listę zadań:
+	showTasks();
 }
 ```
 
-Po przepisaniu tej funkcji do konsoli (oraz opcjonalnym samodzielnym dopisaniu dwóch linijek kodu, o których wspominam w komentarzach), spróbuj usunąć kilka zadań, uprzednio sprawdzając, jakie indeksy chcesz usunąć.
+Po przepisaniu tej funkcji do konsoli, spróbuj usunąć kilka zadań, uprzednio sprawdzając, jakie indeksy chcesz usunąć.
 
 Spróbuj teraz stworzyć funckję o nazwie `deleteAllTasks()`, która usuwa od razu wszystkie zadania. Można to oczywiście zrobić na wiele sposobów:
 
@@ -543,35 +539,57 @@ Spróbuj teraz stworzyć funckję o nazwie `deleteAllTasks()`, która usuwa od r
 
 ---
 
-No teraz nasza aplikacja jest już naprawdę zaawansowana! I przy okazji zobacz, ile już wiemy nt. *JavaScript*!
+No teraz nasza aplikacja jest już naprawdę zaawansowana!
 
-Gratuluję! Właśnie stworzyłeś/aś aplikację w języku JavaScript, która działa w konsoli Twojej przeglądarki, może przechowywać listę Twoich zadań do zrobienia oraz umożliwia dodawanie zadań do tej listy! Przy okazji poznałeś/aś pewne podstawowe pojęcia jeżyka JavaScript:
+A przy okazji zobacz, ile już wiesz o JavaScript:
 
-- zmienna i wartość
-- tablica, indeks, `push()`, `length`, `splice()`
-- funkcje i `console.log()`
+- czym jest konsola
+  - jak pisać i wywoływać kod w konsoli,
+	- jak zapisać plik z kodem JavaScript w przeglądarce w `snippets`,
+	- jak zrobić działającą aplikację w swojej przeglądarce!
+- czym jest zmienna
+  - jak możemy ją zadeklarować,
+	- jak przypisujemy do niej wartość,
+	- jak możemy tę wartość zmienić,
+	- jak nadać zmiennym dobre nazwy,
+- czym jest tablica
+  - jak dodać element do tablicy,
+	- jak usunąć element z tablicy,
+	- jak sprawdzić długość tablicy,
+	- jak uzyskać dostęp do określonego elementu w tablicy za pomocą indeksu,
+	- jak napisać wartość tego elementu,
+- czym jest funkcja
+  - jak ją deklarujemy i wywołujemy,
+	- jak możemy przekazać funkcji pewne dane,
+	- jak tworzyć reużywalne funkcje i wywoływać je w innych funkcjach,
+	- jak nadać funkcjom dobre nazwy,
+- czym jest pętla `for`
+  - jak wyświetlić wszystkie elementy tablicy po kolei,
+	- jak wykonać jakąś czynność (wywołać funkcję) określoną ilość razy 
 
-Poniżej znajduje się cały kod naszej aplikacji, który powinien znajdować się w pliku `todo-app` (który możemy też skopiować i wkleić do konsoli, jeśli nie zapisywaliśmy kodu w pliku - pamiętaj tylko, by odświeżyć stronę, żeby usunąć z konsoli dotychczasowy kod).
+Gratuluję!
 
-*UWAGA: kodu jest o wiele mniej, niż dotychczas napisaliśmy, ponieważ znajdują się w nim jedynie niezbędne funkcjonalności:*
+Spróbuj teraz odpowiedzieć swoimi słowami na wszystkie powyższe pytania, by sprawdzić, co umiesz, a co jeszcze tak nie do końca.
+
+Poniżej znajduje się cały dotychczasowy kod naszej aplikacji, który powinien być w pliku `todo-app` (który możemy też skopiować i wkleić do konsoli, jeśli nie zapisywaliśmy kodu w pliku - pamiętaj tylko, by odświeżyć stronę, żeby usunąć z konsoli dotychczasowy kod).
 
 ```
 let tasks = ["zrobić kawę", "sprawdzić maila", "zajrzeć na stronę kodujemywbiurze.pl"];
 
 function showTasks() {
-    console.log(tasks)
+  console.log(tasks)
 }
 
 function addTask(newTask) {
 
-    // w poniższej linijce dodajemy zadanie do listy zadań:
-    tasks.push(newTask);
+	// w poniższej linijce dodajemy zadanie do listy zadań:
+	tasks.push(newTask);
 
-    // wyświetlamy komunikat w konsoli o nowo dodanym zadaniu:
-    console.log("Do Twoich zadań zostało dodane nowe zadanie:", newTask);
+	// wyświetlamy komunikat w konsoli o nowo dodanym zadaniu:
+	console.log("Do Twoich zadań zostało dodane nowe zadanie:", newTask);
 
-    // wyświetlamy zaktualizowaną pełną listę zadań:
-    showTasks();
+	// wyświetlamy zaktualizowaną pełną listę zadań:
+	showTasks();
 }
 
 function loopTasks() {
@@ -581,21 +599,15 @@ function loopTasks() {
 }
 
 function deleteTask(index) {
-	// jeśli chcemy wyświetlić zadanie, które zostało usunięte,
-	// to najpierw musimy je przechować w zmiennej,
-	// ponieważ po usunięciu nie będziemy mieć do niego dostępu:
+  // usuwamy 1 zadanie zlokalizowane pod przekazanym indeksem:
+  tasks.splice(index, 1);
 
-	let deletedTask = tasks[index];
-	
-	tasks.splice(index, 1);
-
-	console.log("Zadanie", deletedTask, "zostało usunięte...");
-
+	// wyświetlamy zaktualizowaną listę zadań:
 	showTasks();
 }
 ```
 
-Możesz teraz dodawać zadania za pomocą kodu `addTask("jakieś zadanie")`, a potem je usuwać, sprawdzając uprzednio ich indeks: `deleteTask(3)`.
+Możesz teraz dodawać zadania za pomocą kodu `addTask("jakieś zadanie")`, a potem je usuwać, sprawdzając uprzednio ich indeks, np. `deleteTask(3)`. Jeśli z kolei chcesz wyświetlić swoje zadania w konsoli, wywołaj `showTasks()` lub `loopTasks()`.
 
 Spróbuj teraz opowiedzieć swoimi słowami koleżance/koledze z biura, co robi/ co się dzieje w każdej z linijek powyśzego kodu.
 
@@ -603,23 +615,218 @@ Jeśli nie masz, komu to opowiedzieć lub po prostu nie chcesz dzielić się swo
 
 Gratuluję jeszcze raz!
 
-Właśnie dobrnąłeś/aś do końca tego krótkiego tutoriala. Spodobało się? Chcesz więcej? Jeśli tak, to daj mi znać, że jesteś zainteresowany/a dalszymi lekcjami w tym samym stylu *(zakładam, że będziemy dalej rozwijać naszą aplikację do zadań, dodając coraz to nowsze funkcjonalności oraz poznając również podstawy HTML i CSS, by wyjść poza konsolę i stworzyć stronę/ aplikację internetową z prawdziwego zdarzenia)*.
+Ale...
 
-A co byśmy zrobili w następnej kolejności? No na przykład to:
+Mimo że nasza aplikacja działa, to mam jeszcze jedną bonusową lekcję z czymś naprawdę ekstra!
 
-Na razie nasze zadania są przechowywane w przeglądarce tylko dopóki nie zresetujemy tej strony. Jest to w pewnym sensie dobre, ponieważ jutro nie przytłoczy Cię nadmiar zapisanych zadań! Aczkolwiek fajnie by było, gdyby nasze zadania pozostawały zapisane tak długo, jak chcemy.
+Na razie nasze zadania są przechowywane w przeglądarce tylko dopóki nie zresetujemy tej strony lub nie zmienimy czegoś w pliku `todo-app`, a potem nie zapiszemy tego pliku (`Ctrl+S`) i nie uruchomimy go w konsoli.
 
-Możemy to zrobić za pomocą wbudowanego narzędzia każdej przeglądarki `localStorage`, które jest czymś w rodzaju magazynu, w którym możemy przechowywać pewne ilości danych.
+Jest to w pewnym sensie dobre, ponieważ jutro nie przytłoczy Cię w pracy nadmiar zapisanych (i niezrealizowanych) zadań! Aczkolwiek fajnie by było, gdyby nasze zadania pozostawały zapisane tak długo, jak chcemy. Żebyśmy mogli nagle zamknąć przeglądarkę lub tę stronę (żeby przełożony nie zobaczył), a potem otworzyć ją znowu i mieć dostęp do naszych ważnych zadań!
+
+Więc możemy to zrobić i zrobimy w kolejnej, ostatniej lekcji z tego kursu. Jest to wiedza bardziej zaawansowana od tego, co zrobiliśmy dotychczas (wykorzystamy wbudowaną funkcjonalność przeglądarki `localStorage`), ale myślę, że jesteś na to przygotowany/a!
+
+Przy okazji poznamy kolejną ważną rzecz w JavaScript - `if-else`.
+
+Do dzieła!
+
+## BONUS: Zapisujemy oraz pobieramy zadania w przeglądarce | `localStorage`
+
+Gdybyśmy zrobili naszą aplikację tak, jak się to robi w prawdziwym świecie, to wykorzystalibyśmy **bazy danych** do przechowywania naszych zadań. Przechowywalibyśmy tam także dane użytkowników, którzy by z niej korzystali.
+
+Dzięki bazom danych aplikacje mają dostęp do danych niezależnie od tego, na jakim urządzeniu korzysta się z aplikacji (w naszej aplikacji dane są dostępne tylko w tej konkretnej przeglądarce... a na telefonie to w ogóle nie działa). Ale są to zaawansowane tematy (mam nadzieję, że dojdziemy do nich w kolejnych kursach na *kodujemywbiurze.pl* - wszystko zależy od Was!).
+
+Niemniej jednak, możemy trochę poczuć, jak to jest pracować z bazą danych, dzięki wbudowanemu narzędziu każdej przeglądarki - `localStorage`. `localStorage` jest czymś w rodzaju magazynu, w którym możemy przechowywać pewne ilości danych w formie tekstowej (a dokładnie 5 MB - nie za wiele, ale nam wystarczy).
+
+Chciałbym tylko od razu zaznaczyć, że `localStorage` przechowuje osobne zestawy danych dla każdego adresu url, co znaczy, że jak wdrożymy to rozwiązanie, to zadania zapisane w trakcie korzystania ze strony *kodujemywbiurze.pl* będą możliwe do odczytania tylko na tej stronie.
+
+Jeśli z kolei będziemy korzystać z aplikacji na jakiejś innej stronie, np. *vadimgierko.com*, to tam będą przechowywane inne zadania, czyli teoretycznie mógłbyś/ mogłabyś odpalać plik `todo-app` na każdej stronie w Internecie i na każdej z nich przechowywać i modyfikować inne zestawy zadań (ale kod pozostaje taki sam i funkcjonuje w ten sam sposób).
+
+Ok, wpisz więc do konsoli `localStorage` i kliknij Enter. Jeśli po raz pierwszy masz do czynienia z `localStorage` na tej stronie (nie robiłeś/aś wcześniej tego kursu), to wyświetli Ci się to: `Storage {theme: 'dark', length: 1}`. Ten komunikat pokazuje zawartość obiektu `Storage` *(nie omawialiśmy jeszcze obiektów, ale jest to zestaw kluczy i wartości zawartych pomiędzy klamrami `{}`, np. `{firstName: "Vadim", lastName: "Gierko"}`)*, który jak na razie przechowuje jedynie preferowany przez Ciebie tryb (jasny lub ciemny).
+
+Tak, zgadza się, w tajemnicy przed Tobą przechowuję za pomocą `localStorage` to, czy korzystasz z ciemnego czy jasnego trybu na swoim urządzeniu lub czy samodzielnie zmieniłeś tryb wyświetlania na tej stronie klikając w ikonkę księżyca lub słońca w górnym menu. Jak widzisz, `localStorage` jest bardzo przydatny dla twórców stron, kiedy sięganie do bazy danych z prawdziwego zdarzenia jest zbyt dużym *overkillem*.
+
+### Jak zapisać proste tekstowe dane w `localStorage`
+
+Żeby zapisać proste tekstowe dane w `localStorage`, trzeba użyć mniej więcej takiego kodu: `localStorage.setItem("nazwaKlucza", "wartośćKlucza");`. `setItem()` jest jedną z metod obiektu `localStorage`, dzięki której możemy przypisać wartość do jakiegoś klucza, podobnie jak przypisujemy wartość do zmiennej, tyle że zarówno nazwa klucza, jak i jego wartość mają być ujęte w cudzysłów.
+
+Spróbuj zapisać lub zaktualizować swoje imię w `localStorage` w ten sposób: `localStorage.setItem("name", "TutajWpiszSwojeImię")` i kliknij Enter, po czym wpisz `localStorage` i znowu kliknij Enter, by zobaczyć, że nowy klucz jest teraz w obiekcie.
+
+**Uwaga!** Metoda `setItem()` zawsze nadpisuje wartość klucza. Jeśli dany klucz nie istniał wcześniej, zostanie utworzony, jeśli istniał - jego wartość zostanie napisana przez nową wartość.
+
+### Jak odczytać/ pobrać proste tekstowe dane z `localStorage`
+
+Żeby pobrać jakiś klucz z `localStorage`, należy użyć metody `getItem()`, podając w nawiasach nazwę klucza w cudzysłowiu, np. tak: `localStorage.getItem("name")`. Spróbuj pobrać zapisane przez siebie imię z `localStorage`.
+
+Pobrane dane z `localStorage` możemy przypisać do zmiennej, by móc nimi operować w naszym programie. Można to zrobić w następujący sposób: `let name = localStorage.getItem("name")`.
+
+### Jak usunąć proste tekstowe dane z `localStorage`
+
+Żeby usunąć jakiś klucz (i odpowiednio jego wartość) z `localStorage`, trzeba użyć wbudowanej metody `removeItem()`, podając w nawiasach nazwę klucza w cudzysłowiu, np. tak: `localStorage.removeItem("name")`. Spróbuj teraz usunąć klucz `name` z `localStorage`, a potem sprawdź, czy na pewno został usunięty.
+
+### Jak zapisać tablicę w `localStorage` | `JSON.stringify()`
+
+Zapisanie bardziej złożonych struktur danych w `localStorage` wymaga dodatkowej czynności. Kiedy np. chcemy przechować lub nadpisać tablicę (a będziemy chcieli przechować tablicę z naszymi zadaniami), to musimy przekształcić ją na postać tekstową i przypisać do klucza:
+
+```
+localStorage.setItem("tasks", JSON.stringify(["zrobić kawę", "sprawdzić maila", "zajrzeć na stronę kodujemywbiurze.pl"]))
+```
+
+Zwróc uwagę, że do metody `setItem()` przekazaliśmy najpierw tak, jak wcześniej, nazwę klucza `"tasks"` w cudzysłowiu, natomiast drugim argumentem nie jest po prostu tablica, tylko tablica przekazana jako argument do `JSON.stringify()`, która przekształca tablicę w ciąg znaków.
+
+Bardziej klarownym i czytelnym rozwiązaniem byłoby najpierw przypisać tablicę do zmiennej, a potem zmienną przekazać do `JSON.stringify()`:
+
+```
+let tasks = ["zrobić kawę", "sprawdzić maila", "zajrzeć na stronę kodujemywbiurze.pl"];
+
+localStorage.setItem("tasks", JSON.stringify(tasks));
+```
+
+### Jak pobrać tablicę z `localStorage` | `JSON.parse()`
+
+Żeby pobrać tablicę z `localStorage` również musimy zastosować dodatkową metodę uzupełniającą `getItem()`, ponieważ tablica jest zapisana w postaci ciągu tekstowego. W związku z tym, musimy "opakować" metodę `getItem()` w `JSON.parse()` - metodę, która przekształci naszą tablicę z ciągu tekstowego z powrotem w JavaScriptową tablicę:
+
+```
+let tasksFromLocalStorage = JSON.parse(localStorage.getItem("tasks"));
+```
+
+Zwróć uwagę na liczbę nawiasów: ponieważ `localStorage.getItem("tasks")` zostało przekazane do `JSON.parse()` jako argument, w związku z tym zostało "opakowane" w dodatkowe nawiasy.
+
+Tutaj również moglibyśmy zastosować bardziej czytelne rozwiązanie:
+
+```
+// pobieramy tablicę zapisaną w localStorage w postaci ciągu tekstowego:
+let tasksString = localStorage.getItem("tasks");
+
+console.log("pobrana tablica w postaci ciągu tekstowego:", tasksString);
+
+// przekształcamy ją z powrotem w JavaScriptową tablicę:
+let tasksArray = JSON.parse(tasksString);
+
+console.log("przekształcona z powrotem tablica:", tasksArray);
+```
+
+Powyższy kod jest nie tylko bardziej czytelny, ale też najprawdopodbniej bardziej zrozumiały dla Ciebie, gdyż rozbiliśmy złożoną czynność na 2 części: pobranie ciągu tekstowego i przypisanie go do zmiennej, a potem przekazanie tej zmiennej jako argumentu do `JSON.parse()`. No i nie mamy teraz tylu nawiasów (które *nota bene* mogą powodować dużą ilość błędów)!
+
+Pobaw się tym kodem w konsoli i sprawdź, czym się różnią zmienne `tasksString` i `tasksArray`.
+
+Uff... Znamy już podstawy pracy z `localStorage`, więc możemy uzupełnić naszą aplikację w pliku o powyższe funkcjonalności.
+
+Poniższy kod będzie zawierał zmodyfikowane dotychczasowe funkcje oraz komentarze na temat tego, co i jak się zadziało:
+
+```
+// czyścimy/ resetujemy konsolę na start,
+// żeby nie wyświetlała poprzednich komunikatów:
+
+console.clear();
+
+// definiujemy funkcję pobierającą zadania z localStorage:
+
+function getTasksFromLocalStorage() {
+	let storedTasks = JSON.parse(localStorage.getItem("tasks"));
+
+	// storedTasks mogą być tablicą (pustą lub zawierającą elementy)
+	// lub też mieć wartość null, jeśli w localStorage nie ma w ogóle klucza tasks
+	// np. nie został zainicjowany lub został wcześniej usunięty,
+	// dlatego:
+	
+	if (storedTasks !== null) { // jeśli tasks nie jest null
+		return storedTasks; // zwracamy storedTasks
+	} else { // jeśli tasks === null
+		return []; // zwracamy pustą tablicę, by móc np. korzystać z metody push()
+	}
+}
+
+// USUWAMY: let tasks = ["zrobić kawę", "sprawdzić maila", "zajrzeć na stronę kodujemywbiurze.pl"];
+
+// definiujemy zmienną tasks, do której przypisujemy
+// wartość zwróconą przez getTasksFromLocalStorage():
+
+let tasks = getTasksFromLocalStorage();
+
+// zastępujemy poprzednią funkcję showTasks() nową wersją:
+
+function showTasks() {
+	if (tasks.length) {
+		console.log("Twoje zapisane zadania", tasks);
+	} else {
+		console.log("Na razie nie masz żadnych zapisanych zadań... Dodaj jakieś!");
+	}
+}
+
+// dodajemy funkcję aktualizującą tablicę zadań w localStorage
+// (czyli nadpisującą poprzednią jej wartość):
+
+function updateTasksInLocalStorage(updatedTasks) {
+	// aktualizujemy localStorage o updatedTasks:
+	localStorage.setItem("tasks", JSON.stringify(updatedTasks));
+}
+
+// uzupełniamy funkcję addTasks o aktualizację localStorage:
+
+function addTask(newTask) {
+	// w poniższej linijce dodajemy zadanie do listy zadań:
+	tasks.push(newTask);
+
+	// wyświetlamy komunikat w konsoli o nowo dodanym zadaniu:
+	console.log("Do Twoich zadań zostało dodane nowe zadanie:", newTask);
+
+	// aktualizujemy localStorage o najnowsze tasks:
+	updateTasksInLocalStorage(tasks);
+
+	// wyświetlamy zaktualizowaną pełną listę zadań:
+	showTasks();
+}
+
+function loopTasks() {
+	for (let i = 0; i < tasks.length; i++) {
+		console.log(i, tasks[i]);
+	}
+}
+
+function deleteTask(index) {
+  // usuwamy 1 zadanie zlokalizowane pod przekazanym indeksem:
+  tasks.splice(index, 1);
+
+	// aktualizujemy localStorage o najnowsze tasks:
+	updateTasksInLocalStorage(tasks);
+
+	// wyświetlamy zaktualizowaną listę zadań:
+	showTasks();
+}
+
+// odpalając program, wyświetlamy zapisane zadania na start:
+showTasks();
+```
+
+Hmm... właśnie doszedłem do wniosku, że ten kurs należało podzielić na 2 części:
+
+- wszystko, co się działo przed wprowadzeniem `localStorage`
+- to, co się dzieje w "bonusowej" lekcji:
+  - local storage | proste dane tekstowe
+	- local storage | konwertowanie tablicy
+	- `if-else`
+	- `null`
+	- operator `!==` (i ewentualnie inne)
+
+To ma jeszcze większy sens, jeśli osobno zapiszemy plik `todo-app` z kodem przed wprowadzeniem `localStorage` oraz na potrzeby `localStorage` i innych zagadnień stworzymy drugi plik, np. `todo-app-local-storage`, ponieważ zmiany i uzupełnienia są znaczące.
+
+Ok, tak też zrobimy - jutro!
+
+## Zakończenie i podsumowanie
+
+Właśnie dobrnąłeś/aś do końca tego krótkiego kursu. Spodobało się? Chcesz więcej?
+
+Jeśli tak, to daj mi znać, że jesteś zainteresowany/a dalszymi lekcjami w tym samym stylu *(zakładam, że będziemy dalej rozwijać naszą aplikację do zadań, dodając coraz to nowsze funkcjonalności oraz poznając również podstawy HTML i CSS, by wyjść poza konsolę i stworzyć stronę/ aplikację internetową z prawdziwego zdarzenia)*.
 
 Jeśli więc chcesz zrobić ten kolejny i następne kroki, daj znać!
 
-## Darmowe źródła do samodzielnej nauki
+## Darmowe źródła do samodzielnej nauki (po angielsku)
 
 ---
 
 Poniżej znajdziesz listę sprawdzonych źródeł do samodzielnej nauki *JavaScript* i nie tylko.
 
-Niestety, większość nie jest dostępna (przetłumaczona) w języku polskim, aczkolwiek zachęcam do nauki w języku angielskim, nawet jeśli Twój angielski nie jest na najwyższym poziomie, ponieważ tutoriale są zwykle pisane bardzo postym językiem:
+Niestety, większość nie jest dostępna w języku polskim, aczkolwiek zachęcam do nauki w języku angielskim, nawet jeśli Twój angielski nie jest na najwyższym poziomie, ponieważ tutoriale są zwykle pisane bardzo postym językiem:
 
 - https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics
 - https://javascript.info/
