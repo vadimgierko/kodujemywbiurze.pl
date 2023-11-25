@@ -19,7 +19,7 @@
 					<a
 						href={$page.route.id === '/dokumentacja/javascript/[slug]'
 							? `/dokumentacja/javascript/${slug}`
-							: `/kursy/podstawy-javascript-pierwsza-aplikacja-w-konsoli-darmowy-kurs/${slug}`}
+							: `/kursy/javascript/${slug}`}
 						class={$page.url.pathname.includes(slug) ? 'active-link' : ''}>{title}</a
 					>
 				</li>

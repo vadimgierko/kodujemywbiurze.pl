@@ -11,7 +11,7 @@
 			'Naucz się podstaw Javascript - najbardziej popularnego języka programowania!',
 			'W trakcie kursu stworzysz działającą aplikację do zarządzania Twoimi zadaniami bezpośrednio w konsoli Twojej przeglądarki!'
 		]}
-		btnHref="/kursy/podstawy-javascript-pierwsza-aplikacja-w-konsoli-darmowy-kurs/wprowadzenie"
+		btnHref="/kursy/javascript/wprowadzenie"
 		btnCTA="Zacznij kurs!"
 		imgSrc={heroImg}
 		handleMount={() => {}}

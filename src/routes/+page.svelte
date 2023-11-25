@@ -19,9 +19,9 @@
 		h1LargeText="Kodujemy w biurze!"
 		descriptionParagraphs={[
 			'Naucz się programowania webowego w przerwach między zadaniami w biurze!',
-			'Zacznij pisać kod bezpośrednio w swojej przeglądarce!'
+			'Zacznij pisać kod pierwszej aplikacji bezpośrednio w swojej przeglądarce!'
 		]}
-		btnHref="/kursy/podstawy-javascript-pierwsza-aplikacja-w-konsoli-darmowy-kurs"
+		btnHref="/kursy/javascript"
 		btnCTA="Zacznij kodować w biurze!"
 		imgSrc={heroImg}
 		handleMount={() => isIndexPage.set(true)}
