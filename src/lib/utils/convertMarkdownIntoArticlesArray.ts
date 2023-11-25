@@ -1,5 +1,5 @@
-import type { Article } from "$lib/types";
-import slugify from "slugify";
+import type { Article } from '$lib/types';
+import slugify from 'slugify';
 
 function customSlugify(text: string) {
 	slugify.extend({ '|': '-' });
@@ -15,9 +15,24 @@ export default function convertMarkdownIntoArticlesArray(mdContent: string) {
 
 	if (!mdContent || !headersFromMd || !articlesFromMd) return [];
 
-	const articles: Article[] = headersFromMd.map((h, i) => ({
-		title: h,
-		slug: customSlugify(h),
+	const titles = headersFromMd.map((title) => {
+		const separatorIndex = title.indexOf('|');
+		const fullTitle = title.trim();
+		const docTitle = separatorIndex !== -1 ? title.slice(0, separatorIndex).trim() : title.trim();
+		const tutorialTitle =
+			separatorIndex !== -1 ? title.slice(separatorIndex + 1).trim() : title.trim();
+
+		return {
+			fullTitle,
+			docTitle,
+			tutorialTitle
+		};
+	});
+
+	const articles: Article[] = titles.map((t, i) => ({
+		...t,
+		title: t.fullTitle,
+		slug: customSlugify(t.docTitle),
 		content: articlesFromMd[i]
 	}));
 

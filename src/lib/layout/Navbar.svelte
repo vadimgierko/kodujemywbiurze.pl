@@ -58,13 +58,10 @@
 
 			<div class="right-section">
 				{#if !$isScreenLessThan992}
-					<a
-						href="/kursy/podstawy-javascript-pierwsza-aplikacja-w-konsoli-darmowy-kurs"
-						class="nav-link">kurs javascript</a
-					>
-					<a href="/dokumentacja/javascript" class="nav-link"
+					<a href="/kursy/javascript" class="nav-link">kurs javascript</a>
+					<!-- <a href="/dokumentacja/javascript" class="nav-link"
 						>dokumentacja javascript</a
-					>
+					> -->
 				{/if}
 
 				<!-- THEME TOGGLE -->
@@ -106,14 +103,10 @@
 		{#if isScreenLessThan992 && isNavbarExpanded}
 			<hr />
 			<div class="expanded-nav-section">
-				<a
-					href="/kursy/podstawy-javascript-pierwsza-aplikacja-w-konsoli-darmowy-kurs"
-					class="nav-link"
-					on:click={toggleNavbar}>kurs javascript</a
-				>
-				<a href="/dokumentacja/javascript" class="nav-link" on:click={toggleNavbar}
+				<a href="/kursy/javascript" class="nav-link" on:click={toggleNavbar}>kurs javascript</a>
+				<!-- <a href="/dokumentacja/javascript" class="nav-link" on:click={toggleNavbar}
 					>dokumentacja javascript</a
-				>
+				> -->
 				<hr />
 				<a href="https://www.facebook.com/kodujemywbiurze" target="_blank" class="nav-link"
 					><FacebookIcon /></a

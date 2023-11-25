@@ -10,9 +10,10 @@
 
 Chodzi mi przede wszystkim o **pobudzenie Twojej ciekawości** i pokazanie, że **pisanie kodu jest dostępne dla każdego** i może być świetną **zabawą** (w szczególności w biurze)!
 
-W ramach tego *(pierwszego na tej stronie)* krótkiego kursu **stworzymy i odpalimy prostą aplikację do zarządzania listą zadań do zrobienia, która będzie działać w konsoli naszej przeglądarki bezpośrednio na tej stronie** *(za chwilę dowiesz się, <a href="/dokumentacja/javascript/konsola" target="_blank">czym jest konsola i jak z niej korzystać</a>)*.
+Ponieważ wolę **uczyć się nowych rzeczy w praktyce, widząc natychmiastowe rezultaty** mojej nauki i pracy, dlatego w trakcie tego kursu:
 
-Ponieważ zakładam, że nigdy nie napisałeś/aś żadnego kodu i nie masz pojęcia, jak to w ogóle działa, **przy okazji** tworzenia aplikacji **opanujemy wybrane podstawy języka JavaScript** - <a href="https://bulldogjob.pl/readme/najpopularniejsze-jezyki-programowania-2020" target="_blank">najbardziej popularnego języka programowania</a>.
+- **stworzymy i odpalimy prostą aplikację do zarządzania listą zadań do zrobienia, która będzie działać w konsoli naszej przeglądarki bezpośrednio na tej stronie** *(za chwilę dowiesz się, czym jest konsola i jak z niej korzystać)* oraz
+- **przy okazji** tworzenia aplikacji **opanujemy wybrane podstawy języka JavaScript** - <a href="https://bulldogjob.pl/readme/najpopularniejsze-jezyki-programowania-2020" target="_blank">najbardziej popularnego języka programowania</a>.
 
 Aplikacja, którą stworzymy, umożliwi nam:
 
@@ -24,15 +25,9 @@ Aplikacja, którą stworzymy, umożliwi nam:
 
 zadań do zrobienia za pomocą poleceń napisanych przez nas kodem JavaScript w konsoli.
 
-Osobiście wolę **uczyć się nowych rzeczy w praktyce, widząc natychmiastowe rezultaty** mojej nauki i pracy, dlatego w trakcie lektury zdobędziesz **dokładnie tyle wiedzy, ile jest potrzebne w niniejszym kursie, by stworzyć wspomniane funkcjonalności**, i niczego ponad to.
+W ramach rozbudowy niniejszej strony i dodawania kolejnych lekcji i kursów (co zależy od Waszego zainteresowania projektem, dlatego zachęcam do polubienia i śledzenia profilu na <a href="https://www.facebook.com/kodujemywbiurze" target="_blank">Facebooku</a> i <a href="https://www.linkedin.com/company/kodujemywbiurze" target="_blank">LinkedIn</a>), będziemy przekształcać i dalej rozwijać tę aplikację w aplikację z pełnego zdarzenia - z interfacem użytkownika, bazą danych, rejestracją użytkowników itd. *Sky is the limit*, aczkolwiek na razie w ramach eksperymentu ograniczymy się do funkcjonalności, którymi dysponuje nasza przeglądarka.
 
-Jeśli z kolei będziesz chciał/a poszerzyć swoją wiedzę nt. poszczególnych pojęć omawianych w tym kursie, zapraszam do zapoznania się z <a href="/dokumentacja/javascript/konsola" target="_blank">dokumentacją</a>, która jest *de facto* osobnym, bardziej "suchym" tutorialem i *słownikiem* języka JavaScript.
-
-Jak na razie, aplikacja ta będzie w pewnym sensie "tajna", czyli będzie dostępna tylko dla Ciebie w Twojej przeglądarce i tylko na tej stronie oraz... nikt inny z dostępem do Twojej przeglądarki raczej nie będzie w stanie z niej skorzystać, ponieważ na początku będziemy zarządzać naszymi zadaniami za pomocą poleceń, które sami napiszemy. Jeśli ktoś nie zna tych poleceń, to nie odkryje Twoich tajnych i bardzo ważnych zadań w biurze ;-)
-
-Potem, w ramach rozbudowy niniejszej strony i dodawania kolejnych lekcji i kursów (co zależy od Waszego zainteresowania projektem, dlatego zachęcam do zapisania się do newslettera i śledzenia profilu na <a href="https://www.facebook.com/kodujemywbiurze" target="_blank">Facebooku</a> i <a href="https://www.linkedin.com/company/kodujemywbiurze" target="_blank">LinkedIn</a>), będziemy przekształcać i dalej rozwijać tę aplikację w aplikację z pełnego zdarzenia - z interfacem użytkownika, bazą danych, rejestracją użytkowników itd. *Sky is the limit*, aczkolwiek na razie w ramach eksperymentu ograniczymy się do funkcjonalności, którymi dysponuje nasza przeglądarka.
-
-Mam nadzieję, że kiedy dobrniesz do końca tego tutoriala, to będziesz chciał/a więcej! Jeśli tak będzie, to daj mi znać, że jesteś zainteresowany/a dalszymi lekcjami w tym samym stylu.
+Mam nadzieję, że kiedy dobrniesz do końca tego pierwszego tutoriala, to będziesz chciał/a więcej! Jeśli tak będzie, to daj mi znać, że jesteś zainteresowany/a dalszymi lekcjami w tym samym stylu.
 
 *Happy Coding!*
 
@@ -55,7 +50,7 @@ Możliwości są nieograniczone!
 
 To właśnie dzięki JavaScript strony i aplikacje są dynamiczne i interaktywne - jest on silnikiem napędzającym stronę.
 
-## Zaczynamy pisać kod! Czym jest konsola, jak jej używać i co to jest *Hello, World!*?
+## Konsola | Zaczynamy pisać kod! Czym jest konsola, jak jej używać i co to jest *Hello, World!*?
 
 ---
 
@@ -125,7 +120,7 @@ Ok, więc wiemy już, czym jest konsola, jak ją otworzyć, a nawet wpisaliśmy 
 
 Jak już wspomniałem wcześniej, konsola umożliwia nam m. in. pisanie i uruchamianie kodu JavaScript, chociaż nie jest to jej główny cel - każdy edytor kodu jest zdecydowanie lepszym narzędziem do pisania kodu. Natomiast na razie nie chcemy żadnego osobnego edytora kodu. Chcemy po prostu napisać kilka linijek kodu i zobaczyć, jak to działa oraz *złapać bakcyla*. Co prawda, w pewnym momencie w tym kursie zaczniemy korzystać z dodatkowej funkcjonalności w przeglądarce, która ułatwi nam pisanie kodu, ale na razie pozostajemy w "czystej" konsoli. Z kolei w kolejnych kursach będziemy najprawdopodbniej korzystać z edytorów kodu dostępnych online.
 
-## Stwórzmy pierwsze zadanie w naszej aplikacji | Zmienne, wartości i słowo kluczowe `let`
+## Zmienne | Stwórzmy pierwsze zadanie w naszej aplikacji
 
 ---
 
@@ -133,7 +128,7 @@ Jeśli mamy jakieś ważne zadanie do zrobienia, to najprawdopodobniej zapiszemy
 
 Jeśli chcemy przechowywać nasze zadania (lub cokolwiek innego) w kodzie, musimy stworzyć dla nich dedykowane miejsce (odpowiednik naszej kartki). Na razie nasza konsola (czyli de facto nasz prosty program) nie przechowuje niczego.
 
-Zanim przechowamy wiele zadań, spróbujmy najpierw stworzyć 1 zadanie *(jest typowe podejście dla programisty - rozbijamy problem na mniejsze problemy)*. Żeby to zrobić, należy **stworzyć <a href="/dokumentacja/javascript/zmienne" target="_blank">zmienną</a> i przypisać do niej pewne wartości**. Co to znaczy?
+Zanim przechowamy wiele zadań, spróbujmy najpierw stworzyć 1 zadanie *(jest typowe podejście dla programisty - rozbijamy problem na mniejsze problemy)*. Żeby to zrobić, należy **stworzyć zmienną i przypisać do niej pewne wartości**. Co to znaczy?
 
 Zanim wytłumaczę, czym jest zmienna i wartości:
 
@@ -151,7 +146,7 @@ W powyższym kodzie utworzyliśmy/ zadeklarowaliśmy za pomocą słowa kluczoweg
 
 Mamy więc pudełko o nazwie `task`, które w środku może przechowywać jakiekolwiek zadanie - w naszym przypadku jest to ciąg tekstowy `zrobić kawę` (zdecydowanie najważniejsza i podstawowa rzecz do zrobienia podczas pracy w biurze, najlepiej kilkakrotnie w ciągu dnia), ale równie dobrze mogłoby to być *sprawdzić maila* lub *zajrzeć na stronę kodujemywbiurze.pl*.
 
-Zmienne mogą przechowywać wiele <a href="/dokumentacja/javascript/typy-danych" target="_blank">typów danych</a> (liczby, obiekty, <a href="/dokumentacja/javascript/funkcje" target="_blank">funkcje</a> itd.), nie tylko ciągi tekstowe, natomiast nie musimy na razie wiedzieć za wiele na ten temat *(jeśli natomiast już chcesz wiedzieć więcej nt. zmiennych, to zajrzyj <a href="/dokumentacja/javascript/zmienne" target="_blank">do dokumentacji</a>)*.
+Zmienne mogą przechowywać wiele typów danych (liczby, obiekty, funkcje itd.), nie tylko ciągi tekstowe, natomiast nie musimy na razie wiedzieć za wiele na ten temat - w trakcie kursu poznamy większość.
 
 Nasz program wie już o istnieniu zmiennej `task` i będzie o niej pamiętał. W każdej chwili możemy się do niej odwołać na kilka sposobów, np. poprzez wywołanie `console.log(task)`.
 
@@ -159,7 +154,7 @@ Możemy też wpisać w nowej linijce konsoli po prostu samą nazwę zmiennej `ta
 
 Możesz też napisać `task`, a potem kliknąć Enter. W tej sytuacji konsola zwróci Ci wartość tej zmiennej w następnej linijce.
 
-## Zmieńmy nasze zadanie | Nadpisywanie wartości zmiennych
+## Nadpisywanie wartości zmiennych | Zmieńmy nasze zadanie
 
 ---
 
@@ -169,7 +164,7 @@ Ok, zrobiliśmy kawę, więc zadanie zostało odhaczone i teraz chcemy go zmieni
 task = "sprawdzić maila";
 ```
 
-Zwróć uwagę na to, że tym razem nie użyliśmy **słowa kluczowego `let`**, ponieważ **używamy** go **tylko raz, kiedy tworzymy nową <a href="/dokumentacja/javascript/zmienne" target="_blank">zmienną</a>**, żeby powiedzieć programowi, że *oto jest nowa zmienna, będę w niej coś przechowywał/a, nie zapomnij o tym oraz daj mi do niej dostęp za każdym razem, kiedy będę tego potrzebował/a*. Później posługujemy się już tylko samą nazwą zmiennej.
+Zwróć uwagę na to, że tym razem nie użyliśmy **słowa kluczowego `let`**, ponieważ **używamy** go **tylko raz, kiedy tworzymy nową zmienną**, żeby powiedzieć programowi, że *oto jest nowa zmienna, będę w niej coś przechowywał/a, nie zapomnij o tym oraz daj mi do niej dostęp za każdym razem, kiedy będę tego potrzebował/a*. Później posługujemy się już tylko samą nazwą zmiennej.
 
 W powyższym kodzie przypisaliśmy do naszej zmiennej nową wartość, w związku z czym nasz program zapamięta i wyświetli nową wartość, jeśli wpiszemy nazwę zmiennej w konsoli (spróbuj to zrobić).
 
@@ -179,7 +174,7 @@ Możemy tak przypisywać nowe wartości do tej samej zmiennej mnóstwo razy, a p
 
 ---
 
-Dobrą praktyką jest nazywanie <a href="/dokumentacja/javascript/zmienne" target="_blank">zmiennych</a> w taki sposób, aby nazwy te niewątpliwie odzwierciedlały charakter wartości tych zmiennych. Każdy, kto rozumie znaczenie słowa *task*, będzie się spodziewał, że jest to jakieś zadanie, a nie na przykład numer telefonu. Gdybyśmy chcieli przechować numer telefonu w zmiennej, nazwalibyśmy ją `phoneNumber`:
+Dobrą praktyką jest nazywanie zmiennych w taki sposób, aby nazwy te niewątpliwie odzwierciedlały charakter wartości tych zmiennych. Każdy, kto rozumie znaczenie słowa *task*, będzie się spodziewał, że jest to jakieś zadanie, a nie na przykład numer telefonu. Gdybyśmy chcieli przechować numer telefonu w zmiennej, nazwalibyśmy ją `phoneNumber`:
 
 ```
 let phoneNumber = "666-999-666";
@@ -193,11 +188,11 @@ Natomiast to, że nasze zadania, które przechowujemy w kodzie, są zapisane w j
 
 Z kolei sposób łączenia słów w jedną całość w kodzie w ten sposób: `phoneNumber` nazywa się `camelCase`. Taki sposób zapisu rozwiązuje jeden problem: nazwa zmiennej musi być ciągiem znaków, nie mogą to być dwa oddzielone od siebie wyrazy. Możemy też zapisać nazwę zmiennej na kilka innych sposobów (które są właściwe w niektórych sytuacjach): `phone_number` lub `phone-number`, najczęściej jednak w JavaScripcie używamy pisowni `camelCase`.
 
-## Tworzymy listę zadań | Tablica, metoda `push()`, indeksy i modyfikacja elementów w tablicy
+## Tablica, metoda push(), indeksy i modyfikacja elementów w tablicy | Tworzymy listę zadań
 
 ---
 
-Ok, więc potrafimy już utworzyć nową <a href="/dokumentacja/javascript/zmienne" target="_blank">zmienną</a>, by przechować jej wartość w naszym kodzie, potrafimy też tę wartość zmodyfikować/ nadpisać. Natomiast posiadanie tylko jednej zmiennej `task`, którą będziemy ciągle modyfikować, jest bardzo niepraktyczne i nie do tego dążymy. Chcemy utworzyć listę zadań *(masz przecież dużo zadań do zrobienia w biurze, także związanych bezpośrednio z pracą ;-)*, do której będziemy mogli dodawać zadania, usuwać je, lub też wyświetlić listę zadań w całości!
+Ok, więc potrafimy już utworzyć nową zmienną, by przechować jej wartość w naszym kodzie, potrafimy też tę wartość zmodyfikować/ nadpisać. Natomiast posiadanie tylko jednej zmiennej `task`, którą będziemy ciągle modyfikować, jest bardzo niepraktyczne i nie do tego dążymy. Chcemy utworzyć listę zadań *(masz przecież dużo zadań do zrobienia w biurze, także związanych bezpośrednio z pracą ;-)*, do której będziemy mogli dodawać zadania, usuwać je, lub też wyświetlić listę zadań w całości!
 
 Stwórzmy zatem najpierw pustą listę zadań, którą przypiszemy do nowej zmiennej:
 
@@ -205,7 +200,7 @@ Stwórzmy zatem najpierw pustą listę zadań, którą przypiszemy do nowej zmie
 let tasks = [];
 ```
 
-Zauważ, że tym razem wartością zmiennej nie jest ciąg znaków (czyli słowa, zdania, znaki zawarte pomiędzy cudzysłowami, jak w np.: "zrobić kawę"), tylko dwa nawiasy kwadratowe `[]`. Jest to <a href="/dokumentacja/javascript/tablice" target="_blank">tablica</a> (ang. `array`), która jest niczym innym, jak kontenerem/ listą różnych elementów, które znajdą się w środku.
+Zauważ, że tym razem wartością zmiennej nie jest ciąg znaków (czyli słowa, zdania, znaki zawarte pomiędzy cudzysłowami, jak w np.: "zrobić kawę"), tylko dwa nawiasy kwadratowe `[]`. Jest to **tablica** (ang. `array`), która jest niczym innym, jak kontenerem/ listą różnych elementów, które znajdą się w środku.
 
 Na razie nasza tablica/ lista `tasks` jest pusta (pomiędzy kwadratowymi nawiasami nie ma żadnych elementów). Gdybyśmy chcieli dodać do niej manualnie (ręcznie wpisując) nasze zadania, to moglibyśmy to zrobić np. na kilka sposobów:
 
@@ -251,7 +246,7 @@ Teraz, kiedy ponownie sprawdzimy wartość `tasks[0]` w konsoli, to wyświetli n
 
 ---
 
-Każdorazowe dodawanie zadań do listy zadań poprzez użycie kodu, z którego wcześniej korzystaliśmy (`tasks.push("nowe zadanie")`), działa, ale programiści "opakowują" kod, z którego często korzystamy (a będziemy często dodawać zadania do listy), w reużywalne "kawałki" kodu, które nazywają się <a href="/dokumentacja/javascript/funkcje" target="_blank">funkcjami</a>.
+Każdorazowe dodawanie zadań do listy zadań poprzez użycie kodu, z którego wcześniej korzystaliśmy (`tasks.push("nowe zadanie")`), działa, ale programiści "opakowują" kod, z którego często korzystamy (a będziemy często dodawać zadania do listy), w reużywalne "kawałki" kodu, które nazywają się **funkcjami**.
 
 **Funkcja to pewien zakmnięty w sobie fragment kodu, który wykonuje pewne zadania/ polecenia w nim zdefiniowane za każdym razem, kiedy go wywołamy.**
 
@@ -305,7 +300,7 @@ Wracając do naszej funkcji, w powyższym kodzie używając słowa kluczowego `f
 
 Jak widzisz, polecenie `console.log(tasks)`, którego wcześniej używaliśmy osobno, zostało "opakowane" w funkcję, której nazwa ewidentnie wskazuje na to, czego możemy się od niej spodziewać, w związku z czym ktoś, kto nie widział całości naszego kodu, ani nie wie, co jest w środku tej funkcji, raczej się domyśli, co ta funkcja robi i sam będzie mógł jej użyć.
 
-Ponadto, jeśli wrócisz do swojego kodu za kilka dni lub tygodni, to mimo, że nie będziesz pamiętał/a, co znajduje się w środku funkcji `showTasks()`, to zdecydowanie zrozumiesz, co ona robi. Uwierz mi, że programiści o wiele częściej dosłownie czytają kod, niż go piszą, dlatego <a href="/kursy/podstawy-javascript-pierwsza-aplikacja-w-konsoli-darmowy-kurs/dobre-praktyki-w-nazewnictwie-zmiennych" target="_blank">trafne nazwy</a> zarówno zmiennych, jak i funkcji, niezwykle ułatwiają jego zrozumienie, mimo że nie zna się/ nie pamięta się szczegółów.
+Ponadto, jeśli wrócisz do swojego kodu za kilka dni lub tygodni, to mimo, że nie będziesz pamiętał/a, co znajduje się w środku funkcji `showTasks()`, to zdecydowanie zrozumiesz, co ona robi. Uwierz mi, że programiści o wiele częściej dosłownie czytają kod, niż go piszą, dlatego trafne nazwy zarówno zmiennych, jak i funkcji, niezwykle ułatwiają jego zrozumienie, mimo że nie zna się/ nie pamięta się szczegółów.
 
 Żeby nasza funkcja zadziałała i wyświetliła nasze zadania, musimy ją wywołać poprzez wpisanie w konsoli `showTasks()` i kliknąć Enter. Dzięki temu, nie musimy pamiętać, jak wyświetlić nasze zadania w konsoli, wystarczy wywołać funkcję `showTasks()`.
 
@@ -338,7 +333,7 @@ aczkolwiek taki zapis nie jest czytelny, dlatego lepiej używać wielolinijkoweg
 
 Ogólnie funkcje możemy zadeklarować też na kilka innych sposobów, ale na razie wystarczy nam ten jeden.
 
-Zanim stworzymy kolejne funkcje, chciałbym zwrócić Twoją uwagę na nazewnictwo funkcji. Pamiętasz, że <a href="/kursy/podstawy-javascript-pierwsza-aplikacja-w-konsoli-darmowy-kurs/dobre-praktyki-w-nazewnictwie-zmiennych" target="_blank">nazwa zmiennej powinna odzwierciedlać to, jaką wartość przechowuje</a>? Z funkcjami jest podobnie, tyle że funkcje nie reprezentują jakieś wartości, tylko czynności - funkcja coś "robi". W związku z tym, jeśli funkcja powinna wyświetlić zadania, to należy ją nazwać `showTasks` lub `displayTasks`, albo też `logTasks`. Te nazwy brzmią jak komendy: "pokaż/ wyświetl zadania!" i tak właśnie jest z funkcjami - są one poleceniami dla komputera/ przeglądarki.
+Zanim stworzymy kolejne funkcje, chciałbym zwrócić Twoją uwagę na nazewnictwo funkcji. Pamiętasz, że nazwa zmiennej powinna odzwierciedlać to, jaką wartość przechowuje? Z funkcjami jest podobnie, tyle że funkcje nie reprezentują jakieś wartości, tylko czynności - funkcja coś "robi". W związku z tym, jeśli funkcja powinna wyświetlić zadania, to należy ją nazwać `showTasks` lub `displayTasks`, albo też `logTasks`. Te nazwy brzmią jak komendy: "pokaż/ wyświetl zadania!" i tak właśnie jest z funkcjami - są one poleceniami dla komputera/ przeglądarki.
 
 Owszem, funkcja może również zwracać wartość, np. w tym przypadku:
 
@@ -355,9 +350,9 @@ function calculateSum(a, b) {
 let sum = calculateSum(3, 5);
 ```
 
-aczkolwiek zwrócona wartość jest wynikiem działania funkcji, więc funkcja musiała "coś zrobić", by "wyprodukować" wartość, którą zwraca *(więcej na ten temat przeczytasz w <a href="/dokumentacja/javascript/funkcje" target="_blank">dokumentacji</a>)*.
+aczkolwiek zwrócona wartość jest wynikiem działania funkcji, więc funkcja musiała "coś zrobić", by "wyprodukować" wartość, którą zwraca.
 
-## Funkcja dodająca zadanie | Argumenty funkcji, wywoływanie innych funkcji wewnątrz funkcji oraz komentarze
+## Argumenty funkcji, wywoływanie innych funkcji wewnątrz funkcji oraz komentarze | Funkcja dodająca zadanie
 
 ---
 
@@ -423,15 +418,15 @@ addTask("położyć jogurt na grzejniku, by się zacieplił");
 
 Jeśli wszystko poszło zgodnie z planem, to za każdym razem po dodaniu zadania, wyświetla Ci się komunikat oraz coraz to dłuża lista - ileż to my mamy do zrobienia dzisiaj w biurze!
 
-## Wyświetlanie zadań po kolei | Pętla `for`, długość tablicy `length`
+## Pętla for, długość tablicy length | Wyświetlanie zadań po kolei
 
 ---
 
 A co powiesz na to, że zamiast wyświetlać całą tablicę zadań, wyświetlimy każde zadanie w osobnej linijce, dzięki czemu lista będzie bardziej przejrzysta?
 
-Możemy to osiągnąć na wiele sposobów, ale wykorzystamy w tym celu starą dobrą klasyczną metodę - pętlę `for`. Czym jest <a href="/dokumentacja/javascript/petle" target="_blank">pętla</a>?
+Możemy to osiągnąć na wiele sposobów, ale wykorzystamy w tym celu starą dobrą klasyczną metodę - pętlę `for`. Czym jest pętla?
 
-Pętla jest poleceniem, które wykonuje pewne zadanie raz po raz, dopóki pewien <a href="/dokumentacja/javascript/instrukcje-warunkowe" target="_blank">warunek</a> jest spełniony. Ogólnie początkujący programiści czasami mają problem ze zrozumieniem działania pętli, więc w razie czego, nie poddawaj się od razu ;-)
+Pętla jest poleceniem, które wykonuje pewne zadanie raz po raz, dopóki pewien warunek jest spełniony. Ogólnie początkujący programiści czasami mają problem ze zrozumieniem działania pętli, więc w razie czego, nie poddawaj się od razu ;-)
 
 Zobaczmy poniższy kod i zastanówmy się nad nim:
 
@@ -459,7 +454,7 @@ Gdybyśmy chcieli "przetłumaczyć" cały powyższy kod na ludzki język, to mog
 2. Jeśli tak, to wywołaj kod zawarty w klamrach (jeden raz), po czym zwiększ `i` o 1 i wróć do pierwszego punktu.
 3. Jeśli nie (`i` jest równe lub większe niż 10), nie wywołuj żadnego kodu i zakończ zadanie (nie wracaj do pierwszego punktu).
 
-Gdybyśmy teraz chcieli wyświetlić nasze zadania w podobny sposób, moglibyśmy stworzyć nową funkcję, nazwijmy ją `loopTasks()` i zamiast sprawdzać, czy `i` jest mniejsze od 10, będziemy sprawdzać, czy `i` jest mniejsze od długości naszej listy (a możemy sprawdzić długość naszej listy, która jest <a href="/dokumentacja/javascript/tablice" target="_blank">tablicą</a>, w ten sposób: `tasks.length`), czyli liczby elementów, które zawiera:
+Gdybyśmy teraz chcieli wyświetlić nasze zadania w podobny sposób, moglibyśmy stworzyć nową funkcję, nazwijmy ją `loopTasks()` i zamiast sprawdzać, czy `i` jest mniejsze od 10, będziemy sprawdzać, czy `i` jest mniejsze od długości naszej listy (a możemy sprawdzić długość naszej listy, która jest tablicą, w ten sposób: `tasks.length`), czyli liczby elementów, które zawiera:
 
 ```
 function loopTasks() {
@@ -495,7 +490,7 @@ function loopTasks() {
 }
 ```
 
-## Usuwanie zadań z listy | Metoda `splice()`
+## Metoda splice() | Usuwanie zadań z listy
 
 ---
 
@@ -535,7 +530,7 @@ Spróbuj teraz stworzyć funckję o nazwie `deleteAllTasks()`, która usuwa od r
 - można to zrobić bardzo, ale to bardzo łatwo (właśnie tego od Ciebie oczekuję),
 - ale można też zaszaleć i w tym celu użyć pętli, a nawet pętli, która wykorzystuje już wcześniej stworzoną funkcję `deleteTask()`, która by usuwała każde zadanie po kolei, przy okazji wyrzucała do konsoli każde usunięte zadanie.
 
-## Podstawy podstaw za nami! | Kod dotychczasowej aplikacji w całości
+## Podstawy podstaw za nami! Kod pierwszej wersji aplikacji w całości
 
 ---
 
@@ -617,19 +612,15 @@ Gratuluję jeszcze raz!
 
 Ale...
 
-Mimo że nasza aplikacja działa, to mam jeszcze jedną bonusową lekcję z czymś naprawdę ekstra!
-
 Na razie nasze zadania są przechowywane w przeglądarce tylko dopóki nie zresetujemy tej strony lub nie zmienimy czegoś w pliku `todo-app`, a potem nie zapiszemy tego pliku (`Ctrl+S`) i nie uruchomimy go w konsoli.
 
 Jest to w pewnym sensie dobre, ponieważ jutro nie przytłoczy Cię w pracy nadmiar zapisanych (i niezrealizowanych) zadań! Aczkolwiek fajnie by było, gdyby nasze zadania pozostawały zapisane tak długo, jak chcemy. Żebyśmy mogli nagle zamknąć przeglądarkę lub tę stronę (żeby przełożony nie zobaczył), a potem otworzyć ją znowu i mieć dostęp do naszych ważnych zadań!
 
-Więc możemy to zrobić i zrobimy w kolejnej, ostatniej lekcji z tego kursu. Jest to wiedza bardziej zaawansowana od tego, co zrobiliśmy dotychczas (wykorzystamy wbudowaną funkcjonalność przeglądarki `localStorage`), ale myślę, że jesteś na to przygotowany/a!
-
-Przy okazji poznamy kolejną ważną rzecz w JavaScript - `if-else`.
+Więc możemy to zrobić i zrobimy w kolejnej części tutoriala. Będzie to wiedza bardziej zaawansowana od tego, co zrobiliśmy dotychczas (wykorzystamy wbudowaną funkcjonalność przeglądarki `localStorage`), dlatego też stworzymy kolejny plik, w którym będziemy modyfikować naszą aplikację, dzięki czemu... będziemy mieli 2 aplikacje!
 
 Do dzieła!
 
-## BONUS: Zapisujemy oraz pobieramy zadania w przeglądarce | `localStorage`
+## localStorage | Zapisujemy oraz pobieramy zadania w przeglądarce
 
 Gdybyśmy zrobili naszą aplikację tak, jak się to robi w prawdziwym świecie, to wykorzystalibyśmy **bazy danych** do przechowywania naszych zadań. Przechowywalibyśmy tam także dane użytkowników, którzy by z niej korzystali.
 
@@ -645,25 +636,21 @@ Ok, wpisz więc do konsoli `localStorage` i kliknij Enter. Jeśli po raz pierwsz
 
 Tak, zgadza się, w tajemnicy przed Tobą przechowuję za pomocą `localStorage` to, czy korzystasz z ciemnego czy jasnego trybu na swoim urządzeniu lub czy samodzielnie zmieniłeś tryb wyświetlania na tej stronie klikając w ikonkę księżyca lub słońca w górnym menu. Jak widzisz, `localStorage` jest bardzo przydatny dla twórców stron, kiedy sięganie do bazy danych z prawdziwego zdarzenia jest zbyt dużym *overkillem*.
 
-### Jak zapisać proste tekstowe dane w `localStorage`
+## Dodawanie, pobieranie i usuwanie prostych danych tekstowych z localStorage
 
-Żeby zapisać proste tekstowe dane w `localStorage`, trzeba użyć mniej więcej takiego kodu: `localStorage.setItem("nazwaKlucza", "wartośćKlucza");`. `setItem()` jest jedną z metod obiektu `localStorage`, dzięki której możemy przypisać wartość do jakiegoś klucza, podobnie jak przypisujemy wartość do zmiennej, tyle że zarówno nazwa klucza, jak i jego wartość mają być ujęte w cudzysłów.
+Żeby **dodać** proste dane tekstowe do `localStorage`, trzeba użyć mniej więcej takiego kodu: `localStorage.setItem("nazwaKlucza", "wartośćKlucza");`. `setItem()` jest jedną z metod obiektu `localStorage`, dzięki której możemy przypisać wartość do jakiegoś klucza, podobnie jak przypisujemy wartość do zmiennej, tyle że zarówno nazwa klucza, jak i jego wartość mają być ujęte w cudzysłów.
 
 Spróbuj zapisać lub zaktualizować swoje imię w `localStorage` w ten sposób: `localStorage.setItem("name", "TutajWpiszSwojeImię")` i kliknij Enter, po czym wpisz `localStorage` i znowu kliknij Enter, by zobaczyć, że nowy klucz jest teraz w obiekcie.
 
 **Uwaga!** Metoda `setItem()` zawsze nadpisuje wartość klucza. Jeśli dany klucz nie istniał wcześniej, zostanie utworzony, jeśli istniał - jego wartość zostanie napisana przez nową wartość.
 
-### Jak odczytać/ pobrać proste tekstowe dane z `localStorage`
-
-Żeby pobrać jakiś klucz z `localStorage`, należy użyć metody `getItem()`, podając w nawiasach nazwę klucza w cudzysłowiu, np. tak: `localStorage.getItem("name")`. Spróbuj pobrać zapisane przez siebie imię z `localStorage`.
+Żeby **pobrać** jakiś klucz z `localStorage`, należy użyć metody `getItem()`, podając w nawiasach nazwę klucza w cudzysłowiu, np. tak: `localStorage.getItem("name")`. Spróbuj pobrać zapisane przez siebie imię z `localStorage`.
 
 Pobrane dane z `localStorage` możemy przypisać do zmiennej, by móc nimi operować w naszym programie. Można to zrobić w następujący sposób: `let name = localStorage.getItem("name")`.
 
-### Jak usunąć proste tekstowe dane z `localStorage`
+Żeby **usunąć** jakiś klucz (i odpowiednio jego wartość) z `localStorage`, trzeba użyć wbudowanej metody `removeItem()`, podając w nawiasach nazwę klucza w cudzysłowiu, np. tak: `localStorage.removeItem("name")`. Spróbuj teraz usunąć klucz `name` z `localStorage`, a potem sprawdź, czy na pewno został usunięty.
 
-Żeby usunąć jakiś klucz (i odpowiednio jego wartość) z `localStorage`, trzeba użyć wbudowanej metody `removeItem()`, podając w nawiasach nazwę klucza w cudzysłowiu, np. tak: `localStorage.removeItem("name")`. Spróbuj teraz usunąć klucz `name` z `localStorage`, a potem sprawdź, czy na pewno został usunięty.
-
-### Jak zapisać tablicę w `localStorage` | `JSON.stringify()`
+## Dodawanie tablicy do localStorage (JSON.stringify()) | Zapisujemy nasze zadania w localStorage
 
 Zapisanie bardziej złożonych struktur danych w `localStorage` wymaga dodatkowej czynności. Kiedy np. chcemy przechować lub nadpisać tablicę (a będziemy chcieli przechować tablicę z naszymi zadaniami), to musimy przekształcić ją na postać tekstową i przypisać do klucza:
 
@@ -681,7 +668,7 @@ let tasks = ["zrobić kawę", "sprawdzić maila", "zajrzeć na stronę kodujemyw
 localStorage.setItem("tasks", JSON.stringify(tasks));
 ```
 
-### Jak pobrać tablicę z `localStorage` | `JSON.parse()`
+## Pobranie tablicy do localStorage (JSON.parse()) | Pobieramy nasze zadania z localStorage
 
 Żeby pobrać tablicę z `localStorage` również musimy zastosować dodatkową metodę uzupełniającą `getItem()`, ponieważ tablica jest zapisana w postaci ciągu tekstowego. W związku z tym, musimy "opakować" metodę `getItem()` w `JSON.parse()` - metodę, która przekształci naszą tablicę z ciągu tekstowego z powrotem w JavaScriptową tablicę:
 
@@ -708,6 +695,8 @@ console.log("przekształcona z powrotem tablica:", tasksArray);
 Powyższy kod jest nie tylko bardziej czytelny, ale też najprawdopodbniej bardziej zrozumiały dla Ciebie, gdyż rozbiliśmy złożoną czynność na 2 części: pobranie ciągu tekstowego i przypisanie go do zmiennej, a potem przekazanie tej zmiennej jako argumentu do `JSON.parse()`. No i nie mamy teraz tylu nawiasów (które *nota bene* mogą powodować dużą ilość błędów)!
 
 Pobaw się tym kodem w konsoli i sprawdź, czym się różnią zmienne `tasksString` i `tasksArray`.
+
+## Zadania są zapisywane w przeglądarce! Kod drugiej wersji aplikacji w całości
 
 Uff... Znamy już podstawy pracy z `localStorage`, więc możemy uzupełnić naszą aplikację w pliku o powyższe funkcjonalności.
 
@@ -798,23 +787,9 @@ function deleteTask(index) {
 showTasks();
 ```
 
-Hmm... właśnie doszedłem do wniosku, że ten kurs należało podzielić na 2 części:
-
-- wszystko, co się działo przed wprowadzeniem `localStorage`
-- to, co się dzieje w "bonusowej" lekcji:
-  - local storage | proste dane tekstowe
-	- local storage | konwertowanie tablicy
-	- `if-else`
-	- `null`
-	- operator `!==` (i ewentualnie inne)
-
-To ma jeszcze większy sens, jeśli osobno zapiszemy plik `todo-app` z kodem przed wprowadzeniem `localStorage` oraz na potrzeby `localStorage` i innych zagadnień stworzymy drugi plik, np. `todo-app-local-storage`, ponieważ zmiany i uzupełnienia są znaczące.
-
-Ok, tak też zrobimy - jutro!
-
 ## Zakończenie i podsumowanie
 
-Właśnie dobrnąłeś/aś do końca tego krótkiego kursu. Spodobało się? Chcesz więcej?
+Właśnie dobrnąłeś/aś do końca tego krótkiego kursu. Spodobało się? Chcesz więcej *(pamiętaj, że ta strona dopiero się rozwija)*?
 
 Jeśli tak, to daj mi znać, że jesteś zainteresowany/a dalszymi lekcjami w tym samym stylu *(zakładam, że będziemy dalej rozwijać naszą aplikację do zadań, dodając coraz to nowsze funkcjonalności oraz poznając również podstawy HTML i CSS, by wyjść poza konsolę i stworzyć stronę/ aplikację internetową z prawdziwego zdarzenia)*.
 

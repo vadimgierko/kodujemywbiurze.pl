@@ -4,23 +4,27 @@
 	import { isScreenLessThan992, showOffset } from '$lib//stores';
 
 	export let articles: Article[];
+
+	let titleType: 'fullTitle' | 'docTitle' | 'tutorialTitle' = 'fullTitle';
 </script>
 
-<aside
-	class="text-center"
-	id={$isScreenLessThan992 && $showOffset ? 'offset' : 'aside'}
-	on:click={() => ($isScreenLessThan992 && $showOffset ? showOffset.set(false) : null)}
->
+<aside class="text-center" id={$isScreenLessThan992 && $showOffset ? 'offset' : 'aside'}>
 	<h3>Spis treści</h3>
-	<nav>
+
+	<select bind:value={titleType}>
+		<option value="fullTitle">pełny tytuł</option>
+		<option value="docTitle">dokumentacyjny tytuł</option>
+		<option value="tutorialTitle">tutorialowy tytuł</option>
+	</select>
+
+	<nav on:click={() => ($isScreenLessThan992 && $showOffset ? showOffset.set(false) : null)}>
 		<ul>
-			{#each articles as { title, slug }}
+			{#each articles as article}
 				<li>
 					<a
-						href={$page.route.id === '/dokumentacja/javascript/[slug]'
-							? `/dokumentacja/javascript/${slug}`
-							: `/kursy/podstawy-javascript-pierwsza-aplikacja-w-konsoli-darmowy-kurs/${slug}`}
-						class={$page.url.pathname.includes(slug) ? 'active-link' : ''}>{title}</a
+						href={`/kursy/javascript/${article.slug}`}
+						class={$page.url.pathname.includes(article.slug) ? 'active-link' : ''}
+						>{article[titleType]}</a
 					>
 				</li>
 				<hr />
