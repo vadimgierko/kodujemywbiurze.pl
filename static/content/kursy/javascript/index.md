@@ -12,22 +12,25 @@ Chodzi mi przede wszystkim o **pobudzenie Twojej ciekawości** i pokazanie, że 
 
 Ponieważ wolę **uczyć się nowych rzeczy w praktyce, widząc natychmiastowe rezultaty** mojej nauki i pracy, dlatego w trakcie tego kursu:
 
-- **stworzymy i odpalimy prostą aplikację do zarządzania listą zadań do zrobienia, która będzie działać w konsoli naszej przeglądarki bezpośrednio na tej stronie** *(za chwilę dowiesz się, czym jest konsola i jak z niej korzystać)* oraz
-- **przy okazji** tworzenia aplikacji **opanujemy wybrane podstawy języka JavaScript** - <a href="https://bulldogjob.pl/readme/najpopularniejsze-jezyki-programowania-2020" target="_blank">najbardziej popularnego języka programowania</a>.
+- **stworzymy i odpalimy aplikację do zarządzania listą zadań do zrobienia, która *(na początku)* będzie działać w konsoli naszej przeglądarki bezpośrednio na tej stronie** *(za chwilę dowiesz się, czym jest konsola i jak z niej korzystać)*,
+- **przy okazji** tworzenia aplikacji **opanujemy podstawy języka JavaScript** - <a href="https://bulldogjob.pl/readme/najpopularniejsze-jezyki-programowania-2020" target="_blank">najbardziej popularnego języka programowania</a>.
+
+**PS.** *de facto* stworzymy co najmniej kilka samodzielnych, samowystarczalnych i coraz bardziej rozbudowanych i zaawansowanych wersji wspomnianej aplikacji, rozbudowując ją przy okazji poznawania kolejnych zagadnień z języka JavaScript (a później też HTML i CSS). Każda z wersji aplikacji będzie całością samą w sobie i można będzie ich używać osobno - te pierwsze wersje będą działać tylko w konsoli przeglądarki, kolejne natomiast będą możliwe do pobrania.
 
 Aplikacja, którą stworzymy, umożliwi nam:
 
 - zapisywanie,
 - przechowywanie,
-- wyświetlanie
-- dodawanie oraz
+- wyświetlanie,
+- dodawanie,
+- modyfikowanie oraz
 - usuwanie
 
-zadań do zrobienia za pomocą poleceń napisanych przez nas kodem JavaScript w konsoli.
+zadań do zrobienia *(na początku będzie to możliwe za pomocą poleceń napisanych przez nas kodem JavaScript w konsoli)*.
 
-W ramach rozbudowy niniejszej strony i dodawania kolejnych lekcji i kursów (co zależy od Waszego zainteresowania projektem, dlatego zachęcam do polubienia i śledzenia profilu na <a href="https://www.facebook.com/kodujemywbiurze" target="_blank">Facebooku</a> i <a href="https://www.linkedin.com/company/kodujemywbiurze" target="_blank">LinkedIn</a>), będziemy przekształcać i dalej rozwijać tę aplikację w aplikację z pełnego zdarzenia - z interfacem użytkownika, bazą danych, rejestracją użytkowników itd. *Sky is the limit*, aczkolwiek na razie w ramach eksperymentu ograniczymy się do funkcjonalności, którymi dysponuje nasza przeglądarka.
+W ramach rozbudowy niniejszej strony i dodawania kolejnych lekcji i kursów (co zależy od Waszego zainteresowania projektem, dlatego zachęcam do polubienia i śledzenia profilu na <a href="https://www.facebook.com/kodujemywbiurze" target="_blank">Facebooku</a> i <a href="https://www.linkedin.com/company/kodujemywbiurze" target="_blank">LinkedIn</a>), będziemy przekształcać i dalej rozwijać tę aplikację w aplikację z pełnego zdarzenia - z interfacem użytkownika, bazą danych, rejestracją użytkowników itd. *Sky is the limit*, aczkolwiek na początek w ramach eksperymentu ograniczymy się do funkcjonalności, którymi dysponuje nasza przeglądarka.
 
-Mam nadzieję, że kiedy dobrniesz do końca tego pierwszego tutoriala, to będziesz chciał/a więcej! Jeśli tak będzie, to daj mi znać, że jesteś zainteresowany/a dalszymi lekcjami w tym samym stylu.
+Mam nadzieję, że kiedy dobrniesz do końca tego tutoriala, to będziesz chciał/a więcej! Jeśli tak będzie, to daj mi znać, że jesteś zainteresowany/a dalszymi lekcjami w tym samym stylu.
 
 *Happy Coding!*
 
@@ -50,11 +53,11 @@ Możliwości są nieograniczone!
 
 To właśnie dzięki JavaScript strony i aplikacje są dynamiczne i interaktywne - jest on silnikiem napędzającym stronę.
 
-## Konsola | Zaczynamy pisać kod! Czym jest konsola, jak jej używać i co to jest *Hello, World!*?
+## Konsola, console.log(), console.clear() | Zaczynamy pisać kod! Czym jest konsola, jak jej używać, console.log() i co to jest *Hello, World!*?
 
 ---
 
-Niniejsza strona, jak większość innych w Internecie, używa JavaScript. Każda **przeglądarka** również **rozumie i przetwarza kod JavaScript**, a ponadto umożliwia nam pisanie kodu bezpośrednio w przeglądarce, a dokładniej w konsoli. <a href="/dokumentacja/javascript/konsola" target="_blank">Konsola</a> jest jednym z wielu wbudowanych narzędzi każdej przeglądarki i dzięki temu, że możemy w niej pisać kod (a nawet przechowywać pliki z kodem, co też zrobimy później), będzie naszym podstawowym narzędziem kodowania i nauki w tym kursie. Przekonajmy się o tym i otwórzmy konsolę w naszej przeglądarce!
+Niniejsza strona, jak większość innych w Internecie, używa JavaScript. Każda **przeglądarka** również **rozumie i przetwarza kod JavaScript**, a ponadto umożliwia nam pisanie kodu bezpośrednio w przeglądarce, a dokładniej w konsoli. Konsola jest jednym z wielu wbudowanych narzędzi każdej przeglądarki i dzięki temu, że możemy w niej pisać kod (a nawet przechowywać pliki z kodem, co też zrobimy później), będzie naszym podstawowym narzędziem kodowania i nauki w tym kursie. Przekonajmy się o tym i otwórzmy konsolę w naszej przeglądarce!
 
 ---
 
@@ -106,10 +109,10 @@ Jeśli wszystko wpisałeś/aś poprawnie, konsola wyświetliła napis *Hello, Wo
 
 `console.log()` jest wbudowanym poleceniem *(jednym z wielu - z niektórych z nich będziemy korzystać później w tym tutorialu)*, które wyświetla dowolną zawartość umieszczoną w nawiasach (w naszym poprzednim przykładzie był nią ciąg tekstowy "Hello, World!"). Tak jak prawdziwi programiści, będziemy często korzystać z tego polecenia.
 
-A gdybyście byli ciekawi, jakich jeszcze ciekawych poleceń możemy użyć w konsoli, to spróbujcie np. wpisać następujący kod i kliknąć Enter:
+Jeśli z kolei chcemy wyczyścić konsolę (usunąć kod, który napisaliśmy oraz komunikaty wyświetlone w konsoli), to należy wpisać inne wbudowane polecenie `console.clear()` i kliknąć Enter:
 
 ```
-alert("Hej, jestem wyskakującym okienkiem!");
+console.clear();
 ```
 
 *PS. zdradzę Ci tajemnicę: programiści bardzo często używają polecenia `console.log()` w swoim kodzie, by sprawdzić, co się dzieje z niektórymi zmiennymi w trakcie działania programu. Dzięki temu można sprawdzić, czy nasz kod działa poprawnie lub też odkryć, że zawiera błąd. Ten chwyt odnosi się do szerszego pojęcia w programowaniu - "debugowania", czyli wyszukiwania i naprawiania błędów.*
@@ -139,6 +142,7 @@ Zanim wytłumaczę, czym jest zmienna i wartości:
 
 ```
 let task = "zrobić kawę";
+
 console.log(task);
 ```
 
@@ -200,11 +204,11 @@ Stwórzmy zatem najpierw pustą listę zadań, którą przypiszemy do nowej zmie
 let tasks = [];
 ```
 
-Zauważ, że tym razem wartością zmiennej nie jest ciąg znaków (czyli słowa, zdania, znaki zawarte pomiędzy cudzysłowami, jak w np.: "zrobić kawę"), tylko dwa nawiasy kwadratowe `[]`. Jest to **tablica** (ang. `array`), która jest niczym innym, jak kontenerem/ listą różnych elementów, które znajdą się w środku.
+Zauważ, że tym razem wartością zmiennej nie jest **ciąg znaków** (ang. `string`, czyli ciąg znaków ujęty w cudzysłów, jak w np.: "zrobić kawę"), tylko dwa nawiasy kwadratowe `[]`. Jest to **tablica** (ang. `array`), która jest niczym innym, jak kontenerem/ kolekcją/ listą różnych elementów, które znajdą się w środku.
 
 Na razie nasza tablica/ lista `tasks` jest pusta (pomiędzy kwadratowymi nawiasami nie ma żadnych elementów). Gdybyśmy chcieli dodać do niej manualnie (ręcznie wpisując) nasze zadania, to moglibyśmy to zrobić np. na kilka sposobów:
 
-1. Ręcznie wpisujemy każde zadanie jako ciąg znaków zawarty w cudzysłowie i oddzielone przecinkiem:
+1. Ręcznie wpisujemy każde zadanie jako ciągi znaków ujęte w cudzysłów i oddzielone przecinkiem:
 
 ```
 tasks = [ "zrobić kawę", "sprawdzić maila", "zajrzeć na stronę kodujemywbiurze.pl"];
@@ -240,155 +244,20 @@ tasks[0] = "zrobić kawę z mlekiem";
 
 Teraz, kiedy ponownie sprawdzimy wartość `tasks[0]` w konsoli, to wyświetli nam się `zrobić kawę z mlekiem`, a nie `zrobić kawę`.
 
-Świetnie! Potrafimy tworzyć listę zadań, uzyskiwać dostęp do poszczególnych elementów z listy i modyfikować je oraz dodawać nowe elementy do listy/ tablicy. Teraz nadszedł czas na pisanie reużywalnego kodu, który będzie wykonywał pewne powtarzalne zadania - dodawanie nowych zadań!
+## Komentarze
 
-## Wstęp do funkcji | Wyświetlamy listę zadań (znowu)
-
----
-
-Każdorazowe dodawanie zadań do listy zadań poprzez użycie kodu, z którego wcześniej korzystaliśmy (`tasks.push("nowe zadanie")`), działa, ale programiści "opakowują" kod, z którego często korzystamy (a będziemy często dodawać zadania do listy), w reużywalne "kawałki" kodu, które nazywają się **funkcjami**.
-
-**Funkcja to pewien zakmnięty w sobie fragment kodu, który wykonuje pewne zadania/ polecenia w nim zdefiniowane za każdym razem, kiedy go wywołamy.**
-
-Tak naprawdę, już korzystaliśmy z wbudowanych funkcji, tj. `console.log()`, `alert()` lub `tasks.push()`. Zauważ, że w odróżnieniu od zmiennych, **funkcja zawiera nawiasy tuż po swojej nazwie**.
-
-Spróbujmy zatem stworzyć naszą pierwszą funkcję, by zrozumieć, o co w tym chodzi. Stworzymy funkcję, która będzie wyświetlała nam listę wszystkich naszych zadań.
-
-Owszem, wcześniej już wyświetlaliśmy nasze zadania poprzez wpisanie w konsoli zmiennej `tasks` lub poprzez wywołanie funkcji `console.log(tasks)`, ale teraz zrobimy to w sposób bardziej profesjonalny:
+Czasami chcemy dodać jakąś dodatkową informację do naszego kodu, ale też nie chcemy, by program uznał tego za kod sam w sobie i nie wywołał go lub też nie spróbował go wywołać, co doprowadziłoby najprawdopodobniej do błędu. Do tego właśnie służą **komentarze** - tekst, który poprzedzają te symbole: `//`:
 
 ```
-function showTasks() {
-  console.log(tasks);
-}
+// to jest komentarz, program wie, że ten tekst nie jest kodem, więc go nie wywoła
+
+// mogę np. ostrzec innego programistę, by nie używał kodu poniżej:
+console.error("Wywołanie tego kodu było (i w sumie jest) błędem, kolego... Wiem, że chcesz go przetestować w konsoli 😈");
+
+// mogę też napisać jakiś motywacyjny cytat:
+// "Wszystko, co może zostać napisane w JavaScript, ostatecznie zostanie napisane w JavaScript."
+// Douglas Crockford
 ```
-
-Zanim wytłumaczę, co się dzieje w powyższym kodzie, chciałbym poruszyć kwestię pisania wielolinijkowego kodu w konsoli (jak w powyższym przykładzie), błędów oraz utracie kodu po odświeżeniu strony.
-
-W związku z tym polecę też korzystanie z wbudowanej funkcjonalności Chrome i Edge o nazwie `snippets` do zapisywania kodu bezpośrednio w przeglądarce, dzięki czemu go nie utracimy. Są to ważne kwestie, które sprawią, że pisanie kodu w przeglądarce będzie bardziej przyjemne, mniej podatne na błędy oraz zapewni pewną funkcjonalność aplikacji, którą budujemy. Czytaj dalej!
-
-### Kilkulinijkowy kod w konsoli oraz zalecenie korzystania ze snippets
-
-***Uwaga!*** W zależności od przeglądarki, **może się okazać**, że żeby napisać kilkulinijkowy kod w konsoli (taki, jak w powyższej funkcji), musimy **zamiast Enter używać kombinacji klawiszy Shift+Enter**, żeby przejść do następnej linii, ponieważ wciśnięcie klawisza Enter spowoduje wywołanie tego kodu, który już napisałeś/aś, co najprawdopodobniej wywoła błąd w konsoli, ponieważ kod nie jest ukończony.
-
-Jeśli to się zdarzy (pojawi się komunikat błędu) i po ponownym poprawnym wpisaniu kodu nie uda się zainicjować funkcji (ponieważ została niepoprawnie zaincjowana niekompletnym, przedwcześnie wywołanym kodem), odśwież stronę, co wyczyści pamięć konsoli i wpisz kod jeszcze raz.
-
-Ale pamiętaj, że lista zadań `let tasks = ["zrobić kawę", "sprawdzić maila", "zajrzeć na stronę kodujemywbiurze.pl"]` również zniknęła, więc najpierw musisz ją ponownie wpisać, zanim napiszesz powyższą funkcję.
-
-Dlatego też proponuję, byśmy skorzystali z wbudowanej funkcjonalności Chrome i Edge o nazwie `snippets` do zapisywania kodu bezpośrednio w przeglądarce! Jest to świetne narzędzie, o czym się zaraz przekonamy.
-
-Żeby otworzyć *snippets*, musisz kliknąć *Sources*, które znajdują się tuż obok *Console*, a tak wybrać *Snippets*. Teraz możemy kliknąć ikonkę ze znakiem plus i napisem *New snippet*, co utworzy nowy plik z domyślną nazwą, którą możemy zmienić na np. `todo-app`.
-
-Ten plik będzie teraz zapisany w naszej przeglądarce i zawsze będziemy mieli do niego dostęp. Ponadto, plik ten możemy uruchomić w naszej konsoli, która będzie miała dostęp zarówno do pliku, jak i do zawartości strony (co nam przyda się w kolejnych kursach).
-
-Możemy teraz przepisać do tego pliku dotychczasowy kod naszej aplikacji (potrzebne nam są tylko zadeklarowanie zmiennej `tasks` oraz definicja poprzedniej funkcji `showTasks()`, którą zaraz omówimy):
-
-```
-// todo-app file:
-
-let tasks = ["zrobić kawę", "sprawdzić maila", "zajrzeć na stronę kodujemywbiurze.pl"];
-
-function showTasks() {
-  console.log(tasks);
-}
-```
-
-Będziemy teraz pisać kod zarówno w tym pliku (tylko ten niezbędny dla aplikacji; w komentarzu w przykładach kodu zawrę ten zapis: `// todo-app file:`, który będzie odróżniał kod aplikacji od innego testowego kodu w konsoli) oraz czasami w samej konsoli, by coś tam przetestować lub wywołać funkcje z pliku.
-
-Możesz też nie korzystać z tej funkcjonalności i dalej pisać kod wyłącznie w konsoli, ale pamiętaj o sytuacjach, które opisałem powyżej, które mogą mieć miejsce i zakłócić Twoją pracę z kodem.
-
-Wracając do naszej funkcji, w powyższym kodzie używając słowa kluczowego `function` zdefiniowaliśmy nową funckję o nazwie `showTasks`, która... (jak sama nazwa wskazuje) wyświetla listę naszych zadań. 
-
-Jak widzisz, polecenie `console.log(tasks)`, którego wcześniej używaliśmy osobno, zostało "opakowane" w funkcję, której nazwa ewidentnie wskazuje na to, czego możemy się od niej spodziewać, w związku z czym ktoś, kto nie widział całości naszego kodu, ani nie wie, co jest w środku tej funkcji, raczej się domyśli, co ta funkcja robi i sam będzie mógł jej użyć.
-
-Ponadto, jeśli wrócisz do swojego kodu za kilka dni lub tygodni, to mimo, że nie będziesz pamiętał/a, co znajduje się w środku funkcji `showTasks()`, to zdecydowanie zrozumiesz, co ona robi. Uwierz mi, że programiści o wiele częściej dosłownie czytają kod, niż go piszą, dlatego trafne nazwy zarówno zmiennych, jak i funkcji, niezwykle ułatwiają jego zrozumienie, mimo że nie zna się/ nie pamięta się szczegółów.
-
-Żeby nasza funkcja zadziałała i wyświetliła nasze zadania, musimy ją wywołać poprzez wpisanie w konsoli `showTasks()` i kliknąć Enter. Dzięki temu, nie musimy pamiętać, jak wyświetlić nasze zadania w konsoli, wystarczy wywołać funkcję `showTasks()`.
-
-Jeśli zapisałeś/aś w konsoli w zakładce `Sources` plik `todo-app`, umieściłeś/aś w nim kod, który napisałem powyżej, oraz zapisałeś/aś ten plik (klikając `Ctrl+S`), to przejdź teraz z powrotem do konsoli i wpisz polecenie `showTasks()` oraz wywołaj go, klikając Enter. Przekonasz się, że funkcja zwróciła taką listę zadań: `(3) ['zrobić kawę z mlekiem', 'sprawdzić maila', 'zajrzeć na stronę kodujemywbiurze.pl']`.
-
-Zauważ, że ta lista nie jest tą samą listą, która jest przechowana w pliku! Pierwsze zadanie powinno brzmieć `zrobić kawę`, a nie `zrobić kawę z mlekiem`. Dlaczego? Otóż dlatego, że nie uruchomiliśmy jeszcze kodu z naszego pliku, umieszczonego w `Sources`, tylko nadal odwołujemy się do funkcji `showTasks()`, którą zdefiniowaliśmy w konsoli i która wyświetla taski również wcześniej zdefiniowane w konsoli, a jeśli pamiętasz, to nadpisaliśmy pierwsze zadanie z tablicy (`tasks[0] = "zrobić kawę z mlekiem";`). W sumie, nie musisz nawet o tym pamiętać - wystarczy, że przeskrolujesz konsolę w górę, by znaleźć ten kod.
-
-Natomiast od tego momentu chcemy pracować z kodem z pliku `todo-app` (chcemy, ale jak wspominałem, możesz nadal po prostu korzystać tylko z konsoli, niemniej jednak radzę dokładnie podążać za wskazówkami z tutoriala). Żeby uruchomić kod z naszego pliku, wróćmy do `Sources` i do naszego pliku oraz kliknijmy ikonkę trójkąta w dolnym prawym rogu lub użyjmy skrótu `Ctrl+Enter`. Jak widzisz, nasza konsola została ponownie otwarta, ale pod plikiem - teraz widzimy zarówno plik z kodem, jak i konsolę i możemy teraz odwoływać się do naszego kodu z pliku w konsoli. To otwiera przed nami niesamowite możliwości!
-
-Spróbuj teraz wywołać `showTasks()` i przekonaj się, że wynik tej funkcji będzie teraz inny - wyświetlą się zadania, zdefiniowane w pliku (`3) ['zrobić kawę', 'sprawdzić maila', 'zajrzeć na stronę kodujemywbiurze.pl']`), a nie wcześniejsze z konsoli.
-
-Super! Od teraz będziemy działać w ten sposób - będziemy pisać i uzupełniać kod w pliku, natomiast wywoływać go w konsoli. Odśwież teraz tą stronę (nie martw się, plik z kodem nie zniknie, jeśli go zapisałeś/aś) - pamięć konsoli została wyczyszczona (razem ze zmienną `tasks` zdefiniowaną wcześniej w konsoli) i można teraz ponownie kliknąć w ikonkę trójkąta, by uruchomić nasz plik i przekazać jego funkcjonalności oraz zmienne w nim zdefiniowane do konsoli.
-
-Wracając do naszej funkcji `showTasks()`, na pierwszy rzut oka może się wydawać, że wykonaliśmy zbędną pracę - definicja funkcji zajęła nam 3 linijki kodu! Ale, po pierwsze, uczyniła nasz kod bardziej zrozumiałym, czytelnym i reużywalnym, a po drugie, większość funkcji będzie bardziej rozbudowana, będą tam miały miejsce różne procesy, być może będą tam w środku też inne funkcje i tymczasowe zmienne, więc w tym przypadku oszczędność czasu będzie ogromna. Poza tym, musieliśmy tylko raz się zastanowić nad tym, jak wyświetlić nasze zadania, tworząc funkcję i nie będziemy musieli znowu się nad tym zastanawiać, co miałoby miejsce, gdybyśmy każdorazowo pisali `console.log(tasks)`.
-
-Warto też zwrócić uwagę na samą konstrukcję funkcji:
-
-- zaczyna się ona od słowa kluczowego `function`,
-- potem po spacji jest jej nazwa (która jeśli zawiera zlepek słów, to powinna być napisana `camelCasem`),
-- potem bez spacji po nazwie dodajemy nawiasy `()` (później dowiemy się, do czego służą),
-- a potem mamy dwie klamry `{ }`, pomiędzy którymi możemy pisać wiele linijek kodu - to, co znajduje się pomiędzy klamrami, nazywa się ciałem funkcji.
-
-Moglibyśmy powyższą funkcję zapisać także w jednej linijce (ponieważ jest mała):
-
-```
-function showTasks() { console.log(tasks); }
-```
-
-aczkolwiek taki zapis nie jest czytelny, dlatego lepiej używać wielolinijkowego formatu.
-
-Ogólnie funkcje możemy zadeklarować też na kilka innych sposobów, ale na razie wystarczy nam ten jeden.
-
-Zanim stworzymy kolejne funkcje, chciałbym zwrócić Twoją uwagę na nazewnictwo funkcji. Pamiętasz, że nazwa zmiennej powinna odzwierciedlać to, jaką wartość przechowuje? Z funkcjami jest podobnie, tyle że funkcje nie reprezentują jakieś wartości, tylko czynności - funkcja coś "robi". W związku z tym, jeśli funkcja powinna wyświetlić zadania, to należy ją nazwać `showTasks` lub `displayTasks`, albo też `logTasks`. Te nazwy brzmią jak komendy: "pokaż/ wyświetl zadania!" i tak właśnie jest z funkcjami - są one poleceniami dla komputera/ przeglądarki.
-
-Owszem, funkcja może również zwracać wartość, np. w tym przypadku:
-
-```
-function calculateSum(a, b) {
-	const sum = a + b;
-	console.log("a + b =", sum);
-
-	return sum;
-}
-
-// teraz inicjujemy zmienną,
-// do której przypisujemy wartość zwróconą przez calculateSum():
-let sum = calculateSum(3, 5);
-```
-
-aczkolwiek zwrócona wartość jest wynikiem działania funkcji, więc funkcja musiała "coś zrobić", by "wyprodukować" wartość, którą zwraca.
-
-## Argumenty funkcji, wywoływanie innych funkcji wewnątrz funkcji oraz komentarze | Funkcja dodająca zadanie
-
----
-
-Wcześniej dodawaliśmy nasze zadania używając tego kodu: `tasks.push("jakieś tam zadanie")`. Zwróć uwagę na to, że `"jakieś tam zadanie"` znajduje się w nawiasach funkcji, w związku z tym `"jakieś tam zadanie"` zostało przekazane funkcji `push()` jako argument (pewien zasób/ wartość/ informacja), który zostanie przez tę funkcję wykorzystany.
-
-Nasza funkcja `showTasks()` nie ma żadnych argumentów w nawiasach, ponieważ ich nie potrzebuje - ma dostęp do zadań, gdyż zmienna `tasks` istnieje już w naszym kodzie i zawsze mamy do niej dostęp z poziomu każdej funkcji (innymi słowy, jest zmienną globalną). Czyli wiemy już, że funkcja może w ogóle nie mieć żadnych argumentów.
-
-Wyobraźmy natomiast, że chcemy dodać nowe zadanie, które nie istnieje nigdzie w kodzie w postaci zmiennej, wiemy także, że dysponujemy funkcją o nazwie `addTask()` (za chwilę ją napiszemy, ale na razie wyobraźmy, że ktoś już ją napisał). Jak możemy to zrobić?
-
-W tym przypadku należałoby tej funkcji przekazać pewną informację (w naszym przypadku będzie to nowe zadanie), czego możemy dokonać poprzez wpisanie naszego zadania w nawiasach tej funkcji w następujący sposób: `addTask("zrobić kawę po raz drugi")`.
-
-Chciałbym też zauważyć, że taki kod zadziała tylko w tym przypadku, jeśli funkcja `addTask()` oczekuje jakiegoś argumentu, czyli że funkcja ta została napisana w pewien określony sposób, który zaraz zobaczymy (pojawi się tutaj też kilka nowych rzeczy):
-
-```
-function addTask(newTask) {
-
-	// w poniższej linijce dodajemy zadanie do listy zadań:
-	tasks.push(newTask);
-
-	// wyświetlamy komunikat w konsoli o nowo dodanym zadaniu:
-	console.log("Do Twoich zadań zostało dodane nowe zadanie:", newTask);
-
-	// wyświetlamy zaktualizowaną pełną listę zadań:
-	showTasks();
-}
-```
-
-Przeczytaj ten powyższy kod i spróbuj najpierw intuicyjnie zrozumieć, co się w nim dzieje oraz dopisz go do pliku `todo-app` na samym końcu (ale przepisz własnoręcznie, nie kopiuj tego kodu!). No i oczywiście zapisz zmiany skrótem `Ctrl+S`, a potem kliknij ikonkę trójkąta lub kolejny skrót `Ctrl+Enter`, by kod zadziałał w przyszłości w konsoli.
-
-Po pierwsze, zwróć uwagę, że po nazwie funkcji `addTask` w nawiasach mamy zawarty argument `newTask`. Tak naprawdę `newTask` jest zmienną, która jeszcze nie ma żadnej przypisanej wartości, czyli jest to "puste podpisane pudełko", do którego dopiero później coś włożymy - a dokładnie w momencie wywołania funkcji w ten sposób: `addtask("to zadanie jest właśnie tą wartością, która zostanie przypisana do argumentu newTask")`.
-
-Mimo że w samej definicji funkcji `addTask` argument `newTask` nie ma żadnej wartości, to możemy go wykorzystać w kodzie funkcji tak, jakby tę wartość miał (co też robimy w dalszej części kodu funkcji: `tasks.push(newTask)` - tak naprawdę mówimy przeglądarce, że cokolwiek by się znalazło z zmiennej `newTask`, powinno zostać dodane do `tasks`).
-
-Innymi słowy, wyobraź sobie, że mówisz koleżance z biura: *"Na biurku leży żółty segregator, który na razie jest pusty, ale później przyjdzie sekretarka i włoży do tego segregatora stertę dokumentów. Wtedy weź segregator i włóż go do szafy"*. Koleżanka nie musi wiedzieć, jakie dokumenty znajdą się w segregatorze. Wie tylko, że jak się tam znajdą, trzeba odłożyć segregator. Gdyby wspomniana koleżanka bardzo się nudziła, mogłaby wziąć pusty segregator i włożyć go do szafy, mimo że nie ma w nim żadnych dokumentów, by przećwiczyć tę czynność na przyszłość.
-
-Po drugie, pewnie zauważyłeś/aś, że w kodzie znalazły się linijki z tekstem, które poprzedzają te symbole: `//`. Dzięki tym symbolom dodajemy **komentarze** do swojego kodu - są one widoczne w kodzie, natomiast nie są traktowane jako kod przez program (w naszym przypadku przez przeglądarkę).
 
 Dzięki komentarzom możemy też "wyłączyć" pewien fragment kodu, czyli go "zakomentować", jeśli z jakiegoś powodu nie chcemy, by akurat zadziałał. Wystarczy, że zakomentujemy kod w następujący sposób:
 
@@ -396,27 +265,114 @@ Dzięki komentarzom możemy też "wyłączyć" pewien fragment kodu, czyli go "z
 // addTask("To zadanie nie zostanie dodane");
 ```
 
-Po trzecie, zauważ, że w funkcji `addTask()` nie tylko dodajemy zadanie do listy, ale także wyświetlamy komunikat w konsoli o tym, że zostało dodane nowe zadanie, przy czym wyświetlamy także samo zadanie. Dzieje się tak dlatego, że tym razem przekazaliśmy `console.log()` zarówno pewną wiadomość: `"Do Twoich zadań zostało dodane nowe zadanie:"`, a potem po przecinku przekazaliśmy samą zmienną, reprezentującą nowe zadanie, w związku z czym konsola wyświetli wiadomość oraz wartość zmiennej przechowującej nowe zadanie (treść nowego zadania):
+Możemy też tworzyć komentarze wielolinijkowe, umieszczając dowolny wielolinijkowy tekst (wraz z pustymi wierszami) pomiędzy `/* */` w ten sposób:
 
 ```
-console.log("Do Twoich zadań zostało dodane nowe zadanie:", newTask);
+/*
+Dlaczego warto uczyć się JavaScript?
+
+Odpowiedzi na to pytanie możemy doszukać się
+w wypowiedzi Douglasa Crockforda:
+
+"Wszystko, co może zostać napisane w JavaScript,
+ostatecznie zostanie napisane w JavaScript."
+*/
 ```
 
-Po czwarte, po dodaniu nowego zadania i wyświetleniu komunikatu, wywołujemy funkcję `showTasks()`, którą wcześniej napisaliśmy, dzięki czemu konsola automatycznie wyświetli zaktualizowaną listę zadań z nowo dodanym zadaniem na końcu. Widzisz, mówiłem, że funkcje przydają się do ponownego wykorzystania! W funkcji `addTask()` zawarliśmy i wywołujemy inną naszą funkcję `showTasks()` (a w sumie wywołujemy też wbudowaną funkcję `console.log()`). Być może nawet nie pamiętasz już, co dokładnie znajdowało się w funkcji `showTasks()`, ale na pewno wiesz, co robi i właśnie z tego skorzystałeś/aś! Właśnie na tym polega korzyść z tworzenia dobrze nazwanych reużywalnych funkcji!
+## Metoda splice() | Usuwanie zadań z listy oraz dodawanie zadań w określonym miejscu na liście
 
-Dzięki temu, że dodaliśmy automatyczne wyświetlenie zaktualizowanej listy zadań, nie musimy za każdym razem po dodaniu nowego zadania wywoływać ręcznie dodatkowo `showTasks()`, żeby wyświetlić naszą listę. Widzisz, ile może się dziać w jednej funkcji!
+Ok, więc inicjujemy listę zadań, dodajemy i przechowujemy zadania w kodzie, czas więc na kolejną funkcjonalność - usuwanie zadania z listy. Powinniśmy być w stanie usunąć zadanie, które jest już nieaktualne albo wykonane z naszej listy, żeby się nie rozpraszać oraz widzieć nasz progres.
 
-Ok, wpisz więc do konsoli kod nowej funkcji `addTask()`, ale bez moich komentarzy (to te linijki, które zaczynają się od `//`, pamiętasz?).
+### Usuwanie elementów z tablicy
 
-Teraz możemy dodawać zadania poprzez wywołanie funkcji `addTask` z argumentami (poćwicz to w konsoli):
+Usunięcia konkretnego elementu z tablicy można dokonać na kilka sposobów. Ze względu na to, że wiemy, czym są indeksy oraz nasza lista pozwala na wyświetlenie indeksów każdego z zadań, najłatwiej będzie sprawdzić, jaki jest indeks zadania, które chcemy usunąć, a potem użyć wbudowanej metody tablicy `splice()` w ten sposób:
 
 ```
-addTask("sprawdzić Facebooka");
-addTask("wyskoczyć do sklepu po jogurt");
-addTask("położyć jogurt na grzejniku, by się zacieplił");
+// załóżmy, że chcemy usunąć zadanie o indeksie 4:
+
+tasks.splice(4, 1);
 ```
 
-Jeśli wszystko poszło zgodnie z planem, to za każdym razem po dodaniu zadania, wyświetla Ci się komunikat oraz coraz to dłuża lista - ileż to my mamy do zrobienia dzisiaj w biurze!
+Metoda `splice()` w tym przypadku potrzebuje przekazania do niej dwóch argumentów:
+
+- pierwszy (w naszym przykładzie jest to `4`) jest indeksem elementu, który chcemy usunąć,
+- drugi z kolei wskazuje na ilość elementów, które chcemy usunąć, zaczynając od tego indeksu (my chcemy usunąć tylko jedno zadanie, więc napiszemy `1`).
+
+Spróbuj usunąć drugie zadanie w konsoli (pamiętaj, że indeksem drugiego zadania jest... 1).
+
+Metoda `splice()` służy nie tylko do usuwania pojedynczych elementów z tablicy.
+
+Można z niej korzystać także, by usunąć ileś elementów zacznając od określonego indeksu:
+
+```
+let letters = ["a", "b", "c", "d", "e"];
+
+// usuń 3 elementy, zaczynając od drugiego indeksu:
+letters.splice(2, 3);
+
+console.log(letters);
+```
+
+Ponadto, w przypadku usuwania elementów z tablicy, `splice()` nie tylko usuwa elementy z tablicy, modyfikując ją, ale także jednocześnie zwraca nową talicę, w której zawarte są usunięte elementy, którą to tablicę możemy np. przypisać do zmiennej:
+
+```
+let letters = ["a", "b", "c", "d", "e"];
+
+// usuń 3 elementy, zaczynając od drugiego indeksu
+// i przypisz usunięte elementy do nowej tablicy removedLetters: 
+let removedLetters = letters.splice(2, 3);
+
+console.log("letters:", letters);
+console.log("removedLetters:", removedLetters);
+```
+
+To może być bardzo przydatne, jeśli chcemy później wykorzystać usunięte elementy, np. w powyższym przykładzie wypisaliśmy usunięte litery w konsoli - gdybyśmy ich nie zapisali w zmiennej, to zostałyby one utracone na zawsze.
+
+Pamiętaj tylko, że jeśli usuniesz jeden element, to `splice()` zwróci ten jeden element, ale w tablicy! W związku z tym, gdybyś chciał/a zapisać samą wartość usuniętego elementu, to należy ją "wyciągnąć" za pomocą indeksu 0 ze zwróconej tablicy:
+
+```
+let tasks = ["zrobić kawę", "sprawdzić maila", "zajrzeć na stronę kodujemywbiurze.pl"];
+
+// usuń "sprawdzić maila" z listy zadań (indeks 1),
+// przypisz usunięte zadanie do tablicy removedTasks,
+// wyciągnij usunięte zadanie z tablicy removedTasks i przypisz do zmiennej removedTask:
+
+let removedTasks = tasks.splice(1, 1); // zwraca tablicę
+let removedTask = removedTasks[0]; // wyciągamy zadanie z tablicy
+
+console.log("Usunięte zadania:", removedTasks);
+console.log("Zadanie", removedTask, "zostało usunięte z listy...");
+console.log("Zauktualizowane zadania po usunięciu zadania:", tasks);
+```
+
+### Dodawanie elementów w określonym miejscu w tabeli
+
+Korzystając z metody `splice()` możemy też dodawać dowolną ilość elementów po określonym indeksie. Żeby to zrobić, musimy przekazać `splice()` co najmniej 3 argumenty (w ściśle określonej kolejności!):
+
+1. liczba elementów do dodania, np. 3,
+2. zamiast liczby elementów do usunięcia, jak w poprzednich przykładach, wpisujemy 0 (czyli zero elementów do usunięcia ;-),
+3. od tego miejsca możemy kolejno zawrzeć elementy do dodania, np. 3 zadania ujęte w cudzysłów i oddzielone przecinkami (możemy też przekazać zmienną, do której wcześniej przypisaliśmy elementy do dodania, ale w tym przypadku jest mały haczyk, więc na razie nie omawiamy tej kwestii).
+
+Zobacz, jak to wygląda w kodzie poniżej (i przetestuj w konsoli):
+
+```
+let tasks = ["zrobić kawę", "sprawdzić maila", "zajrzeć na stronę kodujemywbiurze.pl"];
+
+console.log(tasks); // 3 zadania
+
+// dodaj 1 zadanie po "zrobić kawę" => przypisz zadanie do indeksu 1:
+tasks.splice(1, 0, "podlać kwiatki na biurku");
+
+console.log(tasks); // 4 zadania
+
+// dodaj 3 nowe zadania po "sprawdzić maila" (czyli zaczynając od indeksu 3):
+
+tasks.splice(3, 0, "zarejestrować dokumenty", "zamówić buty na Zalando", "ogarnąć w końcu, jak się liczy te indeksy w tablicach...");
+
+console.log(tasks); // 7 zadań
+```
+
+Taki zabieg jest z kolei bardzo przydatny, jeśli chcemy dodać element/y nie na końcu tablicy, jak to robiliśmy metodą `push()`, tylko w jakimś określonym miejscu w środku, np. chcemy, by jakieś ważniejsze zadanie znalazło się przed tymi mniej ważnymi. 
 
 ## Pętla for, długość tablicy length | Wyświetlanie zadań po kolei
 
@@ -424,9 +380,9 @@ Jeśli wszystko poszło zgodnie z planem, to za każdym razem po dodaniu zadania
 
 A co powiesz na to, że zamiast wyświetlać całą tablicę zadań, wyświetlimy każde zadanie w osobnej linijce, dzięki czemu lista będzie bardziej przejrzysta?
 
-Możemy to osiągnąć na wiele sposobów, ale wykorzystamy w tym celu starą dobrą klasyczną metodę - pętlę `for`. Czym jest pętla?
+Możemy to osiągnąć na wiele sposobów, ale wykorzystamy (i poznamy) w tym celu starą dobrą klasyczną metodę - pętlę `for`. Czym jest pętla?
 
-Pętla jest poleceniem, które wykonuje pewne zadanie raz po raz, dopóki pewien warunek jest spełniony. Ogólnie początkujący programiści czasami mają problem ze zrozumieniem działania pętli, więc w razie czego, nie poddawaj się od razu ;-)
+**Pętla jest poleceniem, które wykonuje pewne zadanie raz po raz, dopóki pewien warunek jest spełniony**. Ogólnie początkujący programiści czasami mają problem ze zrozumieniem działania pętli, więc w razie czego, nie poddawaj się od razu ;-)
 
 Zobaczmy poniższy kod i zastanówmy się nad nim:
 
@@ -454,13 +410,11 @@ Gdybyśmy chcieli "przetłumaczyć" cały powyższy kod na ludzki język, to mog
 2. Jeśli tak, to wywołaj kod zawarty w klamrach (jeden raz), po czym zwiększ `i` o 1 i wróć do pierwszego punktu.
 3. Jeśli nie (`i` jest równe lub większe niż 10), nie wywołuj żadnego kodu i zakończ zadanie (nie wracaj do pierwszego punktu).
 
-Gdybyśmy teraz chcieli wyświetlić nasze zadania w podobny sposób, moglibyśmy stworzyć nową funkcję, nazwijmy ją `loopTasks()` i zamiast sprawdzać, czy `i` jest mniejsze od 10, będziemy sprawdzać, czy `i` jest mniejsze od długości naszej listy (a możemy sprawdzić długość naszej listy, która jest tablicą, w ten sposób: `tasks.length`), czyli liczby elementów, które zawiera:
+Gdybyśmy teraz chcieli wyświetlić nasze zadania w podobny sposób, moglibyśmy stworzyć nową pętlę, aczkolwiek zamiast sprawdzać, czy `i` jest mniejsze od 10, będziemy sprawdzać, czy `i` jest mniejsze od długości naszej listy (a możemy sprawdzić długość naszej listy, która jest tablicą, w ten sposób: `tasks.length`), czyli liczby elementów, które zawiera:
 
 ```
-function loopTasks() {
-	for (let i = 0; i < tasks.length; i++) {
-		console.log(tasks[i]);
-	}
+for (let i = 0; i < tasks.length; i++) {
+	console.log(tasks[i]);
 }
 ```
 
@@ -480,36 +434,310 @@ Co się dzieje w powyższym kodzie? Ponieważ nie znamy długości listy, ale wi
 
 Może się to wydawać zagmatwane, więc przyjrzyjmy się temu lepiej. Pamiętasz mówiłem, że indeksy zaczynają się od 0, a nie od 1? Jeśli więc mamy listę, która zawiera np. 10 elementów, to indeksem ostatniego elementu będzie... 9! Jeśli z kolei sprawdzimy, co zwraca właściwość `length`, to zwróci ona... 10! Dzieje się tak dlatego, że długość tablicy równa się liczbie elementów, które przechowuje. W związku z tym, jeśli chcemy uzyskać dostęp do ostatniego (dziesiątego) elementu tej listy, musimy użyć indeksu 9: `tenElementsList[9]`. Żeby uzyskać 9, musimy od (długości) 10 odjąć 1. W związku z tym, żeby uzyskać dostęp do ostatniego elementu tablicy o dowolnej nieznanej długości, korzystamy z kodu `list[list.length - 1]` (zamiast `list` podstawiamy oczywiście nazwę naszej zmiennej).
 
-Dopiszmy kod funkcji `loopTasks()` do naszego pliku, ale z małą modyfikacją: oprócz samego zadania, wyświetlimy także jego indeks (ułatwi to nam za chwilę usuwanie zadań):
+Ok, ale jak widzisz, kiedy wyświtlamy zadania za pomocą pętli, to wyświetlają się nam same zadania bez przypisanych indeksów. To może sprawić problem przy ich usuwaniu, ponieważ musimy wiedzieć, jaki jest indeks zadania, które usuwamy. Dlatego zmodyfikujmy naszą pętlę w taki sposób, aby przed nazwą zadania wyświetlała także jego indeks:
 
 ```
-function loopTasks() {
-	for (let i = 0; i < tasks.length; i++) {
-		console.log(i, tasks[i]);
-	}
+for (let i = 0; i < tasks.length; i++) {
+	console.log(i, tasks[i]);
 }
 ```
 
-## Metoda splice() | Usuwanie zadań z listy
+## Kod aplikacji w wersji 0 w całości
+
+Świetnie! Potrafimy tworzyć listę zadań, uzyskiwać dostęp do poszczególnych elementów z listy i modyfikować je, dodawać nowe elementy do listy/ tablicy oraz usuwać je za pomocą poleceń JavaScript.
+
+*De facto* powstała już mała pseudo aplikacja (na razie jeszcze trochę nieudolna) - uznajmy zatem, że jest to `wersja 0` naszej aplikacji. Zanim przejdziemy do kolejnych zagadnień i rozbudowywania aplikacji oraz zmodyfikowania jej w taki sposób, by pracowało się z nią przyjemniej, przypomnijmy sobie cały kod, którego możemy używać do zarządzania naszymi zadaniami w konsoli na tym etapie:
+
+```
+// czyścimy konsolę z całego dotychczasowego kodu i komunikatów:
+console.clear();
+
+// inicjujemy pustą listę zadań:
+let tasks = [];
+
+// żeby wyświetlić listę zadań w całości, używamy console.log():
+console.log("tasks:", tasks);
+
+// żeby dodać zadanie (na końcu listy), używamy metody push():
+tasks.push("zrobić kawę");
+tasks.push("zajrzeć na stronę kodujemywbiurze.pl");
+tasks.push("sprawdzić maila");
+
+console.log("tasks:", tasks);
+
+// żeby usunąć zadanie z listy, sprawdzamy jego indeks,
+// a potem używamy metody splice() w ten sposób:
+tasks.splice(2, 1); // usuwamy "sprawdzić maila" (indeks 2)
+
+console.log("tasks:", tasks);
+
+// żeby dodać zadanie w określonym miejscu (indeksie),
+// używamy metody splice() w ten sposób:
+// dodajemy "podlać kwiatki" po "zrobić kawę"(indeks 1):
+tasks.splice(1, 0, "podlać kwiatki");
+
+console.log("tasks:", tasks);
+
+// żeby wyświetlić całą listę zadań,
+// ale tak, by każde było w nowej linijce poprzedzone indeksem,
+// używamy pętli for:
+for (let i = 0; i < tasks.length; i++) {
+	console.log(i, tasks[i]);
+}
+
+// BONUS:
+// żeby usunąć wszystkie zadania...
+// przypisujemy do zmiennej tasks pustą tablicę ;-)
+tasks = [];
+
+console.log("tasks:", tasks);
+
+// możemy też usuwać kilka zadań od określonego indeksu
+// oraz dodawać kilka zadań od określonego indeksu,
+// co zostało opisane w rozdziale o metodzie splice().
+```
+
+Zanim przejdziesz dalej:
+
+- pobaw się tymi poleceniami w konsoli, tworząc swoją listę zadań (nie za dużą),
+- spróbuj opowiedzieć koleżance/ koledze z biura, co robią poszczególne metody,
+- sprawdź, co i ile pamiętasz.
+
+## Programowanie imperatywne a deklaratywne (funkcyjne) | Jest dobrze, ale chcemy lepiej. Tworzymy własne zrozumiałe polecenia
+
+Aplikacja działa, ale tak naprawdę zarządzamy nią za pośrednictwem poleceń z języka JavaScript, które poznaliśmy i które musimy zapamiętać... Podejrzewam, że z tym zapamiętaniem każdej metody może być na razie problem... 
+
+*Podejrzewam też, że możesz się zastanawiać: "Co to za aplikacja? Gdzie są przyciski, pola do wpisywania zadań, checkboxy do odhaczania i ładna lista zadań?". Jeśli takie pytanie przeszło Ci przez myśl, to bardzo dobrze - to znaczy, że chcesz więcej! Powiem więcej - zrobisz to i nawet stosunkowo niedługo, ale jest jeszcze trochę nauki przed Tobą. W tym celu będziesz musiał/a poznać nie tylko kolejne podstawowe zagadnienia JavaScript, ale także minimalne podstawy HTML i CSS oraz sposoby na dostęp JavaScript do HTML (DOM). Wszystko w swoim czasie.*
+
+Na razie natomiast będziemy zarządzać zadaniami w konsoli za pomocą poleceń, ale... nie tych, które wypisaliśmy powyżej 😅. Kod, którego używamy na razie do zarządzania naszymi zadaniami, jest kodem w stylu imperatywnym. **Styl programowania imperatywnego skupia się głównie na tym, w jaki sposób możemy osiągnąć określony rezultat za pomocą kodu**. Taki styl wymaga **dużej ilości komentarzy** (spójrz, ile ich jest w dotychczasowym kodzie), żeby zrozumieć, co się dzieje w kodzie. Taki kod jest **mało czytelny** nawet dla osoby, która go stworzyła.
+
+**W kolejnych lekcjach natomiast stworzymy** swoje **własne, czytelne i zrozumiałe polecenia** w stylu deklaratywnym (funkcyjnym), jak np.:
+
+- `showTasks()`, które wyświetli zadania,
+- `addTask()`, za pomocą którego będziemy dodawać zadanie,
+- `deleteTask()`, za pomocą którego będziemy usuwać zadania,
+- i wiele innych!
+
+Nazwy z powyższej listy wyglądają chyba lepiej i łatwiej je zapamiętać, niż np. `tasks.push()`, `tasks.splice()` itd.? Też tak myślę. To jest przykład stylu programowania deklaratywnego (funkcyjnego). **Styl programowania deklaratywnego (funkcyjnego) skupia się na tym, by sama składnia (nazwy zmiennych, funkcji, ale także metod) mówiła sama za siebie (co się dzieje w kodzie) oraz by szczegóły działania poszczególnych fragmentów były określone i wyizolowane gdzie indziej**. W programowaniu funkcyjnym tworzymy dużo małych i dobrze nazwanych funkcji, z których powstaje program.
+
+Innymi słowy, nawet jeśli nie masz żadnego pojęcia o programowaniu (a Ty już jakieś masz 😎), to jeśli zobaczysz w kodzie taki zapis: `showTasks()`, to raczej domyślisz się, że to "coś" ma coś wspólnego z pokazywaniem/ wyświetleniem zadań; na pewno jest to bardziej czytelne od `console.log(tasks)` czy `splice(1, 0, "coś tam")`.
+
+Dlatego za chwilę poznamy kolejne fundamentalne zagadnienie w programowaniu - **funkcje** - i "opakujemy" nasze dotychczasowe trudne do zapamiętania JavaScriptowe metody *(ale i tak część z nich trzeba będzie zapamiętać, chociaż wystarczy po prostu często pisać kod)* we **własne, łatwe, zrozumiałe i reużywalne polecenia**. W ten sposób powstanie wersja 1 naszej aplikacji.
+
+Do dzieła!
+
+## Funkcje | Wyświetlamy listę zadań (znowu), ale tym razem za pomocą własnej funkcji `showTasks()`
 
 ---
 
-Ok, więc inicjujemy listę zadań, dodajemy i przechowujemy zadania w kodzie, czas więc na kolejną funkcjonalność - usuwanie zadania z listy. Powinniśmy być w stanie usunąć zadanie, które jest już nieaktualne albo wykonane z naszej listy, że się nie rozpraszać oraz widzieć nasz progres.
+Jak wspomniałem w poprzednim podrozdziale, zarządzanie naszymi zadaniami (naszą aplikacją) za pomocą "czystych" JavaScriptowych poleceń typu `tasks.push("nowe zadanie")` lub `splice(1, 0, "coś tam")` działa, ale programiści "opakowują" taki imperatywny (patrz poprzedni podrozdział) kod, z którego często korzystamy (a będziemy często dodawać zadania do listy oraz je usuwać), w reużywalne "kawałki" kodu, które nazywają się **funkcjami**.
 
-Usunięcia konkretnego elementu z tablicy można dokonać na kilka sposobów. Ze względu na to, że wiemy, czym są indeksy oraz nasza lista pozwala na wyświetlenie indeksów każdego z zadań, najłatwiej będzie sprawdzić, jaki jest indeks zadania, które chcemy usunąć, a potem użyć wbudowanej metody tablicy `splice()` w ten sposób:
+**Funkcja to pewien zakmnięty w sobie fragment kodu o zrozumiałej, czytelnej nazwie, który wykonuje pewne zadania/ polecenia w nim zdefiniowane za każdym razem, kiedy go wywołamy.**
+
+Tak naprawdę, już korzystaliśmy z wbudowanych funkcji (a dokładniej metod - nie przejmuj się na razie tym rozróżnieniem), tj. `console.log()` lub `tasks.push()`. Zauważ, że w odróżnieniu od zmiennych, **funkcja zawiera nawiasy tuż po swojej nazwie**.
+
+Spróbujmy zatem stworzyć naszą pierwszą funkcję, by zrozumieć, o co w tym chodzi. Stworzymy funkcję, która będzie wyświetlała nam listę wszystkich naszych zadań.
+
+Owszem, wcześniej już wyświetlaliśmy nasze zadania poprzez wpisanie w konsoli zmiennej `tasks` lub poprzez wywołanie funkcji `console.log(tasks)`, ale teraz zrobimy to w sposób bardziej profesjonalny, zgodnie z paradygmatem programowania funkcyjnego:
 
 ```
-// załóżmy, że chcemy usunąć zadanie o indeksie 4:
+function showTasks() {
+  console.log(tasks);
+}
 
-tasks.splice(4, 1);
+// =================== Uwaga! ========================
+// Jeśli wyczyściłeś konsolę lub przeładowałeś stronę,
+// to nie mamy już dostępu do globalnej zmiennej tasks,
+// należy więc na nowo ją zadeklarować,
+// odkomentowując poniższy kod i wpisując go przed definicją funkcji:
+// let tasks = ["zrobić kawę", "sprawdzić maila", "zajrzeć na stronę kodujemywbiurze.pl"];
 ```
 
-Metoda `splice()` w tym przypadku potrzebuje przekazania do niej dwóch argumentów:
+W powyższym kodzie używając słowa kluczowego `function` zdefiniowaliśmy nową funckję o nazwie `showTasks`, która... (jak sama nazwa wskazuje) wyświetla listę naszych zadań. 
 
-- pierwszy (w naszym przykładzie jest to `4`) jest indeksem elementu, który chcemy usunąć,
-- drugi z kolei wskazuje na ilość elementów, które chcemy usunąć, zaczynając od tego indeksu (my chcemy usunąć tylko jedno zadanie, więc napiszemy `1`).
+Jak widzisz, polecenie `console.log(tasks)`, którego wcześniej używaliśmy osobno, zostało "opakowane" w funkcję, której nazwa ewidentnie wskazuje na to, czego możemy się od niej spodziewać, w związku z czym ktoś, kto nie widział całości naszego kodu, ani nie wie, co jest w środku tej funkcji, raczej się domyśli, co ta funkcja robi i sam będzie mógł jej użyć.
 
-Oczywistym jest, że nie będziemy usuwać elementów bezpośrednio w ten sposób, tylko... no zgadnij... dokładnie - napiszemy dedykowaną reużywalną funkcję! No bo kto by pamiętał za każdym razem, jakie argumenty i w jakiej kolejności mamy przekazać do metody `splice()`? Zresztą, kto by w ogóle pamiętał, jak nazywa się ta metoda.
+Ponadto, jeśli wrócisz do swojego kodu za kilka dni lub tygodni, to mimo że nie będziesz pamiętał/a, co znajduje się w środku funkcji `showTasks()` i nie będziesz nawet pamiętał/a, jak wyświetlić coś w konsoli za pomocą `console.log()`, to zdecydowanie zrozumiesz, co robi funkcja `showTasks()`. Uwierz mi, że **programiści o wiele częściej dosłownie czytają kod, niż go piszą**, dlatego trafne nazwy zarówno zmiennych, jak i funkcji, niezwykle ułatwiają jego zrozumienie, mimo że nie zna się/ nie pamięta szczegółów.
+
+Żeby nasza funkcja zadziałała i wyświetliła nasze zadania, musimy ją wywołać poprzez wpisanie w konsoli `showTasks()` i kliknąć Enter. Dzięki temu, nie musimy pamiętać, jak wyświetlić nasze zadania w konsoli, wystarczy wywołać funkcję `showTasks()`.
+
+Na pierwszy rzut oka może się wydawać, że wykonaliśmy zbędną pracę - definicja funkcji zajęła nam 3 linijki kodu, a `console.log(tasks)` zajęłoby tylko jedną! Ale, po pierwsze, uczyniła nasz kod bardziej zrozumiałym, czytelnym i reużywalnym, a po drugie, większość funkcji będzie bardziej rozbudowana, będą tam miały miejsce różne procesy, być może będą tam w środku też inne funkcje i tymczasowe (lokalne) zmienne, więc w tym przypadku oszczędność czasu będzie ogromna.
+
+Poza tym, musieliśmy tylko raz się zastanowić nad tym, jak wyświetlić nasze zadania, tworząc funkcję i nie będziemy musieli znowu się nad tym zastanawiać, co miałoby miejsce, gdybyśmy każdorazowo pisali `console.log(tasks)`.
+
+Warto też zwrócić uwagę na samą konstrukcję funkcji:
+
+- zaczyna się ona od słowa kluczowego `function`,
+- potem po spacji jest jej nazwa (która jeśli zawiera zlepek słów, to powinna być napisana `camelCasem`),
+- potem bez spacji po nazwie dodajemy nawiasy `()` (później dowiemy się, do czego służą, chociaż... być może już zwróciłeś/aś uwagę, jak działały nawiasy w wcześniejszych funkcjach/metodach),
+- a potem mamy dwie klamry `{ }`, pomiędzy którymi możemy pisać wiele linijek kodu - to, co znajduje się pomiędzy klamrami, nazywa się ciałem funkcji.
+
+Moglibyśmy powyższą funkcję zapisać także w jednej linijce (ponieważ jest mała):
+
+```
+function showTasks() { console.log(tasks); }
+```
+
+aczkolwiek taki zapis nie jest czytelny, dlatego lepiej używać wielolinijkowego formatu.
+
+Ogólnie funkcje możemy zadeklarować też na kilka innych sposobów, ale na razie wystarczy nam ten jeden.
+
+Zanim stworzymy kolejne funkcje, chciałbym zwrócić Twoją uwagę na nazewnictwo funkcji. Pamiętasz, że nazwa zmiennej powinna odzwierciedlać to, jaką wartość przechowuje? Z funkcjami jest podobnie, tyle że funkcje nie reprezentują jakieś wartości, tylko czynności - funkcja coś "robi". W związku z tym, jeśli funkcja powinna wyświetlić zadania, to należy ją nazwać `showTasks` lub `displayTasks`, albo też `logTasks`. Te nazwy brzmią jak komendy: "pokaż/ wyświetl zadania!" i tak właśnie jest z funkcjami - są one poleceniami dla komputera/ przeglądarki.
+
+Owszem, funkcja może również zwracać wartość *(tak jak metoda `splice()` podczas usuwania elementu z tablicy zwracała także tablicę zawierającą listę usuniętych elementów, pamiętasz?)*, np. w tym przypadku:
+
+```
+function calculateSum(a, b) { // oblicz sumę
+  // tworzymy lokalną zmienną sum,
+  // która przechowuje wartość dodawania a i b:
+	const sum = a + b;
+
+	// wyświetlamy w konsoli wynik dodawania:
+	console.log(a, "+", b, "=", sum);
+
+  // zwracamy wynik, który można przypisać do zmiennej:
+	return sum;
+}
+
+// teraz inicjujemy zmienną,
+// do której przypisujemy wartość zwróconą przez calculateSum():
+let sum = calculateSum(3, 5);
+
+console.log("sum:", sum);
+```
+
+aczkolwiek zwrócona wartość jest wynikiem działania funkcji, więc funkcja musiała "coś zrobić", by "wyprodukować" wartość, którą zwraca.
+
+## Kilkulinijkowy kod w konsoli oraz pliki snippets w Chrome i Edge | Zapisujemy nasz kod w pliku w przeglądarce w zakładce Snippets
+
+---
+
+Zanim przejdziemy dalej i utworzymy więcej customowych funkcji, chciałbym poruszyć kwestię pisania wielolinijkowego kodu w konsoli (np. w przypadku pisania funkcji, jak w wcześniejszym przykładzie), błędów oraz utracie kodu po odświeżeniu strony.
+
+W związku z tym polecę też korzystanie z wbudowanej funkcjonalności Chrome i Edge o nazwie `snippets` do zapisywania kodu bezpośrednio w przeglądarce, dzięki czemu go nie utracimy. Są to ważne kwestie, które sprawią, że pisanie kodu w przeglądarce będzie bardziej przyjemne *(bez wątpienia najprzyjemniej pisze się kod w dedykowanych edytorach kodu, ale na razie w to nie wchodzimy, ponieważ na razie chcemy pobawić się kodem bez zbędnych konfiguracji i rozpraszaczy)*, mniej podatne na błędy oraz zapewni pewną funkcjonalność aplikacji, którą budujemy.
+
+### Błędy oraz kilkulinijkowy kod w kosoli
+
+***Uwaga!*** W zależności od przeglądarki, **może się okazać**, że żeby napisać kilkulinijkowy kod w konsoli (taki, jak w poprzedniej funkcji), musimy **zamiast Enter używać kombinacji klawiszy Shift+Enter**, żeby przejść do następnej linii, ponieważ wciśnięcie klawisza Enter w niektórych przypadkach może spowodować wywołanie tego kodu, który już napisałeś/aś, co najprawdopodobniej wywoła błąd w konsoli, ponieważ kod nie jest ukończony.
+
+Jeśli to się zdarzy (pojawi się komunikat błędu) i po ponownym poprawnym wpisaniu kodu nie uda się zainicjować funkcji (ponieważ została niepoprawnie zaincjowana niekompletnym, przedwcześnie wywołanym kodem), odśwież stronę, co wyczyści pamięć konsoli i wpisz kod jeszcze raz.
+
+Ale pamiętaj, że lista zadań `let tasks = ["zrobić kawę", "sprawdzić maila", "zajrzeć na stronę kodujemywbiurze.pl"]` (oraz jakikolwiek inny kod) zniknęła, więc najpierw musisz ją ponownie wpisać, zanim napiszesz powyższą funkcję.
+
+### Praca z `snippets`. Jak zapisać plik z kodem w przeglądarce?
+
+Proponuję, byśmy skorzystali z **wbudowanej funkcjonalności (i zakładce) przeglądarek Chrome i Edge o nazwie `snippets` do zapisywania kodu w pliku bezpośrednio w przeglądarce** *(Mozilla nie ma tej funkcjonalności, dlatego nie polecałem pracy z tą przeglądarką podczas niniejszego kursu, ale mimo wszystko, jeśli korzystasz z Mozilli, możesz nadal pisać kod w konsoli, tylko uważaj na kilkulinijkowy kod)*! Jest to świetne narzędzie, o czym się zaraz przekonamy.
+
+Żeby otworzyć *snippets*, musisz kliknąć *Sources*, które znajdują się tuż obok *Console*, a tam z rozwijanego menu wybrać zakładkę *Snippets*. Teraz możemy kliknąć ikonkę ze znakiem plus i napisem *New snippet*, co utworzy nowy plik z domyślną nazwą, którą możemy zmienić na np. `todo-app` *(pozostańmy przy tej nazwie, ponieważ będę jej używał w dalszych częściach tutoriala)*.
+
+Ten plik będzie teraz zapisany w naszej przeglądarce i zawsze będziemy mieli do niego dostęp. Ponadto, plik ten możemy uruchomić w naszej konsoli, która będzie miała dostęp zarówno do pliku, jak i do zawartości strony (co nam przyda się w kolejnych kursach).
+
+### Przepisujemy kod aplikacji w wersji 1. do pliku
+
+Możemy teraz przepisać do tego pliku dotychczasowy kod naszej aplikacji w wersji 1. Potrzebne nam są tylko zadeklarowanie zmiennej `tasks` oraz definicja poprzedniej funkcji `showTasks()`:
+
+```
+// todo-app file:
+
+let tasks = ["zrobić kawę", "sprawdzić maila", "zajrzeć na stronę kodujemywbiurze.pl"];
+
+function showTasks() {
+  console.log(tasks);
+}
+```
+
+### Uruchomienie pliku
+
+Jeśli zapisałeś/aś w konsoli w zakładce `Sources` plik `todo-app`, umieściłeś/aś w nim kod, który napisałem powyżej, oraz zapisałeś/aś ten plik (klikając `Ctrl+S`), to musisz teraz uruchomić ten plik, by konsola miała do niego dostęp *(na wszelki wypadek odśwież stronę ten jeden raz, by wyczyścić pamięć konsoli oraz wcześniej zadeklarowanej zmiennej `tasks`)*.
+
+Aby uruchomić kod z pliku, kliknij w ikonkę trójkąta w dolnym prawym rogu lub użyć kombinacji `Ctrl+Enter`, by uruchomić nasz plik, otworzyć konsolę pod spodem pliku oraz przekazać funkcjonalności i zmienne w nim zdefiniowane do konsoli. To otwiera przed nami niesamowite możliwości!
+
+Po automatycznym otwarciu się konsoli, wpisz do niej polecenie `showTasks()` oraz wywołaj go, klikając Enter. Przekonasz się, że funkcja zwróciła listę zadań zdefiniowanych w pliku `todo-app`: `(3) ['zrobić kawę', 'sprawdzić maila', 'zajrzeć na stronę kodujemywbiurze.pl']`.
+
+Zwróć też uwagę na to, że po prawej stronie od komunikatów w konsoli wyświetla się też źródło tych komunikatów: nasz plik o nazwie `todo-app` oraz numer linijki kodu (po dwukropku), który generuje komunikat: `todo-app:6`. Jeśli klikniesz w ten link w konsoli, to podświetli Ci ona tę linijkę w kodzie w pliku. Dzięki temu wiemy dokładnie, co i gdzie się zadziało oraz ewentualnie gdzie szukać błędu w razie czego. Zresztą, dzięki temu wiemy też, że komunikat został wygenerowany przez plik, a nie przez np. jakąś funkcję zdefiniowaną w samej konsoli.
+
+---
+
+**UWAGA!!! Będziemy teraz pisać kod zarówno w tym pliku *(tylko ten niezbędny dla aplikacji; w komentarzu w przykładach kodu zawrę ten zapis: `// todo-app file:`, który będzie odróżniał kod aplikacji od innego testowego kodu w konsoli)* oraz czasami w samej konsoli, by coś tam przetestować lub wywołać funkcje z pliku**.
+
+Możesz też nie korzystać z tej funkcjonalności i dalej pisać kod wyłącznie w konsoli, ale pamiętaj o sytuacjach, które opisałem powyżej, które mogą mieć miejsce i zakłócić Twoją pracę z kodem. No i jeśli będziesz pisać kod programu wyłącznie w konsoli, to utracisz go po przeładowaniu strony... Konsola jest dobra do testowania, pliki są dobre dla programów, które uruchamiamy i testujemy.
+
+---
+
+Dlaczego zasugerowałem odświeżenie strony zanim uruchomimy plik? Otóż dlatego, że być może w konsoli mieliśmy wcześniej zadeklarowaną zmienną `tasks`. W pliku również mamy tę zmienną, w związku z czym w pewnym momencie wartości w zmiennej mogłyby się "rozjechać", ponieważ teraz, kiedy pracujemy z plikiem, konsola ma dostęp zarówno do kodu w pliku, jak również w konsoli. Jeśli więc w jednym, albo w drugim miejscu zadeklarujemy taką samą zmienną, to napisze ona wcześniejszą. Dlatego trzeba na to uważać.
+
+Ponadto, **jeśli pracujemy w konsoli z otwartym plikiem, zmodyfikujemy plik, zapiszemy go/ zmiany (`Ctrl+S`) oraz uruchomimy (ikonka trójkąta lub `Ctrl+Enter`), to poprzednie zmienne, których używaliśmy w konsoli, zostaną nadpisane zgodnie z kodem w pliku**!
+
+Np.: w pliku tworzymy listę z 3 zadaniami, uruchamiamy plik w konsoli, widzimy, że są 3 zadania, potem w konsoli dodajemy kolejne 2 zadania do pliku, sprawdzamy, że teraz mamy 5 zadań, ale potem zmieniamy jakiś kod w pliku i uruchamiamy go jeszcze raz, to teraz, kiedy sprawdzimy listę zadań, to ponownie zobaczymy te pierwotne 3 zadania, mimo że wcześniej dodaliśmy kolejne 2 - zostały one nadpisane przez ponownie uruchomiony kod!
+
+Super! Rozwialiśmy różne wątpliwości, wprowadziliśmy nowe mega narzędzie, idziemy dalej! **Od teraz będziemy działać w ten sposób - będziemy pisać i uzupełniać kod w pliku i wywoływać go w konsoli**.
+
+## Argumenty funkcji, wywoływanie innych funkcji wewnątrz funkcji | Funkcja dodająca zadanie `addTask()`
+
+---
+
+Wcześniej dodawaliśmy nasze zadania używając tego kodu: `tasks.push("jakieś tam zadanie")`. Zwróć uwagę na to, że `"jakieś tam zadanie"` znajduje się w nawiasach funkcji, w związku z tym `"jakieś tam zadanie"` zostało przekazane metody `push()` jako argument (pewien zasób/ wartość/ informacja), który zostanie przez tę funkcję wykorzystany.
+
+Nasza (na razie jedyna) funkcja `showTasks()` nie ma żadnych argumentów w nawiasach, ponieważ ich nie potrzebuje - ma dostęp do zadań, gdyż zmienna `tasks` istnieje już w naszym kodzie i zawsze mamy do niej dostęp z poziomu każdej funkcji (innymi słowy, jest **zmienną globalną**). Czyli wiemy już, że funkcja może w ogóle nie mieć żadnych argumentów.
+
+Wyobraźmy natomiast, że chcemy dodać nowe zadanie, które nie istnieje nigdzie w kodzie w postaci zmiennej, wiemy także, że dysponujemy funkcją o nazwie `addTask()` *(za chwilę ją napiszemy, ale na razie wyobraźmy, że ktoś już ją napisał)*. Jak możemy to zrobić?
+
+W tym przypadku należałoby tej funkcji przekazać pewną informację (w naszym przypadku będzie to nowe zadanie), czego możemy dokonać poprzez wpisanie naszego zadania w nawiasach tej funkcji w następujący sposób: `addTask("zrobić kawę po raz drugi")`.
+
+Chciałbym też zauważyć, że taki kod zadziała tylko w tym przypadku, jeśli funkcja `addTask()` oczekuje jakiegoś argumentu, czyli że funkcja ta została napisana w pewien określony sposób, który zaraz zobaczymy (pojawi się tutaj też kilka nowych rzeczy):
+
+```
+function addTask(newTask) {
+
+	// w poniższej linijce dodajemy zadanie do listy zadań:
+	tasks.push(newTask);
+
+	// wyświetlamy komunikat w konsoli o nowo dodanym zadaniu:
+	console.log("Do Twoich zadań zostało dodane nowe zadanie:", newTask);
+
+	// wyświetlamy zaktualizowaną pełną listę zadań,
+	// używając zdefiniowanej wcześniej funkcji showTasks():
+	showTasks();
+}
+```
+
+Przeczytaj ten powyższy kod i spróbuj najpierw intuicyjnie zrozumieć, co się w nim dzieje oraz dopisz go do pliku `todo-app` na samym końcu (ale przepisz własnoręcznie, nie kopiuj tego kodu!). No i oczywiście zapisz zmiany skrótem `Ctrl+S`, a potem kliknij ikonkę trójkąta lub kolejny skrót `Ctrl+Enter`, by kod zadziałał w przyszłości w konsoli.
+
+Po pierwsze, zwróć uwagę, że po nazwie funkcji `addTask` w nawiasach mamy zawarty argument `newTask`. Tak naprawdę `newTask` jest zmienną, która jeszcze nie ma żadnej przypisanej wartości, czyli jest to "puste podpisane pudełko", swego rodzaju pośrednik, do którego dopiero później coś włożymy - a dokładnie w momencie wywołania funkcji w ten sposób: `addtask("to zadanie jest właśnie tą wartością, która zostanie przypisana do argumentu newTask")`.
+
+Mimo że w samej definicji funkcji `addTask` argument `newTask` nie ma żadnej wartości, to możemy go wykorzystać w kodzie funkcji tak, jakby tę wartość miał (co też robimy w dalszej części kodu funkcji: `tasks.push(newTask)` - tak naprawdę mówimy przeglądarce, że cokolwiek by się znalazło z zmiennej `newTask`, powinno zostać dodane do `tasks`).
+
+Innymi słowy, wyobraź sobie, że mówisz koleżance z biura: *"Na biurku leży żółty segregator, który na razie jest pusty, ale później przyjdzie sekretarka i włoży do tego segregatora stertę dokumentów. Wtedy weź segregator i włóż go do szafy"*. Koleżanka nie musi wiedzieć, jakie dokumenty znajdą się w segregatorze. Wie tylko, że jak się tam znajdą, trzeba odłożyć segregator. Gdyby wspomniana koleżanka bardzo się nudziła, mogłaby wziąć pusty segregator i włożyć go do szafy, mimo że nie ma w nim żadnych dokumentów, by przećwiczyć tę czynność na przyszłość.
+
+Po drugie, zauważ, że w funkcji `addTask()` nie tylko dodajemy zadanie do listy, ale także wyświetlamy komunikat w konsoli o tym, że zostało dodane nowe zadanie, przy czym wyświetlamy także samo zadanie. Dzieje się tak dlatego, że tym razem przekazaliśmy `console.log()` zarówno pewną wiadomość: `"Do Twoich zadań zostało dodane nowe zadanie:"`, a potem po przecinku przekazaliśmy samą zmienną, reprezentującą nowe zadanie, w związku z czym konsola wyświetli wiadomość oraz wartość zmiennej przechowującej nowe zadanie (treść nowego zadania):
+
+```
+console.log("Do Twoich zadań zostało dodane nowe zadanie:", newTask);
+```
+
+Po trzecie, po dodaniu nowego zadania i wyświetleniu komunikatu, wywołujemy funkcję `showTasks()`, którą wcześniej napisaliśmy, dzięki czemu konsola automatycznie wyświetli zaktualizowaną listę zadań z nowo dodanym zadaniem na końcu. Widzisz, mówiłem, że funkcje przydają się do ponownego wykorzystania! W funkcji `addTask()` zawarliśmy i wywołujemy inną naszą funkcję `showTasks()` (a w sumie wywołujemy też wbudowaną funkcję `console.log()`).
+
+Być może nawet nie pamiętasz już, co dokładnie znajdowało się w funkcji `showTasks()`, ale na pewno wiesz, co robi i z tego skorzystałeś/aś! Właśnie na tym polega korzyść z tworzenia dobrze nazwanych reużywalnych funkcji!
+
+Dzięki temu, że dodaliśmy automatyczne wyświetlenie zaktualizowanej listy zadań, nie musimy za każdym razem po dodaniu nowego zadania wywoływać ręcznie dodatkowo `showTasks()`, żeby wyświetlić naszą listę. Widzisz, ile może się dziać w jednej funkcji!
+
+Ok, dopisz więc do pliku `todo-app` kod nowej funkcji `addTask()`, ale bez moich komentarzy (to te linijki, które zaczynają się od `//`, pamiętasz?), zapisz plik (tak jak zwykle za pomocą `Ctrl+S`) i uruchom go klikając ikonkę trójkąta lub używając skrótu `Ctrl+Enter`.
+
+Teraz możemy dodawać zadania poprzez wywołanie funkcji `addTask` z argumentami (poćwicz to w konsoli):
+
+```
+addTask("sprawdzić Facebooka");
+addTask("wyskoczyć do sklepu po jogurt");
+addTask("położyć jogurt na grzejniku, by się zacieplił");
+```
+
+Jeśli wszystko poszło zgodnie z planem, to za każdym razem po dodaniu zadania, wyświetla Ci się komunikat oraz coraz to dłuża lista - ileż to my mamy do zrobienia dzisiaj w biurze!
+
+## Usuwanie zadań z listy za pomocą funkcji `deleteTask()` i `deleteAllTasks()`
+
+---
+
+Pamiętasz, jak usuwaliśmy zadania za pomocą metody `splice()`? Oczywistym jest, że nie będziemy więcej usuwać elementów bezpośrednio w ten sposób, tylko napiszemy dedykowaną reużywalną funkcję. No bo kto by pamiętał za każdym razem, jakie argumenty i w jakiej kolejności mamy przekazać do metody `splice()`? Zresztą, kto by w ogóle pamiętał, jak nazywa się ta metoda.
 
 Stwórzmy więc funkcję `deleteTask(index)`:
 
@@ -525,12 +753,21 @@ function deleteTask(index) {
 
 Po przepisaniu tej funkcji do konsoli, spróbuj usunąć kilka zadań, uprzednio sprawdzając, jakie indeksy chcesz usunąć.
 
-Spróbuj teraz stworzyć funckję o nazwie `deleteAllTasks()`, która usuwa od razu wszystkie zadania. Można to oczywiście zrobić na wiele sposobów:
+Spróbujmy teraz stworzyć funckję o nazwie `deleteAllTasks()`, która usuwa od razu wszystkie zadania. Najłatwiej jest po prostu przypisać do zmiennej `tasks` pustą tablicę:
 
-- można to zrobić bardzo, ale to bardzo łatwo (właśnie tego od Ciebie oczekuję),
-- ale można też zaszaleć i w tym celu użyć pętli, a nawet pętli, która wykorzystuje już wcześniej stworzoną funkcję `deleteTask()`, która by usuwała każde zadanie po kolei, przy okazji wyrzucała do konsoli każde usunięte zadanie.
+```
+function deleteAllTasks() {
+  tasks = [];
 
-## Podstawy podstaw za nami! Kod pierwszej wersji aplikacji w całości
+	console.log("Wszystkie zadania zostały usunięte...");
+
+	showTasks();
+}
+```
+
+Przepisz te nowe funkcje do pliku, zapisz go, uruchom, a później przetestuj.
+
+## Podstawy podstaw za nami! Kompletny kod aplikacji w wersji 1. zapisany w pliku
 
 ---
 
@@ -566,26 +803,30 @@ Gratuluję!
 
 Spróbuj teraz odpowiedzieć swoimi słowami na wszystkie powyższe pytania, by sprawdzić, co umiesz, a co jeszcze tak nie do końca.
 
-Poniżej znajduje się cały dotychczasowy kod naszej aplikacji, który powinien być w pliku `todo-app` (który możemy też skopiować i wkleić do konsoli, jeśli nie zapisywaliśmy kodu w pliku - pamiętaj tylko, by odświeżyć stronę, żeby usunąć z konsoli dotychczasowy kod).
+Poniżej znajduje się cały dotychczasowy kod naszej aplikacji, który powinien być w pliku `todo-app` *(który możemy też skopiować i wkleić do konsoli, jeśli nie zapisywaliśmy kodu w pliku - pamiętaj tylko, by odświeżyć stronę, żeby usunąć z konsoli dotychczasowy kod)*.
 
 ```
-let tasks = ["zrobić kawę", "sprawdzić maila", "zajrzeć na stronę kodujemywbiurze.pl"];
+// czyścimy konsolę z całego dotychczasowego kodu i komunikatów:
+console.clear();
+
+// inicjujemy pustą listę zadań:
+let tasks = [];
 
 function showTasks() {
-  console.log(tasks)
+  console.log("tasks:", tasks);
 }
 
 function addTask(newTask) {
-
-	// w poniższej linijce dodajemy zadanie do listy zadań:
 	tasks.push(newTask);
 
-	// wyświetlamy komunikat w konsoli o nowo dodanym zadaniu:
 	console.log("Do Twoich zadań zostało dodane nowe zadanie:", newTask);
 
-	// wyświetlamy zaktualizowaną pełną listę zadań:
 	showTasks();
 }
+
+// poniższa funkcja wyświetla zadania jedno po drugim;
+// nie utworzyliśmy poniższej funkcji w kursie,
+// ale była ona w innej postaci w wersji 0:
 
 function loopTasks() {
 	for (let i = 0; i < tasks.length; i++) {
@@ -594,29 +835,45 @@ function loopTasks() {
 }
 
 function deleteTask(index) {
-  // usuwamy 1 zadanie zlokalizowane pod przekazanym indeksem:
   tasks.splice(index, 1);
 
-	// wyświetlamy zaktualizowaną listę zadań:
+	showTasks();
+}
+
+function deleteAllTasks() {
+  tasks = [];
+
+	console.log("Wszystkie zadania zostały usunięte...");
+
 	showTasks();
 }
 ```
 
-Możesz teraz dodawać zadania za pomocą kodu `addTask("jakieś zadanie")`, a potem je usuwać, sprawdzając uprzednio ich indeks, np. `deleteTask(3)`. Jeśli z kolei chcesz wyświetlić swoje zadania w konsoli, wywołaj `showTasks()` lub `loopTasks()`.
+Możesz teraz:
 
-Spróbuj teraz opowiedzieć swoimi słowami koleżance/koledze z biura, co robi/ co się dzieje w każdej z linijek powyśzego kodu.
+- dodawać zadania za pomocą kodu `addTask("jakieś zadanie")`,
+- usuwać, sprawdzając uprzednio ich indeks, np. `deleteTask(3)`,
+- wyświetlić swoje zadania w konsoli, wywołując `showTasks()` lub `loopTasks()`.
 
-Jeśli nie masz, komu to opowiedzieć lub po prostu nie chcesz dzielić się swoją tajną wiedzą, możesz opowiedzieć to swoim kwiatkom na parapecie/ biurku lub, tak jak niektórzy programiści, żółtej gumowej kaczce ;-)
+## Czym różni się kod aplikacji w wersji 1. od 0. oraz co dalej?
+
+Zwróć uwagę na to, czym powyższy kod z pliku różni się od kodu, którego używaliśmy w wersji 0. *De facto* robi on to samo, ale:
+
+- wcześniejszy imperatywny kod ("gołe" polecenia JavaScript) wraz z komentarzami został przekształcony w samoopisujące się funkcje, których nazwy wskazują na to, co robią,
+- nie musimy już wszędzie ręcznie wywoływać `console.log()`, by wyświetlić zadania, ani za każdym razem zastanawiać się, jakie argumenty przekazać do metody `splice()`, by usunąć zadanie,
+- kod jest nie tylko bardziej zrozumiały, ale także bardziej czytelny, przejrzysty oraz pogrupowany i zformatowany,
+- teraz możemy zarządzać naszymi zadaniami za pomocą zrozumiałych komend, których możemy nauczyć naszych współpracowników, ponieważ są napisane w "ludzkim języku" - nie muszą oni rozumieć kodu, który kryje się za tymi poleceniami,
+- no i kod został zapisany w pliku w przeglądarce, w związku z tym nie zniknie, jak kod pisany bezpośrednio w konsoli; poza tym, łatwiej jest go modyfikować oraz tworzyć kolejne wersje programu w nowych plikach (co też właśnie zrobimy 😏).
 
 Gratuluję jeszcze raz!
 
 Ale...
 
-Na razie nasze zadania są przechowywane w przeglądarce tylko dopóki nie zresetujemy tej strony lub nie zmienimy czegoś w pliku `todo-app`, a potem nie zapiszemy tego pliku (`Ctrl+S`) i nie uruchomimy go w konsoli.
+Na razie nasze zadania (nie kod!) są przechowywane w przeglądarce tylko dopóki nie zresetujemy tej strony lub nie zmienimy czegoś w pliku `todo-app`, a potem nie zapiszemy tego pliku (`Ctrl+S`) i nie uruchomimy go w konsoli.
 
 Jest to w pewnym sensie dobre, ponieważ jutro nie przytłoczy Cię w pracy nadmiar zapisanych (i niezrealizowanych) zadań! Aczkolwiek fajnie by było, gdyby nasze zadania pozostawały zapisane tak długo, jak chcemy. Żebyśmy mogli nagle zamknąć przeglądarkę lub tę stronę (żeby przełożony nie zobaczył), a potem otworzyć ją znowu i mieć dostęp do naszych ważnych zadań!
 
-Więc możemy to zrobić i zrobimy w kolejnej części tutoriala. Będzie to wiedza bardziej zaawansowana od tego, co zrobiliśmy dotychczas (wykorzystamy wbudowaną funkcjonalność przeglądarki `localStorage`), dlatego też stworzymy kolejny plik, w którym będziemy modyfikować naszą aplikację, dzięki czemu... będziemy mieli 2 aplikacje!
+Więc możemy to zrobić i zrobimy w kolejnej części tutoriala. Będzie to wiedza bardziej zaawansowana od tego, co zrobiliśmy dotychczas (wykorzystamy wbudowaną funkcjonalność przeglądarki `localStorage`), dlatego też stworzymy kolejny plik, w którym będziemy modyfikować naszą aplikację, dzięki czemu... będziemy mieli 2 aplikacje (2 pliki z różnymi aplikacjami - aplikacji *de facto* mamy już 3)!
 
 Do dzieła!
 
@@ -696,16 +953,14 @@ Powyższy kod jest nie tylko bardziej czytelny, ale też najprawdopodbniej bardz
 
 Pobaw się tym kodem w konsoli i sprawdź, czym się różnią zmienne `tasksString` i `tasksArray`.
 
-## Zadania są zapisywane w przeglądarce! Kod drugiej wersji aplikacji w całości
+## Zadania są zapisywane w przeglądarce! Kod aplikacji w wersji 2.0 w całości
 
-Uff... Znamy już podstawy pracy z `localStorage`, więc możemy uzupełnić naszą aplikację w pliku o powyższe funkcjonalności.
+Uff... Znamy już podstawy pracy z `localStorage`, więc możemy stworzyć plik `todo-app-local-storage` w zakładce `snippets` i uzupełnić kod wcześniejszej wersji aplikacji w pliku o powyższe funkcjonalności.
 
 Poniższy kod będzie zawierał zmodyfikowane dotychczasowe funkcje oraz komentarze na temat tego, co i jak się zadziało:
 
 ```
-// czyścimy/ resetujemy konsolę na start,
-// żeby nie wyświetlała poprzednich komunikatów:
-
+// czyścimy konsolę z całego dotychczasowego kodu i komunikatów:
 console.clear();
 
 // definiujemy funkcję pobierającą zadania z localStorage:
@@ -724,8 +979,6 @@ function getTasksFromLocalStorage() {
 		return []; // zwracamy pustą tablicę, by móc np. korzystać z metody push()
 	}
 }
-
-// USUWAMY: let tasks = ["zrobić kawę", "sprawdzić maila", "zajrzeć na stronę kodujemywbiurze.pl"];
 
 // definiujemy zmienną tasks, do której przypisujemy
 // wartość zwróconą przez getTasksFromLocalStorage():
@@ -753,16 +1006,13 @@ function updateTasksInLocalStorage(updatedTasks) {
 // uzupełniamy funkcję addTasks o aktualizację localStorage:
 
 function addTask(newTask) {
-	// w poniższej linijce dodajemy zadanie do listy zadań:
 	tasks.push(newTask);
 
-	// wyświetlamy komunikat w konsoli o nowo dodanym zadaniu:
 	console.log("Do Twoich zadań zostało dodane nowe zadanie:", newTask);
 
 	// aktualizujemy localStorage o najnowsze tasks:
 	updateTasksInLocalStorage(tasks);
 
-	// wyświetlamy zaktualizowaną pełną listę zadań:
 	showTasks();
 }
 
@@ -773,13 +1023,11 @@ function loopTasks() {
 }
 
 function deleteTask(index) {
-  // usuwamy 1 zadanie zlokalizowane pod przekazanym indeksem:
   tasks.splice(index, 1);
 
 	// aktualizujemy localStorage o najnowsze tasks:
 	updateTasksInLocalStorage(tasks);
 
-	// wyświetlamy zaktualizowaną listę zadań:
 	showTasks();
 }
 
