@@ -1,3 +1,7 @@
+# Podstawy Javascript. Pierwsza aplikacja w konsoli
+
+---
+
 ## Wprowadzenie
 
 ---
@@ -8,12 +12,12 @@
 
 *Kodujemy w biurze* powstało, by **zachęcić pracowników biurowych do spróbowania swoich sił w kodowaniu** webowym w przyjazny i nie wymagający żadnych konfiguracji sposób.
 
-Chodzi mi przede wszystkim o **pobudzenie Twojej ciekawości** i pokazanie, że **pisanie kodu jest dostępne dla każdego** i może być świetną **zabawą** (w szczególności w biurze)!
+Chodzi mi przede wszystkim o **pobudzenie Twojej ciekawości** i pokazanie, że **pisanie kodu jest dostępne dla każdego** i może być świetną **zabawą oraz rozrywką intelektualną** (w szczególności w biurze)!
 
 Ponieważ wolę **uczyć się nowych rzeczy w praktyce, widząc natychmiastowe rezultaty** mojej nauki i pracy, dlatego w trakcie tego kursu:
 
-- **stworzymy i odpalimy aplikację do zarządzania listą zadań do zrobienia, która *(na początku)* będzie działać w konsoli naszej przeglądarki bezpośrednio na tej stronie** *(za chwilę dowiesz się, czym jest konsola i jak z niej korzystać)*,
-- **przy okazji** tworzenia aplikacji **opanujemy podstawy języka JavaScript** - <a href="https://bulldogjob.pl/readme/najpopularniejsze-jezyki-programowania-2020" target="_blank">najbardziej popularnego języka programowania</a>.
+- od samego początku **będziemy tworzyć coraz bardziej rozbudowaną aplikację do zarządzania listą zadań do zrobienia, która będzie działać w konsoli naszej przeglądarki bezpośrednio na tej stronie** *(za chwilę dowiesz się, czym jest konsola i jak z niej korzystać)*, a potem zostanie przekształcona w samodzielną aplikację webową,
+- **przy okazji** tworzenia aplikacji **opanujemy podstawy języka JavaScript** - <a href="https://bulldogjob.pl/readme/najpopularniejsze-jezyki-programowania-2020" target="_blank">najbardziej popularnego języka programowania</a>, a potem także niezbędne podstawy HTML i CSS (w kolejnych kursach).
 
 **PS.** *de facto* stworzymy co najmniej kilka samodzielnych, samowystarczalnych i coraz bardziej rozbudowanych i zaawansowanych wersji wspomnianej aplikacji, rozbudowując ją przy okazji poznawania kolejnych zagadnień z języka JavaScript (a później też HTML i CSS). Każda z wersji aplikacji będzie całością samą w sobie i można będzie ich używać osobno - te pierwsze wersje będą działać tylko w konsoli przeglądarki, kolejne natomiast będą możliwe do pobrania.
 
@@ -24,9 +28,9 @@ Aplikacja, którą stworzymy, umożliwi nam:
 - wyświetlanie,
 - dodawanie,
 - modyfikowanie oraz
-- usuwanie
+- usuwanie zadań do zrobienia.
 
-zadań do zrobienia *(na początku będzie to możliwe za pomocą poleceń napisanych przez nas kodem JavaScript w konsoli)*.
+Na początku będzie to możliwe za pomocą poleceń napisanych przez nas kodem JavaScript w konsoli, później stworzymy i będziemy używać własnych funkcji, które zostaną zapisane w pliku bezpośrednio w przeglądarce.
 
 W ramach rozbudowy niniejszej strony i dodawania kolejnych lekcji i kursów (co zależy od Waszego zainteresowania projektem, dlatego zachęcam do polubienia i śledzenia profilu na <a href="https://www.facebook.com/kodujemywbiurze" target="_blank">Facebooku</a> i <a href="https://www.linkedin.com/company/kodujemywbiurze" target="_blank">LinkedIn</a>), będziemy przekształcać i dalej rozwijać tę aplikację w aplikację z pełnego zdarzenia - z interfacem użytkownika, bazą danych, rejestracją użytkowników itd. *Sky is the limit*, aczkolwiek na początek w ramach eksperymentu ograniczymy się do funkcjonalności, którymi dysponuje nasza przeglądarka.
 
@@ -37,6 +41,10 @@ Mam nadzieję, że kiedy dobrniesz do końca tego tutoriala, to będziesz chcia�
 ## Czym jest JavaScript i dlaczego warto się go uczyć?
 
 ---
+
+> Wszystko, co może zostać napisane w JavaScript, ostatecznie zostanie napisane w JavaScript.
+
+*Douglas Crockford*
 
 JavaScript jest obecnie **<a href="https://bulldogjob.pl/readme/najpopularniejsze-jezyki-programowania-2020" target="_blank">najbardziej popularnym językiem programowania</a>**. Programowanie to nic innego, jak pisanie poleceń w języku programowania zrozumiałym dla komputera/ urządzenia/ programu/ przeglądarki, które określają, co urządzenie/ program ma wyświetlić, jak to wyświetlić, jak ma reagować na działania użytkownika, skąd ma pobrać dane lub gdzie je zapisać itd.
 
@@ -123,7 +131,7 @@ Ok, więc wiemy już, czym jest konsola, jak ją otworzyć, a nawet wpisaliśmy 
 
 Jak już wspomniałem wcześniej, konsola umożliwia nam m. in. pisanie i uruchamianie kodu JavaScript, chociaż nie jest to jej główny cel - każdy edytor kodu jest zdecydowanie lepszym narzędziem do pisania kodu. Natomiast na razie nie chcemy żadnego osobnego edytora kodu. Chcemy po prostu napisać kilka linijek kodu i zobaczyć, jak to działa oraz *złapać bakcyla*. Co prawda, w pewnym momencie w tym kursie zaczniemy korzystać z dodatkowej funkcjonalności w przeglądarce, która ułatwi nam pisanie kodu, ale na razie pozostajemy w "czystej" konsoli. Z kolei w kolejnych kursach będziemy najprawdopodbniej korzystać z edytorów kodu dostępnych online.
 
-## Zmienne | Stwórzmy pierwsze zadanie w naszej aplikacji
+## Zmienne i ich deklaracja | Tworzymy pierwsze zadanie
 
 ---
 
@@ -158,7 +166,7 @@ Możemy też wpisać w nowej linijce konsoli po prostu samą nazwę zmiennej `ta
 
 Możesz też napisać `task`, a potem kliknąć Enter. W tej sytuacji konsola zwróci Ci wartość tej zmiennej w następnej linijce.
 
-## Nadpisywanie wartości zmiennych | Zmieńmy nasze zadanie
+## Zmienne. Nadpisywanie wartości | Aktualizujemy nasze zadanie
 
 ---
 
@@ -192,7 +200,7 @@ Natomiast to, że nasze zadania, które przechowujemy w kodzie, są zapisane w j
 
 Z kolei sposób łączenia słów w jedną całość w kodzie w ten sposób: `phoneNumber` nazywa się `camelCase`. Taki sposób zapisu rozwiązuje jeden problem: nazwa zmiennej musi być ciągiem znaków, nie mogą to być dwa oddzielone od siebie wyrazy. Możemy też zapisać nazwę zmiennej na kilka innych sposobów (które są właściwe w niektórych sytuacjach): `phone_number` lub `phone-number`, najczęściej jednak w JavaScripcie używamy pisowni `camelCase`.
 
-## Tablica, metoda push(), indeksy i modyfikacja elementów w tablicy | Tworzymy listę zadań
+## Tablice. push(), indeksy i modyfikacja elementów | Tworzymy listę zadań
 
 ---
 
@@ -279,11 +287,9 @@ ostatecznie zostanie napisane w JavaScript."
 */
 ```
 
-## Metoda splice() | Usuwanie zadań z listy oraz dodawanie zadań w określonym miejscu na liście
+## Tablice. splice() i usuwanie elementów | Usuwanie zadań z listy
 
 Ok, więc inicjujemy listę zadań, dodajemy i przechowujemy zadania w kodzie, czas więc na kolejną funkcjonalność - usuwanie zadania z listy. Powinniśmy być w stanie usunąć zadanie, które jest już nieaktualne albo wykonane z naszej listy, żeby się nie rozpraszać oraz widzieć nasz progres.
-
-### Usuwanie elementów z tablicy
 
 Usunięcia konkretnego elementu z tablicy można dokonać na kilka sposobów. Ze względu na to, że wiemy, czym są indeksy oraz nasza lista pozwala na wyświetlenie indeksów każdego z zadań, najłatwiej będzie sprawdzić, jaki jest indeks zadania, które chcemy usunąć, a potem użyć wbudowanej metody tablicy `splice()` w ten sposób:
 
@@ -345,7 +351,9 @@ console.log("Zadanie", removedTask, "zostało usunięte z listy...");
 console.log("Zauktualizowane zadania po usunięciu zadania:", tasks);
 ```
 
-### Dodawanie elementów w określonym miejscu w tabeli
+## Tablice. splice() i dodawanie elementów | Dodawanie zadań w określonym miejscu na liście
+
+---
 
 Korzystając z metody `splice()` możemy też dodawać dowolną ilość elementów po określonym indeksie. Żeby to zrobić, musimy przekazać `splice()` co najmniej 3 argumenty (w ściśle określonej kolejności!):
 
@@ -434,7 +442,7 @@ Co się dzieje w powyższym kodzie? Ponieważ nie znamy długości listy, ale wi
 
 Może się to wydawać zagmatwane, więc przyjrzyjmy się temu lepiej. Pamiętasz mówiłem, że indeksy zaczynają się od 0, a nie od 1? Jeśli więc mamy listę, która zawiera np. 10 elementów, to indeksem ostatniego elementu będzie... 9! Jeśli z kolei sprawdzimy, co zwraca właściwość `length`, to zwróci ona... 10! Dzieje się tak dlatego, że długość tablicy równa się liczbie elementów, które przechowuje. W związku z tym, jeśli chcemy uzyskać dostęp do ostatniego (dziesiątego) elementu tej listy, musimy użyć indeksu 9: `tenElementsList[9]`. Żeby uzyskać 9, musimy od (długości) 10 odjąć 1. W związku z tym, żeby uzyskać dostęp do ostatniego elementu tablicy o dowolnej nieznanej długości, korzystamy z kodu `list[list.length - 1]` (zamiast `list` podstawiamy oczywiście nazwę naszej zmiennej).
 
-Ok, ale jak widzisz, kiedy wyświtlamy zadania za pomocą pętli, to wyświetlają się nam same zadania bez przypisanych indeksów. To może sprawić problem przy ich usuwaniu, ponieważ musimy wiedzieć, jaki jest indeks zadania, które usuwamy. Dlatego zmodyfikujmy naszą pętlę w taki sposób, aby przed nazwą zadania wyświetlała także jego indeks:
+Ok, ale jak widzisz, kiedy wyświetlamy zadania za pomocą pętli, to wyświetlają się nam same zadania bez przypisanych indeksów. To może sprawić problem przy ich usuwaniu, ponieważ musimy wiedzieć, jaki jest indeks zadania, które usuwamy. Dlatego zmodyfikujmy (a raczej stwórzmy nową) pętlę w taki sposób, aby przed nazwą zadania wyświetlała także jego indeks:
 
 ```
 for (let i = 0; i < tasks.length; i++) {
@@ -442,9 +450,9 @@ for (let i = 0; i < tasks.length; i++) {
 }
 ```
 
-## Kod aplikacji w wersji 0 w całości
+## JavaScriptowy kod do zarządzania zadaniami w konsoli w całości (wersja 0 aplikacji)
 
-Świetnie! Potrafimy tworzyć listę zadań, uzyskiwać dostęp do poszczególnych elementów z listy i modyfikować je, dodawać nowe elementy do listy/ tablicy oraz usuwać je za pomocą poleceń JavaScript.
+Świetnie! Potrafimy tworzyć listę zadań, uzyskiwać dostęp do poszczególnych elementów z listy i modyfikować je, dodawać nowe elementy do listy/ tablicy oraz usuwać je za pomocą poleceń JavaScript, których się nauczyliśmy (mam nadzieję 😏).
 
 *De facto* powstała już mała pseudo aplikacja (na razie jeszcze trochę nieudolna) - uznajmy zatem, że jest to `wersja 0` naszej aplikacji. Zanim przejdziemy do kolejnych zagadnień i rozbudowywania aplikacji oraz zmodyfikowania jej w taki sposób, by pracowało się z nią przyjemniej, przypomnijmy sobie cały kod, którego możemy używać do zarządzania naszymi zadaniami w konsoli na tym etapie:
 
@@ -458,7 +466,7 @@ let tasks = [];
 // żeby wyświetlić listę zadań w całości, używamy console.log():
 console.log("tasks:", tasks);
 
-// żeby dodać zadanie (na końcu listy), używamy metody push():
+// żeby dodać zadanie (na końcu listy), używamy metody push(), np.:
 tasks.push("zrobić kawę");
 tasks.push("zajrzeć na stronę kodujemywbiurze.pl");
 tasks.push("sprawdzić maila");
@@ -491,17 +499,15 @@ for (let i = 0; i < tasks.length; i++) {
 tasks = [];
 
 console.log("tasks:", tasks);
-
-// możemy też usuwać kilka zadań od określonego indeksu
-// oraz dodawać kilka zadań od określonego indeksu,
-// co zostało opisane w rozdziale o metodzie splice().
 ```
+
+PS. możemy też usuwać kilka zadań od określonego indeksu oraz dodawać kilka zadań od określonego indeksu dzięki metodzie splice(), o czym wspominaliśmy wcześniej, aczkolwiek nie ująłem tego w podsumowującym ten etap kursu kodzie, ponieważ raczej nie będziemy działać w ten sposób. Ale pamiętaj, że masz również taką możliwość. Pamiętasz, jak to zrobić? 😅
 
 Zanim przejdziesz dalej:
 
 - pobaw się tymi poleceniami w konsoli, tworząc swoją listę zadań (nie za dużą),
 - spróbuj opowiedzieć koleżance/ koledze z biura, co robią poszczególne metody,
-- sprawdź, co i ile pamiętasz.
+- sprawdź, co i ile pamiętasz i w razie czego przejrzyj wybrane lekcje jeszcze raz.
 
 ## Programowanie imperatywne a deklaratywne (funkcyjne) | Jest dobrze, ale chcemy lepiej. Tworzymy własne zrozumiałe polecenia
 
@@ -522,7 +528,7 @@ Nazwy z powyższej listy wyglądają chyba lepiej i łatwiej je zapamiętać, ni
 
 Innymi słowy, nawet jeśli nie masz żadnego pojęcia o programowaniu (a Ty już jakieś masz 😎), to jeśli zobaczysz w kodzie taki zapis: `showTasks()`, to raczej domyślisz się, że to "coś" ma coś wspólnego z pokazywaniem/ wyświetleniem zadań; na pewno jest to bardziej czytelne od `console.log(tasks)` czy `splice(1, 0, "coś tam")`.
 
-Dlatego za chwilę poznamy kolejne fundamentalne zagadnienie w programowaniu - **funkcje** - i "opakujemy" nasze dotychczasowe trudne do zapamiętania JavaScriptowe metody *(ale i tak część z nich trzeba będzie zapamiętać, chociaż wystarczy po prostu często pisać kod)* we **własne, łatwe, zrozumiałe i reużywalne polecenia**. W ten sposób powstanie wersja 1 naszej aplikacji.
+Dlatego za chwilę poznamy kolejne fundamentalne zagadnienie w programowaniu - **funkcje** - i **"opakujemy" nasze dotychczasowe trudne do zapamiętania JavaScriptowe metody** *(ale i tak część z nich trzeba będzie zapamiętać, chociaż wystarczy po prostu często pisać kod)* **we własne, łatwe, zrozumiałe i reużywalne polecenia**. W ten sposób powstanie wersja 1.0 naszej aplikacji.
 
 Do dzieła!
 
@@ -538,19 +544,18 @@ Tak naprawdę, już korzystaliśmy z wbudowanych funkcji (a dokładniej metod - 
 
 Spróbujmy zatem stworzyć naszą pierwszą funkcję, by zrozumieć, o co w tym chodzi. Stworzymy funkcję, która będzie wyświetlała nam listę wszystkich naszych zadań.
 
-Owszem, wcześniej już wyświetlaliśmy nasze zadania poprzez wpisanie w konsoli zmiennej `tasks` lub poprzez wywołanie funkcji `console.log(tasks)`, ale teraz zrobimy to w sposób bardziej profesjonalny, zgodnie z paradygmatem programowania funkcyjnego:
+Owszem, wcześniej już wyświetlaliśmy nasze zadania poprzez wpisanie w konsoli zmiennej `tasks` lub poprzez wywołanie funkcji `console.log(tasks)`, ale teraz zrobimy to w sposób bardziej profesjonalny, zgodnie z paradygmatem programowania funkcyjnego. "Opakujmy" zatem nasz wcześniejszy kod `console.log(tasks)` w funkcję:
 
 ```
 function showTasks() {
   console.log(tasks);
 }
+```
 
-// =================== Uwaga! ========================
-// Jeśli wyczyściłeś konsolę lub przeładowałeś stronę,
-// to nie mamy już dostępu do globalnej zmiennej tasks,
-// należy więc na nowo ją zadeklarować,
-// odkomentowując poniższy kod i wpisując go przed definicją funkcji:
-// let tasks = ["zrobić kawę", "sprawdzić maila", "zajrzeć na stronę kodujemywbiurze.pl"];
+**UWAGA!** Jeśli wyczyściłeś konsolę lub przeładowałeś stronę, to nie mamy już dostępu do globalnej zmiennej `tasks`, należy więc na nowo ją zadeklarować, odkomentowując poniższy kod i wpisując go przed definicją funkcji:
+
+```
+let tasks = ["zrobić kawę", "sprawdzić maila", "zajrzeć na stronę kodujemywbiurze.pl"];
 ```
 
 W powyższym kodzie używając słowa kluczowego `function` zdefiniowaliśmy nową funckję o nazwie `showTasks`, która... (jak sama nazwa wskazuje) wyświetla listę naszych zadań. 
@@ -584,6 +589,8 @@ Ogólnie funkcje możemy zadeklarować też na kilka innych sposobów, ale na ra
 
 Zanim stworzymy kolejne funkcje, chciałbym zwrócić Twoją uwagę na nazewnictwo funkcji. Pamiętasz, że nazwa zmiennej powinna odzwierciedlać to, jaką wartość przechowuje? Z funkcjami jest podobnie, tyle że funkcje nie reprezentują jakieś wartości, tylko czynności - funkcja coś "robi". W związku z tym, jeśli funkcja powinna wyświetlić zadania, to należy ją nazwać `showTasks` lub `displayTasks`, albo też `logTasks`. Te nazwy brzmią jak komendy: "pokaż/ wyświetl zadania!" i tak właśnie jest z funkcjami - są one poleceniami dla komputera/ przeglądarki.
 
+## Funkcje. Zwracanie wartości i słowo kluczowe return
+
 Owszem, funkcja może również zwracać wartość *(tak jak metoda `splice()` podczas usuwania elementu z tablicy zwracała także tablicę zawierającą listę usuniętych elementów, pamiętasz?)*, np. w tym przypadku:
 
 ```
@@ -606,9 +613,9 @@ let sum = calculateSum(3, 5);
 console.log("sum:", sum);
 ```
 
-aczkolwiek zwrócona wartość jest wynikiem działania funkcji, więc funkcja musiała "coś zrobić", by "wyprodukować" wartość, którą zwraca.
+Zwrócona wartość jest wynikiem działania funkcji, więc funkcja musiała "coś zrobić", by "wyprodukować" wartość, którą zwraca.
 
-## Kilkulinijkowy kod w konsoli oraz pliki snippets w Chrome i Edge | Zapisujemy nasz kod w pliku w przeglądarce w zakładce Snippets
+## Błędy oraz wielolinijkowy kod w konsoli
 
 ---
 
@@ -616,15 +623,15 @@ Zanim przejdziemy dalej i utworzymy więcej customowych funkcji, chciałbym poru
 
 W związku z tym polecę też korzystanie z wbudowanej funkcjonalności Chrome i Edge o nazwie `snippets` do zapisywania kodu bezpośrednio w przeglądarce, dzięki czemu go nie utracimy. Są to ważne kwestie, które sprawią, że pisanie kodu w przeglądarce będzie bardziej przyjemne *(bez wątpienia najprzyjemniej pisze się kod w dedykowanych edytorach kodu, ale na razie w to nie wchodzimy, ponieważ na razie chcemy pobawić się kodem bez zbędnych konfiguracji i rozpraszaczy)*, mniej podatne na błędy oraz zapewni pewną funkcjonalność aplikacji, którą budujemy.
 
-### Błędy oraz kilkulinijkowy kod w kosoli
-
-***Uwaga!*** W zależności od przeglądarki, **może się okazać**, że żeby napisać kilkulinijkowy kod w konsoli (taki, jak w poprzedniej funkcji), musimy **zamiast Enter używać kombinacji klawiszy Shift+Enter**, żeby przejść do następnej linii, ponieważ wciśnięcie klawisza Enter w niektórych przypadkach może spowodować wywołanie tego kodu, który już napisałeś/aś, co najprawdopodobniej wywoła błąd w konsoli, ponieważ kod nie jest ukończony.
+**UWAGA!** W zależności od przeglądarki, **może się okazać**, że żeby napisać kilkulinijkowy kod w konsoli (taki, jak w poprzedniej funkcji), musimy **zamiast Enter używać kombinacji klawiszy Shift+Enter**, żeby przejść do następnej linii, ponieważ wciśnięcie klawisza Enter w niektórych przypadkach może spowodować wywołanie tego kodu, który już napisałeś/aś, co najprawdopodobniej wywoła błąd w konsoli, ponieważ kod nie jest ukończony.
 
 Jeśli to się zdarzy (pojawi się komunikat błędu) i po ponownym poprawnym wpisaniu kodu nie uda się zainicjować funkcji (ponieważ została niepoprawnie zaincjowana niekompletnym, przedwcześnie wywołanym kodem), odśwież stronę, co wyczyści pamięć konsoli i wpisz kod jeszcze raz.
 
 Ale pamiętaj, że lista zadań `let tasks = ["zrobić kawę", "sprawdzić maila", "zajrzeć na stronę kodujemywbiurze.pl"]` (oraz jakikolwiek inny kod) zniknęła, więc najpierw musisz ją ponownie wpisać, zanim napiszesz powyższą funkcję.
 
-### Praca z `snippets`. Jak zapisać plik z kodem w przeglądarce?
+## Praca z plikami kodu w zakładce snippets w Chrome i Edge. Umieszczamy kod aplikacji w wersji 1.0 w pliku
+
+---
 
 Proponuję, byśmy skorzystali z **wbudowanej funkcjonalności (i zakładce) przeglądarek Chrome i Edge o nazwie `snippets` do zapisywania kodu w pliku bezpośrednio w przeglądarce** *(Mozilla nie ma tej funkcjonalności, dlatego nie polecałem pracy z tą przeglądarką podczas niniejszego kursu, ale mimo wszystko, jeśli korzystasz z Mozilli, możesz nadal pisać kod w konsoli, tylko uważaj na kilkulinijkowy kod)*! Jest to świetne narzędzie, o czym się zaraz przekonamy.
 
@@ -632,9 +639,7 @@ Proponuję, byśmy skorzystali z **wbudowanej funkcjonalności (i zakładce) prz
 
 Ten plik będzie teraz zapisany w naszej przeglądarce i zawsze będziemy mieli do niego dostęp. Ponadto, plik ten możemy uruchomić w naszej konsoli, która będzie miała dostęp zarówno do pliku, jak i do zawartości strony (co nam przyda się w kolejnych kursach).
 
-### Przepisujemy kod aplikacji w wersji 1. do pliku
-
-Możemy teraz przepisać do tego pliku dotychczasowy kod naszej aplikacji w wersji 1. Potrzebne nam są tylko zadeklarowanie zmiennej `tasks` oraz definicja poprzedniej funkcji `showTasks()`:
+Możemy teraz przepisać do tego pliku dotychczasowy kod naszej aplikacji w wersji 1.0. Potrzebne nam są tylko zadeklarowanie zmiennej `tasks` oraz definicja poprzedniej funkcji `showTasks()`:
 
 ```
 // todo-app file:
@@ -646,7 +651,9 @@ function showTasks() {
 }
 ```
 
-### Uruchomienie pliku
+## Uruchomienie pliku z snippets w konsoli przeglądarki
+
+---
 
 Jeśli zapisałeś/aś w konsoli w zakładce `Sources` plik `todo-app`, umieściłeś/aś w nim kod, który napisałem powyżej, oraz zapisałeś/aś ten plik (klikając `Ctrl+S`), to musisz teraz uruchomić ten plik, by konsola miała do niego dostęp *(na wszelki wypadek odśwież stronę ten jeden raz, by wyczyścić pamięć konsoli oraz wcześniej zadeklarowanej zmiennej `tasks`)*.
 
@@ -658,7 +665,15 @@ Zwróć też uwagę na to, że po prawej stronie od komunikatów w konsoli wyśw
 
 ---
 
-**UWAGA!!! Będziemy teraz pisać kod zarówno w tym pliku *(tylko ten niezbędny dla aplikacji; w komentarzu w przykładach kodu zawrę ten zapis: `// todo-app file:`, który będzie odróżniał kod aplikacji od innego testowego kodu w konsoli)* oraz czasami w samej konsoli, by coś tam przetestować lub wywołać funkcje z pliku**.
+**UWAGA!**
+
+**Będziemy teraz pisać kod zarówno w tym pliku *(tylko ten niezbędny dla aplikacji; w komentarzu w przykładach kodu zawrę ten zapis: `// todo-app file:`, który będzie odróżniał kod aplikacji od innego testowego kodu w konsoli)* oraz czasami w samej konsoli, by coś tam przetestować lub wywołać funkcje z pliku**.
+
+**Pamiętaj, by po każdej zmianie w pliku za go za pomocą skrótu `Ctrl+S` oraz uruchomić klikając w ikonkę trójkąta w prawym dolnym rogu zakładki lub wciskając `Ctrl+Enter`**.
+
+Będę jeszcze kilkakrotnie o tym przypominał, ale tylko do pewnego momentu. Jeśli zmieniłeś/aś kod, ale coś nie działa, sprawdź najpierw, czy zapisałeś/aś plik o uruchomiłeś/aś go, a dopiero potem szukaj ewentualnych błędów.
+
+---
 
 Możesz też nie korzystać z tej funkcjonalności i dalej pisać kod wyłącznie w konsoli, ale pamiętaj o sytuacjach, które opisałem powyżej, które mogą mieć miejsce i zakłócić Twoją pracę z kodem. No i jeśli będziesz pisać kod programu wyłącznie w konsoli, to utracisz go po przeładowaniu strony... Konsola jest dobra do testowania, pliki są dobre dla programów, które uruchamiamy i testujemy.
 
@@ -672,7 +687,7 @@ Np.: w pliku tworzymy listę z 3 zadaniami, uruchamiamy plik w konsoli, widzimy,
 
 Super! Rozwialiśmy różne wątpliwości, wprowadziliśmy nowe mega narzędzie, idziemy dalej! **Od teraz będziemy działać w ten sposób - będziemy pisać i uzupełniać kod w pliku i wywoływać go w konsoli**.
 
-## Argumenty funkcji, wywoływanie innych funkcji wewnątrz funkcji | Funkcja dodająca zadanie `addTask()`
+## Funkcje. Argumenty, funkcje wewnątrz funkcji | Funkcja dodająca zadanie `addTask()`
 
 ---
 
@@ -689,10 +704,11 @@ Chciałbym też zauważyć, że taki kod zadziała tylko w tym przypadku, jeśli
 ```
 function addTask(newTask) {
 
-	// w poniższej linijce dodajemy zadanie do listy zadań:
+	// w poniższej linijce dodajemy zadanie do listy zadań,
+	// w taki sam sposób, jak robiliśmy to wcześniej:
 	tasks.push(newTask);
 
-	// wyświetlamy komunikat w konsoli o nowo dodanym zadaniu:
+	// dodatkowo wyświetlamy komunikat w konsoli o nowo dodanym zadaniu:
 	console.log("Do Twoich zadań zostało dodane nowe zadanie:", newTask);
 
 	// wyświetlamy zaktualizowaną pełną listę zadań,
@@ -743,7 +759,8 @@ Stwórzmy więc funkcję `deleteTask(index)`:
 
 ```
 function deleteTask(index) {
-  // usuwamy 1 zadanie zlokalizowane pod przekazanym indeksem:
+  // usuwamy 1 zadanie zlokalizowane pod przekazanym indeksem,
+	// w taki sam sposób, jak robiliśmy to wcześniej:
   tasks.splice(index, 1);
 
 	// wyświetlamy zaktualizowaną listę zadań:
@@ -765,13 +782,16 @@ function deleteAllTasks() {
 }
 ```
 
-Przepisz te nowe funkcje do pliku, zapisz go, uruchom, a później przetestuj.
+- Przepisz te nowe funkcje do pliku, zapisz go i uruchom, a potem przetestuj,
+- usuwając wybrane zadania za pomocą `deleteTask()`,
+- dodając nowe zadania za pomocą `addTask()`,
+- a ostatecznie usuwając wszystkie zadania za pomocą `deleteTasks()`.
 
-## Podstawy podstaw za nami! Kompletny kod aplikacji w wersji 1. zapisany w pliku
+## Podstawy podstaw za nami! Kompletny kod aplikacji w wersji 1.0 z funkcjami zapisany w pliku
 
 ---
 
-No teraz nasza aplikacja jest już naprawdę zaawansowana!
+No teraz nasza aplikacja jest już naprawdę zaawansowana! Przekształciliśmy nasze wcześniejsze czysto JavaScriptowe polecenia we własne reużywalne funkcje o bardziej "ludzkich" nazwach. Teraz będzie nam znacznie przyjmniej i łatwiej zarządzać naszymi zadaniami!
 
 A przy okazji zobacz, ile już wiesz o JavaScript:
 
@@ -789,7 +809,7 @@ A przy okazji zobacz, ile już wiesz o JavaScript:
 	- jak usunąć element z tablicy,
 	- jak sprawdzić długość tablicy,
 	- jak uzyskać dostęp do określonego elementu w tablicy za pomocą indeksu,
-	- jak napisać wartość tego elementu,
+	- jak nadpisać wartość tego elementu,
 - czym jest funkcja
   - jak ją deklarujemy i wywołujemy,
 	- jak możemy przekazać funkcji pewne dane,
@@ -799,11 +819,11 @@ A przy okazji zobacz, ile już wiesz o JavaScript:
   - jak wyświetlić wszystkie elementy tablicy po kolei,
 	- jak wykonać jakąś czynność (wywołać funkcję) określoną ilość razy 
 
-Gratuluję!
+**Gratuluję!**
 
 Spróbuj teraz odpowiedzieć swoimi słowami na wszystkie powyższe pytania, by sprawdzić, co umiesz, a co jeszcze tak nie do końca.
 
-Poniżej znajduje się cały dotychczasowy kod naszej aplikacji, który powinien być w pliku `todo-app` *(który możemy też skopiować i wkleić do konsoli, jeśli nie zapisywaliśmy kodu w pliku - pamiętaj tylko, by odświeżyć stronę, żeby usunąć z konsoli dotychczasowy kod)*.
+Poniżej znajduje się cały dotychczasowy kod naszej aplikacji, który powinien znaleźć się w pliku `todo-app` zapisanym w zakładce `snippets` *(który możemy też skopiować i wkleić do konsoli, jeśli nie zapisywaliśmy kodu w pliku - pamiętaj tylko, by odświeżyć stronę, żeby usunąć z konsoli dotychczasowy kod)*.
 
 ```
 // czyścimy konsolę z całego dotychczasowego kodu i komunikatów:
@@ -824,9 +844,20 @@ function addTask(newTask) {
 	showTasks();
 }
 
+// możemy też dodawać zadania do określonego indeksu,
+// korzystając z wcześniejszego kodu wersji 0:
+
+function addTaskAtIndex(index, newTask) {
+  tasks.splice(index, 0, newTask);
+
+	console.log("Do Twoich zadań zostało dodane nowe zadanie:", newTask);
+
+	showTasks();
+}
+
 // poniższa funkcja wyświetla zadania jedno po drugim;
 // nie utworzyliśmy poniższej funkcji w kursie,
-// ale była ona w innej postaci w wersji 0:
+// ale użyliśmy jej wcześniej w kodzie wersji 0:
 
 function loopTasks() {
 	for (let i = 0; i < tasks.length; i++) {
@@ -842,20 +873,24 @@ function deleteTask(index) {
 
 function deleteAllTasks() {
   tasks = [];
-
+	
 	console.log("Wszystkie zadania zostały usunięte...");
-
+	
 	showTasks();
 }
 ```
 
 Możesz teraz:
 
-- dodawać zadania za pomocą kodu `addTask("jakieś zadanie")`,
-- usuwać, sprawdzając uprzednio ich indeks, np. `deleteTask(3)`,
-- wyświetlić swoje zadania w konsoli, wywołując `showTasks()` lub `loopTasks()`.
+- dodawać zadania na koniec listy za pomocą funkcji `addTask("jakieś zadanie")`,
+- wstawiać zadania w określonym miejscu (indeksie) za pomocą `addTaskAtIndex(index, newTask)`,
+- usuwać zadania, sprawdzając uprzednio ich indeks, np. `deleteTask(3)`,
+- wyświetlić swoje zadania w konsoli, wywołując `showTasks()` lub `loopTasks()`,
+- wyczyścić/ zresetować listę za pomocą `deleteAllTasks()`.
 
-## Czym różni się kod aplikacji w wersji 1. od 0. oraz co dalej?
+## Czym się różni kod aplikacji w wersji 1.0 od 0 oraz co dalej?
+
+---
 
 Zwróć uwagę na to, czym powyższy kod z pliku różni się od kodu, którego używaliśmy w wersji 0. *De facto* robi on to samo, ale:
 
@@ -869,11 +904,11 @@ Gratuluję jeszcze raz!
 
 Ale...
 
-Na razie nasze zadania (nie kod!) są przechowywane w przeglądarce tylko dopóki nie zresetujemy tej strony lub nie zmienimy czegoś w pliku `todo-app`, a potem nie zapiszemy tego pliku (`Ctrl+S`) i nie uruchomimy go w konsoli.
+Na razie nasze zadania (nie kod!) są przechowywane w przeglądarce tylko dopóki nie zresetujemy tej strony lub nie zmienimy czegoś w pliku `todo-app`, a potem nie zapiszemy tego pliku (`Ctrl+S`) i nie uruchomimy go w konsoli. Dzieje się tak dlatego, że po odświeżeniu strony lub po ponownym uruchomieniu pliku, plik zgodnie z zawartymi poleceniami czyści konsolę (`console.clear()`), a potem przypisuje do zmiennej `tasks` pustą tablicę.
 
 Jest to w pewnym sensie dobre, ponieważ jutro nie przytłoczy Cię w pracy nadmiar zapisanych (i niezrealizowanych) zadań! Aczkolwiek fajnie by było, gdyby nasze zadania pozostawały zapisane tak długo, jak chcemy. Żebyśmy mogli nagle zamknąć przeglądarkę lub tę stronę (żeby przełożony nie zobaczył), a potem otworzyć ją znowu i mieć dostęp do naszych ważnych zadań!
 
-Więc możemy to zrobić i zrobimy w kolejnej części tutoriala. Będzie to wiedza bardziej zaawansowana od tego, co zrobiliśmy dotychczas (wykorzystamy wbudowaną funkcjonalność przeglądarki `localStorage`), dlatego też stworzymy kolejny plik, w którym będziemy modyfikować naszą aplikację, dzięki czemu... będziemy mieli 2 aplikacje (2 pliki z różnymi aplikacjami - aplikacji *de facto* mamy już 3)!
+Więc możemy to zrobić i zrobimy w kolejnej części tutoriala. Będzie to wiedza bardziej zaawansowana od tego, co zrobiliśmy dotychczas (wykorzystamy wbudowaną funkcjonalność przeglądarki `localStorage`), dlatego też stworzymy kolejny plik, w którym będziemy modyfikować naszą aplikację, dzięki czemu... będziemy mieli 2 aplikacje (2 pliki z różnymi aplikacjami - nie wliczając kodu wersji 0)!
 
 Do dzieła!
 
