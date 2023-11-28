@@ -1,4 +1,4 @@
-# Podstawy Javascript. Pierwsza aplikacja w konsoli
+# Kurs JavaScript
 
 ---
 
@@ -30,13 +30,21 @@ Aplikacja, którą stworzymy, umożliwi nam:
 - modyfikowanie oraz
 - usuwanie zadań do zrobienia.
 
-Na początku będzie to możliwe za pomocą poleceń napisanych przez nas kodem JavaScript w konsoli, później stworzymy i będziemy używać własnych funkcji, które zostaną zapisane w pliku bezpośrednio w przeglądarce.
+Na początku (w Module 1.) będzie to możliwe za pomocą poleceń napisanych przez nas kodem (poleceniami w czystym) JavaScript w konsoli.
+
+Później (Moduł 2.) stworzymy i będziemy używać własnych funkcji, które zostaną zapisane w pliku bezpośrednio w przeglądarce, dzięki czemu nasz kod zostanie zachowany nawet po przeładowaniu strony oraz będziemy mogli go uruchomić w konsoli. W ten sposób powstanie aplikacja w wersji 1.0.
+
+Natomiast w Module 3. (na razie w niniejszym kursie mamy 3 moduły) rozbudujemy naszą aplikację w ten sposób, że nie tylko kod będzie zachowany w przeglądarce, ale także same zadania zostaną zapisane w przeglądarce za pośrednictwem wbudowanej funkcjonalności `localStorage`, która jest swego rodzaju magazynem danych. W ten sposób powstanie aplikacja w wersji 2.0.
 
 W ramach rozbudowy niniejszej strony i dodawania kolejnych lekcji i kursów (co zależy od Waszego zainteresowania projektem, dlatego zachęcam do polubienia i śledzenia profilu na <a href="https://www.facebook.com/kodujemywbiurze" target="_blank">Facebooku</a> i <a href="https://www.linkedin.com/company/kodujemywbiurze" target="_blank">LinkedIn</a>), będziemy przekształcać i dalej rozwijać tę aplikację w aplikację z pełnego zdarzenia - z interfacem użytkownika, bazą danych, rejestracją użytkowników itd. *Sky is the limit*, aczkolwiek na początek w ramach eksperymentu ograniczymy się do funkcjonalności, którymi dysponuje nasza przeglądarka.
 
 Mam nadzieję, że kiedy dobrniesz do końca tego tutoriala, to będziesz chciał/a więcej! Jeśli tak będzie, to daj mi znać, że jesteś zainteresowany/a dalszymi lekcjami w tym samym stylu.
 
 *Happy Coding!*
+
+# Moduł 1. Zarządzanie zadaniami za pomocą poleceń JavaScript w konsoli
+
+---
 
 ## Czym jest JavaScript i dlaczego warto się go uczyć?
 
@@ -450,7 +458,7 @@ for (let i = 0; i < tasks.length; i++) {
 }
 ```
 
-## JavaScriptowy kod do zarządzania zadaniami w konsoli w całości (wersja 0 aplikacji)
+## Podsumowanie Modułu 1. JavaScriptowy kod do zarządzania zadaniami w konsoli w całości (wersja 0 aplikacji)
 
 Świetnie! Potrafimy tworzyć listę zadań, uzyskiwać dostęp do poszczególnych elementów z listy i modyfikować je, dodawać nowe elementy do listy/ tablicy oraz usuwać je za pomocą poleceń JavaScript, których się nauczyliśmy (mam nadzieję 😏).
 
@@ -509,7 +517,13 @@ Zanim przejdziesz dalej:
 - spróbuj opowiedzieć koleżance/ koledze z biura, co robią poszczególne metody,
 - sprawdź, co i ile pamiętasz i w razie czego przejrzyj wybrane lekcje jeszcze raz.
 
+# Moduł 2. Zarządzanie zadaniami za pomocą własnych funkcji. Przechowywanie kodu w pliku. Aplikacja w wersji 1.0
+
+---
+
 ## Programowanie imperatywne a deklaratywne (funkcyjne) | Jest dobrze, ale chcemy lepiej. Tworzymy własne zrozumiałe polecenia
+
+---
 
 Aplikacja działa, ale tak naprawdę zarządzamy nią za pośrednictwem poleceń z języka JavaScript, które poznaliśmy i które musimy zapamiętać... Podejrzewam, że z tym zapamiętaniem każdej metody może być na razie problem... 
 
@@ -787,7 +801,7 @@ function deleteAllTasks() {
 - dodając nowe zadania za pomocą `addTask()`,
 - a ostatecznie usuwając wszystkie zadania za pomocą `deleteTasks()`.
 
-## Podstawy podstaw za nami! Kompletny kod aplikacji w wersji 1.0 z funkcjami zapisany w pliku
+## Podsumowanie Modułu 2. Podstawy podstaw za nami! Kompletny kod aplikacji w wersji 1.0 z funkcjami zapisany w pliku
 
 ---
 
@@ -888,7 +902,7 @@ Możesz teraz:
 - wyświetlić swoje zadania w konsoli, wywołując `showTasks()` lub `loopTasks()`,
 - wyczyścić/ zresetować listę za pomocą `deleteAllTasks()`.
 
-## Czym się różni kod aplikacji w wersji 1.0 od 0 oraz co dalej?
+## Czym się różni kod aplikacji w wersji 1.0 (Moduł 2.) od 0 (Moduł 1.) oraz co dalej?
 
 ---
 
@@ -912,13 +926,17 @@ Więc możemy to zrobić i zrobimy w kolejnej części tutoriala. Będzie to wie
 
 Do dzieła!
 
-## localStorage | Zapisujemy oraz pobieramy zadania w przeglądarce
+# Moduł 3. Przechowywanie zadań w Local Storage. Aplikacja w wersji 2.0
 
-Gdybyśmy zrobili naszą aplikację tak, jak się to robi w prawdziwym świecie, to wykorzystalibyśmy **bazy danych** do przechowywania naszych zadań. Przechowywalibyśmy tam także dane użytkowników, którzy by z niej korzystali.
+---
+
+## localStorage | Zapisujemy oraz pobieramy zadania w przeglądarce za pośrednictwem localStorage
+
+Kod aplikacji w wersji 0. oraz 1. działa, aczkolwiek przechowuje dane (nasze zadania) tylko w trakcie sesji użytkownika w przeglądarce lub do momentu odświeżenia strony lub pliku z kodem. Gdybyśmy zrobili naszą aplikację tak, jak się to robi w prawdziwym świecie, to wykorzystalibyśmy **bazy danych** do przechowywania naszych zadań. Przechowywalibyśmy tam także dane użytkowników, którzy by z niej korzystali.
 
 Dzięki bazom danych aplikacje mają dostęp do danych niezależnie od tego, na jakim urządzeniu korzysta się z aplikacji (w naszej aplikacji dane są dostępne tylko w tej konkretnej przeglądarce... a na telefonie to w ogóle nie działa). Ale są to zaawansowane tematy (mam nadzieję, że dojdziemy do nich w kolejnych kursach na *kodujemywbiurze.pl* - wszystko zależy od Was!).
 
-Niemniej jednak, możemy trochę poczuć, jak to jest pracować z bazą danych, dzięki wbudowanemu narzędziu każdej przeglądarki - `localStorage`. `localStorage` jest czymś w rodzaju magazynu, w którym możemy przechowywać pewne ilości danych w formie tekstowej (a dokładnie 5 MB - nie za wiele, ale nam wystarczy).
+Niemniej jednak, możemy doświadczyć, jak to jest pracować z bazą danych, dzięki wbudowanemu narzędziu każdej przeglądarki - `localStorage`. `localStorage` jest czymś w rodzaju magazynu, w którym możemy przechowywać pewne ilości danych w formie tekstowej (a dokładnie 5 MB - nie za wiele, ale nam wystarczy).
 
 Chciałbym tylko od razu zaznaczyć, że `localStorage` przechowuje osobne zestawy danych dla każdego adresu url, co znaczy, że jak wdrożymy to rozwiązanie, to zadania zapisane w trakcie korzystania ze strony *kodujemywbiurze.pl* będą możliwe do odczytania tylko na tej stronie.
 
@@ -930,27 +948,65 @@ Tak, zgadza się, w tajemnicy przed Tobą przechowuję za pomocą `localStorage`
 
 ## Dodawanie, pobieranie i usuwanie prostych danych tekstowych z localStorage
 
-Żeby **dodać** proste dane tekstowe do `localStorage`, trzeba użyć mniej więcej takiego kodu: `localStorage.setItem("nazwaKlucza", "wartośćKlucza");`. `setItem()` jest jedną z metod obiektu `localStorage`, dzięki której możemy przypisać wartość do jakiegoś klucza, podobnie jak przypisujemy wartość do zmiennej, tyle że zarówno nazwa klucza, jak i jego wartość mają być ujęte w cudzysłów.
+---
 
-Spróbuj zapisać lub zaktualizować swoje imię w `localStorage` w ten sposób: `localStorage.setItem("name", "TutajWpiszSwojeImię")` i kliknij Enter, po czym wpisz `localStorage` i znowu kliknij Enter, by zobaczyć, że nowy klucz jest teraz w obiekcie.
+Żeby **dodać** proste dane tekstowe do `localStorage`, trzeba użyć mniej więcej takiego kodu *(nie wpisuj go na razie w konsoli)*:
 
-**Uwaga!** Metoda `setItem()` zawsze nadpisuje wartość klucza. Jeśli dany klucz nie istniał wcześniej, zostanie utworzony, jeśli istniał - jego wartość zostanie napisana przez nową wartość.
+```
+localStorage.setItem("nazwaKlucza", "wartośćKlucza");
+```
 
-Żeby **pobrać** jakiś klucz z `localStorage`, należy użyć metody `getItem()`, podając w nawiasach nazwę klucza w cudzysłowiu, np. tak: `localStorage.getItem("name")`. Spróbuj pobrać zapisane przez siebie imię z `localStorage`.
+`setItem()` jest jedną z metod obiektu `localStorage`, dzięki której możemy przypisać wartość do jakiegoś klucza, podobnie jak przypisujemy wartość do zmiennej, tyle że zarówno nazwa klucza, jak i jego wartość mają być ujęte w cudzysłów.
 
-Pobrane dane z `localStorage` możemy przypisać do zmiennej, by móc nimi operować w naszym programie. Można to zrobić w następujący sposób: `let name = localStorage.getItem("name")`.
+Spróbuj zapisać lub zaktualizować swoje imię w `localStorage` w ten sposób:
 
-Żeby **usunąć** jakiś klucz (i odpowiednio jego wartość) z `localStorage`, trzeba użyć wbudowanej metody `removeItem()`, podając w nawiasach nazwę klucza w cudzysłowiu, np. tak: `localStorage.removeItem("name")`. Spróbuj teraz usunąć klucz `name` z `localStorage`, a potem sprawdź, czy na pewno został usunięty.
+```
+localStorage.setItem("name", "TutajWpiszSwojeImię");
+```
+
+i kliknij Enter, po czym wpisz `localStorage` i znowu kliknij Enter, by zobaczyć, że nowy klucz jest teraz w obiekcie.
+
+**Uwaga!** Metoda **`setItem()` zawsze nadpisuje poprzednią wartość klucza**. Jeśli dany klucz nie istniał wcześniej, zostanie utworzony, jeśli istniał - jego wartość zostanie nadpisana przez nową wartość.
+
+Żeby **pobrać** jakiś klucz z `localStorage`, należy użyć metody `getItem()`, podając w nawiasach nazwę klucza w cudzysłowiu, np. tak:
+
+```
+localStorage.getItem("name");
+```
+
+Spróbuj pobrać zapisane przez siebie imię z `localStorage`.
+
+Pobrane dane z `localStorage` możemy przypisać do zmiennej, by móc nimi operować w naszym programie. Można to zrobić w następujący sposób:
+
+```
+let name = localStorage.getItem("name");
+
+console.log("Imię zapisane w localStorage:", name);
+```
+
+Żeby **usunąć** jakiś klucz (i odpowiednio jego wartość) z `localStorage`, trzeba użyć wbudowanej metody `removeItem()`, podając w nawiasach nazwę klucza w cudzysłowiu, np. tak:
+
+```
+localStorage.removeItem("name");
+
+console.log(localStorage.getItem("name")); // konsola zwróci wartość null, co znaczy że nie ma takiej wartości
+```
+
+Spróbuj teraz usunąć klucz `name` z `localStorage`, a potem sprawdź, czy na pewno został usunięty.
 
 ## Dodawanie tablicy do localStorage (JSON.stringify()) | Zapisujemy nasze zadania w localStorage
 
-Zapisanie bardziej złożonych struktur danych w `localStorage` wymaga dodatkowej czynności. Kiedy np. chcemy przechować lub nadpisać tablicę (a będziemy chcieli przechować tablicę z naszymi zadaniami), to musimy przekształcić ją na postać tekstową i przypisać do klucza:
+---
+
+Zapisanie bardziej złożonych struktur danych w `localStorage` wymaga dodatkowej czynności. Kiedy np. chcemy przechować lub nadpisać tablicę (a będziemy chcieli przechować tablicę z naszymi zadaniami), to musimy przekształcić ją na postać tekstową (stąd nazwa metody `stringify()`, czyli coś w rodzaju `przekształć w string (ciąg znaków)`) i przypisać do klucza:
 
 ```
 localStorage.setItem("tasks", JSON.stringify(["zrobić kawę", "sprawdzić maila", "zajrzeć na stronę kodujemywbiurze.pl"]))
 ```
 
-Zwróc uwagę, że do metody `setItem()` przekazaliśmy najpierw tak, jak wcześniej, nazwę klucza `"tasks"` w cudzysłowiu, natomiast drugim argumentem nie jest po prostu tablica, tylko tablica przekazana jako argument do `JSON.stringify()`, która przekształca tablicę w ciąg znaków.
+Powyższy kod wygląda strasznie 😬, ale zaraz "rozbijemy" go na mniejsze polecenia i rozłożymy na czynniki pierwsze.
+
+Zwróc uwagę, że do metody `setItem()` przekazaliśmy najpierw tak, jak wcześniej, nazwę klucza `"tasks"` w cudzysłowiu, natomiast drugim argumentem nie jest po prostu tablica, tylko tablica przekazana jako argument do metody `JSON.stringify()`, która zwraca tablicę w ciąg znaków.
 
 Bardziej klarownym i czytelnym rozwiązaniem byłoby najpierw przypisać tablicę do zmiennej, a potem zmienną przekazać do `JSON.stringify()`:
 
@@ -960,7 +1016,18 @@ let tasks = ["zrobić kawę", "sprawdzić maila", "zajrzeć na stronę kodujemyw
 localStorage.setItem("tasks", JSON.stringify(tasks));
 ```
 
-## Pobranie tablicy do localStorage (JSON.parse()) | Pobieramy nasze zadania z localStorage
+Możemy też ten kod rozbić jeszcze bardziej:
+
+```
+let tasks = ["zrobić kawę", "sprawdzić maila", "zajrzeć na stronę kodujemywbiurze.pl"];
+let tasksStringified = JSON.stringify(tasks);
+
+localStorage.setItem("tasks", tasksStringified);
+```
+
+## Pobranie tablicy z localStorage (JSON.parse()) | Pobieramy nasze zadania z localStorage
+
+---
 
 Żeby pobrać tablicę z `localStorage` również musimy zastosować dodatkową metodę uzupełniającą `getItem()`, ponieważ tablica jest zapisana w postaci ciągu tekstowego. W związku z tym, musimy "opakować" metodę `getItem()` w `JSON.parse()` - metodę, która przekształci naszą tablicę z ciągu tekstowego z powrotem w JavaScriptową tablicę:
 
@@ -968,87 +1035,75 @@ localStorage.setItem("tasks", JSON.stringify(tasks));
 let tasksFromLocalStorage = JSON.parse(localStorage.getItem("tasks"));
 ```
 
+Powyższy kod również wygląda strasznie 😬, więc podobnie "rozbijemy" go na mniejsze polecenia i rozłożymy na czynniki pierwsze.
+
 Zwróć uwagę na liczbę nawiasów: ponieważ `localStorage.getItem("tasks")` zostało przekazane do `JSON.parse()` jako argument, w związku z tym zostało "opakowane" w dodatkowe nawiasy.
 
 Tutaj również moglibyśmy zastosować bardziej czytelne rozwiązanie:
 
 ```
 // pobieramy tablicę zapisaną w localStorage w postaci ciągu tekstowego:
-let tasksString = localStorage.getItem("tasks");
+let tasksStringified = localStorage.getItem("tasks");
 
-console.log("pobrana tablica w postaci ciągu tekstowego:", tasksString);
+console.log("pobrana tablica w postaci ciągu tekstowego:", tasksStringified);
 
 // przekształcamy ją z powrotem w JavaScriptową tablicę:
-let tasksArray = JSON.parse(tasksString);
+let tasksArray = JSON.parse(tasksStringified); // możemy też po prostu nazwać tasks
 
 console.log("przekształcona z powrotem tablica:", tasksArray);
 ```
 
 Powyższy kod jest nie tylko bardziej czytelny, ale też najprawdopodbniej bardziej zrozumiały dla Ciebie, gdyż rozbiliśmy złożoną czynność na 2 części: pobranie ciągu tekstowego i przypisanie go do zmiennej, a potem przekazanie tej zmiennej jako argumentu do `JSON.parse()`. No i nie mamy teraz tylu nawiasów (które *nota bene* mogą powodować dużą ilość błędów)!
 
-Pobaw się tym kodem w konsoli i sprawdź, czym się różnią zmienne `tasksString` i `tasksArray`.
+Pobaw się tym kodem w konsoli i sprawdź, czym się różnią zmienne `tasksStringified` i `tasksArray`.
 
-## Zadania są zapisywane w przeglądarce! Kod aplikacji w wersji 2.0 w całości
+**UWAGA!** Po testowaniu i zabawie z kodem, **usuń klucz `"tasks"` z `localStorage` za pomocą `localStorage.remove("tasks")`**, żebyśmy mogli zacząć implementację kodu od podstaw.
 
-Uff... Znamy już podstawy pracy z `localStorage`, więc możemy stworzyć plik `todo-app-local-storage` w zakładce `snippets` i uzupełnić kod wcześniejszej wersji aplikacji w pliku o powyższe funkcjonalności.
+## Zaczynamy implementować funkcjonalności localStorage. Pobieramy zadania
 
-Poniższy kod będzie zawierał zmodyfikowane dotychczasowe funkcje oraz komentarze na temat tego, co i jak się zadziało:
+---
+
+Uff... Znamy już podstawy pracy z `localStorage`, a nawet przetestowaliśmy dodawanie, pobieranie i usuwanie naszych zadań z `localStorage` za pomocą poleceń. Musimy teraz zaimplementować to w naszej aplikacji, a dokładnie zmodyfikować wszystkie dotychczasowe funkcje (a nawet deklarację zmiennej `tasks`!), by były zsynchronizowane z `localStorage`.
+
+Utwórz zatem plik o nazwie `todo-app-local-storage` w zakładce `snippets` i zaczynamy przenosić do niego i uzupełniać kod z wersji 1.0. Zaczynamy!
+
+Najpierw czyścimy konsolę, jak wcześniej:
 
 ```
-// czyścimy konsolę z całego dotychczasowego kodu i komunikatów:
+// todo-app-local-storage app code:
+
 console.clear();
 
-// definiujemy funkcję pobierającą zadania z localStorage:
+// ...tu będziemy pisać kolejne liniki kodu
+```
+
+Teraz, zamiast deklarować zmienną `tasks` i przypisywać do niej pustą tablicę, zdefiniujmy funkcję `getTasksFromLocalStorage()`, której nazwa wskazuje na to, że będzie pobierać i zwracać zapisane zadania z `localStorage`. Funkcja ta musi nie tylko pobrać, ale i zwrócić nasze zadania, byśmy mogli potem zadeklarować zmienną `tasks` i przypisać do niej pobrane zadania podczas uruchomienia programu.
+
+Identycznie działa każda aplikacja, która pobiera dane z bazy danych, np. kiedy uruchamiamy Messengera, to przez jakąś chwilę pobiera on pewną ilość danych z bazy - ostatnie konwersacje, nowe wiadomości itd.
+
+```
+// todo-app-local-storage app code:
+
+// ...tutaj jest poprzedni kod w pliku
 
 function getTasksFromLocalStorage() {
-	let storedTasks = JSON.parse(localStorage.getItem("tasks"));
+	// pobieramy tablicę zadań zapisaną w localStorage w postaci tekstowej:
+	let storedTasksStringified = localStorage.getItem("tasks");
 
-	// storedTasks mogą być tablicą (pustą lub zawierającą elementy)
-	// lub też mieć wartość null, jeśli w localStorage nie ma w ogóle klucza tasks
-	// np. nie został zainicjowany lub został wcześniej usunięty,
-	// dlatego:
-	
-	if (storedTasks !== null) { // jeśli tasks nie jest null
-		return storedTasks; // zwracamy storedTasks
-	} else { // jeśli tasks === null
-		return []; // zwracamy pustą tablicę, by móc np. korzystać z metody push()
-	}
+	// konwertujemy pobrane dane w JavaScriptową tablicę:
+	let storedTasks = JSON.parse(storedTasksStringified);
+
+	// zwracamy wartość:
+	return storedTasks;
 }
 
-// definiujemy zmienną tasks, do której przypisujemy
-// wartość zwróconą przez getTasksFromLocalStorage():
-
+// zadeklarujmy zmienną tasks i przypiszmy do niej to,
+// co zwróci funkcja getTasksFromLocalStorage():
 let tasks = getTasksFromLocalStorage();
 
-// zastępujemy poprzednią funkcję showTasks() nową wersją:
-
+// funkcja showTasks() i loopTasks() pozostają bez zmian:
 function showTasks() {
-	if (tasks.length) {
-		console.log("Twoje zapisane zadania", tasks);
-	} else {
-		console.log("Na razie nie masz żadnych zapisanych zadań... Dodaj jakieś!");
-	}
-}
-
-// dodajemy funkcję aktualizującą tablicę zadań w localStorage
-// (czyli nadpisującą poprzednią jej wartość):
-
-function updateTasksInLocalStorage(updatedTasks) {
-	// aktualizujemy localStorage o updatedTasks:
-	localStorage.setItem("tasks", JSON.stringify(updatedTasks));
-}
-
-// uzupełniamy funkcję addTasks o aktualizację localStorage:
-
-function addTask(newTask) {
-	tasks.push(newTask);
-
-	console.log("Do Twoich zadań zostało dodane nowe zadanie:", newTask);
-
-	// aktualizujemy localStorage o najnowsze tasks:
-	updateTasksInLocalStorage(tasks);
-
-	showTasks();
+  console.log("tasks:", tasks);
 }
 
 function loopTasks() {
@@ -1057,12 +1112,292 @@ function loopTasks() {
 	}
 }
 
+// ...tu będzie kolejny kod
+```
+
+Przepisz powyższy kod do pliku, uruchom go i wpisz w konsoli, która się pojawiła, polecenie `showTasks()`. Co Ci się wyświetliło?
+
+Jeśli zrobiłeś/aś wcześniej to, o co prosiłem (czyli po eksperymentach z `localStorage` usunąłeś/aś klucz `"tasks"`), to powinno Ci się wyświetlić `tasks: null`.
+
+Co to znaczy? W JavaScript `null` jest specjalną wartością, która oznacza brak wartości. Klucz został usunięty z `localStorage`, więc jego wartość wynosi... nic. I to jest w porządku:
+
+- jeśli są zadania lub też zadania zostały usunięte, ale klucz `"tasks"` jest nadal dostępny w `localStorage`, to funkcja `getTasksFromLocalStorage()` zwróci tablicę (pustą lub zawierającą zadania),
+- jeśli z kolei klucz `"tasks"` został usunięty lub nie było go wcale, to funkcja zwróci `null`.
+
+Jeśli po raz pierwszy odpalamy naszą aplikację na tej konkretnej stronie (pamiętasz, że `localStorage` przypisuje dane do konkretnego adresu url?), nigdy nie przechowywaliśmy tutaj zadań, w związku z czym ich wartość jest `null`. Podobnie jest w przypadku, gdy klucz został usunięty z `localStorage`.
+
+No i mógłbyś/abyś zapytać: w czym problem? Funkcja zwróciła `null` i tyle.
+
+Sprawdźmy zatem! Do kodu, który już masz w pliku, dodajmy zmodyfikowaną funkcję `addTasks`, która także wymaga utworzenia funkcji pomocniczej `updateTasksInLocalStorage()`, która będzie aktualizowała zadania w `localStorage`:
+
+```
+// todo-app-local-storage app code:
+
+// ...tutaj jest poprzedni kod w pliku
+
+// dodajemy funkcję aktualizującą tablicę zadań w localStorage
+// (czyli nadpisującą jej poprzednią wartość):
+
+function updateTasksInLocalStorage() {
+	// aktualizujemy localStorage o właśnie zmienione tasks
+	// pamiętaj, że musimy przekształcić tablicę w dane tekstowe,
+	// dlatego używamy JSON.stringify():
+
+	localStorage.setItem("tasks", JSON.stringify(tasks));
+
+	// pamiętaj, że tasks jest zmienną globalną,
+	// czyli zawsze mamy dostęp do jej aktualnej wartości
+	// z poziomu każdej funkcji
+}
+
+function addTask(newTask) {
+  // dodajemy zadanie do zmiennej, tak jak wcześniej:
+	tasks.push(newTask);
+
+	// uzupełniamy funkcję addTasks o aktualizację localStorage
+	// za pomocą funkcji updateTasksInLocalStorage():
+
+	updateTasksInLocalStorage();
+
+  // tu pozostawiamy dotychczasowy kod:
+	console.log("Do Twoich zadań zostało dodane nowe zadanie:", newTask);
+
+	showTasks();
+}
+```
+
+Zapisz teraz plik, wyświetl zadania w konsoli, a potem spróbuj dodać zadanie za pomocą funkcji `addTasks("test")`. I co się stało?
+
+Powinien wyświetlić się komunikat błędu (`error`): `Uncaught TypeError: Cannot read properties of null (reading 'push')`. Dlaczego pojawił się błąd?
+
+Przyczyną błędu jest, że próbowaliśmy zastosować metodę `push()` (w środku funkcji `addTask()`), która jest metodą właściwą dla tablic, na wartości `null`, która tablicą nie jest... Nie da się "wcisnąć" jakiejś wartości do czegoś, co nie istnieje, a `null` jest właśnie reprezentacją niczego.
+
+Dlatego musimy upewnić się, że funkcja `getTasksFromLocalStorage()` zawsze zwraca tablicę, nawet jeśli nie mamy klucza reprezentującego zadania w `localStorage` (lub też jeśli do klucza `"tasks"` z jakiegoś powodu byłaby przypisana wartość `null`, co jak najbardziej możemy zrobić, gdybyśmy tego chcieli).
+
+W tym celu musimy dodać mechanizm sprawdzający, czy wartość klucza `"tasks"` w `localStorage` jest tablicą (nieważne, czy pustą, czy też zawierającą zadania), czy też `null` i w tym drugim przypadku zamiast `null` funkcja powinna zwrócić po prostu pustą tablicę.
+
+Żeby wdrożyć taki mechanizm, potrzebujemy... kolejnej dawki wiedzy! Dlatego teraz poznamy i zastosujemy po raz pierwszy konstrukcję warunkową `if-else` oraz powiązane z nią wartości logiczne `true` i `false`. Zacznijmy od `true` i `false`!
+
+## Wartości logiczne true i false - wybrane podstawy
+
+---
+
+W JavaScript *(ale też w innych językach programowania)* wartości `true` i `false` są używane do reprezentowania logicznych prawd i fałszu. Są one często używane w warunkach logicznych, takich jak instrukcje warunkowe `if-else` *(które za chwilę omówimy i wykorzystamy)*, operatory logiczne () i wiele innych.
+
+`true` reprezentuje prawdę. Oznacza, że warunek jest spełniony lub wartość logiczna jest prawdziwa. `false` reprezentuje fałsz. Oznacza, że warunek nie jest spełniony lub wartość logiczna jest fałszywa. Zobaczmy kilka przykładów:
+
+```
+let inOffice = false;
+let inHomeOffice = true;
+let onVacation = false;
+
+console.log("Czy pracownik jest w biurze?", inOffice); // zwraca false
+console.log("Czy pracownik jest na pracy zdalnej?", inHomeOffice); // zwraca true
+console.log("Czy pracownik jest na urlopie?", onVacation); // zwraca false
+
+inOffice = true;
+console.log("Czy pracownik jest w biurze?", inOffice);
+```
+
+```
+let a = 10;
+let b = 5;
+
+console.log("Czy a jest większe od b?", a > b);
+console.log("Czy a jest mniejsze od b?", a < b);
+console.log("Czy b jest większe od a?", b > a);
+
+console.log(a + b > 10); // zwraca true, ponieważ 10 + 5 jest większe od 10
+console.log(a + b > 20); // zwraca false, ponieważ 10 + 5 nie jest większe od 20
+```
+
+Znaki `<` i `>` to niektóre z operatorów porównania, których na razie nie omawiamy, ponieważ nie są nam na razie potrzebne w naszej aplikacji - na pewno temat operatorów *(który jest jednym z podstawowych tematów w nauce programowania)* zostanie poruszony, jak tylko zajdzie taka potrzeba.
+
+Wartości logiczne `true` i `false` są fundamentalne w JavaScript i stanowią podstawę do podejmowania decyzji na podstawie warunków w programach, o czym się zaraz przekonamy.
+
+## Konstrukcja warunkowa if-else - wybrane podstawy | Jeśli w localStorage nie ma zapisanych zadań, zwracamy pustą tablicę
+
+---
+
+W JavaScript, `if-else` to konstrukcja warunkowa używana do wykonywania różnych fragmentów kodu w zależności od warunku logicznego. Wygląda to mniej więcej tak:
+
+```
+if (warunek) {
+  // kod bloku if do wykonania, jeśli warunek jest prawdziwy
+} else {
+  // kod bloku else do wykonania, jeśli warunek jest fałszywy
+}
+```
+
+Jeśli warunek wewnątrz `if` jest spełniony, czyli jest prawdziwy, co znaczy że zwraca wartość logiczą `true`, kod w jego bloku zostanie wykonany. W przeciwnym razie, jeśli warunek nie jest spełniony (zwraca `false`), wykonany zostanie kod w bloku `else`.
+
+Istnieje również możliwość zagnieżdżania wielu warunków z użyciem `else if`, co pozwala sprawdzać kolejne warunki, jeśli pierwszy warunek nie jest spełniony:
+
+```
+if (warunek1) {
+  // kod do wykonania, jeśli warunek1 jest prawdziwy
+} else if (warunek2) {
+  // kod do wykonania, jeśli warunek1 nie jest prawdziwy, natomiast warunek2 jest prawdziwy
+} else {
+  // kod do wykonania, jeśli żaden z warunków nie jest spełniony
+}
+```
+
+To pozwala na bardziej skomplikowane zachowania w zależności od różnych warunków w kodzie JavaScript.
+
+Wykorzystajmy przykłady z poprzedniej lekcji o `true` i `false` w konstrukcjach warunkowych.
+
+Wyobraź sobie, że mamy aplikację z bazą danych pracowników, w której odznacza się, czy pracownik pracuje dziś w biurze, jest na pracy zdalnej lub też na urlopie. Poniższy kod mógłby w pewien sposób odzwierciedlać logikę działania takiego wyszukiwania i wyświetlania komunikatów:
+
+```
+let inOffice = false;
+let inHomeOffice = true;
+let onVacation = false;
+
+if (inOffice) {
+  console.log("Pracownik jest dziś w pracy!");
+} else if (inHomeOffice) {
+  console.log("Pracownik udaje, że pracuje w domu.");
+} else if (onVacation) {
+  console.log("Pracownik dorabia na czarno podczas urlopu (dobrze, że nie dorabia w trakcie pracy zdalnej!)");
+} else {
+	console.log("Brak danych...");
+}
+```
+
+Wklej powyższy kod do konsoli, a potem kliknij Enter. Sprawdź, jaki jest komunikat. A potem wklej całość kodu znowu, ale zanim klikniesz Enter, zmień `true` na `false` i przypisz `true` do innej zmiennej. Kliknij Enter i sprawdź komunikat.
+
+A teraz... wklej cały ten kod jeszcze raz i zmień wszystkie wartości na `true`, zanim klikniesz Enter. Jak myślisz, co się stanie? Wyświetlą się wszystkie 3 komunikaty? Otóż nie, ponieważ konstrukcja `if-else` zwraca zawsze tylko pierwszy napotkany spełniony warunek (w naszym przypadku będzie to komunikat `console.log("Pracownik jest dziś w pracy!")`), a pozostałe ignoruje, dlatego trzeba uważać.
+
+Jeśli z kolei wszystkie warunki ustawimy na `false`, to wyświetli się komunikat z bloku `else`, który działa, jeśli żaden ze zdefiniowanych warunków nie został spełniony. W tym przypadku wyświetli się komunikat `Brak danych...`.
+
+Jest jeszcze jedna istotna kwestia, którą musimy przyswoić, by rozwiązać nasz problem z funkcją `getTasksFromLocalStorage()`:
+
+**W programowaniu niektóre wartości same z siebie są traktowane jako prawda (`true`) albo fałsz (`false`). Takie wartości odpowiednio określa się jako `truthy` i `falsy`.**
+
+Wartościami `falsy`, czyli tymi, które zwracają fałsz (`false`) w sensie logicznym (i odpowiednio w warunkach zawartych w konstrukcjach `if-else`), są m. in.:
+
+- wartość logiczna `false` (to chyba jest oczywiste), 
+- liczba 0 (ale liczby ujemne już nie - są `truthy`!),
+- pusty `string` (ciąg znaków), czyli `""` lub `''` (ale pusta tablica `[]` jest `truthy` - tak, JavaScript jest czasami dziwny...),
+- wartość `null`,
+- wartość `undefined` (taką wartość ma zmienna, która została zadeklarowana, ale nie została do niej przypisana żadna wartość, np. `let task;`)  
+
+Wszystkie pozostałe wartości są `truthy`, czyli zwracają `true` w warunkach.
+
+Wiem, że dużo tego jest i niektóre rzeczy może nie być tak łatwo sobie przyswoić, ale w końcu jesteśmy w 3. module 😜.
+
+Zobaczmy kilka przykładów i przetestujmy je w konsoli:
+
+```
+let name = ""; // name jest pustym ciągiem znaków
+
+if (name) {
+  // name jest truthy; innymi słowy, jeśli zawiera choćby jeden znak, to jest już czymś:
+  console.log("Imię:", name);
+} else {
+  // name jest falsy...
+  console.log("Nie masz imienia...", name);
+}
+
+let tasks = null;
+
+if (tasks) {
+  console.log("Zadania:", tasks);
+} else {
+  console.log("Nie ma zadań...");
+}
+
+let list = []; // list jest pustą tablicą, więc jest truthy, ale...
+
+if (list.length) {
+  console.log("Lista ma długość (zawiera co najmniej jeden element) - jest to jakaś liczba większa od zera, a dokładnie:", list.length);
+} else {
+  console.log("Długość tablicy wynosi 0, więc jest falsy", list.length);
+}
+```
+
+Powyższe przykłady zawsze wywołują kod z bloku `else`, ponieważ wszystkie warunki zwracają fałsz. Spróbuj je przetestować, a potem przypisać do zmiennych wartości truthy, np.: `name = "Freddie"; tasks = ["zrozumieć logikę JavaScript"]; list = [1, 2, 3];`.
+
+Uff... wróćmy więc teraz do funkcji `getTasksFromLocalStorage()` i dodajmy do niej sprawdzającą logikę, na którą tak czekamy:
+
+```
+function getTasksFromLocalStorage() {
+	// pobieramy tablicę zadań zapisaną w localStorage w postaci tekstowej:
+	let storedTasksStringified = localStorage.getItem("tasks");
+
+	// konwertujemy pobrane dane w JavaScriptową tablicę (lub null):
+	let storedTasks = JSON.parse(storedTasksStringified);
+
+	// sprawdzamy, czy storedTasks są truthy,
+	// czyli są pustą tablicą lub tablicą z elementami:
+	
+	if (storedTasks) {
+		return storedTasks; // zwracamy storedTasks
+	} else { // jeśli tasks są falsy, czyli w naszym przypadku null
+	  // dodajmy komunikat komunikat, żebyśmy byli pewni,
+		// że w localStorage nie było klucza tasks,
+		// więc zwracamy tablicę:
+		console.log("Klucz 'tasks' ma wartość", storedTasks, "więc zwracamy pustą tablicę, by móc do niej dodawać elementy za pomocą metodu push()");
+		return []; // zwracamy pustą tablicę
+	}
+}
+```
+
+Zaktualizuj funkcję `getTasksFromLocalStorage()`, zapisz plik, uruchom go i zobaczysz, że w konsoli pojawił się komunikat o wartości `null` klucza `"tasks"`. Teraz wyświetl listę zadań (`showTasks()`), która powinna zwrócić pustą tablicę. No i teraz możesz spróbować dodać jakieś zadanie: `addTask("zadanie testowe")`. Mało tego, że tym razem udało się w końcu dodać zadanie, to w dodatku zostało ono zapisane w `localStorage`! Możesz to sprawdzić, uruchamiając kod jeszcze raz (kliknij ikonkę trójkąta lub `Ctrl+Enter`). Tym razem nie zobaczysz żadnego komunikatu o wartości `null`. Spróbuj teraz wpisać `showTasks()` i powinieneś/aś zobaczyć to: `tasks: ['test']`. Udało się!
+
+W sumie, fajnie by było, gdyby plik po uruchomieniu od razu pokazał nam nasze zapisane zadania (lub ich brak). W tym celu musimy dokonać dwóch zmian:
+
+1. zmodyfikować funkcję `showTasks()`, dodając konstrukcję `if-else`, sprawdzającą, czy długość tablicy `tasks` jest truthy:
+
+```
+function showTasks() {
+	if (tasks.length) {
+		console.log("Twoje zapisane zadania:", tasks);
+	} else {
+		console.log("Na razie nie masz żadnych zapisanych zadań... Dodaj jakieś!");
+	}
+}
+```
+
+2. dodać wywołanie funkcji `showTasks()` na końcu pliku (pamiętaj, że JavaScript czyta i wywołuje kod od góry do dołu).
+
+## Modyfikujemy pozostałe funkcje, aby aktualizowały localStorage
+
+---
+
+Aby dokończyć wersję 2.0 aplikacji, pozostało nam tylko dodać funkcję `updateTasksInLocalStorage()` do pozostałych funkcji (po prostu kopiuj i wklejaj `updateTasksInLocalStorage();` we właściwych miejscach w funkcjach, czyli po modyfikacji zmiennej `tasks`):
+
+```
+// todo-app-local-storage app code:
+
+// ...tutaj jest poprzedni kod w pliku
+
+function addTaskAtIndex(index, newTask) {
+  tasks.splice(index, 0, newTask);
+
+	console.log("Do Twoich zadań zostało dodane nowe zadanie:", newTask);
+
+	updateTasksInLocalStorage();
+
+	showTasks();
+}
+
 function deleteTask(index) {
   tasks.splice(index, 1);
 
-	// aktualizujemy localStorage o najnowsze tasks:
-	updateTasksInLocalStorage(tasks);
+	updateTasksInLocalStorage();
 
+	showTasks();
+}
+
+function deleteAllTasks() {
+  tasks = [];
+	
+	console.log("Wszystkie zadania zostały usunięte...");
+
+	updateTasksInLocalStorage(tasks);
+	
 	showTasks();
 }
 
@@ -1070,15 +1405,110 @@ function deleteTask(index) {
 showTasks();
 ```
 
-## Zakończenie i podsumowanie
+## Podsumowanie Modułu 3. Kompletny kod aplikacji w wersji 2.0 zintegrowanej z localStorage
 
-Właśnie dobrnąłeś/aś do końca tego krótkiego kursu. Spodobało się? Chcesz więcej *(pamiętaj, że ta strona dopiero się rozwija)*?
+---
+
+Poniżej znajduje się cały kod aplikacji w wersji 2.0 zapisanej w pliku `todo-app-local-storage` w zakładce `snippets`, która przechowuje zadania w `localStorage`, dzięki czemu **Twoje zadania będą zapisane w pamięci przeglądarki tak długo, aż nie wyczyścisz `localStorage`**! Spróbuj odświeżyć stronę lub zamknąć przeglądarkę, a potem znowu uruchomić plik - zadania nadal są w pamięci przeglądarki!
+
+Pozwoliłem sobie usunąć komentarze z poniższego kodu, ponieważ widziałeś/aś je już nie raz, a ponadto nasz kod jest wystarczająco czytelny, a funkcje mają właściwe i opisowe nazwy, więc wszystko powinno być jasne.
+
+*Gdybyś jednak nie mógł/a sobie przypomnieć, co robią poszczególne funkcje, to zapraszam do odpowiednich fragmentów kursu.*
+
+```
+console.clear();
+
+function getTasksFromLocalStorage() {
+	let storedTasksStringified = localStorage.getItem("tasks");
+
+	let storedTasks = JSON.parse(storedTasksStringified);
+
+	if (storedTasks) {
+		return storedTasks;
+	} else {
+		console.log("Klucz 'tasks' ma wartość", storedTasks, "więc zwracamy pustą tablicę, by móc do niej dodawać elementy za pomocą metodu push()");
+
+		return [];
+	}
+}
+
+let tasks = getTasksFromLocalStorage();
+
+function showTasks() {
+	if (tasks.length) {
+		console.log("Twoje zapisane zadania:", tasks);
+	} else {
+		console.log("Na razie nie masz żadnych zapisanych zadań... Dodaj jakieś!");
+	}
+}
+
+function loopTasks() {
+	for (let i = 0; i < tasks.length; i++) {
+		console.log(i, tasks[i]);
+	}
+}
+
+function updateTasksInLocalStorage() {
+	localStorage.setItem("tasks", JSON.stringify(tasks));
+}
+
+function addTask(newTask) {
+	tasks.push(newTask);
+
+	updateTasksInLocalStorage();
+
+	console.log("Do Twoich zadań zostało dodane nowe zadanie:", newTask);
+
+	showTasks();
+}
+
+function addTaskAtIndex(index, newTask) {
+  tasks.splice(index, 0, newTask);
+
+	console.log("Do Twoich zadań zostało dodane nowe zadanie:", newTask);
+
+	updateTasksInLocalStorage();
+
+	showTasks();
+}
+
+function deleteTask(index) {
+  tasks.splice(index, 1);
+
+	updateTasksInLocalStorage();
+
+	showTasks();
+}
+
+function deleteAllTasks() {
+  tasks = [];
+	
+	console.log("Wszystkie zadania zostały usunięte...");
+
+	updateTasksInLocalStorage(tasks);
+	
+	showTasks();
+}
+
+// odpalając program, wyświetlamy zapisane zadania na start:
+showTasks();
+```
+
+## Zakończenie oraz darmowe źródła do samodzielnej nauki (po angielsku)
+
+---
+
+Właśnie dobrnąłeś/aś do końca 3. modułu kursu i na tym na razie kończy się ten tutorial!
+
+Spodobało się? Chcesz więcej *(pamiętaj, że ta strona dopiero się rozwija)*?
 
 Jeśli tak, to daj mi znać, że jesteś zainteresowany/a dalszymi lekcjami w tym samym stylu *(zakładam, że będziemy dalej rozwijać naszą aplikację do zadań, dodając coraz to nowsze funkcjonalności oraz poznając również podstawy HTML i CSS, by wyjść poza konsolę i stworzyć stronę/ aplikację internetową z prawdziwego zdarzenia)*.
 
 Jeśli więc chcesz zrobić ten kolejny i następne kroki, daj znać!
 
-## Darmowe źródła do samodzielnej nauki (po angielsku)
+A zanim powstaną kolejne moduły tego kursu (a mamy jeszcze wiele rzeczy do omówienia) oraz kolejne kursy na *kodujemywbiurze.pl*, zachęcam do dalszej samodzielnej nauki (patrz linki poniżej)!
+
+### BONUS: Darmowe źródła do samodzielnej nauki (po angielsku)
 
 ---
 
