@@ -50,9 +50,9 @@ Mam nadzieję, że kiedy dobrniesz do końca tego tutoriala, to będziesz chcia�
 
 ---
 
-> Wszystko, co może zostać napisane w JavaScript, ostatecznie zostanie napisane w JavaScript.
+<p style="text-align: end"><em>Wszystko, co może zostać napisane w JavaScript, ostatecznie zostanie napisane w JavaScript.</em><p>
 
-*Douglas Crockford*
+<p style="text-align: end">Douglas Crockford</p>
 
 JavaScript jest obecnie **<a href="https://bulldogjob.pl/readme/najpopularniejsze-jezyki-programowania-2020" target="_blank">najbardziej popularnym językiem programowania</a>**. Programowanie to nic innego, jak pisanie poleceń w języku programowania zrozumiałym dla komputera/ urządzenia/ programu/ przeglądarki, które określają, co urządzenie/ program ma wyświetlić, jak to wyświetlić, jak ma reagować na działania użytkownika, skąd ma pobrać dane lub gdzie je zapisać itd.
 
@@ -388,75 +388,7 @@ tasks.splice(3, 0, "zarejestrować dokumenty", "zamówić buty na Zalando", "oga
 console.log(tasks); // 7 zadań
 ```
 
-Taki zabieg jest z kolei bardzo przydatny, jeśli chcemy dodać element/y nie na końcu tablicy, jak to robiliśmy metodą `push()`, tylko w jakimś określonym miejscu w środku, np. chcemy, by jakieś ważniejsze zadanie znalazło się przed tymi mniej ważnymi. 
-
-## Pętla for, długość tablicy length | Wyświetlanie zadań po kolei
-
----
-
-A co powiesz na to, że zamiast wyświetlać całą tablicę zadań, wyświetlimy każde zadanie w osobnej linijce, dzięki czemu lista będzie bardziej przejrzysta?
-
-Możemy to osiągnąć na wiele sposobów, ale wykorzystamy (i poznamy) w tym celu starą dobrą klasyczną metodę - pętlę `for`. Czym jest pętla?
-
-**Pętla jest poleceniem, które wykonuje pewne zadanie raz po raz, dopóki pewien warunek jest spełniony**. Ogólnie początkujący programiści czasami mają problem ze zrozumieniem działania pętli, więc w razie czego, nie poddawaj się od razu ;-)
-
-Zobaczmy poniższy kod i zastanówmy się nad nim:
-
-```
-for (let i = 0; i < 10; i++) {
-	console.log(i);
-}
-```
-
-Jak Ci się wydaje, co się dzieje w tym kodzie? Spróbuj go przepisać do konsoli (lub skopiować), kliknij Enter i zobacz, co się stanie! Jeśli wszystko poszło dobrze, to powinny Ci się wyświetlić liczby od 0 do 9, przy czym każda liczba została wyświetlona w nowej linijce.
-
-Jak to działa?
-
-Więc po słowie kluczowym `for` dzieją się 3 rzeczy w nawiasach:
-
-- `let i = 0;` => w tej części definiujemy zmienną `i`, której przypisujemy wartość 0,
-- `i < 10;` => to jest warunek, który ma być spełniony, by pętla działała - w tym konkretnym przypadku pętla ma działać, dopóki `i` jest mniejsze, niż 10 (czyli jeśli `i` będzie równe 10, pętla przestanie działać),
-- `i++` => ten kod z kolei zwiększa wartość `i` o 1 po każdej iteracji pętli.
-
-Natomiast pomiędzy klamrami `{ }` wpisujemy to, co ma się wydarzyć podczas każdej iteracji pętli (podobnie jak w funkcjach). W naszym przykładzie za każdym razem będzie wywoływana funkcja `console.log()`, która będzie wyświetlała aktualną wartość zmiennej `i`, która jest za każdym razem powiększana o 1.
-
-Gdybyśmy chcieli "przetłumaczyć" cały powyższy kod na ludzki język, to moglibyśmy to zrobić w ten sposób:
-
-1. Sprawdź, czy aktualnie `i` jest mniejsze, niż 10.
-2. Jeśli tak, to wywołaj kod zawarty w klamrach (jeden raz), po czym zwiększ `i` o 1 i wróć do pierwszego punktu.
-3. Jeśli nie (`i` jest równe lub większe niż 10), nie wywołuj żadnego kodu i zakończ zadanie (nie wracaj do pierwszego punktu).
-
-Gdybyśmy teraz chcieli wyświetlić nasze zadania w podobny sposób, moglibyśmy stworzyć nową pętlę, aczkolwiek zamiast sprawdzać, czy `i` jest mniejsze od 10, będziemy sprawdzać, czy `i` jest mniejsze od długości naszej listy (a możemy sprawdzić długość naszej listy, która jest tablicą, w ten sposób: `tasks.length`), czyli liczby elementów, które zawiera:
-
-```
-for (let i = 0; i < tasks.length; i++) {
-	console.log(tasks[i]);
-}
-```
-
-W powyższym kodzie iterujemy po naszych zadaniach z listy, dopóki zmienna `i` jest mniejsza od długości listy, do której mamy dostęp sprawdzając długość tablicy `tasks.length` (możesz to osobno sprawdzić, wpisując ten kod do konsoli).
-
-Dlaczego nie sprawdzimy długości listy w konsoli i nie użyjemy tej konkretnej liczby w naszej pętli? Takie podejście nie ma sensu, ponieważ długość listy będzie najprawdopobniej się zmieniać (np. za chwilę stworzymy funckję do usuwania zadań z listy), a właściwość `length` zawsze dynamicznie zwróci nam realną długość każdej tablicy.
-
-Z drugiej strony zwróć uwagę na to, w jaki sposób uzyskujemy dostęp do każdego zadania za pomocą indeksu tablicy. Robiliśmy to już wcześniej, kiedy omawialiśmy tablice i indeksy, np. kiedy pisaliśmy kod `tasks[0]`, żeby zwrócić pierwszy element z listy. Teraz używamy dynamicznej zmiennej `i`, która każdorazowo automatycznie podstawia kolejny indeks poprzez `tasks[i]` - jeśli `i` w danej chwili będzie równe 5, to program potraktuje nasz dynamiczny kod jako `tasks[5]`.
-
-No i ciekawostka: **jak uzyskać ostatni element z listy**, której długości nie znamy? Nie wiemy przecież, jaką wartość indeksu mamy wpisać w `tasks[?]`... Otóż możemy to robić na kilka sposobów (jak zwykle w programowaniu), natomiast na początek w tym celu możemy użyć nowo poznanej właściwości `length` w ten sposób:
-
-```
-tasks[tasks.length - 1];
-```
-
-Co się dzieje w powyższym kodzie? Ponieważ nie znamy długości listy, ale wiemy, że właściwość `length` zawsze zwraca atkualną długość tablicy, dynamicznie obliczyliśmy indeks ostatniego elementu odejmując od długości jedynkę.
-
-Może się to wydawać zagmatwane, więc przyjrzyjmy się temu lepiej. Pamiętasz mówiłem, że indeksy zaczynają się od 0, a nie od 1? Jeśli więc mamy listę, która zawiera np. 10 elementów, to indeksem ostatniego elementu będzie... 9! Jeśli z kolei sprawdzimy, co zwraca właściwość `length`, to zwróci ona... 10! Dzieje się tak dlatego, że długość tablicy równa się liczbie elementów, które przechowuje. W związku z tym, jeśli chcemy uzyskać dostęp do ostatniego (dziesiątego) elementu tej listy, musimy użyć indeksu 9: `tenElementsList[9]`. Żeby uzyskać 9, musimy od (długości) 10 odjąć 1. W związku z tym, żeby uzyskać dostęp do ostatniego elementu tablicy o dowolnej nieznanej długości, korzystamy z kodu `list[list.length - 1]` (zamiast `list` podstawiamy oczywiście nazwę naszej zmiennej).
-
-Ok, ale jak widzisz, kiedy wyświetlamy zadania za pomocą pętli, to wyświetlają się nam same zadania bez przypisanych indeksów. To może sprawić problem przy ich usuwaniu, ponieważ musimy wiedzieć, jaki jest indeks zadania, które usuwamy. Dlatego zmodyfikujmy (a raczej stwórzmy nową) pętlę w taki sposób, aby przed nazwą zadania wyświetlała także jego indeks:
-
-```
-for (let i = 0; i < tasks.length; i++) {
-	console.log(i, tasks[i]);
-}
-```
+Taki zabieg jest z kolei bardzo przydatny, jeśli chcemy dodać element/y nie na końcu tablicy, jak to robiliśmy metodą `push()`, tylko w jakimś określonym miejscu w środku, np. chcemy, by jakieś ważniejsze zadanie znalazło się przed tymi mniej ważnymi.
 
 ## Podsumowanie Modułu 1. JavaScriptowy kod do zarządzania zadaniami w konsoli w całości (wersja 0 aplikacji)
 
@@ -493,13 +425,6 @@ console.log("tasks:", tasks);
 tasks.splice(1, 0, "podlać kwiatki");
 
 console.log("tasks:", tasks);
-
-// żeby wyświetlić całą listę zadań,
-// ale tak, by każde było w nowej linijce poprzedzone indeksem,
-// używamy pętli for:
-for (let i = 0; i < tasks.length; i++) {
-	console.log(i, tasks[i]);
-}
 
 // BONUS:
 // żeby usunąć wszystkie zadania...
@@ -661,7 +586,7 @@ Możemy teraz przepisać do tego pliku dotychczasowy kod naszej aplikacji w wers
 let tasks = ["zrobić kawę", "sprawdzić maila", "zajrzeć na stronę kodujemywbiurze.pl"];
 
 function showTasks() {
-  console.log(tasks);
+  console.log("Twoje zapisane zadania:", tasks);
 }
 ```
 
@@ -828,10 +753,7 @@ A przy okazji zobacz, ile już wiesz o JavaScript:
   - jak ją deklarujemy i wywołujemy,
 	- jak możemy przekazać funkcji pewne dane,
 	- jak tworzyć reużywalne funkcje i wywoływać je w innych funkcjach,
-	- jak nadać funkcjom dobre nazwy,
-- czym jest pętla `for`
-  - jak wyświetlić wszystkie elementy tablicy po kolei,
-	- jak wykonać jakąś czynność (wywołać funkcję) określoną ilość razy 
+	- jak nadać funkcjom dobre nazwy.
 
 **Gratuluję!**
 
@@ -847,7 +769,7 @@ console.clear();
 let tasks = [];
 
 function showTasks() {
-  console.log("tasks:", tasks);
+  console.log("Twoje zapisane zadania:", tasks);
 }
 
 function addTask(newTask) {
@@ -867,16 +789,6 @@ function addTaskAtIndex(index, newTask) {
 	console.log("Do Twoich zadań zostało dodane nowe zadanie:", newTask);
 
 	showTasks();
-}
-
-// poniższa funkcja wyświetla zadania jedno po drugim;
-// nie utworzyliśmy poniższej funkcji w kursie,
-// ale użyliśmy jej wcześniej w kodzie wersji 0:
-
-function loopTasks() {
-	for (let i = 0; i < tasks.length; i++) {
-		console.log(i, tasks[i]);
-	}
 }
 
 function deleteTask(index) {
@@ -899,7 +811,7 @@ Możesz teraz:
 - dodawać zadania na koniec listy za pomocą funkcji `addTask("jakieś zadanie")`,
 - wstawiać zadania w określonym miejscu (indeksie) za pomocą `addTaskAtIndex(index, newTask)`,
 - usuwać zadania, sprawdzając uprzednio ich indeks, np. `deleteTask(3)`,
-- wyświetlić swoje zadania w konsoli, wywołując `showTasks()` lub `loopTasks()`,
+- wyświetlić swoje zadania w konsoli, wywołując `showTasks()`,
 - wyczyścić/ zresetować listę za pomocą `deleteAllTasks()`.
 
 ## Czym się różni kod aplikacji w wersji 1.0 (Moduł 2.) od 0 (Moduł 1.) oraz co dalej?
@@ -1099,17 +1011,13 @@ function getTasksFromLocalStorage() {
 
 // zadeklarujmy zmienną tasks i przypiszmy do niej to,
 // co zwróci funkcja getTasksFromLocalStorage():
+
 let tasks = getTasksFromLocalStorage();
 
-// funkcja showTasks() i loopTasks() pozostają bez zmian:
-function showTasks() {
-  console.log("tasks:", tasks);
-}
+// funkcja showTasks() pozostaje bez zmian:
 
-function loopTasks() {
-	for (let i = 0; i < tasks.length; i++) {
-		console.log(i, tasks[i]);
-	}
+function showTasks() {
+  console.log("Twoje zapisane zadania:", tasks);
 }
 
 // ...tu będzie kolejny kod
@@ -1126,7 +1034,7 @@ Co to znaczy? W JavaScript `null` jest specjalną wartością, która oznacza br
 
 Jeśli po raz pierwszy odpalamy naszą aplikację na tej konkretnej stronie (pamiętasz, że `localStorage` przypisuje dane do konkretnego adresu url?), nigdy nie przechowywaliśmy tutaj zadań, w związku z czym ich wartość jest `null`. Podobnie jest w przypadku, gdy klucz został usunięty z `localStorage`.
 
-No i mógłbyś/abyś zapytać: w czym problem? Funkcja zwróciła `null` i tyle.
+No i mógłbyś/abyś zapytać: *W czym problem? Funkcja zwróciła `null` i tyle*.
 
 Sprawdźmy zatem! Do kodu, który już masz w pliku, dodajmy zmodyfikowaną funkcję `addTasks`, która także wymaga utworzenia funkcji pomocniczej `updateTasksInLocalStorage()`, która będzie aktualizowała zadania w `localStorage`:
 
@@ -1174,193 +1082,43 @@ Przyczyną błędu jest, że próbowaliśmy zastosować metodę `push()` (w śro
 
 Dlatego musimy upewnić się, że funkcja `getTasksFromLocalStorage()` zawsze zwraca tablicę, nawet jeśli nie mamy klucza reprezentującego zadania w `localStorage` (lub też jeśli do klucza `"tasks"` z jakiegoś powodu byłaby przypisana wartość `null`, co jak najbardziej możemy zrobić, gdybyśmy tego chcieli).
 
-W tym celu musimy dodać mechanizm sprawdzający, czy wartość klucza `"tasks"` w `localStorage` jest tablicą (nieważne, czy pustą, czy też zawierającą zadania), czy też `null` i w tym drugim przypadku zamiast `null` funkcja powinna zwrócić po prostu pustą tablicę.
+W tym celu musimy dodać mechanizm sprawdzający, czy wartość klucza `"tasks"` w `localStorage` jest tablicą (nieważne, czy pustą, czy też zawierającą zadania), czy też `null` ~~i w tym drugim przypadku zamiast `null` funkcja powinna zwrócić po prostu pustą tablicę~~.
 
-Żeby wdrożyć taki mechanizm, potrzebujemy... kolejnej dawki wiedzy! Dlatego teraz poznamy i zastosujemy po raz pierwszy konstrukcję warunkową `if-else` oraz powiązane z nią wartości logiczne `true` i `false`. Zacznijmy od `true` i `false`!
+~~Żeby wdrożyć taki mechanizm, potrzebujemy... kolejnej dawki wiedzy! Dlatego teraz poznamy i zastosujemy po raz pierwszy konstrukcję warunkową `if-else` oraz powiązane z nią wartości logiczne `true` i `false`. Zacznijmy od `true` i `false`!~~
 
-## Wartości logiczne true i false - wybrane podstawy
+Nie przez przypadek przekreśliłem powyższe akapity. Chciałem Ci pokazać, że owszem, przekreślone zagadnienia są mega ważne i zdecydowanie zaliczają się do podstaw języka JavaScript oraz że owszem dzięki nim moglibyśmy wdrożyć wspomniany mechanizm sprawdzający, czy funkcja `getTasksFromLocalStorage()` zawsze zwraca tablicę, aczkolwiek...
 
----
+Przed publikacją tego kursu przejrzałem jego treść jeszcze raz i stwierdziłem, że na tym etapie (w tym module oraz w kursie ogólnie) zależy mi na tym, abyście jak najszybciej zbudowali coś wartościowego, coś co działa, z czego możecie korzystać i jednocześnie wymaga jak najmniej wiedzy, żeby Was nie przytłoczyć jej nadmiarem. Moim celem jest Was zachęcić do spróbowania swoich sił w kodowaniu, dlatego...
 
-W JavaScript *(ale też w innych językach programowania)* wartości `true` i `false` są używane do reprezentowania logicznych prawd i fałszu. Są one często używane w warunkach logicznych, takich jak instrukcje warunkowe `if-else` *(które za chwilę omówimy i wykorzystamy)*, operatory logiczne () i wiele innych.
-
-`true` reprezentuje prawdę. Oznacza, że warunek jest spełniony lub wartość logiczna jest prawdziwa. `false` reprezentuje fałsz. Oznacza, że warunek nie jest spełniony lub wartość logiczna jest fałszywa. Zobaczmy kilka przykładów:
+Zamiast lektury dwóch większych rozdziałów (ponad 200 linijek tekstu i przykładów, które oczywiście i tak później wypłyną), zastosujemy pewien trick - skrót myślowy, który rozwiąże nasz problem w sekundę, bez nadmiaru wiedzy i przykładów, a jednocześnie jest powszechną i poprawną techniką sprawdzania czy wartość jest prawdziwa (istnieje). **Użyjemy operatora logicznego `||`** podczas zadeklarowania zmiennej `tasks` w ten sposób:
 
 ```
-let inOffice = false;
-let inHomeOffice = true;
-let onVacation = false;
-
-console.log("Czy pracownik jest w biurze?", inOffice); // zwraca false
-console.log("Czy pracownik jest na pracy zdalnej?", inHomeOffice); // zwraca true
-console.log("Czy pracownik jest na urlopie?", onVacation); // zwraca false
-
-inOffice = true;
-console.log("Czy pracownik jest w biurze?", inOffice);
+let tasks = getTasksFromLocalStorage() || [];
 ```
 
-```
-let a = 10;
-let b = 5;
+Zauważ, że po wywołaniu funkcji, która zwraca albo tablicę z zadaniami, albo `null`, czyli nic, co zdecydowanie nie jest tablicą i później doprowadzi do błędu, wstawiliśmy mały fragment kodu: `|| []`.
 
-console.log("Czy a jest większe od b?", a > b);
-console.log("Czy a jest mniejsze od b?", a < b);
-console.log("Czy b jest większe od a?", b > a);
+Operator logiczny `||` (bardzo upraszczając) oznacza dosłownie `lub` (ang. `or`) i w tym przypadku działa w ten sposób: **jeśli `getTasksFromLocalStorage()` zwraca "nic", czyli innymi słowami, jeśli nie ma zwróconych zadań, to przypisz do zmiennej `tasks` pustą tablicę**.
 
-console.log(a + b > 10); // zwraca true, ponieważ 10 + 5 jest większe od 10
-console.log(a + b > 20); // zwraca false, ponieważ 10 + 5 nie jest większe od 20
-```
+Lub jeszcze inaczej: **przypisz do zmiennej `tasks` realną/ rzeczywistą wartość zwróconą przez `getTasksFromLocalStorage()` (czyli np. tablicę) LUB (`||`) przypisz pustą tablicę**. Zadania lub pusta tablica.
 
-Znaki `<` i `>` to niektóre z operatorów porównania, których na razie nie omawiamy, ponieważ nie są nam na razie potrzebne w naszej aplikacji - na pewno temat operatorów *(który jest jednym z podstawowych tematów w nauce programowania)* zostanie poruszony, jak tylko zajdzie taka potrzeba.
+Od razu powiem, że jest to ogromne uproszczenie i wręcz spłaszczenie tego, co się dzieje naprawdę, ale uznałem, że na razie wystarczy nam taki trick - te tematy poruszymy we właściwym czasie!
 
-Wartości logiczne `true` i `false` są fundamentalne w JavaScript i stanowią podstawę do podejmowania decyzji na podstawie warunków w programach, o czym się zaraz przekonamy.
+- zmodyfikuj zatem wcześniejszy kod, służący do deklaracji zmiennej `let tasks = getTasksFromLocalStorage();` i zamień go na `let tasks = getTasksFromLocalStorage() || [];`,
+- zapisz plik,
+- uruchom go
 
-## Konstrukcja warunkowa if-else - wybrane podstawy | Jeśli w localStorage nie ma zapisanych zadań, zwracamy pustą tablicę
+i zobaczysz, że w konsoli po odpaleniu programu znowu pojawił się komunikat o wartości `null` klucza `"tasks"`.
 
----
+Teraz wyświetl listę zadań (`showTasks()`), która powinna zwrócić pustą tablicę!
 
-W JavaScript, `if-else` to konstrukcja warunkowa używana do wykonywania różnych fragmentów kodu w zależności od warunku logicznego. Wygląda to mniej więcej tak:
+No i teraz możesz spróbować dodać jakieś zadanie: `addTask("zadanie testowe")`.
 
-```
-if (warunek) {
-  // kod bloku if do wykonania, jeśli warunek jest prawdziwy
-} else {
-  // kod bloku else do wykonania, jeśli warunek jest fałszywy
-}
-```
+Mało tego, że tym razem udało się w końcu dodać zadanie, to w dodatku zostało ono zapisane w `localStorage` (ponieważ `addTask()` zawiera teraz dodatkową funkcję updatejtującą `localStorage` po dodaniu zadania `updateTasksInLocalStorage()`)!
 
-Jeśli warunek wewnątrz `if` jest spełniony, czyli jest prawdziwy, co znaczy że zwraca wartość logiczą `true`, kod w jego bloku zostanie wykonany. W przeciwnym razie, jeśli warunek nie jest spełniony (zwraca `false`), wykonany zostanie kod w bloku `else`.
+Możesz to sprawdzić, uruchamiając kod jeszcze raz (kliknij ikonkę trójkąta lub `Ctrl+Enter` lub przeładowując stronę i uruchamiając plik). Tym razem nie zobaczysz żadnego komunikatu o wartości `null`. Spróbuj teraz wpisać `showTasks()` i powinieneś/aś zobaczyć to: `tasks: ['test']`. Udało się!
 
-Istnieje również możliwość zagnieżdżania wielu warunków z użyciem `else if`, co pozwala sprawdzać kolejne warunki, jeśli pierwszy warunek nie jest spełniony:
-
-```
-if (warunek1) {
-  // kod do wykonania, jeśli warunek1 jest prawdziwy
-} else if (warunek2) {
-  // kod do wykonania, jeśli warunek1 nie jest prawdziwy, natomiast warunek2 jest prawdziwy
-} else {
-  // kod do wykonania, jeśli żaden z warunków nie jest spełniony
-}
-```
-
-To pozwala na bardziej skomplikowane zachowania w zależności od różnych warunków w kodzie JavaScript.
-
-Wykorzystajmy przykłady z poprzedniej lekcji o `true` i `false` w konstrukcjach warunkowych.
-
-Wyobraź sobie, że mamy aplikację z bazą danych pracowników, w której odznacza się, czy pracownik pracuje dziś w biurze, jest na pracy zdalnej lub też na urlopie. Poniższy kod mógłby w pewien sposób odzwierciedlać logikę działania takiego wyszukiwania i wyświetlania komunikatów:
-
-```
-let inOffice = false;
-let inHomeOffice = true;
-let onVacation = false;
-
-if (inOffice) {
-  console.log("Pracownik jest dziś w pracy!");
-} else if (inHomeOffice) {
-  console.log("Pracownik udaje, że pracuje w domu.");
-} else if (onVacation) {
-  console.log("Pracownik dorabia na czarno podczas urlopu (dobrze, że nie dorabia w trakcie pracy zdalnej!)");
-} else {
-	console.log("Brak danych...");
-}
-```
-
-Wklej powyższy kod do konsoli, a potem kliknij Enter. Sprawdź, jaki jest komunikat. A potem wklej całość kodu znowu, ale zanim klikniesz Enter, zmień `true` na `false` i przypisz `true` do innej zmiennej. Kliknij Enter i sprawdź komunikat.
-
-A teraz... wklej cały ten kod jeszcze raz i zmień wszystkie wartości na `true`, zanim klikniesz Enter. Jak myślisz, co się stanie? Wyświetlą się wszystkie 3 komunikaty? Otóż nie, ponieważ konstrukcja `if-else` zwraca zawsze tylko pierwszy napotkany spełniony warunek (w naszym przypadku będzie to komunikat `console.log("Pracownik jest dziś w pracy!")`), a pozostałe ignoruje, dlatego trzeba uważać.
-
-Jeśli z kolei wszystkie warunki ustawimy na `false`, to wyświetli się komunikat z bloku `else`, który działa, jeśli żaden ze zdefiniowanych warunków nie został spełniony. W tym przypadku wyświetli się komunikat `Brak danych...`.
-
-Jest jeszcze jedna istotna kwestia, którą musimy przyswoić, by rozwiązać nasz problem z funkcją `getTasksFromLocalStorage()`:
-
-**W programowaniu niektóre wartości same z siebie są traktowane jako prawda (`true`) albo fałsz (`false`). Takie wartości odpowiednio określa się jako `truthy` i `falsy`.**
-
-Wartościami `falsy`, czyli tymi, które zwracają fałsz (`false`) w sensie logicznym (i odpowiednio w warunkach zawartych w konstrukcjach `if-else`), są m. in.:
-
-- wartość logiczna `false` (to chyba jest oczywiste), 
-- liczba 0 (ale liczby ujemne już nie - są `truthy`!),
-- pusty `string` (ciąg znaków), czyli `""` lub `''` (ale pusta tablica `[]` jest `truthy` - tak, JavaScript jest czasami dziwny...),
-- wartość `null`,
-- wartość `undefined` (taką wartość ma zmienna, która została zadeklarowana, ale nie została do niej przypisana żadna wartość, np. `let task;`)  
-
-Wszystkie pozostałe wartości są `truthy`, czyli zwracają `true` w warunkach.
-
-Wiem, że dużo tego jest i niektóre rzeczy może nie być tak łatwo sobie przyswoić, ale w końcu jesteśmy w 3. module 😜.
-
-Zobaczmy kilka przykładów i przetestujmy je w konsoli:
-
-```
-let name = ""; // name jest pustym ciągiem znaków
-
-if (name) {
-  // name jest truthy; innymi słowy, jeśli zawiera choćby jeden znak, to jest już czymś:
-  console.log("Imię:", name);
-} else {
-  // name jest falsy...
-  console.log("Nie masz imienia...", name);
-}
-
-let tasks = null;
-
-if (tasks) {
-  console.log("Zadania:", tasks);
-} else {
-  console.log("Nie ma zadań...");
-}
-
-let list = []; // list jest pustą tablicą, więc jest truthy, ale...
-
-if (list.length) {
-  console.log("Lista ma długość (zawiera co najmniej jeden element) - jest to jakaś liczba większa od zera, a dokładnie:", list.length);
-} else {
-  console.log("Długość tablicy wynosi 0, więc jest falsy", list.length);
-}
-```
-
-Powyższe przykłady zawsze wywołują kod z bloku `else`, ponieważ wszystkie warunki zwracają fałsz. Spróbuj je przetestować, a potem przypisać do zmiennych wartości truthy, np.: `name = "Freddie"; tasks = ["zrozumieć logikę JavaScript"]; list = [1, 2, 3];`.
-
-Uff... wróćmy więc teraz do funkcji `getTasksFromLocalStorage()` i dodajmy do niej sprawdzającą logikę, na którą tak czekamy:
-
-```
-function getTasksFromLocalStorage() {
-	// pobieramy tablicę zadań zapisaną w localStorage w postaci tekstowej:
-	let storedTasksStringified = localStorage.getItem("tasks");
-
-	// konwertujemy pobrane dane w JavaScriptową tablicę (lub null):
-	let storedTasks = JSON.parse(storedTasksStringified);
-
-	// sprawdzamy, czy storedTasks są truthy,
-	// czyli są pustą tablicą lub tablicą z elementami:
-	
-	if (storedTasks) {
-		return storedTasks; // zwracamy storedTasks
-	} else { // jeśli tasks są falsy, czyli w naszym przypadku null
-	  // dodajmy komunikat komunikat, żebyśmy byli pewni,
-		// że w localStorage nie było klucza tasks,
-		// więc zwracamy tablicę:
-		console.log("Klucz 'tasks' ma wartość", storedTasks, "więc zwracamy pustą tablicę, by móc do niej dodawać elementy za pomocą metodu push()");
-		return []; // zwracamy pustą tablicę
-	}
-}
-```
-
-Zaktualizuj funkcję `getTasksFromLocalStorage()`, zapisz plik, uruchom go i zobaczysz, że w konsoli pojawił się komunikat o wartości `null` klucza `"tasks"`. Teraz wyświetl listę zadań (`showTasks()`), która powinna zwrócić pustą tablicę. No i teraz możesz spróbować dodać jakieś zadanie: `addTask("zadanie testowe")`. Mało tego, że tym razem udało się w końcu dodać zadanie, to w dodatku zostało ono zapisane w `localStorage`! Możesz to sprawdzić, uruchamiając kod jeszcze raz (kliknij ikonkę trójkąta lub `Ctrl+Enter`). Tym razem nie zobaczysz żadnego komunikatu o wartości `null`. Spróbuj teraz wpisać `showTasks()` i powinieneś/aś zobaczyć to: `tasks: ['test']`. Udało się!
-
-W sumie, fajnie by było, gdyby plik po uruchomieniu od razu pokazał nam nasze zapisane zadania (lub ich brak). W tym celu musimy dokonać dwóch zmian:
-
-1. zmodyfikować funkcję `showTasks()`, dodając konstrukcję `if-else`, sprawdzającą, czy długość tablicy `tasks` jest truthy:
-
-```
-function showTasks() {
-	if (tasks.length) {
-		console.log("Twoje zapisane zadania:", tasks);
-	} else {
-		console.log("Na razie nie masz żadnych zapisanych zadań... Dodaj jakieś!");
-	}
-}
-```
-
-2. dodać wywołanie funkcji `showTasks()` na końcu pliku (pamiętaj, że JavaScript czyta i wywołuje kod od góry do dołu).
+Fajnie by było również, gdyby aplikacja po uruchomieniu od razu pokazała nam nasze zapisane zadania lub też ich brak. Dodaj więc wywołanie funkcji `showTasks()` na końcu pliku (pamiętaj, że JavaScript czyta i wywołuje kod od góry do dołu, dlatego zainicjuje wszystkie zmienne i funkcje, a potem wywoła `showTasks()`, która będzie już miała dostęp do pobranych (lub nie) zadań).
 
 ## Modyfikujemy pozostałe funkcje, aby aktualizowały localStorage
 
@@ -1405,11 +1163,62 @@ function deleteAllTasks() {
 showTasks();
 ```
 
+Jeszcze raz (na wszelki wypadek) wytłumaczę, dlaczego dodaliśmy funkcję `updateTasksInLocalStorage()` i dlaczego dodaliśmy ją w określonym miejscu w naszym kodzie.
+
+Wspomniana funkcja ma dostęp do globalnej zmiennej `tasks`. Zmienna ta nazywa się globalną, ponieważ została zadeklarowana poza żadną funkcją, w związku z czym nic nie ogranicza jej zasięgu - mamy do niej dostęp w dowolnej linijce kodu poniżej jej deklaracji. `updateTasksInLocalStorage()` nie robi nic innego, jak przypisuje do klucza `"tasks"`, znajdującego się w `localStorage`, aktualną wartość zmiennej `tasks`, czyli jej rzeczywistą wartość w chwili zapisu.
+
+Jeśli np. dodaliśmy coś do tablicy `tasks`, a potem wywołamy `updateTasksInLocalStorage()`, to będzie miała ona dostęp do zmienionej przed sekundą tablicy zadań. Dlatego tak ważne jest, by wywołać `updateTasksInLocalStorage()` dopiero po aktualizacji zadań, a nie np. przed, ponieważ w tym przypadku zapisalibyśmy wartość `tasks` przed zmianą jej wartości.
+
+Zobaczmy przykład ✅ poprawnej aktualizacji `localStorage`:
+
+```
+// przykładowa lista zadań:
+
+let tasks = ["a", "b", "c"];
+console.log(tasks); // => ["a", "b", "c"]
+
+// 1. najpierw dodajemy zadanie do zmiennej:
+tasks.push("d");
+console.log(tasks); // => ["a", "b", "c", "d"]
+
+// 2. dopiero teraz aktualizujemy localStorage,
+// czyli wrzucamy do niego taski z nowododanym "d":
+
+updateTasksInLocalStorage(); // zapisaliśmy ["a", "b", "c", "d"] do localStorage
+```
+
+W tym przykładzie zachowaliśmy spójny stan aplikacji: zmienna `task` jest "zsynchronizowana" z wartością `"tasks"` w `localStorage`.
+
+Poniżej z kolei jest przykład ❌ niepoprawnej aktualizacji `localStorage`:
+
+```
+// przykładowa lista zadań:
+
+let tasks = ["a", "b", "c"];
+console.log(tasks); // => ["a", "b", "c"]
+
+// 1. najpierw aktualizujemy localStorage:
+updateTasksInLocalStorage(); // w localStorage zapisujemy aktualną wartość tasków => ["a", "b", "c"]
+
+// 2. dodajemy zadanie do zmiennej:
+tasks.push("d");
+console.log(tasks); // => ["a", "b", "c", "d"]
+```
+
+Jak widzisz, "rozjechał" nam się stan aplikacji: `localStorage` przechowuje wartość `tasks` sprzed dodania nowego zadania do listy, w związku z czym `localStorage` i `tasks` nie są zsynchronizowane.
+
+Pamiętaj zatem, żeby pilnować:
+
+- kolejności poleceń w JavaScript - kod jest wykonywany od góry do dołu;
+- pilnuj stanu aplikacji, jeśli zmienne/ lokalizacje wymieniają się danymi.
+
 ## Podsumowanie Modułu 3. Kompletny kod aplikacji w wersji 2.0 zintegrowanej z localStorage
 
 ---
 
-Poniżej znajduje się cały kod aplikacji w wersji 2.0 zapisanej w pliku `todo-app-local-storage` w zakładce `snippets`, która przechowuje zadania w `localStorage`, dzięki czemu **Twoje zadania będą zapisane w pamięci przeglądarki tak długo, aż nie wyczyścisz `localStorage`**! Spróbuj odświeżyć stronę lub zamknąć przeglądarkę, a potem znowu uruchomić plik - zadania nadal są w pamięci przeglądarki!
+Poniżej znajduje się cały kod aplikacji w wersji 2.0 zapisanej w pliku `todo-app-local-storage` w zakładce `snippets`, która przechowuje zadania w `localStorage`, dzięki czemu **Twoje zadania będą zapisane w pamięci przeglądarki tak długo, aż nie wyczyścisz `localStorage`**!
+
+Spróbuj odświeżyć stronę lub zamknąć przeglądarkę, a potem znowu uruchomić plik - zadania nadal są w pamięci przeglądarki!
 
 Pozwoliłem sobie usunąć komentarze z poniższego kodu, ponieważ widziałeś/aś je już nie raz, a ponadto nasz kod jest wystarczająco czytelny, a funkcje mają właściwe i opisowe nazwy, więc wszystko powinno być jasne.
 
@@ -1423,29 +1232,13 @@ function getTasksFromLocalStorage() {
 
 	let storedTasks = JSON.parse(storedTasksStringified);
 
-	if (storedTasks) {
-		return storedTasks;
-	} else {
-		console.log("Klucz 'tasks' ma wartość", storedTasks, "więc zwracamy pustą tablicę, by móc do niej dodawać elementy za pomocą metodu push()");
-
-		return [];
-	}
+	return storedTasks;
 }
 
-let tasks = getTasksFromLocalStorage();
+let tasks = getTasksFromLocalStorage() || [];
 
 function showTasks() {
-	if (tasks.length) {
-		console.log("Twoje zapisane zadania:", tasks);
-	} else {
-		console.log("Na razie nie masz żadnych zapisanych zadań... Dodaj jakieś!");
-	}
-}
-
-function loopTasks() {
-	for (let i = 0; i < tasks.length; i++) {
-		console.log(i, tasks[i]);
-	}
+	console.log("Twoje zapisane zadania:", tasks);
 }
 
 function updateTasksInLocalStorage() {
@@ -1494,7 +1287,7 @@ function deleteAllTasks() {
 showTasks();
 ```
 
-## Zakończenie oraz darmowe źródła do samodzielnej nauki (po angielsku)
+## Zakończenie (na razie) oraz darmowe źródła do samodzielnej nauki (po angielsku)
 
 ---
 
