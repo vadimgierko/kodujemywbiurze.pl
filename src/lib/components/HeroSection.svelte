@@ -1,5 +1,7 @@
 <script lang="ts">
+	import { isIndexPage } from '$lib/stores';
 	import { onMount } from 'svelte';
+	import Warning from './Warning.svelte';
 
 	// we need to pass this to the component:
 	export let imgSrc: string;
@@ -43,6 +45,9 @@
 			</div>
 		</div>
 	</div>
+	{#if $isIndexPage}
+		<Warning />
+	{/if}
 </div>
 
 <style scoped>
