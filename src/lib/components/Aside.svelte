@@ -1,9 +1,9 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	import type { Article } from '$lib/types';
+	import type { Section } from '$lib/types';
 	import { isScreenLessThan992, showOffset } from '$lib//stores';
 
-	export let articles: Article[];
+	export let sections: Section[];
 
 	let titleType: 'fullTitle' | 'docTitle' | 'tutorialTitle' = 'fullTitle';
 </script>
@@ -18,18 +18,23 @@
 	</select>
 
 	<nav on:click={() => ($isScreenLessThan992 && $showOffset ? showOffset.set(false) : null)}>
-		<ul>
-			{#each articles as article}
-				<li>
-					<a
-						href={`/kursy/javascript/${article.slug}`}
-						class={$page.url.pathname.includes(article.slug) ? 'active-link' : ''}
-						>{article[titleType]}</a
-					>
-				</li>
-				<hr />
-			{/each}
-		</ul>
+		{#each sections as { title, articles, fileName }}
+			{#if fileName !== 'wprowadzenie' && fileName !== 'koniec'}
+				<h3>{title}</h3>
+			{/if}
+			<ul>
+				{#each articles as article}
+					<li>
+						<a
+							href={`/kursy/javascript/${article.slug}`}
+							class={$page.url.pathname.includes(article.slug) ? 'active-link' : ''}
+							>{article[titleType]}</a
+						>
+					</li>
+					<hr />
+				{/each}
+			</ul>
+		{/each}
 	</nav>
 </aside>
 

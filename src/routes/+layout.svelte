@@ -3,8 +3,9 @@
 	import '../app.css';
 	import Footer from '$lib/layout/Footer.svelte';
 	import Navbar from '$lib/layout/Navbar.svelte';
-	import { isScreenLessThan992 } from '$lib/stores';
+	import { isScreenLessThan992, isIndexPage } from '$lib/stores';
 	import { onMount } from 'svelte';
+	import Warning from '$lib/components/Warning.svelte';
 
 	onMount(() => {
 		// set isScreenLessThan992 & update on resize:
@@ -28,6 +29,9 @@
 <Navbar />
 
 <div>
+	{#if $isIndexPage}
+		<Warning />
+	{/if}
 	<slot />
 </div>
 
