@@ -1,18 +1,20 @@
 <script lang="ts">
 	import Aside from '$lib/components/Aside.svelte';
+	import Warning from '$lib/components/Warning.svelte';
 	import { showOffset, isScreenLessThan992 } from '$lib/stores';
 
 	export let data;
 
-	const { articles } = data;
+	const { sections } = data;
 </script>
 
-<Aside {articles} />
+<Aside {sections} />
 
 <main
 	class="container"
 	on:click={() => ($isScreenLessThan992 && $showOffset ? showOffset.set(false) : null)}
 >
+	<Warning />
 	<slot />
 </main>
 

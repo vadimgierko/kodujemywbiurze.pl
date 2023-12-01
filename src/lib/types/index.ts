@@ -6,3 +6,10 @@ export interface Article {
 	slug: string;
 	content: string;
 }
+
+export interface Section {
+	title: string;
+	fileName: string;
+	mdContent: string;
+	articles: Article[];
+}
