@@ -9,7 +9,7 @@
 	<meta
 		name="description"
 		content="Eksperymentalna darmowa interaktywna strona edukacyjna do zachęcenia do nauki programowania webowego dla
-  pracowników biurowych. Poznaj podstawy języka JavaScript, takie jak zmienne, wartości, tablice, funkcje poprzez stworzenie prostej aplikacji do zarządzania zadaniami, która działa w konsoli przeglądarki"
+  pracowników biurowych. Poznaj podstawy języka JavaScript, HTML i CSS budując aplikacje od pierwszej lekcji!"
 	/>
 </svelte:head>
 
@@ -18,11 +18,11 @@
 		h1FirstSmallText="Witaj na stronie"
 		h1LargeText="Kodujemy w biurze!"
 		descriptionParagraphs={[
-			'Naucz się programowania webowego w przerwach między zadaniami w biurze!',
-			'Zacznij pisać kod pierwszej aplikacji bezpośrednio w swojej przeglądarce!'
+			'Naucz się tworzyć aplikacje webowe i strony www... w przerwach między zadaniami w biurze 😏',
+			'Zacznij pisać kod swojej aplikacji bezpośrednio w przeglądarce już od pierwszej lekcji!'
 		]}
 		btnHref="/kursy/javascript"
-		btnCTA="Zacznij kodować w biurze!"
+		btnCTA="Zacznij kurs!"
 		imgSrc={heroImg}
 		handleMount={() => isIndexPage.set(true)}
 	/>
