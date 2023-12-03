@@ -10,6 +10,7 @@
     --black-50: hsl(192, 0%, 50%);
     --black-25: hsl(192, 0%, 75%);
     --black-10: hsl(192, 0%, 90%);
+    --black-5: hsl(192, 0%, 95%);
 }
 
 :root,
@@ -19,7 +20,7 @@ html[data-theme='light'] {
     --link-color: var(--black-80);
     --link-color-on-hover: var(--black-50);
     --header-background-color: var(--black-90);
-    --code-background-color: var(--black-10);
+    --code-background-color: var(--black-5);
     --code-color: var(--black-100);
     --aside-background-color: var(--black-10);
 }
@@ -30,7 +31,7 @@ html[data-theme='dark'] {
     --link-color: white;
     --link-color-on-hover: var(--primary-hover);
     --header-background-color: var(--black-100);
-    --code-background-color: var(--black-80);
+    --code-background-color: #2a2a2a;
     --code-color: white;
     --aside-background-color: var(--black-80);
 }
@@ -80,20 +81,23 @@ article {
 }
 
 code {
-    background-color: var(--code-background-color);
-    color: var(--code-color);
+    background-color: var(--code-background-color) !important;
+    /* color: var(--code-color); */
     font-size: 15px;
     border-radius: 5px;
     
+    & .hljs-comment {
+        font-style: normal !important; /* overwrite italic for dark mode */
+    }
 }
 
-pre {
+/* pre {
     background-color: var(--code-background-color);
     color: var(--code-color);
     padding: 1em 1em;
     overflow: auto;
     border-radius: 5px;
-}
+} */
 
 aside {
     background-color: var(--aside-background-color);

@@ -3,8 +3,36 @@
 	import PrevNextArticle from '$lib/components/PrevNextArticle.svelte';
 	import { marked } from 'marked';
 	import { isIndexPage } from '$lib/stores';
-	import { onMount } from 'svelte';
+	import { onMount, afterUpdate } from 'svelte';
 	import type { Article } from '$lib/types/index.js';
+
+	//========================== CODE HIGHLIGHTING =======================//
+	import hljs from 'highlight.js/lib/core';
+	import javascript from 'highlight.js/lib/languages/javascript';
+
+	hljs.registerLanguage('javascript', javascript);
+
+	// Function to dynamically load dark/light CSS based on the theme
+	function loadHighlightTheme() {
+		const theme = document.documentElement.getAttribute('data-theme');
+		const link = document.createElement('link');
+		link.rel = 'stylesheet';
+
+		if (theme === 'dark') {
+			link.href = 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/vs2015.css';
+		} else {
+			link.href = 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/vs.css';
+		}
+
+		// Remove any existing highlight.js styles
+		const existingStyles = document.querySelectorAll(
+			'link[href*="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/"]'
+		);
+		existingStyles.forEach((style) => style.remove());
+
+		document.head.appendChild(link);
+	}
+	//========================== CODE HIGHLIGHTING: END =======================//
 
 	export let data;
 
@@ -20,6 +48,30 @@
 
 	onMount(() => {
 		isIndexPage.set(false);
+
+		//========================== CODE HIGHLIGHTING =======================//
+		loadHighlightTheme();
+
+		// Observer to watch for changes in data-theme attribute
+		const observer = new MutationObserver((mutationsList) => {
+			for (let mutation of mutationsList) {
+				if (mutation.type === 'attributes' && mutation.attributeName === 'data-theme') {
+					loadHighlightTheme();
+				}
+			}
+		});
+
+		// Start observing changes in the data-theme attribute
+		observer.observe(document.documentElement, { attributes: true });
+
+		//========================== CODE HIGHLIGHTING: END =======================//
+	});
+
+	// Initialize highlighting:
+	afterUpdate(() => {
+		document.querySelectorAll('code').forEach((block) => {
+			hljs.highlightElement(block);
+		});
 	});
 </script>
 
