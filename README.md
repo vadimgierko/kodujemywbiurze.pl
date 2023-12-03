@@ -1,6 +1,7 @@
 # Kodujemy w biurze
-  Eksperymentalna darmowa interaktywna strona edukacyjna do nauki podstaw programowania webowego dla
-  pracowników biurowych
+  Naucz się podstaw programowania webowego (HTML, CSS, JavaScript)... w przerwach między zadaniami w biurze!
+
+<img src="https://www.kodujemywbiurze.pl/content/kursy/javascript/kodujemy-w-biurze-pl-strona-internetowa-screenshot.jpg" width="100%" alt="screenshot głównej strony kodujemywbiurze.pl" />
 
 - **Pracujesz w biurze?**
 - **Masz do dyspozycji komputer/ laptop, Internet i kubek kawy/ herbaty?**

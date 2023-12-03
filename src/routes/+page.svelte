@@ -6,11 +6,24 @@
 
 <svelte:head>
 	<title>Kodujemy w biurze</title>
+	<meta property="og:title" content="Kodujemy w biurze" />
+
 	<meta
 		name="description"
-		content="Eksperymentalna darmowa interaktywna strona edukacyjna do zachęcenia do nauki programowania webowego dla
-  pracowników biurowych. Poznaj podstawy języka JavaScript, HTML i CSS budując aplikacje od pierwszej lekcji!"
+		content="Naucz się tworzyć aplikacje webowe i strony www za pomocą JavaScript, HTML i CSS... w przerwach między zadaniami w biurze!"
 	/>
+	<meta
+		property="og:description"
+		content="Naucz się tworzyć aplikacje webowe i strony www za pomocą JavaScript, HTML i CSS... w przerwach między zadaniami w biurze!"
+	/>
+
+	<meta
+		property="og:image"
+		content="/content/kursy/javascript/kodujemy-w-biurze-pl-strona-internetowa-screenshot.jpg"
+	/>
+
+	<meta property="og:url" content="https://www.kodujemywbiurze.pl" />
+	<meta property="og:type" content="website" />
 </svelte:head>
 
 <main class="container">

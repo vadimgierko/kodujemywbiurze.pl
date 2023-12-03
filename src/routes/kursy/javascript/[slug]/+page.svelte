@@ -77,7 +77,21 @@
 
 <svelte:head>
 	<title>Kodujemy w biurze | {article?.title}</title>
-	<meta name="description" content="" />
+	<meta property="og:title" content={`Kodujemy w biurze | ${article?.title}`} />
+
+	<meta name="description" content={`${article?.title}`} />
+	<meta property="og:description" content={`${article?.title}`} />
+
+	<meta
+		property="og:image"
+		content="/content/kursy/javascript/kurs-podstawy-javascript-pierwsza-aplikacja-w-konsoli-screenshot.jpg"
+	/>
+
+	<meta
+		property="og:url"
+		content={`https://www.kodujemywbiurze.pl/kursy/javascript/${$page.params.slug}`}
+	/>
+	<meta property="og:type" content="article" />
 </svelte:head>
 
 {#if article}
