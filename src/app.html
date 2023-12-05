@@ -1,6 +1,18 @@
 <!DOCTYPE html>
 <html lang="pl" data-theme="light">
 	<head>
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-BPTQXJEJKT"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag('js', new Date());
+
+			gtag('config', 'G-BPTQXJEJKT');
+		</script>
+
 		<meta charset="utf-8" />
 		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -14,7 +26,7 @@
 			//====================== DARK THEME INIT SETTINGS ======================//
 
 			// check, if theme is stored in local storage first:
-			const theme = localStorage.getItem("theme");
+			const theme = localStorage.getItem('theme');
 
 			if (!theme) {
 				// if no theme stored in local storage, check user theme preferences:
@@ -28,7 +40,7 @@
 					localStorage.setItem('theme', 'light');
 				}
 			} else {
-				if (theme === "dark") {
+				if (theme === 'dark') {
 					document.documentElement.setAttribute('data-theme', 'dark');
 				}
 			}
@@ -36,7 +48,7 @@
 			//======================= FOR SCROLLING =========================//
 
 			// Smooth scroll to anchor links
-			document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+			document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 				anchor.addEventListener('click', function (e) {
 					e.preventDefault();
 
@@ -46,7 +58,7 @@
 					if (targetElement) {
 						window.scrollTo({
 							behavior: 'smooth',
-							top: targetElement.offsetTop,
+							top: targetElement.offsetTop
 						});
 					}
 				});
@@ -60,7 +72,7 @@
 					if (targetElement) {
 						window.scrollTo({
 							behavior: 'smooth',
-							top: targetElement.offsetTop,
+							top: targetElement.offsetTop
 						});
 					}
 				}
@@ -74,12 +86,11 @@
 					if (targetElement) {
 						window.scrollTo({
 							behavior: 'smooth',
-							top: targetElement.offsetTop,
+							top: targetElement.offsetTop
 						});
 					}
 				}
 			});
-
 		</script>
 	</body>
 </html>
