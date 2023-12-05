@@ -36,7 +36,7 @@
 			'Naucz się podstaw Javascript - najbardziej popularnego języka programowania!',
 			'W trakcie kursu stworzysz działającą aplikację do zarządzania Twoimi zadaniami bezpośrednio w konsoli Twojej przeglądarki!'
 		]}
-		btnHref="/kursy/javascript/wprowadzenie"
+		btnHref="/kursy/javascript/wprowadzenie-czym-jest-javascript-i-dlaczego-warto-sie-go-uczyc"
 		btnCTA="Zacznij kurs!"
 		imgSrc={heroImg}
 		handleMount={() => {}}
