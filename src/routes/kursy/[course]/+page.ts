@@ -51,30 +51,32 @@ const courses: Course[] = [
 			imgSrc: '',
 			handleMount: () => {}
 		}
+	},
+	{
+		slug: 'html-javascript-dom',
+		headData: {
+			title:
+				'Kodujemy w biurze | Podstawy DOM. Integrujemy HTML i JavaScript. Pierwsza interaktywna aplikacja webowa',
+			ogTitle:
+				'Kodujemy w biurze | Podstawy DOM. Integrujemy HTML i JavaScript. Pierwsza interaktywna aplikacja webowa',
+			description:
+				'Stwórz pierwszą interaktywną aplikację webową do zarządzania Twoimi zadaniami łącząc HTML i JavaScript!',
+			ogDescription:
+				'Stwórz pierwszą interaktywną aplikację webową do zarządzania Twoimi zadaniami łącząc HTML i JavaScript!',
+			ogImage: '',
+			ogUrl: 'https://www.kodujemywbiurze.pl/kursy/html-javascript-dom'
+		},
+		heroSectionData: {
+			h1FirstSmallText: 'Darmowy kurs',
+			h1LargeText:
+				'Podstawy DOM. Integrujemy HTML i JavaScript. Pierwsza interaktywna aplikacja webowa',
+			descriptionParagraphs: [],
+			btnHref: '/kursy/html-javascript-dom/wprowadzenie',
+			btnCTA: 'Zacznij kurs!',
+			imgSrc: '',
+			handleMount: () => {}
+		}
 	}
-	// {
-	// 	slug: 'javascript-dom',
-	// 	headData: {
-	// 		title: 'Kodujemy w biurze | Podstawy JavaScript DOM. Pierwsza interaktywna aplikacja webowa',
-	// 		ogTitle:
-	// 			'Kodujemy w biurze | Podstawy JavaScript DOM. Pierwsza interaktywna aplikacja webowa',
-	// 		description:
-	// 			'Naucz się podstaw JavaScript DOM i stwórz pierwszą interaktywną aplikację webową do zarządzania Twoimi zadaniami!',
-	// 		ogDescription:
-	// 			'Naucz się podstaw JavaScript DOM i stwórz pierwszą interaktywną aplikację webową do zarządzania Twoimi zadaniami!',
-	// 		ogImage: '',
-	// 		ogUrl: 'https://www.kodujemywbiurze.pl/kursy/javascript-dom'
-	// 	},
-	// 	heroSectionData: {
-	// 		h1FirstSmallText: 'Darmowy kurs',
-	// 		h1LargeText: 'Podstawy JavaScript DOM. Pierwsza interaktywna aplikacja webowa',
-	// 		descriptionParagraphs: [],
-	// 		btnHref: '/kursy/javascript-dom/wprowadzenie',
-	// 		btnCTA: 'Zacznij kurs!',
-	// 		imgSrc: '',
-	// 		handleMount: () => {}
-	// 	}
-	// }
 ];
 
 export async function load() {

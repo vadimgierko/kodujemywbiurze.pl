@@ -13,12 +13,15 @@
 	import javascript from 'highlight.js/lib/languages/javascript';
 	import xml from 'highlight.js/lib/languages/xml';
 
-	if (data.sections) {
-		// if there are sections, it's js:
-		hljs.registerLanguage('javascript', javascript);
-	} else {
-		hljs.registerLanguage('xml', xml);
-	}
+	hljs.registerLanguage('xml', xml);
+	hljs.registerLanguage('javascript', javascript);
+
+	// if (data.sections) {
+	// 	// if there are sections, it's js:
+	// 	hljs.registerLanguage('javascript', javascript);
+	// } else {
+	// 	hljs.registerLanguage('xml', xml);
+	// }
 
 	// Function to dynamically load dark/light CSS based on the theme
 	function loadHighlightTheme() {

@@ -50,6 +50,11 @@ export async function load({ fetch, params }) {
 		const mdContent = await res.text();
 
 		articles = convertMarkdownIntoArticlesArray(mdContent);
+	} else {
+		const res = await fetch(`/content/kursy/html-javascript-dom/index.md`);
+		const mdContent = await res.text();
+
+		articles = convertMarkdownIntoArticlesArray(mdContent);
 	}
 
 	return {
