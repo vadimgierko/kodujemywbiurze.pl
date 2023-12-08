@@ -2,6 +2,9 @@
 	import { isIndexPage } from '$lib/stores';
 	import { onMount } from 'svelte';
 	import Warning from './Warning.svelte';
+	import JavaScriptLogo from '$lib/logos/JavaScriptLogo.svelte';
+	import HtmlLogo from '$lib/logos/HtmlLogo.svelte';
+	import { page } from '$app/stores';
 
 	// we need to pass this to the component:
 	export let imgSrc: string;
@@ -41,7 +44,11 @@
 			</div>
 
 			<div class="right">
-				<img src={imgSrc} width="100%" />
+				<!-- <img src={imgSrc} width="100%" /> -->
+				{#if $page.params.course === 'javascript'}
+					<JavaScriptLogo />
+				{:else}<HtmlLogo />
+				{/if}
 			</div>
 		</div>
 	</div>
