@@ -47,7 +47,10 @@
 				<!-- <img src={imgSrc} width="100%" /> -->
 				{#if $page.params.course === 'javascript'}
 					<JavaScriptLogo />
-				{:else}<HtmlLogo />
+				{:else if $page.params.course === 'html' || $page.params.course === 'html-javascript-dom'}<HtmlLogo
+					/>
+				{:else}
+					<img src={imgSrc} width="100%" alt="" />
 				{/if}
 			</div>
 		</div>

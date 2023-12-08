@@ -56,9 +56,9 @@ const courses: Course[] = [
 		slug: 'html-javascript-dom',
 		headData: {
 			title:
-				'Kodujemy w biurze | Podstawy DOM. Integrujemy HTML i JavaScript. Pierwsza interaktywna aplikacja webowa',
+				'Kodujemy w biurze | Integrujemy HTML i JavaScript. Podstawy DOM. Pierwsza interaktywna aplikacja webowa',
 			ogTitle:
-				'Kodujemy w biurze | Podstawy DOM. Integrujemy HTML i JavaScript. Pierwsza interaktywna aplikacja webowa',
+				'Kodujemy w biurze | Integrujemy HTML i JavaScript. Podstawy DOM. Pierwsza interaktywna aplikacja webowa',
 			description:
 				'Stwórz pierwszą interaktywną aplikację webową do zarządzania Twoimi zadaniami łącząc HTML i JavaScript!',
 			ogDescription:
@@ -69,8 +69,10 @@ const courses: Course[] = [
 		heroSectionData: {
 			h1FirstSmallText: 'Darmowy kurs',
 			h1LargeText:
-				'Podstawy DOM. Integrujemy HTML i JavaScript. Pierwsza interaktywna aplikacja webowa',
-			descriptionParagraphs: [],
+				'Integrujemy HTML i JavaScript. Podstawy DOM. Pierwsza interaktywna aplikacja webowa',
+			descriptionParagraphs: [
+				'Połącz swoją wiedzę z zakresu JavaScript i HTML, dzięki czemu przeniesiesz swoją aplikację do zarzadzania zadaniami z konsoli do przeglądarki!'
+			],
 			btnHref: '/kursy/html-javascript-dom/wprowadzenie',
 			btnCTA: 'Zacznij kurs!',
 			imgSrc: '',
