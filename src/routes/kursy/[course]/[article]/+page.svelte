@@ -6,11 +6,19 @@
 	import { onMount, afterUpdate } from 'svelte';
 	import type { Article } from '$lib/types/index.js';
 
+	export let data;
+
 	//========================== CODE HIGHLIGHTING =======================//
 	import hljs from 'highlight.js/lib/core';
 	import javascript from 'highlight.js/lib/languages/javascript';
+	import xml from 'highlight.js/lib/languages/xml';
 
-	hljs.registerLanguage('javascript', javascript);
+	if (data.sections) {
+		// if there are sections, it's js:
+		hljs.registerLanguage('javascript', javascript);
+	} else {
+		hljs.registerLanguage('xml', xml);
+	}
 
 	// Function to dynamically load dark/light CSS based on the theme
 	function loadHighlightTheme() {
@@ -34,17 +42,22 @@
 	}
 	//========================== CODE HIGHLIGHTING: END =======================//
 
-	export let data;
+	// export let data;
 
-	const { sections } = data;
+	//const { sections, articles } = data;
 
-	const articles = sections.reduce((all, s) => [...all, ...s.articles], [] as Article[]);
+	const articles = data.sections
+		? data.sections.reduce((all, s) => [...all, ...s.articles], [] as Article[])
+		: data.articles;
 
-	$: article = articles.find((a) => a.slug === $page.params.slug);
-	$: articleIndex = articles.findIndex((a) => a.slug === $page.params.slug);
-	$: prevArticleSlug = articleIndex > 0 ? articles[articleIndex - 1].slug : null;
+	$: article = articles?.find((a) => a.slug === $page.params.article);
+	$: articleIndex = articles?.findIndex((a) => a.slug === $page.params.article);
+	$: prevArticleSlug =
+		articles && articleIndex && articleIndex > 0 ? articles[articleIndex - 1].slug : null;
 	$: nextArticleSlug =
-		articleIndex !== articles.length - 1 ? articles[articleIndex + 1].slug : null;
+		articles && articleIndex !== undefined && articleIndex !== articles.length - 1
+			? articles[articleIndex + 1].slug
+			: null;
 
 	onMount(() => {
 		isIndexPage.set(false);
@@ -89,22 +102,22 @@
 
 	<meta
 		property="og:url"
-		content={`https://www.kodujemywbiurze.pl/kursy/javascript/${$page.params.slug}`}
+		content={`https://www.kodujemywbiurze.pl/kursy/${$page.params.course}/${$page.params.article}`}
 	/>
 	<meta property="og:type" content="article" />
 </svelte:head>
 
 {#if article}
 	<PrevNextArticle
-		prevSlug={prevArticleSlug ? `kursy/javascript/${prevArticleSlug}` : null}
-		nextSlug={nextArticleSlug ? `kursy/javascript/${nextArticleSlug}` : null}
+		prevSlug={prevArticleSlug ? `kursy/${$page.params.course}/${prevArticleSlug}` : null}
+		nextSlug={nextArticleSlug ? `kursy/${$page.params.course}/${nextArticleSlug}` : null}
 	/>
 	<article>
 		{@html marked(article.content)}
 	</article>
 	<PrevNextArticle
-		prevSlug={prevArticleSlug ? `kursy/javascript/${prevArticleSlug}` : null}
-		nextSlug={nextArticleSlug ? `kursy/javascript/${nextArticleSlug}` : null}
+		prevSlug={prevArticleSlug ? `kursy/${$page.params.course}/${prevArticleSlug}` : null}
+		nextSlug={nextArticleSlug ? `kursy/${$page.params.course}/${nextArticleSlug}` : null}
 	/>
 {:else}
 	<p style="text-align: center; color: red">Niestety nie ma takiego artykułu...</p>

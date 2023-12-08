@@ -5,10 +5,10 @@
 
 	export let data;
 
-	const { sections } = data;
+	const { sections, articles } = data;
 </script>
 
-<Aside articles={null} {sections} />
+<Aside {articles} {sections} />
 
 <main
 	class="container"
