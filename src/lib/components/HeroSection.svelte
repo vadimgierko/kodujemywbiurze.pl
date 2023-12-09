@@ -22,7 +22,7 @@
 	onMount(() => handleMount());
 </script>
 
-<div class="hero-section">
+<section class="hero-section">
 	<div class="hero-wrapper">
 		<h1>
 			{#if h1FirstSmallText.length}
@@ -58,7 +58,7 @@
 	{#if $isIndexPage}
 		<Warning />
 	{/if}
-</div>
+</section>
 
 <style scoped>
 	/* STYLES NOT DEPENDENT ON SCREEN SIZE */

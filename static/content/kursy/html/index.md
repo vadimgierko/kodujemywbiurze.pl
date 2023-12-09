@@ -2,33 +2,24 @@
 
 ---
 
-**Witaj w darmowym kursie *Podstawy HTML. Pierwsza aplikacja w przeglądarce***!
+**Witaj w darmowym kursie *Podstawy HTML. Pierwsza statyczna strona internetowa***!
 
-Jeśli dotarłeś/aś do końca 3-go modułu kursu JavaScript na tej stronie, to znasz już podstawy JavaScript i masz ukończoną aplikację do zarządzania zadaniami, która działa w konsoli przeglądarki i przechowuje zadania w pamięci przeglądarki `localStorage`.
+Najprawdopodobniej trafiłeś/aś tutaj, ponieważ ukończyłeś 3 moduły pierwszego kursu na tej stronie nt. <a href="/kursy/javascript" target="_blank">JavaScript</a>, gdzie poznaliśmy podstawy tego języka i mamy już ukończoną aplikację do zarządzania zadaniami, która działa w konsoli przeglądarki i przechowuje zadania w pamięci przeglądarki `localStorage`.
 
-Dzięki wiedzy, którą zdobędziesz za chwilę w niniejszym krótkim kursie, tak naprawdę nieznacznie rozbudujemy naszą aplikację dodając trochę kodu HTML i JavaScript, by wyświetlać i zarządzać naszymi zadaniami bezpośrednio w oknie przeglądarki, jak w pradziwej aplikacji!
+Jeśli z kolei zajrzałeś/aś tutaj z czystej ciekawości, to polecam zacząć od <a href="/kursy/javascript" target="_blank">kursu JavaScript</a>, ponieważ tutaj **poznamy niezbędne podstawy języka HTML, by stworzyć prawdziwy interface dla JavaScriptowej aplikacji, którą już zbudowaliśmy w konsoli**.
 
-W niniejszym kursie poznamy wyłącznie niezbędne podstawy HTML wystarczające do **przeniesienia naszej aplikacji do zarządzania zadaniami z konsoli bezpośrednio do przeglądarki, dzięki czemu będzie funkcjonowała jak aplikacja z prawdziwego zdarzenia**, z którymi miałeś/aś do czynienia mnóstwo razy.
+Niemniej jednak, możesz zacząć poznawać programowanie webowe od tego kursu i HTML (tak, jak radzi większość), jednakże stworzymy tutaj wyłącznie minimalistyczną statyczną stronę dla aplikacji. Potem będziesz musiał/a i tak powrócić do JavaScript, by ją ożywić, więc w pewnym momencie powstanie małoprzyjemna "dziura", w trakcie której będziesz opanowywał/a podstawy JSa...
 
-Rozbudowana w tym kursie aplikacja umożliwi nam (oprócz dotychczasowych funkcjonalności) wyświetlanie listy zadań i manipulację nimi (dodawanie, usuwanie) bezpośrednio w oknie przeglądarki. W związku z czym przejdziemy przez kilka etapów:
+### Co zrobimy w niniejszym kursie i co dalej?
 
-1. Na początku po prostu dodamy (osadzimy) nasz istniejący kod JavaScript w pliku HTML, dzięki czemu będziemy mogli go odpalić w przeglądarce i wyświetli się pusty ekran, ale w konsoli będziemy mogli nadal korzystać z wcześniejszych funkcjonalności naszej aplikacji.
-2. Potem
-  - dodamy podstawowy niezbędny kod HTML:
-    - nagłówek `<h1>`,
-    - linia rozdzielająca `<hr>`,
-    - lista `<ul>` + `<li>`) i wykorzystamy go do wyświetlania naszych zadań bezpośrednio w przeglądarce, a nie w konsoli, jak dotychczas, przy czym nadal będziemy korzystać z poleceń w konsoli, ale same zadania będą wyświetlać się w przeglądarce
-  - wykorzystamy wybrane metody **DOM**, tj.:
-    - `document.getElementById()`,
-    - `document.createElement()`,
-    - `appendChild()`
-  - oraz właściwości `textContent` i `innerHTML`,
-  - ponadto wykorzystamy także JavaScriptowe pętle `for` i `forEach`.
-3. Później przeniesiemy zarządzanie zadaniami całkowicie do przeglądarki poprzez:
-  - dodanie przycisków (`<button>`) *dodaj* i *usuń* oraz nasłuchiwania tych zdarzeń za pomocą metody DOM `addEventListener` lub HTML-owego `onclick`, a także
-  - wykorzystanie wbudowanych okien dialogowych przeglądarki `alert`, `confirm` i `prompt` do wygodnego wprowadzania naszych zadań (podobnie do formularzy).
+W niniejszym kursie dowiemy się, czym są oraz dodamy takie elementy UI, jak:
 
-Mam nadzieję, że kiedy dobrniesz do końca opublikowanych modułów, będziesz chciał/a więcej! Jeśli tak będzie, to daj mi znać, że jesteś zainteresowany/a dalszymi lekcjami w tym samym stylu!
+- nagłówek `<h1>` - tytuł naszej aplikacji,
+- linia rozdzielająca `<hr>`,
+- lista `<ul>` + `<li>` wyświetlającą zadania,
+- przyciski usunięcia oraz dodania zadania.
+
+Kiedy dobrniesz do końca tego kursu, przejdziemy do <a href="/kursy/html-javascript-dom" target="_blank">kolejnego kursu łączącego HTML i JavaScript za pomocą DOM</a>, dzięki czemu powstanie prawdziwa interaktywna i działająca aplikacja z prawdziwego zdarzenia!
 
 *Happy Coding!*
 
@@ -138,9 +129,9 @@ Kod nieuporządkowanej listy wygląda tak:
 
 ```html
 <ul>
-  <li>Zrobić kawę</li>
-  <li>Zrobić kawę</li>
-  <li>Zrobić kawę</li>
+  <li>zrobić kawę</li>
+  <li>wypić jogurt</li>
+  <li>sprawdzić maila</li>
 </ul>
 ```
 
@@ -148,15 +139,37 @@ Natomiast uporządkowana lista wygląda tak:
 
 ```html
 <ol>
-  <li>Zrobić kawę</li>
-  <li>Zrobić kawę</li>
-  <li>Zrobić kawę</li>
+  <li>zrobić kawę</li>
+  <li>wypić jogurt</li>
+  <li>sprawdzić maila</li>
 </ol>
 ```
 
 Doklej powyższy kod do naszego pliku, by zobaczyć, jak będzie wyglądał w przeglądarce (nie zapomnij najpierw zapisać plik, a potem odświeżyć przeglądarkę).
 
-Fajnie, co nie?
+## Przyciski button | Dodajemy przyciski do dodawania i usuwania zadań
+
+---
+
+W aplikacji konsolowej dodawaliśmy i usuwaliśmy zadania za pomocą poleceń JavaScript opakowanych w stworzone przez nas funkcje, które ręcznie wywoływaliśmy w konsoli. W realnym świecie i aplikacjach nikt oczywiście tak nie robi. Potrzebujemy przycisków, w które będziemy klikać, kiedy będziemy chcieli dodać lub usunąć zadanie, ale także wyczyścić listę.
+
+W HTMLu przyciski tworzymy za pomocą tagu `<button>`. Zróbmy więc to za pomocą poniższego kodu:
+
+```html
+<h1>Twoje zadania</h1>
+
+<hr>
+
+<button>dodaj zadanie</button>
+
+<ul>
+  <li>zrobić kawę <button>usuń</button></li>
+  <li>wypić jogurt <button>usuń</button></li>
+  <li>sprawdzić maila <button>usuń</button></li>
+</ul>
+
+<button>wyczyść listę</button>
+```
 
 ## Kod HTML aplikacji
 
@@ -171,11 +184,15 @@ Ostateczny dotychczasowy kod HTML naszej aplikacji wygląda w ten sposób:
 
 <hr>
 
+<button>dodaj zadanie</button>
+
 <ul>
-  <li>Zrobić kawę</li>
-  <li>Zrobić kawę</li>
-  <li>Zrobić kawę</li>
+  <li>zrobić kawę <button>usuń</button></li>
+  <li>wypić jogurt <button>usuń</button></li>
+  <li>sprawdzić maila <button>usuń</button></li>
 </ul>
+
+<button>wyczyść listę</button>
 ```
 
 ## Szablon pliku HTML
@@ -196,11 +213,15 @@ Kod naszej dotychczasowej strony działa w przeglądarce, jednak jest skrótem m
 
     <hr>
 
+    <button>dodaj zadanie</button>
+
     <ul>
-      <li>Zrobić kawę</li>
-      <li>Zrobić kawę</li>
-      <li>Zrobić kawę</li>
+      <li>zrobić kawę <button>usuń</button></li>
+      <li>wypić jogurt <button>usuń</button></li>
+      <li>sprawdzić maila <button>usuń</button></li>
     </ul>
+
+    <button>wyczyść listę</button>
   </body>
 </html>
 ```
@@ -250,4 +271,6 @@ PS. na razie poznaliśmy dokładnie tyle HTML, ile jest nam potrzebne, później
 
 Jest świetny, minimalistyczny i zawiera niezbędne podstawy. Dlatego jeśli chcesz natychmiast zanurzyć się w HTML, to przejdź do kursu <a href="https://how2html.pl/" target="_blank">how2html</a>.
 
-My natomiast zajmiemy się integracją HTML i JavaScript, co zapewni nam zarówno funkcjonalność aplikacji (zarządzanie zadaniami - JavaScript), jak i jej reprezentację w przeglądarce, czyli tzw. *user interface*.
+My natomiast zajmiemy się integracją HTML i JavaScript, co zapewni nam zarówno funkcjonalność/ logikę aplikacji (zarządzanie zadaniami - JavaScript), jak i jej reprezentację w przeglądarce, czyli tzw. *user interface* napisany już w HTML.
+
+Gratuluję! Możesz śmiało przejść do kolejnego kursu 👉 ***[Integrujemy HTML i JavaScript. Podstawy DOM. Pierwsza interaktywna aplikacja webowa](/kursy/html-javascript-dom)***!
