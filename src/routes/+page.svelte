@@ -1,9 +1,10 @@
 <script lang="ts">
 	import { isIndexPage } from '$lib/stores';
 	import heroImg from './hero-img-square.png';
-	import avatar from './vadim-gierko-avatar.jpg';
+
 	import HeroSection from '$lib/components/HeroSection.svelte';
 	import { marked } from 'marked';
+	import AuthorSection from '$lib/components/AuthorSection.svelte';
 
 	const about = `
 - **Pracujesz w biurze?**
@@ -73,49 +74,5 @@ Mam nadzieję, że kiedy dobrniesz do końca [pierwszego (i na razie jedynego) t
 
 	<hr />
 
-	<div class="author-section">
-		<div class="avatar-container">
-			<img
-				src={avatar}
-				width="100%"
-				alt="Vadim Gierko autor strony kodujemywbiurze.pl zdjęcie profilowe"
-			/>
-		</div>
-		<h2>O autorze</h2>
-		<p><strong>Cześć!</strong> Nazywam się Vadim Gierko.</p>
-		<p>
-			Pracuję w biurze w instytucji samorządowej, ale także programuję od 3 lat, stąd też pomysł na
-			stworzenie niniejszej strony.
-		</p>
-		<p>
-			Jestem programistycznym samoukiem i udało mi się opanować takie technologie webowe, jak <strong
-				>HTML, CSS, JavaScript, TypeScript, React, Next.js, Svelte i SvelteKit, Bootstrap i Firebase</strong
-			>, dzięki którym w miarę swobodnie
-			<strong>tworzę strony i aplikacje webowe, w tym sklepy internetowe</strong>. I teraz chciałbym
-			podzielić się swoją wiedzą i doświadczeniem z każdym!
-		</p>
-		<p>
-			Jeśli chcesz wiedzieć więcej nt. tego, czym się zajmuję (w szczególności, co robiłem
-			wcześniej) i kim jestem, zapraszam do odwiedzenia mojej strony www <a
-				href="https://www.vadimgierko.com"
-				target="_blank">vadimgierko.com</a
-			>!
-		</p>
-	</div>
+	<AuthorSection />
 </main>
-
-<style>
-	.author-section {
-		text-align: center;
-		margin: 2em auto;
-	}
-
-	.avatar-container {
-		max-width: 200px;
-		margin: 0 auto;
-
-		& img {
-			border-radius: 50%;
-		}
-	}
-</style>

@@ -28,7 +28,7 @@
 					{#each articles as article}
 						<li>
 							<a
-								href={`/kursy/javascript/${article.slug}`}
+								href={`/kursy/${$page.params.course}/${article.slug}`}
 								class={$page.url.pathname.includes(article.slug) ? 'active-link' : ''}
 								>{article[titleType]}</a
 							>
@@ -46,7 +46,7 @@
 				{#each articles as article}
 					<li>
 						<a
-							href={`/kursy/html/${article.slug}`}
+							href={`/kursy/${$page.params.course}/${article.slug}`}
 							class={$page.url.pathname.includes(article.slug) ? 'active-link' : ''}
 							>{article[titleType]}</a
 						>
