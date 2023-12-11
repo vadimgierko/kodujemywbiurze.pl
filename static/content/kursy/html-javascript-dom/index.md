@@ -609,7 +609,7 @@ Dzięki takiemu zabiegowi, możemy stworzyć jedną funkcję - `renderTasks()`, 
 
 Podobnie updatujemy nasz `localStorage` za pomocą jednej funkcji `updateTasksInLocalStorage()`, którą wywołujemy w każdej funkcji modyfikującej listę zadań.
 
-## Dodajemy zadanie za pomocą przycisku i okna dialogowego `prompt`
+## Okno dialogowe `prompt` i atrybut `onclick` | Dodajemy zadanie za pomocą przycisku i okna dialogowego `prompt`
 
 ---
 
@@ -619,15 +619,13 @@ Jest to niewygodne, ale także uniemożliwia zwykłym nieprogramującym użytkow
 
 Dlatego naszym kolejnym krokiem jest zmodyfikowanie funkcji `addTask()` w taki sposób, aby otwierała wbudowane okno dialogowe przeglądarki `prompt`, w którym użytkownik może wpisać swoje zadanie i kliknąć Enter, natomiast funkcja ta będzie wywoływana przez kliknięcie przycisku "dodaj zadanie".
 
-Możemy to zrobić (jak zawsze) na 2 (kilka) sposoby, ale na razie wybierzemy najprostszy z nich.
-
 ### `prompt()`
 
-Najpierw sprawdźmy, czym jest wbudowana funkcja `prompt()`. Wpisz w konsoli `prompt()`, kliknij Enter i zobacz, co się stało. Na górze przeglądarki otworzyło się nowe okno z polem do wprowadzania treści.
+Najpierw dowiedzmy się, czym jest wbudowana funkcja `prompt()`. Wpisz w konsoli `prompt()`, kliknij Enter i zobacz, co się stało. Na górze przeglądarki otworzyło się nowe okno z polem do wprowadzania treści.
 
-Jeśli coś tam wpiszesz, a potem klikniesz Enter lub przycisk OK, w konsoli zostanie zwrócona treść, którą wpisałeś/aś! Jeśli z kolei klikniesz przycisk Anuluj/ Cancel lub też przycisk Esc na klawiaturze, funkcja zwróci `null`, czyli brak treści.
+Jeśli coś tam wpiszesz, a potem klikniesz *Enter* lub przycisk *OK*, w konsoli zostanie zwrócona treść, którą wpisałeś/aś, w postaci ciągu tekstowego (*string*)! Jeśli z kolei klikniesz przycisk *Anuluj/ Cancel* lub też *Esc* na klawiaturze, funkcja zwróci `null`, czyli brak treści.
 
-Mamy teraz wygodne wbudowane narzędzie do pobierania danych od użytkownika, które może nam zastąpić klasyczny formularz (oraz konieczność wklepywania tej treści ręcznie w funkcji `addTask()` w konsoli). Rozbudujmy teraz funkcję `addTask()`, dodając tę funkcjonalność:
+Mamy teraz wygodne wbudowane narzędzie do pobierania danych od użytkownika, które może nam zastąpić klasyczny formularz (oraz konieczność wklepywania tej treści ręcznie w funkcji `addTask()` w konsoli). Owszem, w poważnych aplikacjach korzystamy z formularzy, aczkolwiek na razie wystarczy nam takie działające rozwiązanie. Rozbudujmy teraz funkcję `addTask()`, dodając tę funkcjonalność:
 
 ```javascript
 // usuń argument newTask z nawiasów funkcji,
@@ -649,19 +647,21 @@ function addTask() {
 }
 ```
 
-Wow! Teraz możemy doświadczyć namiastki prawdziwej aplikacji! Co ciekawe, to okienko jest także dostępne na telefonach, w związku z czym, gdybyśmy opublikowali naszą aplikację jako prawdziwą stronę w internecie, a potem otworzylibyśmy ją w przeglądarce na telefonie, to zadziała tak samo.
+Tak! Teraz możemy doświadczyć namiastki prawdziwej aplikacji! Co ciekawe, to okienko jest także dostępne na telefonach, w związku z czym, gdybyśmy opublikowali naszą aplikację jako prawdziwą stronę w internecie (a mogę Cię tego nauczyć), a potem otworzylibyśmy ją w przeglądarce na telefonie, to zadziała tak samo.
 
-Musimy teraz dopisać dosłownie kilka znaków w naszym kodzie HTML, by wywołać funkcję `addTask()` poprzez kliknięcie przycisku W związku z tym otwórz plik `todo-app.html` w notatniku i zmień tylko linijkę zawierającą 
+### atrybut HTML `onclick`
+
+Musimy teraz dopisać dosłownie kilka znaków w naszym kodzie HTML, by wywołać funkcję `addTask()` poprzez kliknięcie przycisku *Dodaj zadanie*. W związku z tym otwórz plik `todo-app.html` w notatniku i uzupełnij tylko jedną linijkę zawierającą `<button>dodaj zadanie</button>`:
 
 ```html
-<!-- poprzedni kod -->
+<!-- poprzedni kod HTML -->
 
 <button onclick="addTask()">dodaj zadanie</button>
 
-<!-- kolejny kod -->
+<!-- kolejny kod HTML -->
 ```
 
-Do znacznika `<button>` można dodać atrybut `onclick`, do którego można przypisać funkcję, która ma być wywołana po kliknięciu w przycisk. Nie jest to najlepszy sposób na dodawanie funkcjonalności do HTMLa, ale nam na razie wystarczy.
+Do znacznika `<button>`, ale także wielu innych znaczników, można dodać **atrybut `onclick`, do którego można przypisać funkcję, która ma być wywołana po kliknięciu** w przycisk. Nie jest to najlepszy sposób na dodawanie funkcjonalności do HTMLa, ale nam na razie wystarczy.
 
 Zapisz teraz plik `todo-app.html` (Ctrl+S), odśwież przeglądarkę, uruchom plik `todo-app-dom` z poziomu konsoli (zakładka `snippets`) => `Ctrl+Enter` lub klikając ikonkę trójkąta, a teraz spróbuj kliknąć w przycisk "Dodaj zadanie".
 
@@ -669,11 +669,511 @@ Jeśli wszystko zrobiłeś/aś dobrze, to w odpowiedzi na kliknięcie przycisku 
 
 Nasza aplikacja jest coraz bardziej interaktywna!
 
+## Usuwamy zadania za pomocą przycisku
 
 ---
 
-Spodobało się? Chcesz więcej *(pamiętaj, że ta strona dopiero się rozwija)*?
+### Czyścimy listę | Usuwamy wszystkie zadania
 
-Jeśli tak, to daj mi znać, że jesteś zainteresowany/a dalszymi lekcjami w tym samym stylu *(zakładam, że będziemy dalej rozwijać naszą aplikację do zadań, dodając coraz to nowsze funkcjonalności oraz poznając również podstawy HTML i CSS, by wyjść poza konsolę i stworzyć stronę/ aplikację internetową z prawdziwego zdarzenia)*.
+Skoro tak dobrze poszło nam przypisywanie funkcji do przycisków, zróbmy to samo w celu usuwania zadań. Zacznijmy od usunięcia wszystkich zadań na raz za pomocą przycisku *wyczyść listę*, ponieważ to będzie najłatwiejsze - mamy już gotową funkcję `deleteAllTasks()`, której nie będziemy nawet modyfikować oraz wiemy, jak przypisać obsługę kliknięcia do elementu HTML. Zmodyfikujmy więc ostatnią linijkę w naszym kodzie HTML:
 
-Jeśli więc chcesz zrobić ten kolejny i następne kroki, daj znać!
+```html
+<!-- poprzedni kod HTML -->
+
+<button onclick="deleteAllTasks()">wyczyść listę</button>
+```
+
+I to tyle! Zapisz plik HTML, otwórz go w przeglądarce, uruchom nasz plik JavaScript w zakładce `snippets` oraz spróbuj teraz dodać kilka zadań (oczywiście za pomocą przycisku *dodaj zadanie*), po czym usuń je wszystkie na raz klikając w przycisk *wyczyść listę*.
+
+### Usuwamy pojedyncze zadania
+
+Jeśli chodzi usunięcie pojedynczego zadania, to sprawa się trochę komplikuje. Przede wszystkim, zauważ że nie mamy w ogóle przycisku/ów do usuwania poszczególnych zadań! W kursie HTML dodaliśmy taki przycisk do każdego statycznie wpisanego zadania, aczkolwiek później w tym kursie dynamicznie tworzymy nowe zadanie jako element listy, ale bez przycisku.
+
+W związku z tym, musimy zmodyfikować funkcję `appendTaskToTheTasksList()` w taki sposób, żeby tworząc element listy nie tylko wyświetliła zadanie, ale także wyrenderowała obok niego przycisk do usuwania tego zadania.
+
+Zmodyfikuj funkcję `appendTaskToTheTasksList()` zgodnie z poniższym kodem - wszelkie szczegóły są wyjaśnione w komentarzach:
+
+```javascript
+
+// dodaj w nawiasach drugi argument - indeks zadania,
+// byśmy mogli go przekazać do deleteTask(), która potrzebuje indeksu
+// (pamiętaj, że appendTaskToTheTasksList() jest później przekazana do metody forEach,
+// która przekaże 2 argumenty: task i index):
+function appendTaskToTheTasksList(task, index) {
+  // utwórz nowy element listy li:
+  let li = document.createElement("li");
+  // i przypisz do niego wartość zadania:
+
+  //====================> ZMODYFIKOWANY KOD: ============================//
+  li.textContent = task + " "; // dodajemy spację, by oddzielić tekst od przycisku usuń
+
+  // utwórz przycisk usuwania zadania:
+  let deleteButton = document.createElement("button");
+  // przypisz do niego nazwę:
+  deleteButton.textContent = "usuń";
+
+  // przypisz do niego funkcję usuwania tego konkretnego zadania
+  // (to jest nasza istniejąca już funkcja deleteTask())
+  deleteButton.onclick = function() {
+    deleteTask(index);
+  }
+  // dodaj przycisk do nowego elementu listy
+  li.appendChild(deleteButton); // teraz przycisk będzie dodany po zadaniu po spacji
+
+  //================> KONIEC ZMODYFIKOWANEGO KODU =======================//
+  tasksList.appendChild(li);
+}
+```
+
+Brawo! Teraz musimy przetestować usuwanie zadań!
+
+W tym miejscu chciałbym dokładniej wyjaśnić, co się dzieje w tym framencie kodu powyższej zmodyfikowanej funkcji:
+
+```javascript
+// ... kod funkcji appendTaskToTheTasksList()...
+
+// przypisz do niego funkcję usuwania tego konkretnego zadania
+// (to jest nasza istniejąca już funkcja deleteTask())
+deleteButton.onclick = function() {
+  deleteTask(index);
+}
+
+  // ...dalszy kod funkcji appendTaskToTheTasksList()...
+```
+
+W powyższym kodzie przypisaliśmy funkcję usuwania zadania do atrybutu `onclick`, ale nie bezpośrednio w HTMLu, jak to robiliśmy wcześniej, tylko za pośrednictwem kodu JavaScript. `deleteButton` jest zmienną reprezentującą i mającą dostęp do przycisku, w związku z tym mamy dostęp także do atrybutów tego przycisku, tj. np. wspomniany `onclick`. Po prostu przypisaliśmy do niego wartość w postaci funkcji.
+
+Dlaczego natomiast użyliśmy słowa kluczowego `function()`, a nie np. po prostu podaliśmy nazwę funkcji? Jest tak dlatego, że gdybyśmy przypisali funkcję z argumentem w ten sposób: `deleteButton.onclick = deleteTask(index);`, to wyskoczy nam błąd podczas usuwania, ponieważ nie przypisaliśmy tak naprawdę funkcji, ile ją wywołaliśmy wraz z argumentem już w momencie przypisania!
+
+Moglibyśmy z kolei poprawnie przypisać funkcję w ten sposób: `deleteButton.onclick = deleteTask;`. Jak widzisz, nie ma nawiasów, w związku z tym nie ma błędu i można by było wywołać teraz tę przypisaną funkcję w ten sposób: `deleteButton.onclick(index)`, tyle że nie jesteśmy w stanie tego zrobić, ponieważ `deleteButton.onclick` zostanie wywołane z poziomu HTML i nie ma jak przekazać tam argumentu `index`.
+
+W związku z tym przypisaliśmy do `deleteButton.onclick` deklarację funkcji anonimowej `function(){}` (anonimowej, czyli nie posiadającej nazwy po słowie kluczowym `function`), która z kolei wywołuje wewnątrz funkcję `deleteTask(index)` w momencie, kiedy kliknie się w przycisk.
+
+W nowoczesnym JavaScripcie moglibyśmy to także zrobić prościej, za pomocą funkcji strzałkowej (*arrow function*): `deleteButton.onclick = () => deleteTask(index)`, aczkolwiek ten zapis również wymagałby wyjaśnienia, natomiast znamy się już na definiowaniu funkcji za pomocą słowa kluczowego `function`, w związku z czym wybrałem tę opcję.
+
+## Dodajemy zadanie do określonego indeksu za pomocą przycisku i zmodyfikowanej funkcji `addTaskAtIndex()`
+
+---
+
+Mamy jeszcze jedną funkcję pochodzącą z naszej konsolowej aplikacji, która nie została zmodyfikowana, by współdziałała z HTMLem - `addTaskAtIndex()`, dodająca zadanie w określonym miejscu (indeksie). Niemniej jednak jest bardzo przydatna, w związku z czym także ją zaimplementujemy.
+
+Zastanówmy się, uwzględniając wszystko, co dotychczas zrobiliśmy, jak możemy to zrobić?
+
+1. Najpierw zmodyfikujemy funkcję `addTaskAtIndex()` w podobny sposób, w jaki zmodyfikowaliśmy funkcję `addTask()`, czyli tak, by zamiast pobierać zadanie jako argument, będzie otwierała okno dialogowe `prompt` i pobierała treść wprowadzoną przez użytkownika:
+
+```javascript
+// usuń argument newTask z nawiasów,
+// ponieważ będzie wprowadzany przez użytkownika:
+function addTaskAtIndex(index) {
+  // deklarujemy zmienną newTask,
+  // która przyjmuje wartość zwracaną przez wbudowaną funkcję prompt():
+  let newTask = prompt("Wpisz nowe zadanie:");
+
+  tasks.splice(index, 0, newTask);
+
+  console.log("Do Twoich zadań zostało dodane nowe zadanie:", newTask);
+
+  updateTasksInLocalStorage();
+
+  renderTasks();
+}
+```
+
+2. Podczas tworzenia elementu listy zadań, za co jest odpowiedzialna funkcja `appendTaskToTheTasksList()`, oprócz samego zadania oraz przycisku usunięcia działania, dodamy także przycisk *dodaj przed*, który będzie służył do dodania zadania przed wybranym zadaniem, czyli innymi słowy dodamy nowe zadanie pod tym samym indeksem, pod którym obecnie znajduje się inne zadanie (czyli to, co już w tej chwili robi funkcja `addTaskAtIndex()`). Na pierwszy rzut oka może się to wydawać dziwne: przycisk nazwaliśmy *dodaj przed*, a dodajemy właśnie w tym konkretnym miejscu, niemniej jednak chodzi o podkreślenie faktu dodania nowego zadania nie tyle pod danym indeksem, ile przed zadaniem, które w tej chwili jest pod tym indeksem, ale po chwili przesunie się o jedną pozycję (indeks).
+3. Do przycisku *dodaj przed* przypiszemy wywołanie funkcji `addTaskAtIndex()` i przekażemy jej indeks jako argument:
+
+```javascript
+function appendTaskToTheTasksList(task, index) {
+  //====================> DOTYCHCZASOWY KOD: ============================//
+  let li = document.createElement("li");
+
+  li.textContent = task + " ";
+
+  let deleteButton = document.createElement("button");
+  deleteButton.textContent = "usuń";
+
+  deleteButton.onclick = function() {
+    deleteTask(index);
+  }
+
+  li.appendChild(deleteButton);
+
+  //====================> NOWY KOD: ============================//
+
+  // utwórz przycisk dodania zadania pod tym indeksem:
+  let addAtIndexButton = document.createElement("button");
+  // przypisz do niego nazwę:
+  addAtIndexButton.textContent = "dodaj przed";
+
+  // przypisz do niego funkcję dodania zadania pod konkretnym indeksem
+  // (to jest nasza zmodyfikowana funkcja addTaskAtIndex())
+  addAtIndexButton.onclick = function() {
+    addTaskAtIndex(index);
+  }
+  // dodaj przycisk do nowego elementu listy
+  li.appendChild(addAtIndexButton);
+
+  //================> KONIEC NOWEGO KODU =======================//
+  tasksList.appendChild(li);
+}
+```
+
+Zapisz zmiany w pliku, uruchom go po raz kolejny w konsoli i sprawdź, jak działa!
+
+## Kompletny kod pliku HTML i pliku JavaScript
+
+Po ukończeniu tego kursu uproszczony kod pliku HTML powinien wyglądać tak:
+
+```html
+<h1>Twoje zadania</h1>
+
+<hr>
+
+<button onclick="addTask()">dodaj zadanie</button>
+
+<ul id="tasks-list">
+
+</ul>
+
+<button onclick="deleteAllTasks()">wyczyść listę</button>
+```
+
+Z kolei kod pliku JavaScript powinien wyglądać tak:
+
+```javascript
+console.clear();
+
+function getTasksFromLocalStorage() {
+  let storedTasksStringified = localStorage.getItem("tasks");
+
+  let storedTasks = JSON.parse(storedTasksStringified);
+
+  return storedTasks;
+}
+
+let tasks = getTasksFromLocalStorage() || [];
+
+let tasksList = document.getElementById("tasks-list");
+
+function appendTaskToTheTasksList(task, index) {
+  let li = document.createElement("li");
+  li.textContent = task + " ";
+  
+  let deleteButton = document.createElement("button");
+  deleteButton.textContent = "usuń";
+
+  deleteButton.onclick = function() {
+    deleteTask(index);
+  }
+
+  li.appendChild(deleteButton);
+
+  let addAtIndexButton = document.createElement("button");
+  addAtIndexButton.textContent = "dodaj przed";
+
+  addAtIndexButton.onclick = function() {
+    addTaskAtIndex(index);
+  }
+
+  li.appendChild(addAtIndexButton);
+  
+  tasksList.appendChild(li);
+}
+
+function renderTasks() {
+  tasksList.innerHTML = "";
+
+  tasks.forEach(appendTaskToTheTasksList);
+
+  console.log("Twoje zapisane zadania:", tasks);
+}
+
+function updateTasksInLocalStorage() {
+  localStorage.setItem("tasks", JSON.stringify(tasks));
+}
+
+function addTask() {
+  let newTask = prompt("Wpisz nowe zadanie:");
+
+  tasks.push(newTask);
+
+  updateTasksInLocalStorage();
+
+  console.log("Do Twoich zadań zostało dodane nowe zadanie:", newTask);
+
+  renderTasks();
+}
+
+function addTaskAtIndex(index) {
+  let newTask = prompt("Wpisz nowe zadanie:");
+  
+  tasks.splice(index, 0, newTask);
+
+  console.log("Do Twoich zadań zostało dodane nowe zadanie:", newTask);
+
+  updateTasksInLocalStorage();
+
+  renderTasks();
+}
+
+function deleteTask(index) {
+  tasks.splice(index, 1);
+
+  updateTasksInLocalStorage();
+
+  renderTasks();
+}
+
+function deleteAllTasks() {
+  tasks = [];
+
+  console.log("Wszystkie zadania zostały usunięte...");
+
+  updateTasksInLocalStorage(tasks);
+
+  renderTasks();
+}
+
+renderTasks();
+```
+
+W następnym rozdziale połączymy te dwa pliki w jeden plik HTML. Do dzieła!
+
+## Kompletny kod aplikacji w jednym pliku HTML, zawierającym kod JavaScript w tagu `<script>`
+
+---
+
+Nasza aplikacja działa, ale nie jest to jeszcze aż tak wygodne, jakim by mogło być, ponieważ musimy najpierw odpalić plik HTML w przeglądarce, a potem dodatkowo odpalić plik JavaScript z poziomu konsoli i zakładki `snippets`.
+
+Nasz HTML i JavaScript żyją swoim życiem, musimy natomiast powiązać te pliki. Możemy to zrobić na 2 sposoby.
+
+Pierwszym sposobem jest skopiować <a href="/kursy/html-javascript-dom/kompletny-kod-pliku-html-i-pliku-javascript" target="_blank">kod naszej aplikacji JavaScript z poprzedniej rozdziału</a> (lub z pliku z zakładki `snippets`) i wkleić go wewnątrz tagu `<script></script>` bezpośrednio w pliku HTML.
+
+Nasz kod HTML musimy z kolei osadzić w szablonie HTML, co już robiliśmy <a href="/kursy/html/szablon-pliku-html" target="_blank">tutaj</a>):
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Todo App | kodujemywbiurze.pl</title>
+  </head>
+
+  <body>
+    <!-- kod HTML -->
+    <h1>Twoje zadania</h1>
+
+    <hr>
+
+    <button onclick="addTask()">dodaj zadanie</button>
+
+    <ul id="tasks-list">
+
+    </ul>
+
+    <button onclick="deleteAllTasks()">wyczyść listę</button>
+
+    <!-- dodaj poniżej otwierający tag <script> -->
+    <script>
+      /* tutaj wklejamy kod JavaScript pomiędzy otwierającym tagiem <script> i zamykającym tagiem </script> */
+      console.clear();
+
+      function getTasksFromLocalStorage() {
+        let storedTasksStringified = localStorage.getItem("tasks");
+
+        let storedTasks = JSON.parse(storedTasksStringified);
+
+        return storedTasks;
+      }
+
+      let tasks = getTasksFromLocalStorage() || [];
+
+      let tasksList = document.getElementById("tasks-list");
+
+      function appendTaskToTheTasksList(task, index) {
+        let li = document.createElement("li");
+        li.textContent = task + " ";
+        
+        let deleteButton = document.createElement("button");
+        deleteButton.textContent = "usuń";
+
+        deleteButton.onclick = function() {
+          deleteTask(index);
+        }
+        
+        li.appendChild(deleteButton);
+
+        let addAtIndexButton = document.createElement("button");
+        addAtIndexButton.textContent = "dodaj przed";
+
+        addAtIndexButton.onclick = function() {
+          addTaskAtIndex(index);
+        }
+
+        li.appendChild(addAtIndexButton);
+        
+        tasksList.appendChild(li);
+      }
+
+      function renderTasks() {
+        tasksList.innerHTML = "";
+
+        tasks.forEach(appendTaskToTheTasksList);
+
+        console.log("Twoje zapisane zadania:", tasks);
+      }
+
+      function updateTasksInLocalStorage() {
+        localStorage.setItem("tasks", JSON.stringify(tasks));
+      }
+
+      function addTask() {
+        let newTask = prompt("Wpisz nowe zadanie:");
+
+        tasks.push(newTask);
+
+        updateTasksInLocalStorage();
+
+        console.log("Do Twoich zadań zostało dodane nowe zadanie:", newTask);
+
+        renderTasks();
+      }
+
+      function addTaskAtIndex(index) {
+        let newTask = prompt("Wpisz nowe zadanie:");
+        
+        tasks.splice(index, 0, newTask);
+
+        console.log("Do Twoich zadań zostało dodane nowe zadanie:", newTask);
+
+        updateTasksInLocalStorage();
+
+        renderTasks();
+      }
+
+      function deleteTask(index) {
+        tasks.splice(index, 1);
+
+        updateTasksInLocalStorage();
+
+        renderTasks();
+      }
+
+      function deleteAllTasks() {
+        tasks = [];
+
+        console.log("Wszystkie zadania zostały usunięte...");
+
+        updateTasksInLocalStorage(tasks);
+
+        renderTasks();
+      }
+
+      renderTasks();
+
+      /* dodaj poniżej zamykający tag </script> */
+    </script>
+  </body>
+</html>
+```
+
+Teraz albo zapisujemy dotychczasowy plik HTML lub też tworzymy nowy plik z nową nazwą i możemy odpalić go w przeglądarce, dzięki czemu aplikacja będzie działać natychmiast - bez uruchamiania dodatkowego pliku js w `snippets`, jak to miało miejsce dotychczas!
+
+Wszystko jest w jednym pliku - nasza prawdziwa aplikacja webowa, którą możemy zapisać na komputerze lub też przesłać mailem znajomemu, dzięki czemu pobierze plik i odpali na swoim komputerze.
+
+W związku z tym pamiętaj, że gdybyś chciał/a pisać kod HTML i JavaScript w jednym pliku, to powinieneś/aś utworzyć plik HTML, po czym wypełnić go w następujący sposób:
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tutaj wpisz tytuł swojej aplikacji/ strony internetowej</title>
+  </head>
+
+  <body>
+    <!-- tutaj poniżej pisz kod HTML -->
+
+    <!-- tutaj (po kodzie HTML) możesz pisać kod JavaScript wewnątrz tagu <script> -->
+    <script>
+      // kod JavaScript...
+    </script>
+  </body>
+</html>
+```
+
+## Kompletny kod aplikacji w jednym folderze zawierającym plik HTML oraz plik JavaScript podpięty do pliku HTML w tagu `<script>`
+
+---
+
+Teraz jest już znacznie lepiej - cały kod naszej aplikacji jest w jednym pliku, więc możemy go odpalić w przeglądarce i wszystko działa od razu. Najpierw przeglądarka renderuje HTML, a potem przetwarza kod JavaScript zawarty w tagu `<script>`. Kod nadal ma dostęp do `localStorage`, dzięki czemu będzie przechowywał nasze zadania przypisane do tego konkretnego pliku.
+
+Niemniej jednak, nasz plik HTML jest dość długi, a w związku z tym nieczytelny. Dlatego w prawdziwym programistycznym świecie, kod JavaScript jest zapisywany w osobnym pliku, a później podpinany do pliku HTML również za pośrednictwem tagu `<script>`. Żeby to zadziałało, musimy zrobić kilka rzeczy:
+
+1. Utwórz folder (np. na pulpicie) o nazwie `todo-app`.
+2. Otwórz aplikację *Notatnik*, wklej tam <a href="/kursy/html-javascript-dom/kompletny-kod-pliku-html-i-pliku-javascript" target="_blank">kod naszej aplikacji JavaScript z poprzedniej rozdziału</a> (lub z pliku z zakładki `snippets`), po czym zapisz ten plik pod nazwą `script.js` w folderze `todo-app`, pamiętając o rozszerzeniu `.js` po nazwie pliku i o tym, by wybrać typ "wszystkie pliki".
+3. Otwórz aplikację *Notatnik*, wklej tam kod HTML (bez JavaScriptu). Musisz teraz "podpiąć" plik `script.js` do `index.html` w ten sposób, że przed tagiem zamykającym `</body>` umieszczamy następujący kod `<script src="script.js">`, gdzie atrybut `src` (skrót od *source* - źródło) otrzymuje nazwę pliku JavaScript, co automatycznie "zaciąga" cały JavaScriptowy kod. Po tej zmianie plik HTML wygląda tak:
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Todo App | kodujemywbiurze.pl</title>
+  </head>
+
+  <body>
+    <h1>Twoje zadania</h1>
+
+    <hr>
+
+    <button onclick="addTask()">dodaj zadanie</button>
+
+    <ul id="tasks-list">
+
+    </ul>
+
+    <button onclick="deleteAllTasks()">wyczyść listę</button>
+
+    <!-- tutaj podpinamy plik script.js -->
+    <script src="script.js"></script>
+  </body>
+</html>
+```
+
+4. Zapisz plik pod nazwą `index.html`, pamiętając o rozszerzeniu `.html` oraz o tym, żeby wybrać typ pliku "wszystkie pliki".
+
+Teraz nasz kod jest podzielony na dwa pliki, HTML i JavaScript, znajdują się w jednym folderze oraz plik .js jest podpięty do pliku HTML za pośrednictwem tagu `<script>`. Teraz wystarczy, że wejdziemy do folderu `todo-app`, otworzymy plik `index.html` w przeglądarce i aplikacja działa natychmiastowo!
+
+Jest to najbardziej profesjonalny sposób, w jaki możemy zorganizować kod naszej aplikacji w danej chwili, czyli... po ukończeniu wszystkich 3 kursów dostępnych w chwili obecnej na *kodujemywbiurze.pl*!
+
+Poświęć jeszcze chwilę na przeczytanie *Zakończenia* - następnego artykułu, w którym piszę, jaka przyszłość czeka *kodujemywbiurze.pl* i dlaczego w dużej mierze zależy od Ciebie 😏😉! 
+
+## Zakończenie
+
+---
+
+Jeśli dotarłeś/aś do tego miejsca, jestem z Ciebie niesamowicie dumny! Wykonałeś/aś kawał ogromnej roboty! I mimo że ja również wykonałem kawał ogromnej roboty, to nie jestem w stanie wyobrazić, co teraz czujesz, ponieważ swoje początki z kodowaniem miałem 3 lata temu.
+
+Dlatego zazdroszczę Ci - chciałbym zacząć naukę jeszcze raz, mądrzej, lepiej, szybciej, czyli dokładnie w taki sposób, w jaki zaprojektowałem i napisałem niniejszy kurs *(mam na myśli kurs, na który składają się wszystkie dotychczasowe kursy na tej stronie)*.
+
+Chociaż dzięki temu, że od dwóch miesięcy pracowałem nad niniejszym kursem, mogłem się poczuć trochę jak nowicjusz z dwóch powodów:
+
+1. Po pierwsze, musiałem sobie wyobrazić, z jednej strony, że nic nie wiem nt. programowania webowego, z drugiej zaś strony, musiałem zebrać się z myślami i przeanalizować swoją 3-letnią przygodę z programowaniem, by wyłuskać najistotniejsze podstawy, które są niezbędne na samym początku w określonej kolejności.
+2. Po drugie, może to zabrzmieć dziwnie, ale... sam się nauczyłem wielu rzeczy pisząc ten kurs. Od dawna nie piszę kodu w czystym JavaScripcie (*Vanilla JavaScript*) i HTMLu (ogólnie obecnie żaden doświadczony programista tego nie robi), tylko używam JavaScriptowych frameworków, tj. React, Next.js, Svelte i SvelteKit, a ostatnio nawet Vue. Dzięki frameworkom można tworzyć niesamowite i bardzo złożone rzeczy o wiele szybciej, wydajniej i bardziej czytelnie. Niemniej jednak, najpierw trzeba poznać i zrozumieć podstawy, które, jak widzisz, doprowadziły nas do stworzenia prawdziwej, interaktywnej aplikacji. Dlatego sam musiałem odświeżyć wybrane podstawy JavaScriptu i... niejednokrotnie byłem zaskoczony!
+
+Jeśli wydaje Ci się, że podstawy HTMLa i JavaScriptu masz już za sobą, cóż, muszę Cię trochę rozczarować... To jest dopiero część podstaw, aczkolwiek im dalej, tym będzie już łatwiej.
+
+Dlatego teraz muszę zrobić sobie świąteczną przerwę od tworzenia treści, oficjalnie opublikować kurs i... czekać na feedback z Waszej strony.
+
+Jeśli uważasz, że ten kurs był dla Ciebie przydatny, podobało Ci się, w jaki sposób dzielę się wiedzą, to bardzo chętnie będę to kontynuował - nic nie motywuje nauczyciela/ mentora bardziej, niż chłonni wiedzy uczniowe!
+
+Dlatego proszę Cię o to, byś dał/a mi znać, czy chcesz... więcej! Plan mam na kilka kursów do przodu, więc teraz Twoja kolej na Twój krok:
+
+- polub i obserwuj <a href="https://www.facebook.com/kodujemywbiurze" target="_blank">stronę *Kodujemy w biurze* na Facebooku</a>, no i oczywiście udostępnij tę stronę i jej profil, by inni także mogli skorzystać z tej samej wiedzy i spróbować swoich sił w kodowaniu,
+- możesz też obserwować i polecić ten projekt na <a href="https://www.linkedin.com/company/kodujemywbiurze" target="_blank">LinkedInie</a> (nie wiem, który z tych portali bardziej się sprawdzi).
+
+Możesz też odezwać się do mnie bezpośrednio na Facebooku lub LinkedInie!
+
+Niech JavaScript będzie z Tobą!
+
+*Vadim*
+
+
