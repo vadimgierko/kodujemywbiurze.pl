@@ -18,10 +18,6 @@ export async function load({ fetch, params }) {
 				fileName: '2'
 			},
 			{
-				title: 'Moduł 3. Przechowywanie zadań w Local Storage. Aplikacja w wersji 2.0',
-				fileName: '3'
-			},
-			{
 				title: 'Zakończenie (na razie) oraz darmowe źródła do samodzielnej nauki (po angielsku)',
 				fileName: 'koniec'
 			}
@@ -45,13 +41,8 @@ export async function load({ fetch, params }) {
 				return sectionObject;
 			})
 		);
-	} else if (params.course === 'html') {
-		const res = await fetch(`/content/kursy/html/index.md`);
-		const mdContent = await res.text();
-
-		articles = convertMarkdownIntoArticlesArray(mdContent);
 	} else {
-		const res = await fetch(`/content/kursy/html-javascript-dom/index.md`);
+		const res = await fetch(`/content/kursy/${params.course}/index.md`);
 		const mdContent = await res.text();
 
 		articles = convertMarkdownIntoArticlesArray(mdContent);

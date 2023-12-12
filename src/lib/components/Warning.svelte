@@ -3,7 +3,7 @@
 		<strong>Uwaga!</strong> Niniejsza strona nie jest jeszcze oficjalnie ukończona, w związku z czym
 		zarówno treść, jak i struktura strony będą ulegać zmianie!
 	</p>
-	<p><strong>Ostatnia aktualizacja: 11.12.2023</strong></p>
+	<p><strong>Ostatnia aktualizacja: 12.12.2023</strong></p>
 </div>
 
 <style>

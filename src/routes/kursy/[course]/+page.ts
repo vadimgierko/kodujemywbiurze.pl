@@ -28,6 +28,32 @@ const courses: Course[] = [
 		}
 	},
 	{
+		slug: 'local-storage',
+		headData: {
+			title: 'Kodujemy w biurze | Javascript i Local Storage. Przechowujemy dane w przeglądarce',
+			ogTitle: 'Kodujemy w biurze | Javascript i Local Storage. Przechowujemy dane w przeglądarce',
+			description:
+				'Naucz się podstaw Local Storage i zapisuj dane aplikacji do zarządzania zadaniami bezpośrednio w przeglądarce!',
+			ogDescription:
+				'Naucz się podstaw Local Storage i zapisuj dane aplikacji do zarządzania zadaniami bezpośrednio w przeglądarce!',
+			ogImage:
+				'/content/kursy/javascript/kurs-podstawy-javascript-pierwsza-aplikacja-w-konsoli-screenshot.jpg',
+			ogUrl: 'https://www.kodujemywbiurze.pl/kursy/local-storage'
+		},
+		heroSectionData: {
+			h1FirstSmallText: 'Darmowy kurs',
+			h1LargeText: 'Javascript i Local Storage. Przechowujemy dane w przeglądarce',
+			descriptionParagraphs: [
+				'Naucz się podstaw Local Storage i zapisuj dane bezpośrednio w przeglądarce.',
+				'W trakcie kursu rozbudujesz aplikację do zarządzania zadaniami tak, by przechowywała Twoje dane!'
+			],
+			btnHref: '/kursy/local-storage/wprowadzenie-czym-jest-local-storage',
+			btnCTA: 'Zacznij kurs!',
+			imgSrc: '',
+			handleMount: () => {}
+		}
+	},
+	{
 		slug: 'html',
 		headData: {
 			title: 'Kodujemy w biurze | Podstawy HTML. Pierwsza statyczna strona internetowa',

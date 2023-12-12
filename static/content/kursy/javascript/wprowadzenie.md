@@ -46,14 +46,14 @@ Aplikacja, którą stworzymy, umożliwi nam:
 - modyfikowanie oraz
 - usuwanie zadań do zrobienia.
 
-Na początku (w **Module 1.**) będzie to możliwe za pomocą poleceń napisanych przez nas kodem (poleceniami w czystym) JavaScript w konsoli.
+Na początku (w **Module 1.** tego kursu) będzie to możliwe za pomocą poleceń napisanych przez nas kodem (poleceniami w czystym) JavaScript w konsoli.
 
-Później (**Moduł 2.**) stworzymy i będziemy używać własnych funkcji, które zostaną zapisane w pliku bezpośrednio w przeglądarce, dzięki czemu nasz kod zostanie zachowany nawet po przeładowaniu strony oraz będziemy mogli go uruchomić w konsoli. W ten sposób powstanie aplikacja w wersji 1.0.
+Później (**Moduł 2.**) stworzymy i będziemy używać własnych funkcji, które zostaną zapisane w pliku bezpośrednio w przeglądarce, dzięki czemu nasz kod zostanie zachowany nawet po przeładowaniu strony oraz będziemy mogli go uruchomić w konsoli.
 
-Natomiast w **Module 3.** (na razie w niniejszym kursie mamy 3 moduły) rozbudujemy naszą aplikację w ten sposób, że nie tylko kod będzie zachowany w przeglądarce, ale także same zadania zostaną zapisane w przeglądarce za pośrednictwem wbudowanej funkcjonalności `localStorage`, która jest swego rodzaju magazynem danych. W ten sposób powstanie aplikacja w wersji 2.0.
+Natomiast później przejdziesz do <a href="/kursy/local-storage" target="_blank">kursu Local Storage</a>, w którym rozbudujemy naszą aplikację w ten sposób, że przechowamy nie tylko kod aplikacji, ale także same zadania zostaną zapisane w przeglądarce za pośrednictwem wbudowanej funkcjonalności `localStorage`, która jest swego rodzaju magazynem danych.
 
-Niniejszy kurs nie jest jeszcze oficjalnie ukończony, niemniej jednak już w tej chwili masz czego się uczyć w 3 istniejących modułach, które pozostaną raczej w obecnej formie, ewentualnie z małymi zmianami.
+Potem przerobimy <a href="/kursy/html" target="_blank">niezbędne podstawy HTML</a> oraz <a href="/kursy/local-storage" target="_blank">zintegrujemy HTML i JavaScript za pomocą DOM</a>, dzięki czemu powstanie prawdziwa interaktywna aplikacja do zarządzania zadaniami z interfacem użytkownika w przeglądarce - z przyciskami, okienkiem dialogowym do wpisywania zadań itd.
 
-Mam nadzieję, że kiedy dobrniesz do końca opublikowanych modułów, będziesz chciał/a więcej! Jeśli tak będzie, to daj mi znać, że jesteś zainteresowany/a dalszymi lekcjami w tym samym stylu!
+Powodzenia!
 
 *Happy Coding!*

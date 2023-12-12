@@ -59,6 +59,7 @@
 			<div class="right-section">
 				{#if !$isScreenLessThan992}
 					<a href="/kursy/javascript" class="nav-link">javascript</a> |
+					<a href="/kursy/local-storage" class="nav-link">local storage</a> |
 					<a href="/kursy/html" class="nav-link">html</a> |
 					<a href="/kursy/html-javascript-dom" class="nav-link">html + javascript</a>
 				{/if}
@@ -103,6 +104,7 @@
 			<hr />
 			<div class="expanded-nav-section">
 				<a href="/kursy/javascript" class="nav-link" on:click={toggleNavbar}>javascript</a>
+				<a href="/kursy/local-storage" class="nav-link" on:click={toggleNavbar}>local storage</a>
 				<a href="/kursy/html" class="nav-link" on:click={toggleNavbar}>html</a>
 				<a href="/kursy/html-javascript-dom" class="nav-link" on:click={toggleNavbar}
 					>html + javascript</a

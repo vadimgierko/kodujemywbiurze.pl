@@ -45,7 +45,7 @@
 
 			<div class="right">
 				<!-- <img src={imgSrc} width="100%" /> -->
-				{#if $page.params.course === 'javascript'}
+				{#if $page.params.course === 'javascript' || $page.params.course === 'local-storage'}
 					<JavaScriptLogo />
 				{:else if $page.params.course === 'html' || $page.params.course === 'html-javascript-dom'}<HtmlLogo
 					/>

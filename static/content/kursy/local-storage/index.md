@@ -1,8 +1,10 @@
-# Moduł 3. Przechowywanie zadań w Local Storage. Aplikacja w wersji 2.0
+# Javascript i Local Storage. Przechowujemy dane w przeglądarce. Aplikacja w wersji 2.0
 
 ---
 
-## localStorage | Zapisujemy oraz pobieramy zadania w przeglądarce za pośrednictwem localStorage
+## Wprowadzenie. Czym jest Local Storage?
+
+---
 
 Kod aplikacji w wersji 0. oraz 1. działa, aczkolwiek przechowuje dane (nasze zadania) tylko w trakcie sesji użytkownika w przeglądarce lub do momentu odświeżenia strony lub pliku z kodem. Gdybyśmy zrobili naszą aplikację tak, jak się to robi w prawdziwym świecie, to wykorzystalibyśmy **bazy danych** do przechowywania naszych zadań. Przechowywalibyśmy tam także dane użytkowników, którzy by z niej korzystali.
 
@@ -296,7 +298,7 @@ function addTaskAtIndex(index, newTask) {
 
 	console.log("Do Twoich zadań zostało dodane nowe zadanie:", newTask);
 
-	updateTasksInLocalStorage();
+	updateTasksInLocalStorage(); // <= dodajemy updateTasksInLocalStorage()
 
 	showTasks();
 }
@@ -304,7 +306,7 @@ function addTaskAtIndex(index, newTask) {
 function deleteTask(index) {
   tasks.splice(index, 1);
 
-	updateTasksInLocalStorage();
+	updateTasksInLocalStorage(); // <= dodajemy updateTasksInLocalStorage()
 
 	showTasks();
 }
@@ -314,7 +316,7 @@ function deleteAllTasks() {
 	
 	console.log("Wszystkie zadania zostały usunięte...");
 
-	updateTasksInLocalStorage(tasks);
+	updateTasksInLocalStorage(tasks); // <= dodajemy updateTasksInLocalStorage()
 	
 	showTasks();
 }
@@ -372,7 +374,7 @@ Pamiętaj zatem, żeby pilnować:
 - kolejności poleceń w JavaScript - kod jest wykonywany od góry do dołu;
 - pilnuj stanu aplikacji, jeśli zmienne/ lokalizacje wymieniają się danymi.
 
-## Podsumowanie Modułu 3. Kompletny kod aplikacji w wersji 2.0 zintegrowanej z localStorage
+## Podsumowanie. Kompletny kod aplikacji w wersji 2.0 aplikacji do zarządzania zadaniami zintegrowanej z localStorage
 
 ---
 
@@ -382,7 +384,7 @@ Spróbuj odświeżyć stronę lub zamknąć przeglądarkę, a potem znowu urucho
 
 Pozwoliłem sobie usunąć komentarze z poniższego kodu, ponieważ widziałeś/aś je już nie raz, a ponadto nasz kod jest wystarczająco czytelny, a funkcje mają właściwe i opisowe nazwy, więc wszystko powinno być jasne.
 
-*Gdybyś jednak nie mógł/a sobie przypomnieć, co robią poszczególne funkcje, to zapraszam do odpowiednich fragmentów kursu.*
+*Gdybyś jednak nie mógł/a sobie przypomnieć, co robią poszczególne funkcje, to zapraszam do odpowiednich fragmentów kursu JavaScript.*
 
 ```javascript
 console.clear();
@@ -446,3 +448,13 @@ function deleteAllTasks() {
 // odpalając program, wyświetlamy zapisane zadania na start:
 showTasks();
 ```
+
+## Zakończenie oraz kolejny kurs (HTML)
+
+---
+
+Właśnie dobrnąłeś/aś do końca kursu o `localStorage`! Twoja aplikacja działa w konsoli oraz przechowuje dane w przeglądarce!
+
+Czas najwyższy zbudować prosty widok naszej aplikacji za pomocą HTML (prosty interface użytkownika), a potem zintegrować ten widok z JavaScriptem, czym się zajmiemy w kolejnych kursach.
+
+Gratuluję! Możesz śmiało przejść do kolejnego kursu 👉 ***[Integrujemy HTML i JavaScript. Podstawy DOM. Pierwsza interaktywna aplikacja webowa](/kursy/html)***!
