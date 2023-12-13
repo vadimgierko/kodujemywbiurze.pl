@@ -41,7 +41,7 @@ Języki takie jak JavaScript są uważane za języki programowania, ponieważ po
 
 Właśnie z tego względu postanowiłem, że pierwszym kursem na tej stronie oraz pierwszym kursem, od którego polecam zacząć naukę programowania webowego, będzie JavaScript. Mam nadzieję, że przerobiłeś/aś wspomniany kurs i jesteś tutaj, dlatego że zostałeś/aś z niego przekierowany. Jeśli z kolei nie przerobiłeś/aś jeszcze kursu JavaScript, to polecam najpierw to zrobić, ponieważ w tym kursie będziemy dalej rozwijać poprzednią aplikację i dodawać nową wiedzę do zdobytych wcześniej fundamentów.
 
-## Plik HTML, nagłówek h1, tagi, znaczniki
+## Plik HTML, nagłówek `<h1>`, tagi, znaczniki
 
 ---
 
@@ -115,7 +115,7 @@ Istnieje mnóstwo tagów HTML i nie znam ich wszystkich na pamięć, mimo że ko
 
 Wpisz powyższy kod do pliku HTML, zapisz go (`Ctrl+S`) i odśwież okno przeglądarki. Zobaczysz, że pod tytułem pojawiła się linia. Zwróć uwagę na to, że tag `<hr>` nie ma tagu zamykającego, ponieważ... nie jest potrzebny - nie przechowuje żadnej treści, jak np. nagłówek.
 
-## Listy HTML, ol, ul
+## Listy HTML: `<ol>`, `<ul>`
 
 ---
 
@@ -147,7 +147,7 @@ Natomiast uporządkowana lista wygląda tak:
 
 Doklej powyższy kod do naszego pliku, by zobaczyć, jak będzie wyglądał w przeglądarce (nie zapomnij najpierw zapisać plik, a potem odświeżyć przeglądarkę).
 
-## Przyciski button | Dodajemy przyciski do dodawania i usuwania zadań
+## Przyciski `<button>` | Dodajemy przyciski do dodawania i usuwania zadań
 
 ---
 

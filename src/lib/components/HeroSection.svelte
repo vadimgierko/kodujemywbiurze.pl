@@ -19,10 +19,12 @@
 
 	export let handleMount: () => void;
 
+	export let additionalClasses: string = '';
+
 	onMount(() => handleMount());
 </script>
 
-<section class="hero-section">
+<section class={'hero-section ' + additionalClasses}>
 	<div class="hero-wrapper">
 		<h1>
 			{#if h1FirstSmallText.length}

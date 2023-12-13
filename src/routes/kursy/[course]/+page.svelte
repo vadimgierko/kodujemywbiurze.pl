@@ -1,6 +1,8 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 	import HeroSection from '$lib/components/HeroSection.svelte';
+	import { isIndexPage } from '$lib/stores/index.js';
+	import { onMount } from 'svelte';
 
 	export let data;
 
@@ -9,6 +11,10 @@
 	$: course = courses.find((c) => c.slug === $page.params.course);
 	$: heroSectionData = course?.heroSectionData;
 	$: headData = course?.headData;
+
+	onMount(() => {
+		isIndexPage.set(true);
+	});
 </script>
 
 <svelte:head>

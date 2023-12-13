@@ -68,7 +68,7 @@ console.log(localStorage.getItem("name")); // konsola zwróci wartość null, co
 
 Spróbuj teraz usunąć klucz `name` z `localStorage`, a potem sprawdź, czy na pewno został usunięty.
 
-## Dodawanie tablicy do localStorage (JSON.stringify()) | Zapisujemy nasze zadania w localStorage
+## Dodawanie tablicy do localStorage (`JSON.stringify()`) | Zapisujemy nasze zadania w localStorage
 
 ---
 
@@ -99,7 +99,7 @@ let tasksStringified = JSON.stringify(tasks);
 localStorage.setItem("tasks", tasksStringified);
 ```
 
-## Pobranie tablicy z localStorage (JSON.parse()) | Pobieramy nasze zadania z localStorage
+## Pobranie tablicy z localStorage (`JSON.parse()`) | Pobieramy nasze zadania z localStorage
 
 ---
 
@@ -282,7 +282,7 @@ Możesz to sprawdzić, uruchamiając kod jeszcze raz (kliknij ikonkę trójkąta
 
 Fajnie by było również, gdyby aplikacja po uruchomieniu od razu pokazała nam nasze zapisane zadania lub też ich brak. Dodaj więc wywołanie funkcji `showTasks()` na końcu pliku (pamiętaj, że JavaScript czyta i wywołuje kod od góry do dołu, dlatego zainicjuje wszystkie zmienne i funkcje, a potem wywoła `showTasks()`, która będzie już miała dostęp do pobranych (lub nie) zadań).
 
-## Modyfikujemy pozostałe funkcje, aby aktualizowały localStorage
+## Modyfikujemy pozostałe funkcje, aby aktualizowały `localStorage`
 
 ---
 

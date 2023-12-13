@@ -1,9 +1,9 @@
 <div class="container">
 	<p>
-		<strong>Uwaga!</strong> Niniejsza strona nie jest jeszcze oficjalnie ukończona, w związku z czym
-		zarówno treść, jak i struktura strony będą ulegać zmianie!
+		<strong>Uwaga!</strong> Niniejsza strona nie jest jeszcze oficjalnie ukończona! Zarówno treść, jak
+		i struktura strony będą ulegać zmianom do stycznia 2024!
 	</p>
-	<p><strong>Ostatnia aktualizacja: 12.12.2023</strong></p>
+	<p><strong>Ostatnia aktualizacja: 13.12.2023</strong></p>
 </div>
 
 <style>

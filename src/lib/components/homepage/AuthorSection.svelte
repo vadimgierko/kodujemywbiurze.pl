@@ -1,8 +1,8 @@
 <script lang="ts">
-	import avatar from '../../routes/vadim-gierko-avatar.jpg';
+	import avatar from '../../../routes/vadim-gierko-avatar.jpg';
 </script>
 
-<section class="author-section">
+<section class="author-section container">
 	<div class="avatar-container">
 		<img
 			src={avatar}
@@ -10,15 +10,15 @@
 			alt="Vadim Gierko autor strony kodujemywbiurze.pl zdjęcie profilowe"
 		/>
 	</div>
-	<h2>O autorze</h2>
-	<p><strong>Cześć!</strong> Nazywam się Vadim Gierko.</p>
+	<h2>Cześć 👋</h2>
+	<p>Nazywam się Vadim Gierko.</p>
 	<p>
 		<strong>Pracuję w biurze</strong> w instytucji samorządowej,
 		<strong>ale także programuję od 3 lat</strong>, stąd też pomysł na stworzenie niniejszej strony.
 	</p>
 	<p>
-		Jestem programistycznym samoukiem i udało mi się opanować takie języki, technologie i narzędzia
-		programistyczne, jak:
+		<strong>Jestem programistycznym samoukiem</strong> i tworzę strony oraz aplikacje webowe za pomocą
+		takich języków, technologii i narzędzi programistycznych, jak:
 	</p>
 
 	<h3>Języki</h3>
@@ -119,10 +119,6 @@
 		/>
 	</div>
 
-	<p>
-		dzięki którym w miarę swobodnie
-		<strong>tworzę strony i aplikacje webowe, w tym sklepy internetowe</strong>.
-	</p>
 	<p>I teraz chciałbym podzielić się swoją wiedzą i doświadczeniem z każdym!</p>
 	<p>
 		Jeśli chcesz wiedzieć więcej nt. tego, czym się zajmuję (w szczególności, co robiłem wcześniej)
@@ -136,15 +132,23 @@
 <style scoped>
 	section {
 		text-align: center;
-		margin: 2em auto;
 	}
 
 	.avatar-container {
 		max-width: 200px;
 		margin: 0 auto;
+		padding-top: 2em;
 
 		& img {
 			border-radius: 50%;
 		}
+	}
+
+	h2 {
+		font-size: 2.5rem;
+	}
+
+	h3 {
+		padding: 1em 0;
 	}
 </style>
