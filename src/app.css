@@ -5,6 +5,7 @@
     --primary-hover: hsla(47, 100%, 50.2%, 0.801);
     --black-100: hsl(192, 0%, 0%);
     --black-90: hsl(192, 0%, 10%);
+    --black-85: hsl(192, 0%, 15%);
     --black-80: hsl(192, 0%, 20%);
     --black-75: hsl(192, 0%, 25%);
     --black-50: hsl(192, 0%, 50%);
@@ -23,6 +24,7 @@ html[data-theme='light'] {
     --code-background-color: var(--black-5);
     --code-color: var(--black-100);
     --aside-background-color: var(--black-10);
+    --section-background-color: var(--black-5);
 }
 
 html[data-theme='dark'] {
@@ -34,6 +36,7 @@ html[data-theme='dark'] {
     --code-background-color: #2a2a2a;
     --code-color: white;
     --aside-background-color: var(--black-80);
+    --section-background-color: var(--black-85);
 }
 
 /* GLOBAL CSS */
@@ -73,7 +76,7 @@ article {
         line-height: normal;
     }
 
-    & p {
+    & p, ul, ol {
         font-size: 18px;
         line-height: 1.8rem;
         margin-bottom: 1.5em;
@@ -83,7 +86,7 @@ article {
 code {
     background-color: var(--code-background-color) !important;
     /* color: var(--code-color); */
-    font-size: 15px;
+    font-size: inherit;
     border-radius: 5px;
     
     & .hljs-comment {

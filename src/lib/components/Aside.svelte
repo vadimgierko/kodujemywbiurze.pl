@@ -58,7 +58,7 @@
 	{/if}
 </aside>
 
-<style>
+<style scoped>
 	.active-link {
 		font-weight: bold;
 	}

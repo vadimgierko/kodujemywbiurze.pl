@@ -38,13 +38,7 @@ Ponadto poznamy i wykorzystamy także JavaScriptowe pętle `for` i `forEach`.
 
 Później przeniesiemy zarządzanie zadaniami z konsoli do pliku JavaScript, który połączymy z plikiem HTML.
 
-Wykorzystamy także wbudowane okna dialogowe przeglądarki:
-
-- `alert`,
-- `confirm`,
-- `prompt`
-
-do wygodnego wprowadzania naszych zadań, co pozwoli nam na razie uniknąć konieczności poznawania podstaw obsługi formularzy.
+Wykorzystamy także wbudowane okno dialogowe przeglądarki `prompt` do wygodnego wprowadzania naszych zadań, co pozwoli nam na razie uniknąć konieczności poznawania podstaw obsługi formularzy.
 
 I jak na razie będzie to ostatni kurs na *kodujemywbiurze.pl* oraz ostatni etap budowy naszej aplikacji. Potem będę czekał na feedback pierwszych użytkowników i ewentualnie dalej rozbudowywał zarówno stronę i kursy, jak i samą aplikację, którą stworzyliśmy!
 
