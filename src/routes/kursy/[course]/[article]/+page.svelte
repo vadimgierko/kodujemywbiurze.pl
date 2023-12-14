@@ -52,13 +52,7 @@
 			: null;
 
 	onMount(() => {
-		if ($isIndexPage && !$isScreenLessThan992) {
-			// show offset/ aside by default
-			showOffset.set(true);
-		}
-
 		isIndexPage.set(false);
-		showOffset.set(false);
 
 		//========================== CODE HIGHLIGHTING =======================//
 		loadHighlightTheme();

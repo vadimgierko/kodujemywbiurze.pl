@@ -9,14 +9,14 @@
 	onMount(() => {
 		// set isScreenLessThan992 & update on resize:
 
-		if (window.innerWidth < 1200) {
+		if (window.innerWidth < 992) {
 			isScreenLessThan992.set(true);
 		} else {
 			isScreenLessThan992.set(false);
 		}
 
 		window.addEventListener('resize', () => {
-			if (window.innerWidth < 1200) {
+			if (window.innerWidth < 992) {
 				isScreenLessThan992.set(true);
 			} else {
 				isScreenLessThan992.set(false);
