@@ -28,8 +28,6 @@
 		if (!isScreenLessThan992) return;
 
 		isNavbarExpanded = !isNavbarExpanded;
-
-		// console.log({ isNavbarExpanded });
 	}
 
 	onMount(() => {
@@ -196,35 +194,10 @@
 	.right-section a {
 		display: inline-block;
 		vertical-align: middle;
-		/* Add other styles as needed */
 	}
 
 	.expanded-nav-section {
 		display: flex;
 		flex-direction: column;
-
-		/* & a {
-			color: white;
-		}
-
-		& a:hover {
-			color: rgba(255, 255, 255, 0.7);
-		} */
-	}
-
-	/* Styles for screens with a minimum width of 992px (typical laptop) */
-	@media screen and (min-width: 992px) {
-		/* Your laptop-specific CSS styles here */
-		#menu-toggle {
-			visibility: hidden;
-		}
-	}
-
-	/* Styles for screens with a maximum width of 991px (typical mobile) */
-	@media screen and (max-width: 991px) {
-		/* Your mobile-specific CSS styles here */
-		#menu-toggle {
-			visibility: visible;
-		}
 	}
 </style>

@@ -11,7 +11,11 @@
 <Aside {articles} {sections} />
 
 <main
-	class="container"
+	style={$showOffset
+		? $isScreenLessThan992
+			? 'margin-left: 0;	max-width: 100vw;'
+			: 'margin-left: 30%;	max-width: calc(100vw - 30%); padding: 0 2em;'
+		: 'margin-left: 0;	max-width: 100vw;'}
 	on:click={() => ($isScreenLessThan992 && $showOffset ? showOffset.set(false) : null)}
 >
 	<Warning />
@@ -19,15 +23,7 @@
 </main>
 
 <style>
-	/* Styles for screens with a minimum width of 992px (typical laptop) */
-	@media screen and (min-width: 992px) {
-		/* Your laptop-specific CSS styles here */
-		main {
-			box-sizing: border-box;
-			/* margin-top: 40px; */
-			margin-left: 30%; /* Same as the width of the sidenav */
-			padding: 0 2em;
-			max-width: calc(100vw - 30%);
-		}
+	main {
+		box-sizing: border-box;
 	}
 </style>

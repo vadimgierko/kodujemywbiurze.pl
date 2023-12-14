@@ -6,7 +6,7 @@
 	export let prevSlug: string | null;
 </script>
 
-<div>
+<div class="container">
 	{#if prevSlug}
 		<nav>
 			<ArrowLeft /> <a href={`/${prevSlug}`}>Poprzedni artykuł</a>

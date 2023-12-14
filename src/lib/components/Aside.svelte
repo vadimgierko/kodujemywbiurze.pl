@@ -9,7 +9,14 @@
 	let titleType: 'fullTitle' | 'docTitle' | 'tutorialTitle' = 'fullTitle';
 </script>
 
-<aside class="text-center" id={$isScreenLessThan992 && $showOffset ? 'offset' : 'aside'}>
+<aside
+	class="text-center"
+	style={$showOffset
+		? $isScreenLessThan992
+			? 'display: block; width: 60%'
+			: 'display: block; width: 30%'
+		: 'display: none'}
+>
 	<h3>Spis treści</h3>
 
 	<select bind:value={titleType}>
@@ -81,45 +88,16 @@
 		font-size: smaller;
 		height: calc(100% - 40px);
 		padding: 0 2em;
+
+		margin-top: 40px;
+		position: fixed;
+		z-index: 1;
+		top: 0;
+		left: 0;
+		overflow-x: hidden;
 	}
 
 	aside a {
 		text-decoration: none;
-	}
-
-	/* Styles for screens with a minimum width of 992px (typical laptop) */
-	@media screen and (min-width: 992px) {
-		/* Your laptop-specific CSS styles here */
-		#aside {
-			width: 30%;
-			margin-top: 40px;
-			position: fixed;
-			z-index: 1;
-			top: 0;
-			left: 0;
-			overflow-x: hidden;
-		}
-
-		#offset {
-			display: none;
-		}
-	}
-
-	/* Styles for screens with a maximum width of 991px (typical mobile) */
-	@media screen and (max-width: 991px) {
-		/* Your mobile-specific CSS styles here */
-		#aside {
-			display: none;
-		}
-
-		#offset {
-			width: 50%;
-			margin-top: 40px;
-			position: fixed;
-			z-index: 1;
-			top: 0;
-			left: 0;
-			overflow-x: hidden;
-		}
 	}
 </style>

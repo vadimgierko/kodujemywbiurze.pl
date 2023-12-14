@@ -1,18 +1,13 @@
 <script>
-	import { page } from '$app/stores';
-
-	import { isIndexPage, isScreenLessThan992, showOffset } from '$lib/stores';
+	import { isIndexPage, showOffset } from '$lib/stores';
 	import GitHubIcon from '../icons/GitHubIcon.svelte';
 	import LinkedInIcon from '../icons/LinkedInIcon.svelte';
 </script>
 
 <footer
-	style={$isIndexPage ||
-	$page.route.id === '/kursy/podstawy-javascript-pierwsza-aplikacja-w-konsoli-darmowy-kurs'
-		? 'margin-left: 0'
-		: $isScreenLessThan992
-		? 'margin-left: 0'
-		: 'margin-left: 30%;'}
+	class={$isIndexPage || (!$isIndexPage && !$showOffset)
+		? 'hide-aside-footer'
+		: 'show-aside-footer'}
 >
 	<hr />
 	<p>
@@ -33,6 +28,14 @@
 <style scoped>
 	footer {
 		text-align: center;
+	}
+
+	.hide-aside-footer {
+		margin: 0;
+	}
+
+	.show-aside-footer {
+		margin-left: 30%;
 	}
 
 	.social-media-link {

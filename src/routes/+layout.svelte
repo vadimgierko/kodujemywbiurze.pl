@@ -3,20 +3,20 @@
 	import '../app.css';
 	import Footer from '$lib/layout/Footer.svelte';
 	import Navbar from '$lib/layout/Navbar.svelte';
-	import { isScreenLessThan992 } from '$lib/stores';
+	import { isScreenLessThan992, showOffset } from '$lib/stores';
 	import { onMount } from 'svelte';
 
 	onMount(() => {
 		// set isScreenLessThan992 & update on resize:
 
-		if (window.innerWidth < 992) {
+		if (window.innerWidth < 1200) {
 			isScreenLessThan992.set(true);
 		} else {
 			isScreenLessThan992.set(false);
 		}
 
 		window.addEventListener('resize', () => {
-			if (window.innerWidth < 992) {
+			if (window.innerWidth < 1200) {
 				isScreenLessThan992.set(true);
 			} else {
 				isScreenLessThan992.set(false);

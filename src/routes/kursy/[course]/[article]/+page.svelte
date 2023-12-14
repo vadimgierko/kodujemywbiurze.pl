@@ -2,7 +2,7 @@
 	import { page } from '$app/stores';
 	import PrevNextArticle from '$lib/components/PrevNextArticle.svelte';
 	import { marked } from 'marked';
-	import { isIndexPage } from '$lib/stores';
+	import { isIndexPage, isScreenLessThan992, showOffset } from '$lib/stores';
 	import { onMount, afterUpdate } from 'svelte';
 	import type { Article } from '$lib/types/index.js';
 
@@ -15,13 +15,6 @@
 
 	hljs.registerLanguage('xml', xml);
 	hljs.registerLanguage('javascript', javascript);
-
-	// if (data.sections) {
-	// 	// if there are sections, it's js:
-	// 	hljs.registerLanguage('javascript', javascript);
-	// } else {
-	// 	hljs.registerLanguage('xml', xml);
-	// }
 
 	// Function to dynamically load dark/light CSS based on the theme
 	function loadHighlightTheme() {
@@ -45,10 +38,6 @@
 	}
 	//========================== CODE HIGHLIGHTING: END =======================//
 
-	// export let data;
-
-	//const { sections, articles } = data;
-
 	const articles = data.sections
 		? data.sections.reduce((all, s) => [...all, ...s.articles], [] as Article[])
 		: data.articles;
@@ -63,7 +52,13 @@
 			: null;
 
 	onMount(() => {
+		if ($isIndexPage && !$isScreenLessThan992) {
+			// show offset/ aside by default
+			showOffset.set(true);
+		}
+
 		isIndexPage.set(false);
+		showOffset.set(false);
 
 		//========================== CODE HIGHLIGHTING =======================//
 		loadHighlightTheme();
@@ -115,7 +110,7 @@
 		prevSlug={prevArticleSlug ? `kursy/${$page.params.course}/${prevArticleSlug}` : null}
 		nextSlug={nextArticleSlug ? `kursy/${$page.params.course}/${nextArticleSlug}` : null}
 	/>
-	<article>
+	<article class="container">
 		{@html marked(article.content)}
 	</article>
 	<PrevNextArticle
