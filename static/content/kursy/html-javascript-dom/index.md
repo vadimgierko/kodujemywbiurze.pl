@@ -79,7 +79,7 @@ Możesz z ciekawości przejść do zakładki `Elements`, by zobaczyć kod HTML T
 Powróćmy teraz do konsoli i spróbujmy uzyskać dostęp do listy zadań za pomocą `document.getElementById()` na razie z poziomu konsoli:
 
 ```javascript
-let tasksList = document.getElementById("tasks-list");
+const tasksList = document.getElementById("tasks-list");
 
 console.log(tasksList);
 ```
@@ -113,7 +113,7 @@ Usuńmy najpierw ręcznie wszystkie elementy `<li>` z naszego kodu HTML, zapiszm
 Teraz przejdźmy do konsoli i stwórzmy nowy element `<li>` za pomocą metody `document.createElement()`, przypisując go do zmiennej `li` (*list element*):
 
 ```javascript
-let li = document.createElement("li");
+const li = document.createElement("li");
 
 console.log(li);
 ```
@@ -134,7 +134,7 @@ Ok, mamy już ukształtowane zadanie w postaci elementu DOM, zawierającego tre�
 
 ```javascript
 // najpierw uzyskujemy dostęp do listy, tak jak wcześniej:
-let tasksList = document.getElementById("tasks-list");
+const tasksList = document.getElementById("tasks-list");
 
 // dodajemy wcześniej utworzony element li z przypisaną treścią do listy:
 tasksList.appendChild(li); // jeśli wcześniej przeładowałeś/aś stronę, to musisz stworzyć ten element jeszcze raz
@@ -153,10 +153,10 @@ function addTask(task) {
   // najpierw uzyskujemy dostęp do listy, tak jak wcześniej:
   // mimo że w konsoli mamy już dostęp do tej listy,
   // na wszelki wypadek zadeklarujmy ją jeszcze raz
-  let tasksList = document.getElementById("tasks-list");
+  const tasksList = document.getElementById("tasks-list");
 
   // tworzymy nowy element li:
-  let li = document.createElement("li");
+  const li = document.createElement("li");
   // przypisujemy do elementu li wartość tekstową (argument funkcji):
   li.textContent = task;
 
@@ -190,7 +190,7 @@ Dzięki tej właściwości dowolnego węzła DOM, możemy przypisać dowolny kod
 
 ```javascript
 // na wszelki wypadek zadeklarujmy listę jeszcze raz:
-let tasksList = document.getElementById("tasks-list");
+const tasksList = document.getElementById("tasks-list");
 
 // czyścimy listę:
 tasksList.innerHTML = "";
@@ -203,7 +203,7 @@ Zaszalejmy i przypiszmy ten kod do funkcji `deleteAllTasks`:
 ```javascript
 function deleteAllTasks() {
   // na wszelki wypadek zadeklarujmy listę jeszcze raz:
-  let tasksList = document.getElementById("tasks-list");
+  const tasksList = document.getElementById("tasks-list");
 
   // czyścimy listę:
   tasksList.innerHTML = "";
@@ -255,9 +255,9 @@ Początek pozostawiamy bez zmian:
 console.clear();
 
 function getTasksFromLocalStorage() {
-  let storedTasksStringified = localStorage.getItem("tasks");
+  const storedTasksStringified = localStorage.getItem("tasks");
 
-  let storedTasks = JSON.parse(storedTasksStringified);
+  const storedTasks = JSON.parse(storedTasksStringified);
 
   return storedTasks;
 }
@@ -282,7 +282,7 @@ Teraz musimy te pobrane zadania wyświetlić na ekranie, a dokładniej - musimy 
 // po deklaracji globalnej zmiennej tasks:
 // let tasks = getTasksFromLocalStorage() || [];
 // zadeklaruj globalną zmienną przechowującą HTMLową listę zadań:
-let tasksList = document.getElementById("tasks-list");
+const tasksList = document.getElementById("tasks-list");
 
 // teraz mamy dostęp i możemy korzystać z HTMLowej listy w dalszym kodzie!
 ```
@@ -294,7 +294,7 @@ Dodajmy teraz pomocniczą funkcję `appendTaskToTheTasksList()` tworząca nowy e
 
 function appendTaskToTheTasksList(task) {
   // utwórz nowy element listy li:
-  let li = document.createElement("li");
+  const li = document.createElement("li");
   // i przypisz do niego wartość zadania:
   li.textContent = task;
 
@@ -387,9 +387,9 @@ Spróbuj pododawać kilka zadań, usunąć jakieś itd., ale najpierw upewnij si
 console.clear();
 
 function getTasksFromLocalStorage() {
-  let storedTasksStringified = localStorage.getItem("tasks");
+  const storedTasksStringified = localStorage.getItem("tasks");
 
-  let storedTasks = JSON.parse(storedTasksStringified);
+  const storedTasks = JSON.parse(storedTasksStringified);
 
   return storedTasks;
 }
@@ -399,14 +399,14 @@ let tasks = getTasksFromLocalStorage() || [];
 //================= nowy kod DOM: ==========================//
 
 // zadeklaruj globalną zmienną przechowującą HTMLową listę zadań:
-let tasksList = document.getElementById("tasks-list");
+const tasksList = document.getElementById("tasks-list");
 
 // dodaj teraz pomocniczą funkcję `appendTaskToTheTasksList()`
 // tworząca nowy element listy,
 // pobierającą zadanie jako argument i dodającą zadanie do listy:    
 function appendTaskToTheTasksList(task) {
   // utwórz nowy element listy li:
-  let li = document.createElement("li");
+  const li = document.createElement("li");
   // i przypisz do niego wartość zadania:
   li.textContent = task;
 
@@ -502,19 +502,19 @@ W związku z tym proponuję usunąć funkcję `showTasks()` i zastąpić ją ca�
 console.clear();
 
 function getTasksFromLocalStorage() {
-  let storedTasksStringified = localStorage.getItem("tasks");
+  const storedTasksStringified = localStorage.getItem("tasks");
 
-  let storedTasks = JSON.parse(storedTasksStringified);
+  const storedTasks = JSON.parse(storedTasksStringified);
 
   return storedTasks;
 }
 
 let tasks = getTasksFromLocalStorage() || [];
 
-let tasksList = document.getElementById("tasks-list");
+const tasksList = document.getElementById("tasks-list");
   
 function appendTaskToTheTasksList(task) {
-  let li = document.createElement("li");
+  const li = document.createElement("li");
   li.textContent = task;
 
   tasksList.appendChild(li);
@@ -625,10 +625,10 @@ Mamy teraz wygodne wbudowane narzędzie do pobierania danych od użytkownika, kt
 // usuń argument newTask z nawiasów funkcji,
 // ponieważ nie będziemy już go wprowadzać ręcznie:
 function addTask() {
-  // deklarujemy zmienną newTask,
+  // deklarujemy zmienną newTask, używając const, ponieważ nie będziemy jej modyfikować,
   // która przyjmuje wartość zwracaną przez wbudowaną funkcję prompt(),
   // która to wartość jest tym, co wpisze użytkownik w oknie:
-  let newTask = prompt("Wpisz nowe zadanie:");
+  const newTask = prompt("Wpisz nowe zadanie:");
 
   // reszta kodu pozostaje bez zmian:
   tasks.push(newTask);
@@ -695,14 +695,14 @@ Zmodyfikuj funkcję `appendTaskToTheTasksList()` zgodnie z poniższym kodem - ws
 // która przekaże 2 argumenty: task i index):
 function appendTaskToTheTasksList(task, index) {
   // utwórz nowy element listy li:
-  let li = document.createElement("li");
+  const li = document.createElement("li");
   // i przypisz do niego wartość zadania:
 
   //====================> ZMODYFIKOWANY KOD: ============================//
   li.textContent = task + " "; // dodajemy spację, by oddzielić tekst od przycisku usuń
 
   // utwórz przycisk usuwania zadania:
-  let deleteButton = document.createElement("button");
+  const deleteButton = document.createElement("button");
   // przypisz do niego nazwę:
   deleteButton.textContent = "usuń";
 
@@ -761,7 +761,7 @@ Zastanówmy się, uwzględniając wszystko, co dotychczas zrobiliśmy, jak może
 function addTaskAtIndex(index) {
   // deklarujemy zmienną newTask,
   // która przyjmuje wartość zwracaną przez wbudowaną funkcję prompt():
-  let newTask = prompt("Wpisz nowe zadanie:");
+  const newTask = prompt("Wpisz nowe zadanie:");
 
   tasks.splice(index, 0, newTask);
 
@@ -779,11 +779,11 @@ function addTaskAtIndex(index) {
 ```javascript
 function appendTaskToTheTasksList(task, index) {
   //====================> DOTYCHCZASOWY KOD: ============================//
-  let li = document.createElement("li");
+  const li = document.createElement("li");
 
   li.textContent = task + " ";
 
-  let deleteButton = document.createElement("button");
+  const deleteButton = document.createElement("button");
   deleteButton.textContent = "usuń";
 
   deleteButton.onclick = function() {
@@ -795,7 +795,7 @@ function appendTaskToTheTasksList(task, index) {
   //====================> NOWY KOD: ============================//
 
   // utwórz przycisk dodania zadania pod tym indeksem:
-  let addAtIndexButton = document.createElement("button");
+  const addAtIndexButton = document.createElement("button");
   // przypisz do niego nazwę:
   addAtIndexButton.textContent = "dodaj przed";
 
@@ -838,22 +838,22 @@ Z kolei kod pliku JavaScript powinien wyglądać tak:
 console.clear();
 
 function getTasksFromLocalStorage() {
-  let storedTasksStringified = localStorage.getItem("tasks");
+  const storedTasksStringified = localStorage.getItem("tasks");
 
-  let storedTasks = JSON.parse(storedTasksStringified);
+  const storedTasks = JSON.parse(storedTasksStringified);
 
   return storedTasks;
 }
 
 let tasks = getTasksFromLocalStorage() || [];
 
-let tasksList = document.getElementById("tasks-list");
+const tasksList = document.getElementById("tasks-list");
 
 function appendTaskToTheTasksList(task, index) {
-  let li = document.createElement("li");
+  const li = document.createElement("li");
   li.textContent = task + " ";
   
-  let deleteButton = document.createElement("button");
+  const deleteButton = document.createElement("button");
   deleteButton.textContent = "usuń";
 
   deleteButton.onclick = function() {
@@ -862,7 +862,7 @@ function appendTaskToTheTasksList(task, index) {
 
   li.appendChild(deleteButton);
 
-  let addAtIndexButton = document.createElement("button");
+  const addAtIndexButton = document.createElement("button");
   addAtIndexButton.textContent = "dodaj przed";
 
   addAtIndexButton.onclick = function() {
@@ -887,7 +887,7 @@ function updateTasksInLocalStorage() {
 }
 
 function addTask() {
-  let newTask = prompt("Wpisz nowe zadanie:");
+  const newTask = prompt("Wpisz nowe zadanie:");
 
   tasks.push(newTask);
 
@@ -899,7 +899,7 @@ function addTask() {
 }
 
 function addTaskAtIndex(index) {
-  let newTask = prompt("Wpisz nowe zadanie:");
+  const newTask = prompt("Wpisz nowe zadanie:");
   
   tasks.splice(index, 0, newTask);
 
@@ -972,22 +972,22 @@ Nasz kod HTML musimy z kolei osadzić w szablonie HTML, co już robiliśmy <a hr
       console.clear();
 
       function getTasksFromLocalStorage() {
-        let storedTasksStringified = localStorage.getItem("tasks");
+        const storedTasksStringified = localStorage.getItem("tasks");
 
-        let storedTasks = JSON.parse(storedTasksStringified);
+        const storedTasks = JSON.parse(storedTasksStringified);
 
         return storedTasks;
       }
 
       let tasks = getTasksFromLocalStorage() || [];
 
-      let tasksList = document.getElementById("tasks-list");
+      const tasksList = document.getElementById("tasks-list");
 
       function appendTaskToTheTasksList(task, index) {
-        let li = document.createElement("li");
+        const li = document.createElement("li");
         li.textContent = task + " ";
         
-        let deleteButton = document.createElement("button");
+        const deleteButton = document.createElement("button");
         deleteButton.textContent = "usuń";
 
         deleteButton.onclick = function() {
@@ -996,7 +996,7 @@ Nasz kod HTML musimy z kolei osadzić w szablonie HTML, co już robiliśmy <a hr
         
         li.appendChild(deleteButton);
 
-        let addAtIndexButton = document.createElement("button");
+        const addAtIndexButton = document.createElement("button");
         addAtIndexButton.textContent = "dodaj przed";
 
         addAtIndexButton.onclick = function() {
@@ -1021,7 +1021,7 @@ Nasz kod HTML musimy z kolei osadzić w szablonie HTML, co już robiliśmy <a hr
       }
 
       function addTask() {
-        let newTask = prompt("Wpisz nowe zadanie:");
+        const newTask = prompt("Wpisz nowe zadanie:");
 
         tasks.push(newTask);
 
@@ -1033,7 +1033,7 @@ Nasz kod HTML musimy z kolei osadzić w szablonie HTML, co już robiliśmy <a hr
       }
 
       function addTaskAtIndex(index) {
-        let newTask = prompt("Wpisz nowe zadanie:");
+        const newTask = prompt("Wpisz nowe zadanie:");
         
         tasks.splice(index, 0, newTask);
 

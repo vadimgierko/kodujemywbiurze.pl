@@ -139,13 +139,19 @@ Pobaw się tym kodem w konsoli i sprawdź, czym się różnią zmienne `tasksStr
 
 Uff... Znamy już podstawy pracy z `localStorage`, a nawet przetestowaliśmy dodawanie, pobieranie i usuwanie naszych zadań z `localStorage` za pomocą poleceń. Musimy teraz zaimplementować to w naszej aplikacji, a dokładnie zmodyfikować wszystkie dotychczasowe funkcje (a nawet deklarację zmiennej `tasks`!), by były zsynchronizowane z `localStorage`.
 
-Utwórz zatem plik o nazwie `todo-app-local-storage` w zakładce `snippets` i zaczynamy przenosić do niego i uzupełniać kod z wersji 1.0. Zaczynamy!
+Utwórz zatem nowy plik o nazwie `todo-app-console-local-storage-snippet` w zakładce `snippets` i zaczynamy przenosić do niego i uzupełniać kod z wersji 1.0.
+
+Być może się zastanawiasz, po co utworzyliśmy nowy plik, a nie modyfikujemy poprzedni, z którym pracowaliśmy wcześniej?
+
+Otóż, jak najbardziej możemy modyfikować poprzedni plik z pierwszą wersją aplikacji, aczkolwiek wtedy ją utracimy. Owszem, być może nie będzie nam potrzebna, ponieważ nowa wersja będzie bardziej zaawansowana, aczkolwiek dobrą praktyką jest przechowywanie różnych wersji w różnych plikach.
+
+W programowaniu nazywamy to kontrolą wersji i używa się do tego zaawansowanych narzędzi, tj. <a href="https://github.com/" target="_blank">GitHub</a>, aczkolwiek nam na razie wystarczy, że będziemy tworzyć nowy plik (lub później foldery z plikami) dla każdej wersji aplikacji, którą będziemy tworzyć. Ponadto, ten sposób organizacji naszego kodu pozwala nie tylko na wyizolowane korzystanie z każdej z wersji, ale także, w pewnym sensie, podróż w czasie, jeśli chodzi o naszą naukę, ale też rozwój aplikacji.
+
+Zaczynamy!
 
 Najpierw czyścimy konsolę, jak wcześniej:
 
 ```javascript
-// todo-app-local-storage app code:
-
 console.clear();
 
 // ...tu będziemy pisać kolejne liniki kodu
@@ -156,16 +162,27 @@ Teraz, zamiast deklarować zmienną `tasks` i przypisywać do niej pustą tablic
 Identycznie działa każda aplikacja, która pobiera dane z bazy danych, np. kiedy uruchamiamy Messengera, to przez jakąś chwilę pobiera on pewną ilość danych z bazy - ostatnie konwersacje, nowe wiadomości itd.
 
 ```javascript
-// todo-app-local-storage app code:
-
 // ...tutaj jest poprzedni kod w pliku
 
 function getTasksFromLocalStorage() {
 	// pobieramy tablicę zadań zapisaną w localStorage w postaci tekstowej:
-	let storedTasksStringified = localStorage.getItem("tasks");
+	const storedTasksStringified = localStorage.getItem("tasks");
 
 	// konwertujemy pobrane dane w JavaScriptową tablicę:
-	let storedTasks = JSON.parse(storedTasksStringified);
+	const storedTasks = JSON.parse(storedTasksStringified);
+
+	// UWAGA!
+	// zadeklarowaliśmy powyższe zmienne za pomocą słowa kluczowego const, a nie let,
+	// ponieważ nie będziemy tych zmiennych... zmieniać:
+	// przypisujemy do nich pobraną wartość z localStorage lub też jej przekonwertowaną wersję,
+	// a potem zwracamy tę zmienną (przekazujemy ją dalej do ponownego wykorzystania),
+	// nie będziemy ich w żaden sposób modyfikować!
+
+	// Jeśli nie pamiętasz, o co chodzi ze słowem kluczowym const,
+	// wróć do lekcji nt. zmiennych w module 1. kursu JavaScript
+
+	// PS. użycie słowa kluczowego let także zadziała,
+	// aczkolwiek użycie const w tym przypadku będzie dobrą praktyką. 
 
 	// zwracamy wartość:
 	return storedTasks;
@@ -201,8 +218,6 @@ No i mógłbyś/abyś zapytać: *W czym problem? Funkcja zwróciła `null` i tyl
 Sprawdźmy zatem! Do kodu, który już masz w pliku, dodajmy zmodyfikowaną funkcję `addTasks`, która także wymaga utworzenia funkcji pomocniczej `updateTasksInLocalStorage()`, która będzie aktualizowała zadania w `localStorage`:
 
 ```javascript
-// todo-app-local-storage app code:
-
 // ...tutaj jest poprzedni kod w pliku
 
 // dodajemy funkcję aktualizującą tablicę zadań w localStorage
@@ -378,7 +393,7 @@ Pamiętaj zatem, żeby pilnować:
 
 ---
 
-Poniżej znajduje się cały kod aplikacji w wersji 2.0 zapisanej w pliku `todo-app-local-storage` w zakładce `snippets`, która przechowuje zadania w `localStorage`, dzięki czemu **Twoje zadania będą zapisane w pamięci przeglądarki tak długo, aż nie wyczyścisz `localStorage`**!
+Poniżej znajduje się cały kod aplikacji w wersji 2.0 zapisanej w pliku `todo-app-console-local-storage-snippet` w zakładce `snippets`, która przechowuje zadania w `localStorage`, dzięki czemu **Twoje zadania będą zapisane w pamięci przeglądarki tak długo, aż nie wyczyścisz `localStorage`**!
 
 Spróbuj odświeżyć stronę lub zamknąć przeglądarkę, a potem znowu uruchomić plik - zadania nadal są w pamięci przeglądarki!
 
@@ -390,9 +405,9 @@ Pozwoliłem sobie usunąć komentarze z poniższego kodu, ponieważ widziałeś/
 console.clear();
 
 function getTasksFromLocalStorage() {
-	let storedTasksStringified = localStorage.getItem("tasks");
+	const storedTasksStringified = localStorage.getItem("tasks");
 
-	let storedTasks = JSON.parse(storedTasksStringified);
+	const storedTasks = JSON.parse(storedTasksStringified);
 
 	return storedTasks;
 }
