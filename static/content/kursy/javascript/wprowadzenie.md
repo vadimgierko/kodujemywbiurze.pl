@@ -52,7 +52,7 @@ Później (**Moduł 2.**) stworzymy i będziemy używać własnych funkcji, któ
 
 Natomiast później przejdziesz do <a href="/kursy/local-storage" target="_blank">kursu Local Storage</a>, w którym rozbudujemy naszą aplikację w ten sposób, że przechowamy nie tylko kod aplikacji, ale także same zadania zostaną zapisane w przeglądarce za pośrednictwem wbudowanej funkcjonalności `localStorage`, która jest swego rodzaju magazynem danych.
 
-Potem przerobimy <a href="/kursy/html" target="_blank">niezbędne podstawy HTML</a> oraz <a href="/kursy/local-storage" target="_blank">zintegrujemy HTML i JavaScript za pomocą DOM</a>, dzięki czemu powstanie prawdziwa interaktywna aplikacja do zarządzania zadaniami z interfacem użytkownika w przeglądarce - z przyciskami, okienkiem dialogowym do wpisywania zadań itd.
+Potem przerobimy <a href="/kursy/html" target="_blank">niezbędne podstawy HTML</a> oraz <a href="/kursy/html-javascript-dom" target="_blank">zintegrujemy HTML i JavaScript za pomocą DOM</a>, dzięki czemu powstanie prawdziwa interaktywna aplikacja do zarządzania zadaniami z interfacem użytkownika w przeglądarce - z przyciskami, okienkiem dialogowym do wpisywania zadań itd.
 
 Powodzenia!
 
