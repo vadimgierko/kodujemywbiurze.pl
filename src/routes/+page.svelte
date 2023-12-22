@@ -3,7 +3,6 @@
 	import heroImg from './hero-img-square.png';
 
 	import HeroSection from '$lib/components/HeroSection.svelte';
-	import AuthorSection from '$lib/components/homepage/AuthorSection.svelte';
 	import AboutSection from '$lib/components/homepage/AboutSection.svelte';
 </script>
 
@@ -37,8 +36,8 @@
 			'Naucz się tworzyć aplikacje webowe i strony www... w przerwach między zadaniami w biurze 😏',
 			'Zacznij pisać kod swojej pierwszej aplikacji bezpośrednio w przeglądarce już od pierwszej lekcji!'
 		]}
-		btnHref="/kursy/javascript"
-		btnCTA="Zacznij kodować!"
+		btnHref="/kursy/programowanie-aplikacji-webowych"
+		btnCTA="Przejdź do kursu!"
 		imgSrc={heroImg}
 		handleMount={() => isIndexPage.set(true)}
 		additionalClasses="container"
@@ -48,5 +47,76 @@
 
 	<AboutSection />
 
-	<AuthorSection />
+	<div style="text-align: center;">
+		<a href="/kursy/programowanie-aplikacji-webowych">
+			<button class="bg-primary">Przejdź do kursu!</button>
+		</a>
+	</div>
+
+	<br />
 </main>
+
+<style scoped>
+	/* MEDIA QUERIES */
+
+	/* MOBILE */
+
+	button {
+		margin-top: 2em;
+		font-size: 1rem;
+		font-weight: 600;
+		padding: 1em 2em;
+		border-radius: 18px;
+		color: rgb(0, 0, 0);
+	}
+
+	/* Small devices (landscape phones, 576px and up) */
+
+	@media screen and (min-width: 576px) {
+	}
+
+	/* Medium devices (tablets, 768px and up) */
+	@media screen and (min-width: 768px) and (orientation: portrait) {
+	}
+
+	@media screen and (min-width: 768px) and (orientation: landscape) {
+	}
+
+	/* Large devices (desktops, 992px and up) */
+	@media screen and (min-width: 992px) and (orientation: portrait) {
+		button {
+			margin-top: 32px;
+
+			font-size: 1.2rem;
+			font-weight: 600;
+			padding: 1.2em 2.4em;
+			border-radius: 20px;
+			color: rgb(0, 0, 0);
+		}
+	}
+
+	@media screen and (min-width: 992px) and (orientation: landscape) {
+		button {
+			margin-top: 32px;
+
+			font-size: 1.2rem;
+			font-weight: 600;
+			padding: 1.2em 2.4em;
+			border-radius: 20px;
+			color: rgb(0, 0, 0);
+		}
+	}
+
+	/* Extra large devices (large desktops, 1200px and up) */
+	@media screen and (min-width: 1200px) and (orientation: landscape) {
+		button {
+			margin-top: 32px;
+
+			font-size: 1.2rem;
+			font-weight: 600;
+			padding: 1.2em 2.4em;
+			border-radius: 20px;
+			color: rgb(0, 0, 0);
+		}
+	}
+</style>
