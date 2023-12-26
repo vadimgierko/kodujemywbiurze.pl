@@ -1,8 +1,8 @@
 <script lang="ts">
-	import avatar from '../../../routes/vadim-gierko-avatar.jpg';
+	import avatar from '../../routes/vadim-gierko-avatar.jpg';
 </script>
 
-<section class="author-section container">
+<main class="container">
 	<div class="avatar-container">
 		<img
 			src={avatar}
@@ -10,18 +10,22 @@
 			alt="Vadim Gierko autor strony kodujemywbiurze.pl zdjęcie profilowe"
 		/>
 	</div>
-	<h2>Cześć 👋</h2>
+	<h1>Cześć 👋</h1>
 	<p>Nazywam się Vadim Gierko.</p>
 	<p>
-		<strong>Pracuję w biurze</strong> w instytucji samorządowej,
-		<strong>ale także programuję od 3 lat</strong>, stąd też pomysł na stworzenie niniejszej strony.
+		<strong>Pracuję w biurze 🏢</strong> (a dokładniej w Urzędzie) ➕
+		<strong>programuję 💻 od 3 lat</strong>.
 	</p>
+	<p>Stąd też pomysł na stworzenie tej strony!</p>
+
+	<hr>
+
 	<p>
-		<strong>Jestem programistycznym samoukiem</strong> i tworzę strony oraz aplikacje webowe za pomocą
-		takich języków, technologii i narzędzi programistycznych, jak:
+		<strong>Jestem programistycznym samoukiem</strong><br> i tworzę strony oraz aplikacje webowe za pomocą
+		takich technologii, jak:
 	</p>
 
-	<h3>Języki</h3>
+	<h2>Języki</h2>
 
 	<div>
 		<img
@@ -46,7 +50,7 @@
 		/>
 	</div>
 
-	<h3>Frameworki</h3>
+	<h2>Frameworki</h2>
 
 	<div>
 		<img
@@ -67,7 +71,7 @@
 		/>
 	</div>
 
-	<h3>Biblioteki</h3>
+	<h2>Biblioteki</h2>
 
 	<div>
 		<img
@@ -80,7 +84,7 @@
 		/>
 	</div>
 
-	<h3>Baza danych w chmurze, płatności online i autoryzacja użytkowników</h3>
+	<h2>Baza danych, autoryzacja użytkowników oraz płatności</h2>
 
 	<div>
 		<img
@@ -93,7 +97,7 @@
 		/>
 	</div>
 
-	<h3>Deployment</h3>
+	<h2>Deployment</h2>
 
 	<div>
 		<img
@@ -106,7 +110,7 @@
 		/>
 	</div>
 
-	<h3>Kontrola wersji oraz edytor kodu</h3>
+	<h2>Kontrola wersji oraz edytor kodu</h2>
 
 	<div>
 		<img
@@ -119,6 +123,9 @@
 		/>
 	</div>
 
+    <br />
+    <hr />
+
 	<p>I teraz chciałbym podzielić się swoją wiedzą i doświadczeniem z każdym!</p>
 	<p>
 		Jeśli chcesz wiedzieć więcej nt. tego, czym się zajmuję (w szczególności, co robiłem wcześniej)
@@ -127,10 +134,10 @@
 			target="_blank">vadimgierko.com</a
 		>!
 	</p>
-</section>
+</main>
 
 <style scoped>
-	section {
+	main {
 		text-align: center;
 	}
 
@@ -144,11 +151,11 @@
 		}
 	}
 
-	h2 {
+	h1 {
 		font-size: 2.5rem;
 	}
 
-	h3 {
+	h2 {
 		padding: 1em 0;
 	}
 </style>

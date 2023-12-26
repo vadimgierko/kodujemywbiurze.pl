@@ -41,7 +41,7 @@
 				{/each}
 
 				<a href={btnHref}>
-					<button class="bg-primary" id="cta-btn">{btnCTA}</button>
+					<button class="bg-primary">{btnCTA}</button>
 				</a>
 			</div>
 

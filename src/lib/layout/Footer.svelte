@@ -1,4 +1,5 @@
 <script>
+	import GlobeIcon from '$lib/icons/GlobeIcon.svelte';
 	import { isIndexPage, showOffset } from '$lib/stores';
 	import GitHubIcon from '../icons/GitHubIcon.svelte';
 	import LinkedInIcon from '../icons/LinkedInIcon.svelte';
@@ -11,10 +12,15 @@
 >
 	<hr />
 	<p>
-		&copy; 2023 <a href="https://vadimgierko.com" target="_blank" style="margin-left: 0.5em"
-			>Vadim Gierko</a
-		>
+		&copy; 2023 Vadim Gierko
 		<br />
+		<a href="/o-autorze" class="social-media-link"
+			>o autorze</a
+		> |
+		<a class="social-media-link" href="https://vadimgierko.com" target="_blank"
+			><GlobeIcon /></a
+		>
+		|
 		<a class="social-media-link" href="https://github.com/vadimgierko" target="_blank"
 			><GitHubIcon /></a
 		>

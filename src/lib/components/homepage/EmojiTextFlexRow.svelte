@@ -56,6 +56,7 @@
 	@media screen and (max-width: 568px) {
 		h2 {
 			font-size: 2rem;
+			line-height: normal;
 		}
 	}
 </style>
