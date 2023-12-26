@@ -12,10 +12,11 @@
 >
 	<hr />
 	<p>
-		&copy; 2023 Vadim Gierko | <a href="/o-autorze" style="margin-left: 0.5em"
-			>więcej o autorze</a
-		>
+		&copy; 2023 Vadim Gierko
 		<br />
+		<a href="/o-autorze" class="social-media-link"
+			>o autorze</a
+		> |
 		<a class="social-media-link" href="https://vadimgierko.com" target="_blank"
 			><GlobeIcon /></a
 		>

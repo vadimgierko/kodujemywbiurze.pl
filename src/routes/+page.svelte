@@ -36,7 +36,7 @@
 			'Naucz się tworzyć aplikacje webowe i strony www... w przerwach między zadaniami w biurze 😏',
 			'Zacznij pisać kod swojej pierwszej aplikacji bezpośrednio w przeglądarce już od pierwszej lekcji!'
 		]}
-		btnHref="/kursy/programowanie-aplikacji-webowych"
+		btnHref="/kursy/javascript/wprowadzenie-czym-jest-javascript-i-dlaczego-warto-sie-go-uczyc"
 		btnCTA="Przejdź do kursu!"
 		imgSrc={heroImg}
 		handleMount={() => isIndexPage.set(true)}
@@ -48,7 +48,7 @@
 	<AboutSection />
 
 	<div style="text-align: center;">
-		<a href="/kursy/programowanie-aplikacji-webowych">
+		<a href="/kursy/javascript/wprowadzenie-czym-jest-javascript-i-dlaczego-warto-sie-go-uczyc">
 			<button class="bg-primary">Przejdź do kursu!</button>
 		</a>
 	</div>

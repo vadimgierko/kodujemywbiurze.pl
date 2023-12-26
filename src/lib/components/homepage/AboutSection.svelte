@@ -87,8 +87,8 @@
 		<strong>Zamień scrollowanie na kodowanie!</strong>😈
 	</p>
 	<EmojiTextFlexRow items={pros} header="Programowanie jest..." />
-	<p class="container" style="padding: 1em 0; line-height: 2.0">
-		<strong STYLE="font-size: 2rem;">Poznaj podstawy web developmentu -</strong><br />
+	<p style="padding: 1em 0; line-height: 2.0" class="container">
+		<strong style="font-size: 2rem;">Poznaj podstawy web developmentu -</strong><br />
 		sztuki tworzenia stron internetowych i aplikacji webowych!
 	</p>
 	<!-- LANGUAGES -->

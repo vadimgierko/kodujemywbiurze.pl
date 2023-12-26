@@ -2,7 +2,7 @@
 	import avatar from '../../routes/vadim-gierko-avatar.jpg';
 </script>
 
-<main class="author-section container">
+<main class="container">
 	<div class="avatar-container">
 		<img
 			src={avatar}
@@ -13,12 +13,16 @@
 	<h1>Cześć 👋</h1>
 	<p>Nazywam się Vadim Gierko.</p>
 	<p>
-		<strong>Pracuję w biurze</strong> w instytucji samorządowej,
-		<strong>ale także programuję od 3 lat</strong>, stąd też pomysł na stworzenie niniejszej strony.
+		<strong>Pracuję w biurze 🏢</strong> (a dokładniej w Urzędzie) ➕
+		<strong>programuję 💻 od 3 lat</strong>.
 	</p>
+	<p>Stąd też pomysł na stworzenie tej strony!</p>
+
+	<hr>
+
 	<p>
-		<strong>Jestem programistycznym samoukiem</strong> i tworzę strony oraz aplikacje webowe za pomocą
-		takich języków, technologii i narzędzi programistycznych, jak:
+		<strong>Jestem programistycznym samoukiem</strong><br> i tworzę strony oraz aplikacje webowe za pomocą
+		takich technologii, jak:
 	</p>
 
 	<h2>Języki</h2>
@@ -80,7 +84,7 @@
 		/>
 	</div>
 
-	<h2>Baza danych w chmurze, płatności online i autoryzacja użytkowników</h2>
+	<h2>Baza danych, autoryzacja użytkowników oraz płatności</h2>
 
 	<div>
 		<img

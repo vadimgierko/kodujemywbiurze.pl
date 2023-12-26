@@ -15,12 +15,14 @@
 	});
 
 	const content = `
-## Twórz aplikację do zarządzania zadaniami krok po kroku od pierwszej lekcji!
+Witaj w darmowym metakursie dla początkujących koderów w biurze *Podstawy programowania webowego. Tworzymy aplikację*!
 
-Ponieważ wolę **uczyć się nowych rzeczy w praktyce, widząc natychmiastowe rezultaty** mojej nauki i pracy, dlatego w trakcie tego kursu:
+## Twórz aplikację krok po kroku od pierwszej lekcji i jednocześnie poznawaj podstawy programowania webowego!
 
-- od samego początku **będziemy tworzyć coraz bardziej rozbudowaną aplikację do zarządzania listą zadań do zrobienia, która będzie działać w konsoli naszej przeglądarki bezpośrednio na tej stronie**, a potem zostanie przekształcona w samodzielną aplikację webową,
-- **przy okazji** tworzenia aplikacji **opanujemy podstawy języka JavaScript** - <a href="https://bulldogjob.pl/readme/najpopularniejsze-jezyki-programowania-2020" target="_blank">najbardziej popularnego języka programowania</a>, a potem także niezbędne podstawy HTML i CSS (w kolejnych kursach).
+Jak sama nazwa wskazuje, w trakcie tego metakursu:
+
+1. **będziemy tworzyć i stopniowo rozbudowywać aplikację do zarządzania listą zadań do zrobienia**, która będzie działać w przeglądarce,
+2. i **przy okazji** tworzenia aplikacji **opanujemy niezbędne do tego podstawy języka JavaScript oraz HTML**.
 
 Aplikacja, którą stworzymy, umożliwi nam:
 
@@ -31,21 +33,25 @@ Aplikacja, którą stworzymy, umożliwi nam:
 - modyfikowanie oraz
 - usuwanie zadań do zrobienia.
 
-## Struktura metakursu *Programowanie aplikacji webowych*
+## Struktura metakursu
+
+---
+
+Kurs ten nazwałem *metakursem*, ponieważ jest on zlepkiem **4 mniejszych odrębnych kursów**, skupionych na konkretnych językach programowania, ich integracji oraz wbudowanych funkcjonalnościach przeglądarki.
 
 ### JavaScript
 
-Na początku (w 1. module kursu JavaScript) będzie to możliwe za pomocą poleceń napisanych przez nas kodem (poleceniami w czystym) JavaScript w konsoli.
+Na początku (w 1. module <a href="/kursy/javascript" target="_blank">kursu JavaScript</a>) będziemy zarządzać naszymi zadaniami za pomocą nowopoznanych poleceń JavaScript w konsoli *(za chwilę dowiesz się, czym jest konsola i jak z niej korzystać)*.
 
-Później (Moduł 2. kursu JavaScript), stworzymy i będziemy używać własnych funkcji, które zostaną zapisane w pliku bezpośrednio w przeglądarce, dzięki czemu nasz kod zostanie zachowany nawet po przeładowaniu strony oraz będziemy mogli go uruchomić w konsoli. W ten sposób powstanie aplikacja w wersji 1.0.
+Później (w module 2. kursu JavaScript) stworzymy i będziemy używać własnych funkcji, które zostaną zapisane w pliku bezpośrednio w przeglądarce, dzięki czemu nasz kod zostanie zachowany nawet po przeładowaniu strony oraz będziemy mogli go uruchomić w konsoli.
 
 ### Local Storage
 
-Natomiast w kursie Local Storage rozbudujemy naszą aplikację w ten sposób, że zadania zostaną zapisane w przeglądarce za pośrednictwem wbudowanej funkcjonalności *localStorage*, która jest swego rodzaju magazynem danych. W ten sposób powstanie aplikacja w wersji 2.0.
+Później przejdziemy do <a href="/kursy/local-storage" target="_blank">kursu Local Storage</a>, w którym rozbudujemy naszą aplikację w ten sposób, że zadania zostaną zapisane w "pamięci" przeglądarki, dzięki czemu ich nie utracimy nawet po zamknięciu przeglądarki.
 
-### HTML i DOM
+### HTML + DOM
 
-Z kolei później poznamy minimum HTML oraz podstawy DOM, który integruje HTML i JavaScript, dzięki czemu przeniesiemy naszą aplikację z konsoli do przeglądarki i stworzymy prosty UI zintegrowany z kodem JavaScript.
+Potem poznamy totalnie ascetyczne <a href="/kursy/html" target="_blank">podstawy HTML</a>, by stworzyć prosty UI (widok naszej aplikacji w przeglądarce), oraz <a href="/kursy/html-javascript-dom" target="_blank">zintegrujemy HTML i JavaScript za pomocą DOM</a>, dzięki czemu przeniesiemy naszą aplikację z konsoli do przeglądarki oraz zintegrujemy nasz UI z kodem JavaScript. W ten sposób powstanie prawdziwa interaktywna aplikacja do zarządzania zadaniami z interfacem użytkownika w przeglądarce - z przyciskami, okienkiem dialogowym do wpisywania zadań itd.
 
 ## Przyszłość strony *kodujemywbiurze.pl* oraz kursu/ów
 
