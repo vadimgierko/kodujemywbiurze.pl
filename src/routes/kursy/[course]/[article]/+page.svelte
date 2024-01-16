@@ -89,7 +89,7 @@
 
 	<meta
 		property="og:image"
-		content="/content/kursy/javascript/kurs-podstawy-javascript-pierwsza-aplikacja-w-konsoli-screenshot.jpg"
+		content="https://www.kodujemywbiurze.pl/content/kursy/javascript/kurs-podstawy-javascript-pierwsza-aplikacja-w-konsoli-screenshot.jpg"
 	/>
 
 	<meta

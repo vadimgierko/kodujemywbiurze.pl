@@ -11,7 +11,7 @@ const courses: Course[] = [
 			ogDescription:
 				'Naucz się podstaw Javascript i stwórz aplikację do zarządzania Twoimi zadaniami bezpośrednio w Twojej przeglądarce!',
 			ogImage:
-				'/content/kursy/javascript/kurs-podstawy-javascript-pierwsza-aplikacja-w-konsoli-screenshot.jpg',
+				'https://www.kodujemywbiurze.pl/content/kursy/javascript/kurs-podstawy-javascript-pierwsza-aplikacja-w-konsoli-screenshot.jpg',
 			ogUrl: 'https://www.kodujemywbiurze.pl/kursy/javascript'
 		},
 		heroSectionData: {
@@ -37,7 +37,7 @@ const courses: Course[] = [
 			ogDescription:
 				'Naucz się podstaw Local Storage i zapisuj dane aplikacji do zarządzania zadaniami bezpośrednio w przeglądarce!',
 			ogImage:
-				'/content/kursy/javascript/kurs-podstawy-javascript-pierwsza-aplikacja-w-konsoli-screenshot.jpg',
+				'https://www.kodujemywbiurze.pl/content/kursy/javascript/kurs-podstawy-javascript-pierwsza-aplikacja-w-konsoli-screenshot.jpg',
 			ogUrl: 'https://www.kodujemywbiurze.pl/kursy/local-storage'
 		},
 		heroSectionData: {
@@ -62,7 +62,8 @@ const courses: Course[] = [
 				'Naucz się podstaw HTML i stwórz pierwszą statyczną stronę aplikacji do zarządzania Twoimi zadaniami!',
 			ogDescription:
 				'Naucz się podstaw HTML i stwórz pierwszą statyczną stronę aplikacji do zarządzania Twoimi zadaniami!',
-			ogImage: '',
+			ogImage:
+				'https://www.kodujemywbiurze.pl/content/kursy/javascript/kurs-podstawy-javascript-pierwsza-aplikacja-w-konsoli-screenshot.jpg',
 			ogUrl: 'https://www.kodujemywbiurze.pl/kursy/html'
 		},
 		heroSectionData: {
@@ -89,7 +90,8 @@ const courses: Course[] = [
 				'Stwórz pierwszą interaktywną aplikację webową do zarządzania Twoimi zadaniami łącząc HTML i JavaScript!',
 			ogDescription:
 				'Stwórz pierwszą interaktywną aplikację webową do zarządzania Twoimi zadaniami łącząc HTML i JavaScript!',
-			ogImage: '',
+			ogImage:
+				'https://www.kodujemywbiurze.pl/content/kursy/javascript/kurs-podstawy-javascript-pierwsza-aplikacja-w-konsoli-screenshot.jpg',
 			ogUrl: 'https://www.kodujemywbiurze.pl/kursy/html-javascript-dom'
 		},
 		heroSectionData: {

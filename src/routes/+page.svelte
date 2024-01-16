@@ -21,7 +21,7 @@
 
 	<meta
 		property="og:image"
-		content="/content/kursy/javascript/kodujemy-w-biurze-pl-strona-internetowa-screenshot.jpg"
+		content="https://www.kodujemywbiurze.pl/content/kursy/javascript/kodujemy-w-biurze-pl-strona-internetowa-screenshot.jpg"
 	/>
 
 	<meta property="og:url" content="https://www.kodujemywbiurze.pl" />

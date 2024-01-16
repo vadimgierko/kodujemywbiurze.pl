@@ -6,6 +6,28 @@
 	onMount(() => isIndexPage.set(true));
 </script>
 
+<svelte:head>
+	<title>O autorze | kodujemywbiurze.pl</title>
+	<meta property="og:title" content="O autorze | kodujemywbiurze.pl" />
+
+	<meta
+		name="description"
+		content="Cześć👋 Nazywam się Vadim Gierko. Pracuję w biurze 🏢 i programuję 💻 od 3 lat, stąd też pomysł na stworzenie tej strony!"
+	/>
+	<meta
+		property="og:description"
+		content="Cześć👋 Nazywam się Vadim Gierko. Pracuję w biurze 🏢 i programuję 💻 od 3 lat, stąd też pomysł na stworzenie tej strony!"
+	/>
+
+	<meta
+		property="og:image"
+		content="https://www.kodujemywbiurze.pl/content/vadim-gierko-avatar.jpg"
+	/>
+
+	<meta property="og:url" content="https://www.kodujemywbiurze.pl/o-autorze" />
+	<meta property="og:type" content="article" />
+</svelte:head>
+
 <main class="container">
 	<div class="avatar-container">
 		<img
