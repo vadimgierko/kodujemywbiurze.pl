@@ -1,5 +1,9 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
 	import avatar from '../../routes/vadim-gierko-avatar.jpg';
+	import { isIndexPage } from '$lib/stores';
+
+	onMount(() => isIndexPage.set(true));
 </script>
 
 <main class="container">
@@ -18,11 +22,11 @@
 	</p>
 	<p>Stąd też pomysł na stworzenie tej strony!</p>
 
-	<hr>
+	<hr />
 
 	<p>
-		<strong>Jestem programistycznym samoukiem</strong><br> i tworzę strony oraz aplikacje webowe za pomocą
-		takich technologii, jak:
+		<strong>Jestem programistycznym samoukiem</strong><br /> i tworzę strony oraz aplikacje webowe za
+		pomocą takich technologii, jak:
 	</p>
 
 	<h2>Języki</h2>
@@ -123,8 +127,8 @@
 		/>
 	</div>
 
-    <br />
-    <hr />
+	<br />
+	<hr />
 
 	<p>I teraz chciałbym podzielić się swoją wiedzą i doświadczeniem z każdym!</p>
 	<p>

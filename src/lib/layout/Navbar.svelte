@@ -56,10 +56,10 @@
 
 			<div class="right-section">
 				{#if !$isScreenLessThan992}
-					<a href="/kursy/javascript" class="nav-link">javascript</a> |
-					<a href="/kursy/local-storage" class="nav-link">storage</a> |
-					<a href="/kursy/html" class="nav-link">html</a> |
-					<a href="/kursy/html-javascript-dom" class="nav-link">html + js</a>
+					<a href="/kursy/javascript" class="nav-link">1. js</a> |
+					<a href="/kursy/local-storage" class="nav-link">2. storage</a> |
+					<a href="/kursy/html" class="nav-link">3. html</a> |
+					<a href="/kursy/html-javascript-dom" class="nav-link">4. html + js</a>
 				{/if}
 
 				<!-- THEME TOGGLE -->
@@ -101,11 +101,11 @@
 		{#if isScreenLessThan992 && isNavbarExpanded}
 			<hr />
 			<div class="expanded-nav-section">
-				<a href="/kursy/javascript" class="nav-link" on:click={toggleNavbar}>javascript</a>
-				<a href="/kursy/local-storage" class="nav-link" on:click={toggleNavbar}>local storage</a>
-				<a href="/kursy/html" class="nav-link" on:click={toggleNavbar}>html</a>
+				<a href="/kursy/javascript" class="nav-link" on:click={toggleNavbar}>1. javascript</a>
+				<a href="/kursy/local-storage" class="nav-link" on:click={toggleNavbar}>2. local storage</a>
+				<a href="/kursy/html" class="nav-link" on:click={toggleNavbar}>3. html</a>
 				<a href="/kursy/html-javascript-dom" class="nav-link" on:click={toggleNavbar}
-					>html + javascript</a
+					>4. html + javascript</a
 				>
 
 				<hr />

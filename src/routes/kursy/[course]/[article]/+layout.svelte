@@ -18,7 +18,7 @@
 		: 'margin-left: 0;	max-width: 100vw;'}
 	on:click={() => ($isScreenLessThan992 && $showOffset ? showOffset.set(false) : null)}
 >
-	<Warning />
+	<!-- <Warning /> -->
 	<slot />
 </main>
 

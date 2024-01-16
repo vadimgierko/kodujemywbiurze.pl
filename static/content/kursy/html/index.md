@@ -4,7 +4,7 @@
 
 **Witaj w darmowym kursie *Podstawy HTML. Pierwsza statyczna strona internetowa***!
 
-Najprawdopodobniej trafiłeś/aś tutaj, ponieważ ukończyłeś 3 moduły pierwszego kursu na tej stronie nt. <a href="/kursy/javascript" target="_blank">JavaScript</a>, gdzie poznaliśmy podstawy tego języka i mamy już ukończoną aplikację do zarządzania zadaniami, która działa w konsoli przeglądarki i przechowuje zadania w pamięci przeglądarki `localStorage`.
+Najprawdopodobniej trafiłeś/aś tutaj, ponieważ ukończyłeś 2 moduły pierwszego kursu na tej stronie nt. <a href="/kursy/javascript" target="_blank">JavaScript</a> oraz drugiego kursu nt. <a href="/kursy/local-storage" target="_blank">Local Storage</a>, w trakcie których poznaliśmy podstawy JavaScript i mamy już ukończoną aplikację do zarządzania zadaniami, która działa w konsoli przeglądarki i przechowuje zadania w pamięci przeglądarki `localStorage`.
 
 Jeśli z kolei zajrzałeś/aś tutaj z czystej ciekawości, to polecam zacząć od <a href="/kursy/javascript" target="_blank">kursu JavaScript</a>, ponieważ tutaj **poznamy niezbędne podstawy języka HTML, by stworzyć prawdziwy interface dla JavaScriptowej aplikacji, którą już zbudowaliśmy w konsoli**.
 

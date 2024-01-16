@@ -1094,7 +1094,7 @@ Niemniej jednak, nasz plik HTML jest dość długi, a w związku z tym nieczytel
 
 Teraz nasz kod jest podzielony na dwa pliki, HTML i JavaScript, znajdują się w jednym folderze oraz plik .js jest podpięty do pliku HTML za pośrednictwem tagu `<script>`. Teraz wystarczy, że wejdziemy do folderu `todo-app`, otworzymy plik `index.html` w przeglądarce i aplikacja działa natychmiastowo!
 
-Jest to najbardziej profesjonalny sposób, w jaki możemy zorganizować kod naszej aplikacji w danej chwili, czyli... po ukończeniu wszystkich 3 kursów dostępnych w chwili obecnej na *kodujemywbiurze.pl*!
+Jest to najbardziej profesjonalny sposób, w jaki możemy zorganizować kod naszej aplikacji w danej chwili, czyli... po ukończeniu wszystkich 4 kursów dostępnych w chwili obecnej na *kodujemywbiurze.pl*!
 
 Poświęć jeszcze chwilę na przeczytanie *Zakończenia* - następnego artykułu, w którym piszę, jaka przyszłość czeka *kodujemywbiurze.pl* i dlaczego w dużej mierze zależy od Ciebie 😏😉! 
 

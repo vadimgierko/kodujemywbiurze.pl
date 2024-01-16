@@ -57,9 +57,9 @@
 			</div>
 		</div>
 	</div>
-	{#if $isIndexPage}
+	<!-- {#if $isIndexPage}
 		<Warning />
-	{/if}
+	{/if} -->
 </section>
 
 <style scoped>
