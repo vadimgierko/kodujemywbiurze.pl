@@ -49,8 +49,10 @@
 				<!-- <img src={imgSrc} width="100%" /> -->
 				{#if $page.params.course === 'javascript' || $page.params.course === 'local-storage'}
 					<JavaScriptLogo />
-				{:else if $page.params.course === 'html' || $page.params.course === 'html-javascript-dom'}<HtmlLogo
-					/>
+				{:else if $page.params.course === 'html' || $page.params.course === 'html-javascript-dom'}
+					<HtmlLogo />
+				{:else if $page.url.pathname.includes('programowanie-aplikacji-webowych')}
+					<JavaScriptLogo />
 				{:else}
 					<img src={imgSrc} width="100%" alt="" />
 				{/if}
