@@ -71,7 +71,7 @@ Kurs ten nazwałem *metakursem*, ponieważ jest on zlepkiem **4 mniejszych odrę
 
 Na początku (w 1. module <a href="/kursy/javascript" target="_blank">kursu JavaScript</a>) będziemy zarządzać naszymi zadaniami za pomocą nowopoznanych poleceń JavaScript w konsoli *(za chwilę dowiesz się, czym jest konsola i jak z niej korzystać)*.
 
-Później (<a href="/kursy/javascript/programowanie-imperatywne-a-deklaratywne-funkcyjne" target="_blank">w module 2. kursu JavaScript) stworzymy i będziemy używać własnych funkcji, które zostaną zapisane w pliku bezpośrednio w przeglądarce, dzięki czemu nasz kod zostanie zachowany nawet po przeładowaniu strony oraz będziemy mogli go uruchomić w konsoli.
+Później (<a href="/kursy/javascript/programowanie-imperatywne-a-deklaratywne-funkcyjne" target="_blank">w module 2. kursu JavaScript</a>) stworzymy i będziemy używać własnych funkcji, które zostaną zapisane w pliku bezpośrednio w przeglądarce, dzięki czemu nasz kod zostanie zachowany nawet po przeładowaniu strony oraz będziemy mogli go uruchomić w konsoli.
 
 ### 2️⃣ Local Storage
 
@@ -145,15 +145,15 @@ Pamiętaj, że rozwój niniejszego projektu zależy od Twojego zainteresowania, 
 
 	<div style="text-align: center;">
 		<a href="/kursy/javascript/wprowadzenie-czym-jest-javascript-i-dlaczego-warto-sie-go-uczyc">
-			<button class="bg-primary">Przejdź do kursu!</button>
+			<button class="bg-primary">Przejdź do pierwszego kursu (JavaScript)</button>
 		</a>
 	</div>
 </main>
 
 <style>
 	button {
-		margin-top: 2em;
-		font-size: 1rem;
+		margin: 2em 0;
+		font-size: 1.5rem;
 		font-weight: 600;
 		padding: 1em 2em;
 		border-radius: 18px;

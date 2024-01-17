@@ -12,14 +12,10 @@
 >
 	<hr />
 	<p>
-		&copy; 2023 Vadim Gierko
+		&copy; 2023-2024 Vadim Gierko
 		<br />
-		<a href="/o-autorze" class="social-media-link"
-			>o autorze</a
-		> |
-		<a class="social-media-link" href="https://vadimgierko.com" target="_blank"
-			><GlobeIcon /></a
-		>
+		<a href="/o-autorze" class="social-media-link">o autorze</a> |
+		<a class="social-media-link" href="https://vadimgierko.com" target="_blank"><GlobeIcon /></a>
 		|
 		<a class="social-media-link" href="https://github.com/vadimgierko" target="_blank"
 			><GitHubIcon /></a

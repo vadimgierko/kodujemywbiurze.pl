@@ -56,9 +56,9 @@
 
 			<div class="right-section">
 				{#if !$isScreenLessThan992}
-					<a href="/kursy/javascript" class="nav-link">1️⃣ js</a> |
-					<a href="/kursy/local-storage" class="nav-link">2️⃣ storage</a> |
-					<a href="/kursy/html" class="nav-link">3️⃣ html</a> |
+					<a href="/kursy/javascript" class="nav-link">1️⃣ js</a>
+					<a href="/kursy/local-storage" class="nav-link">2️⃣ storage</a>
+					<a href="/kursy/html" class="nav-link">3️⃣ html</a>
 					<a href="/kursy/html-javascript-dom" class="nav-link">4️⃣ html + js</a>
 				{/if}
 
