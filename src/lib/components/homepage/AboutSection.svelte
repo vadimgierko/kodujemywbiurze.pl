@@ -45,7 +45,7 @@
 		},
 		{
 			text: 'możliwością tworzenia',
-			emoji: '🪄'
+			emoji: '🖌️'
 		},
 		{
 			text: 'mega kreatywne',
