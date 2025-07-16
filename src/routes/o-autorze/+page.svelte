@@ -12,11 +12,11 @@
 
 	<meta
 		name="description"
-		content="Cześć👋 Nazywam się Vadim Gierko. Pracuję w biurze 🏢 i programuję 💻 od 3 lat, stąd też pomysł na stworzenie tej strony!"
+		content="Cześć👋 Nazywam się Vadim Gierko. Pracuję w biurze 🏢 i programuję 💻 od końca 2020 r., stąd też pomysł na stworzenie tej strony!"
 	/>
 	<meta
 		property="og:description"
-		content="Cześć👋 Nazywam się Vadim Gierko. Pracuję w biurze 🏢 i programuję 💻 od 3 lat, stąd też pomysł na stworzenie tej strony!"
+		content="Cześć👋 Nazywam się Vadim Gierko. Pracuję w biurze 🏢 i programuję 💻 od końca 2020 r., stąd też pomysł na stworzenie tej strony!"
 	/>
 
 	<meta
@@ -40,7 +40,7 @@
 	<p>Nazywam się Vadim Gierko.</p>
 	<p>
 		<strong>Pracuję w biurze 🏢</strong> (a dokładniej w Urzędzie) ➕
-		<strong>programuję 💻 od 3 lat</strong>.
+		<strong>programuję 💻 końca 2020 r.</strong>.
 	</p>
 	<p>Stąd też pomysł na stworzenie tej strony!</p>
 

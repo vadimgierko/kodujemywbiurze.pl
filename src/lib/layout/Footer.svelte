@@ -12,7 +12,7 @@
 >
 	<hr />
 	<p>
-		&copy; 2023-2024 Vadim Gierko
+		&copy; 2023-2025 Vadim Gierko
 		<br />
 		<a href="/o-autorze" class="social-media-link">o autorze</a> |
 		<a class="social-media-link" href="https://vadimgierko.com" target="_blank"><GlobeIcon /></a>
