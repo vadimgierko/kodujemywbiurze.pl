@@ -40,7 +40,7 @@
 	<p>Nazywam się Vadim Gierko.</p>
 	<p>
 		<strong>Pracuję w biurze 🏢</strong> (a dokładniej w Urzędzie) ➕
-		<strong>programuję 💻 końca 2020 r.</strong>.
+		<strong>programuję 💻 od końca 2020 r.</strong>.
 	</p>
 	<p>Stąd też pomysł na stworzenie tej strony!</p>
 
