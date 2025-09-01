@@ -3,8 +3,6 @@
 import styled from "styled-components";
 import { JavaScriptLogo } from "../logos/JavaScriptLogo";
 import { HtmlLogo } from "../logos/HtmlLogo";
-import { useEffect } from "react";
-import { useUiStore } from "@/context/useUiStore";
 
 const StyledSection = styled.section`
 	/* STYLES NOT DEPENDENT ON SCREEN SIZE */
@@ -235,19 +233,19 @@ const StyledSection = styled.section`
 `;
 
 type HeroSectionProps = {
-	additionalClasses: string;
+	additionalClasses?: string;
 	imgSrc: string;
 	btnHref: string;
 	btnCTA: string;
 	h1FirstSmallText: string;
 	h1LargeText: string;
 	descriptionParagraphs: string[];
-	handleMount: () => void;
+	// handleMount: () => void;
 };
 
 export function HeroSection({
 	additionalClasses,
-	handleMount,
+	// handleMount,
 	h1FirstSmallText,
 	h1LargeText,
 	descriptionParagraphs,
@@ -255,12 +253,6 @@ export function HeroSection({
 	btnCTA,
 	imgSrc,
 }: HeroSectionProps) {
-	const { isIndexPage } = useUiStore();
-
-	useEffect(() => {
-		handleMount();
-	}, [handleMount]);
-
 	return (
 		<StyledSection className={"hero-section " + additionalClasses}>
 			<div className="hero-wrapper">

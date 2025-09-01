@@ -1,16 +1,15 @@
-"use client";
+"use client"
 
-import { useUiStore } from "@/context/useUiStore";
 import { HeroSection } from "@/lib/components/HeroSection";
 import { AboutSection } from "@/lib/components/homepage/AboutSection";
+import { IndexPageSetter } from "@/lib/components/IndexPageSetter";
 import Link from "next/link";
 import styled from "styled-components";
 
 export default function Home() {
-	const { setIsIndexPage } = useUiStore();
-
 	return (
 		<StyledMain>
+			<IndexPageSetter />
 			<HeroSection
 				h1FirstSmallText="Witaj na stronie"
 				h1LargeText="Kodujemy w biurze!"
@@ -21,7 +20,6 @@ export default function Home() {
 				btnHref="/kursy/programowanie-aplikacji-webowych"
 				btnCTA="Przejdź do kursu!"
 				imgSrc="content/hero-img.png" //{heroImg}
-				handleMount={() => setIsIndexPage(true)}
 				additionalClasses="container"
 			/>
 

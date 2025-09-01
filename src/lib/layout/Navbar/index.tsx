@@ -80,18 +80,18 @@ export function Navbar() {
 					<div className="right-section">
 						{!isScreenLessThan992 && (
 							<>
-								<a href="/kursy/javascript" className="nav-link">
+								<Link href="/kursy/javascript" className="nav-link">
 									1️⃣ js
-								</a>
-								<a href="/kursy/local-storage" className="nav-link">
+								</Link>
+								<Link href="/kursy/local-storage" className="nav-link">
 									2️⃣ storage
-								</a>
-								<a href="/kursy/html" className="nav-link">
+								</Link>
+								<Link href="/kursy/html" className="nav-link">
 									3️⃣ html
-								</a>
-								<a href="/kursy/html-javascript-dom" className="nav-link">
+								</Link>
+								<Link href="/kursy/html-javascript-dom" className="nav-link">
 									4️⃣ html + js
-								</a>
+								</Link>
 							</>
 						)}
 
@@ -146,30 +146,30 @@ export function Navbar() {
 					<>
 						<hr />
 						<div className="expanded-nav-section">
-							<a
+							<Link
 								href="/kursy/javascript"
 								className="nav-link"
 								onClick={toggleNavbar}
 							>
 								1️⃣ javascript
-							</a>
-							<a
+							</Link>
+							<Link
 								href="/kursy/local-storage"
 								className="nav-link"
 								onClick={toggleNavbar}
 							>
 								2️⃣ local storage
-							</a>
-							<a href="/kursy/html" className="nav-link" onClick={toggleNavbar}>
+							</Link>
+							<Link href="/kursy/html" className="nav-link" onClick={toggleNavbar}>
 								3️⃣ html
-							</a>
-							<a
+							</Link>
+							<Link
 								href="/kursy/html-javascript-dom"
 								className="nav-link"
 								onClick={toggleNavbar}
 							>
 								4️⃣ html + javascript
-							</a>
+							</Link>
 
 							<hr />
 
