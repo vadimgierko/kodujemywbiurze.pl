@@ -2,15 +2,14 @@
 
 import { HeroSection } from "@/lib/components/HeroSection";
 import { AboutSection } from "@/lib/components/homepage/AboutSection";
-import { IndexPageSetter } from "@/lib/components/IndexPageSetter";
 import Link from "next/link";
 import styled from "styled-components";
 
 export default function Home() {
 	return (
 		<StyledMain>
-			<IndexPageSetter />
 			<HeroSection
+				courseSlug={undefined}
 				h1FirstSmallText="Witaj na stronie"
 				h1LargeText="Kodujemy w biurze!"
 				descriptionParagraphs={[

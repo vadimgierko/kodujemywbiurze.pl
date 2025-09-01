@@ -14,7 +14,9 @@ import { useEffect, useState } from "react";
 type Theme = "light" | "dark";
 
 export function Navbar() {
-	const { showOffset, setShowOffset, isIndexPage, isScreenLessThan992 } =
+	// ❗❗❗ TEMPORARY SOLUTION FIX IT ❗❗❗
+	const isIndexPage = true;
+	const { showOffset, setShowOffset, isScreenLessThan992 } =
 		useUiStore();
 	const [theme, setTheme] = useState<Theme>();
 	const [isNavbarExpanded, setIsNavbarExpanded] = useState(false);

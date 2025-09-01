@@ -1,5 +1,4 @@
 import { HeroSection } from '@/lib/components/HeroSection';
-import { IndexPageSetter } from '@/lib/components/IndexPageSetter';
 import type { Course } from '@/lib/types';
 import { Metadata } from 'next';
 
@@ -161,8 +160,8 @@ export default async function Page({
 
     return (
         <main className="container">
-            <IndexPageSetter />
             <HeroSection
+                courseSlug={courseSlug}
                 h1FirstSmallText={heroSectionData.h1FirstSmallText}
                 h1LargeText={heroSectionData.h1LargeText}
                 descriptionParagraphs={heroSectionData.descriptionParagraphs}

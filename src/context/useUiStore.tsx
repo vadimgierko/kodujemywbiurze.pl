@@ -14,9 +14,7 @@ type UiStoreType = {
 	showOffset: boolean;
 	setShowOffset: Dispatch<SetStateAction<boolean>>;
 	isScreenLessThan992: boolean | null;
-	isIndexPage: boolean;
 	setIsScreenLessThan992: (value: boolean) => void;
-	setIsIndexPage: (value: boolean) => void;
 };
 
 const UiStoreContext = createContext<UiStoreType | undefined>(undefined);
@@ -26,13 +24,6 @@ export const UiStoreProvider = ({ children }: { children: ReactNode }) => {
 	const [isScreenLessThan992, setIsScreenLessThan992] = useState<
 		boolean | null
 	>(null);
-	/**
-	 * NOT COURSE PAGE
-	 *
-	 * ...this is smth weird, probably svelte-specific, so need to be investigated,
-	 * but for now during dirty rewrite to next it will stay...
-	 */
-	const [isIndexPage, setIsIndexPage] = useState(true); // not course page
 
 	useEffect(() => {
 		if (window.innerWidth < 992) {
@@ -63,9 +54,7 @@ export const UiStoreProvider = ({ children }: { children: ReactNode }) => {
 				showOffset,
 				setShowOffset,
 				isScreenLessThan992,
-				isIndexPage,
 				setIsScreenLessThan992,
-				setIsIndexPage,
 			}}
 		>
 			{children}

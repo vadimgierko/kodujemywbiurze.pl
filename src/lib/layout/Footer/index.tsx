@@ -9,10 +9,13 @@ import { LinkedInIcon } from "@/lib/icons/LinkedInIcon";
 import Link from "next/link";
 
 export function Footer() {
-	const { isIndexPage, showOffset } = useUiStore();
+	const { showOffset } = useUiStore();
+	// ❗❗❗ TEMPORARY SOLUTION FIX IT ❗❗❗
+	const isIndexPage = true;
 
 	return (
 		<footer
+			//className="show-aside-footer"
 			className={
 				isIndexPage || (!isIndexPage && !showOffset)
 					? "hide-aside-footer"

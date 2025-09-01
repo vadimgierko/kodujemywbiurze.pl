@@ -240,18 +240,18 @@ type HeroSectionProps = {
 	h1FirstSmallText: string;
 	h1LargeText: string;
 	descriptionParagraphs: string[];
-	// handleMount: () => void;
+	courseSlug: string | undefined
 };
 
 export function HeroSection({
 	additionalClasses,
-	// handleMount,
 	h1FirstSmallText,
 	h1LargeText,
 	descriptionParagraphs,
 	btnHref,
 	btnCTA,
 	imgSrc,
+	courseSlug
 }: HeroSectionProps) {
 	return (
 		<StyledSection className={"hero-section " + additionalClasses}>
@@ -278,16 +278,13 @@ export function HeroSection({
 					</div>
 
 					<div className="right">
-						<img src={imgSrc} width="100%" alt="" />
-						{/* {#if $page.params.course === 'javascript' || $page.params.course === 'local-storage'}
-					<JavaScriptLogo />
-				{:else if $page.params.course === 'html' || $page.params.course === 'html-javascript-dom'}
-					<HtmlLogo />
-				{:else if $page.url.pathname.includes('programowanie-aplikacji-webowych')}
-					<JavaScriptLogo />
-				{:else}
-					<img src={imgSrc} width="100%" alt="" />
-				{/if} */}
+						{
+							courseSlug === 'javascript' || courseSlug === "local-storage" || courseSlug === "programowanie-aplikacji-webowych"
+								? <JavaScriptLogo />
+								: courseSlug === 'html' || courseSlug === "html-javascript-dom"
+									? <HtmlLogo />
+									: <img src={imgSrc} width="100%" alt="" />
+						}
 					</div>
 				</div>
 			</div>

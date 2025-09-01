@@ -1,5 +1,4 @@
 import { Metadata } from "next";
-import { IndexPageSetter } from "@/lib/components/IndexPageSetter";
 
 const title = "O autorze | kodujemywbiurze.pl";
 const description =
@@ -23,7 +22,6 @@ export const metadata: Metadata = {
 export default function Page() {
 	return (
 		<main className="container" style={{ textAlign: "center" }}>
-			<IndexPageSetter />
 			<div
 				className="avatar-container"
 				style={{
