@@ -5,6 +5,7 @@ import { Article, Section } from "../types";
 import { useState } from "react";
 import Link from "next/link";
 import styled from "styled-components";
+import { usePathname } from "next/navigation";
 
 const StyledAside = styled.aside`
 .active-link {
@@ -47,14 +48,14 @@ type AsideProps = {
 	articles: Article[] | null;
 	sections: Section[] | null;
 	courseSlug: string;
-	pathName: string;
 }
 
 type TitleType = 'fullTitle' | 'docTitle' | 'tutorialTitle';
 
-export function Aside({ articles, sections, courseSlug, pathName }: AsideProps) {
+export function Aside({ articles, sections, courseSlug }: AsideProps) {
 	const { showOffset, setShowOffset, isScreenLessThan992 } = useUiStore();
 	const [titleType, setTitleType] = useState<TitleType>("fullTitle");
+	const pathName = usePathname();
 
 	return (
 		<StyledAside
