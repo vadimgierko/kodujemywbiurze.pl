@@ -9,15 +9,16 @@ import { SunIcon } from "@/lib/icons/SunIcon";
 import { ThreeDotsHorizontal } from "@/lib/icons/ThreeDotsHorizontal";
 import { ThreeDotsVertical } from "@/lib/icons/ThreeDotsVertical";
 import Link from "next/link";
+import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 
 type Theme = "light" | "dark";
 
 export function Navbar() {
-	// ❗❗❗ TEMPORARY SOLUTION FIX IT ❗❗❗
-	const isIndexPage = true;
-	const { showOffset, setShowOffset, isScreenLessThan992 } =
-		useUiStore();
+	const params = useParams();
+	const isIndexPage = Boolean(!params.article);
+
+	const { showOffset, setShowOffset, isScreenLessThan992 } = useUiStore();
 	const [theme, setTheme] = useState<Theme>();
 	const [isNavbarExpanded, setIsNavbarExpanded] = useState(false);
 
@@ -162,7 +163,11 @@ export function Navbar() {
 							>
 								2️⃣ local storage
 							</Link>
-							<Link href="/kursy/html" className="nav-link" onClick={toggleNavbar}>
+							<Link
+								href="/kursy/html"
+								className="nav-link"
+								onClick={toggleNavbar}
+							>
 								3️⃣ html
 							</Link>
 							<Link

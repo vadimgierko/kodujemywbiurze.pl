@@ -8,24 +8,23 @@ import styled from "styled-components";
 import { usePathname } from "next/navigation";
 
 const StyledAside = styled.aside`
-.active-link {
-	font-weight: bold;
-}
+	.active-link {
+		font-weight: bold;
+	}
 
-:global(html[data-theme='light'] .active-link) {
-	color: black;
-}
+	:global(html[data-theme="light"] .active-link) {
+		color: black;
+	}
 
-:global(html[data-theme='dark'] .active-link) {
-	color: var(--primary);
-}
+	:global(html[data-theme="dark"] .active-link) {
+		color: var(--primary);
+	}
 
-ul {
-	list-style: none;
-	padding-left: 0;
-}
+	ul {
+		list-style: none;
+		padding-left: 0;
+	}
 
-aside {
 	box-sizing: border-box;
 	font-size: smaller;
 	height: calc(100% - 40px);
@@ -37,20 +36,19 @@ aside {
 	top: 0;
 	left: 0;
 	overflow-x: hidden;
-}
 
-aside a {
-	text-decoration: none;
-}
-`
+	a {
+		text-decoration: none;
+	}
+`;
 
 type AsideProps = {
 	articles: Article[] | null;
 	sections: Section[] | null;
 	courseSlug: string;
-}
+};
 
-type TitleType = 'fullTitle' | 'docTitle' | 'tutorialTitle';
+type TitleType = "fullTitle" | "docTitle" | "tutorialTitle";
 
 export function Aside({ articles, sections, courseSlug }: AsideProps) {
 	const { showOffset, setShowOffset, isScreenLessThan992 } = useUiStore();
@@ -61,77 +59,85 @@ export function Aside({ articles, sections, courseSlug }: AsideProps) {
 		<StyledAside
 			className="text-center"
 			style={{
-				display: showOffset
-					? isScreenLessThan992
-						? 'display: block; width: 60%'
-						: 'display: block; width: 30%'
-					: 'display: none'
+				display: showOffset ? "block" : "none",
+				width: isScreenLessThan992 ? "60%" : "30%",
 			}}
 		>
 			<h3>Spis treści</h3>
 
-			<select value={titleType} onChange={e => setTitleType(e.target.value as TitleType)}>
+			<select
+				value={titleType}
+				onChange={(e) => setTitleType(e.target.value as TitleType)}
+			>
 				<option value="fullTitle">pełny tytuł</option>
 				<option value="docTitle">dokumentacyjny tytuł</option>
 				<option value="tutorialTitle">tutorialowy tytuł</option>
 			</select>
 
-			{
-				sections && <nav
-					onClick={() => (isScreenLessThan992 && showOffset ? setShowOffset(false) : null)}
-				>
-					{
-						sections.map(
-							({ title, articles, fileName }) =>
-								<div key={`section-list-item-${title}`}>
-									{fileName !== 'wprowadzenie' && fileName !== 'koniec' && <h3>{title}</h3>}
-									<ul>
-										{
-											articles.map(article => <div key={`section-article-list-item-${article.slug}`}>
-												<li>
-													<Link
-														href={`/kursy/${courseSlug}/${article.slug}`}
-														className={courseSlug.includes(article.slug) ? 'active-link' : ''}
-													>
-														{article[titleType]}
-													</Link>
-												</li>
-												<hr />
-											</div>)
-										}
-									</ul>
-								</div>
-						)
+			{sections && (
+				<nav
+					onClick={() =>
+						isScreenLessThan992 && showOffset ? setShowOffset(false) : null
 					}
+				>
+					{sections.map(({ title, articles, fileName }) => (
+						<div key={`section-list-item-${title}`}>
+							{fileName !== "wprowadzenie" && fileName !== "koniec" && (
+								<h3>{title}</h3>
+							)}
+							<ul>
+								{articles.map((article) => (
+									<div key={`section-article-list-item-${article.slug}`}>
+										<li>
+											<Link
+												href={`/kursy/${courseSlug}/${article.slug}`}
+												className={
+													courseSlug.includes(article.slug) ? "active-link" : ""
+												}
+											>
+												{article[titleType]}
+											</Link>
+										</li>
+										<hr />
+									</div>
+								))}
+							</ul>
+						</div>
+					))}
 				</nav>
-			}
+			)}
 
-			{
-				articles && <nav onClick={() => (isScreenLessThan992 && showOffset ? setShowOffset(false) : null)}>
+			{articles && (
+				<nav
+					onClick={() =>
+						isScreenLessThan992 && showOffset ? setShowOffset(false) : null
+					}
+				>
 					<ul>
-						{
-							articles.map(article => <div key={`article-list-item-${article.slug}`}>
+						{articles.map((article) => (
+							<div key={`article-list-item-${article.slug}`}>
 								<li>
 									<Link
 										href={`/kursy/${courseSlug}/${article.slug}`}
-										className={pathName.includes(article.slug) ? 'active-link' : ''}
+										className={
+											pathName.includes(article.slug) ? "active-link" : ""
+										}
 									>
 										{article[titleType]}
 									</Link>
 								</li>
 								<hr />
-							</div>)
-						}
+							</div>
+						))}
 					</ul>
 				</nav>
-			}
+			)}
 		</StyledAside>
 	);
 }
 
-
-
-{/* <style scoped>
+{
+	/* <style scoped>
 	.active-link {
 		font-weight: bold;
 	}
@@ -166,4 +172,5 @@ export function Aside({ articles, sections, courseSlug }: AsideProps) {
 	aside a {
 		text-decoration: none;
 	}
-</style> */}
+</style> */
+}

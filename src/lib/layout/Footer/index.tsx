@@ -7,11 +7,13 @@ import { GithubIcon } from "@/lib/icons/GitHubIcon";
 import { GlobeIcon } from "@/lib/icons/GlobeIcon";
 import { LinkedInIcon } from "@/lib/icons/LinkedInIcon";
 import Link from "next/link";
+import { useParams } from "next/navigation";
 
 export function Footer() {
+	const params = useParams();
+	const isIndexPage = Boolean(!params.article);
+
 	const { showOffset } = useUiStore();
-	// ❗❗❗ TEMPORARY SOLUTION FIX IT ❗❗❗
-	const isIndexPage = true;
 
 	return (
 		<footer

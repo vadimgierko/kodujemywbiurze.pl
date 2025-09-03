@@ -3,19 +3,19 @@
 import styled from "styled-components";
 import { JavaScriptLogo } from "../logos/JavaScriptLogo";
 import { HtmlLogo } from "../logos/HtmlLogo";
+import Link from "next/link";
 
+/** .hero-section */
 const StyledSection = styled.section`
 	/* STYLES NOT DEPENDENT ON SCREEN SIZE */
-	.hero-section {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		min-height: calc(100dvh - 40px - 90px);
-		line-height: normal;
-		overflow: hidden;
-		/* margin: 0 auto; */
-	}
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	min-height: calc(100dvh - 40px - 90px);
+	line-height: normal;
+	overflow: hidden;
+	/* margin: 0 auto; */
 
 	.hero-wrapper {
 		text-align: center;
@@ -240,7 +240,7 @@ type HeroSectionProps = {
 	h1FirstSmallText: string;
 	h1LargeText: string;
 	descriptionParagraphs: string[];
-	courseSlug: string | undefined
+	courseSlug: string | undefined;
 };
 
 export function HeroSection({
@@ -251,7 +251,7 @@ export function HeroSection({
 	btnHref,
 	btnCTA,
 	imgSrc,
-	courseSlug
+	courseSlug,
 }: HeroSectionProps) {
 	return (
 		<StyledSection className={"hero-section " + additionalClasses}>
@@ -272,19 +272,22 @@ export function HeroSection({
 							<p key={p}>{p}</p>
 						))}
 
-						<a href={btnHref}>
+						<Link href={btnHref}>
 							<button className="bg-primary">{btnCTA}</button>
-						</a>
+						</Link>
 					</div>
 
 					<div className="right">
-						{
-							courseSlug === 'javascript' || courseSlug === "local-storage" || courseSlug === "programowanie-aplikacji-webowych"
-								? <JavaScriptLogo />
-								: courseSlug === 'html' || courseSlug === "html-javascript-dom"
-									? <HtmlLogo />
-									: <img src={imgSrc} width="100%" alt="" />
-						}
+						{courseSlug === "javascript" ||
+						courseSlug === "local-storage" ||
+						courseSlug === "programowanie-aplikacji-webowych" ? (
+							<JavaScriptLogo />
+						) : courseSlug === "html" ||
+						  courseSlug === "html-javascript-dom" ? (
+							<HtmlLogo />
+						) : (
+							<img src={imgSrc} width="100%" alt="" />
+						)}
 					</div>
 				</div>
 			</div>
