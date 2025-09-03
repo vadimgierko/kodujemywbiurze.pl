@@ -1,6 +1,7 @@
 import MarkdownRenderer from "@/lib/components/MarkdownRenderer";
 import { getArticlesAndSections } from "./getArticlesAndSections";
 import { Metadata } from "next";
+import { courses } from "../page";
 
 type PageParams = {
 	params: Promise<{ course: string; article: string }>;
@@ -34,18 +35,25 @@ export const metadata: Metadata = {
 </svelte:head> */
 }
 
-/**
- * ❗❗❗ TODO ❗❗❗
- */
-// export async function generateStaticParams() {
-//     // const slugs = courses.map(c => c.slug);
+export async function generateStaticParams() {
+	const coursesSlugs = courses.map((c) => c.slug);
+	console.log(coursesSlugs);
 
-//     // const params: CourseSlugPageParams[] = slugs.map((slug) => ({
-//     //     course: slug,
-//     // }));
+	const params: { course: string; article: string }[] = [];
 
-//     // return params;
-// }
+	coursesSlugs.forEach(async (courseSlug) => {
+		const { articles } = await getArticlesAndSections({ course: courseSlug });
+
+		if (articles) {
+			console.log(articles.map((a) => a.slug));
+			articles.forEach((a) =>
+				params.push({ course: courseSlug, article: a.slug })
+			);
+		}
+	});
+
+	return params;
+}
 
 export default async function ArticlePage({ params }: PageParams) {
 	const { course: courseSlug, article: articleSlug } = await params;

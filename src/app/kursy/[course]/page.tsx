@@ -2,7 +2,7 @@ import { HeroSection } from "@/lib/components/HeroSection";
 import type { Course } from "@/lib/types";
 import { Metadata } from "next";
 
-const courses: Course[] = [
+export const courses: Course[] = [
 	{
 		slug: "javascript",
 		headData: {
