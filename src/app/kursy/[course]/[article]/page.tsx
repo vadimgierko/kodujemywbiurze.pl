@@ -1,93 +1,69 @@
-import { Aside } from "@/lib/components/Aside";
-import { Article, Section } from "@/lib/types";
-import convertMarkdownIntoArticlesArray from "@/lib/utils/convertMarkdownIntoArticlesArray";
-import { promises as fs } from "fs";
-import path from "path";
-import { MainWrapper } from "./MainWrapper";
 import MarkdownRenderer from "@/lib/components/MarkdownRenderer";
-
-async function getArticlesAndSections({ course }: { course: string }) {
-    let sections: Section[] | null = null;
-    let articles: Article[] | null = null;
-
-    if (course === 'javascript') {
-        const sectionsTitles = [
-            { title: 'Wprowadzenie', fileName: 'wprowadzenie' },
-            {
-                title: 'Moduł 1. Zarządzanie zadaniami za pomocą poleceń JavaScript w konsoli',
-                fileName: '1'
-            },
-            {
-                title:
-                    'Moduł 2. Zarządzanie zadaniami za pomocą własnych funkcji. Przechowywanie kodu w pliku. Aplikacja w wersji 1.0',
-                fileName: '2'
-            },
-            {
-                title: 'Zakończenie (na razie) oraz darmowe źródła do samodzielnej nauki (po angielsku)',
-                fileName: 'koniec'
-            }
-        ];
-
-        sections = await Promise.all(
-            sectionsTitles.map(async ({ title, fileName }) => {
-                const filePath = path.join(
-                    process.cwd(),
-                    "public/content/kursy/javascript",
-                    `${fileName}.md`
-                );
-
-                const mdContent = await fs.readFile(filePath, "utf8");
-                const articles = convertMarkdownIntoArticlesArray(mdContent);
-
-                return {
-                    title,
-                    fileName,
-                    mdContent,
-                    articles,
-                } satisfies Section;
-            })
-        );
-    } else {
-        const filePath = path.join(
-            process.cwd(),
-            "public/content/kursy",
-            course,
-            "index.md"
-        );
-
-        const mdContent = await fs.readFile(filePath, "utf8");
-        articles = convertMarkdownIntoArticlesArray(mdContent);
-    }
-
-    return {
-        articles,
-        sections
-    };
-}
+import { getArticlesAndSections } from "./getArticlesAndSections";
+import { Metadata } from "next";
 
 type PageParams = {
     params: Promise<{ course: string, article: string }>
 };
 
-export default async function Page({ params }: PageParams) {
+/**
+ * ❗❗❗ TODO ❗❗❗
+ */
+export const metadata: Metadata = {
+    //
+}
+
+{/* <svelte:head>
+	<title>Kodujemy w biurze | {article?.title}</title>
+	<meta property="og:title" content={`Kodujemy w biurze | ${article?.title}`} />
+
+	<meta name="description" content={`${article?.title}`} />
+	<meta property="og:description" content={`${article?.title}`} />
+
+	<meta
+		property="og:image"
+		content="https://www.kodujemywbiurze.pl/content/kursy/javascript/kurs-podstawy-javascript-pierwsza-aplikacja-w-konsoli-screenshot.jpg"
+	/>
+
+	<meta
+		property="og:url"
+		content={`https://www.kodujemywbiurze.pl/kursy/${$page.params.course}/${$page.params.article}`}
+	/>
+	<meta property="og:type" content="article" />
+</svelte:head> */}
+
+/**
+ * ❗❗❗ TODO ❗❗❗
+ */
+// export async function generateStaticParams() {
+//     // const slugs = courses.map(c => c.slug);
+
+//     // const params: CourseSlugPageParams[] = slugs.map((slug) => ({
+//     //     course: slug,
+//     // }));
+
+//     // return params;
+// }
+
+export default async function ArticlePage({ params }: PageParams) {
     const { course: courseSlug, article: articleSlug } = await params;
-    const { articles, sections } = await getArticlesAndSections({ course: courseSlug });
+    const { articles } = await getArticlesAndSections({ course: courseSlug });
 
-    const article = articles?.find(a => a.slug === articleSlug)
+    const article = articles?.find(a => a.slug === articleSlug);
 
-    return <div>
-        <Aside
-            articles={articles}
-            sections={sections}
-            courseSlug={courseSlug}
-        />
+    if (!article) return (
+        <p
+            style={{
+                textAlign: "center",
+                color: "red"
+            }}>
+            Niestety nie ma takiego artykułu...
+        </p>
+    );
 
-        <MainWrapper>
-            {
-                article && <article className="container">
-                    <MarkdownRenderer markdown={article.content} />
-                </article>
-            }
-        </MainWrapper>
-    </div>
+    return (
+        <article className="container">
+            <MarkdownRenderer markdown={article.content} />
+        </article>
+    );
 }
