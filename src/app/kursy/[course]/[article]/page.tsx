@@ -2,64 +2,64 @@ import MarkdownRenderer from "@/lib/components/MarkdownRenderer";
 import { getArticlesAndSections } from "./getArticlesAndSections";
 import { Metadata } from "next";
 import { courses } from "../page";
+import { getArticle } from "./getArticle";
 
-type PageParams = {
-	params: Promise<{ course: string; article: string }>;
+type ArticleSlugPageParams = {
+	course: string;
+	article: string;
 };
 
-/**
- * ❗❗❗ TODO ❗❗❗
- */
-export const metadata: Metadata = {
-	//
-};
+export async function generateMetadata({
+	params,
+}: {
+	params: Promise<ArticleSlugPageParams>;
+}): Promise<Metadata> {
+	const { course: courseSlug, article: articleSlug } = await params;
 
-{
-	/* <svelte:head>
-	<title>Kodujemy w biurze | {article?.title}</title>
-	<meta property="og:title" content={`Kodujemy w biurze | ${article?.title}`} />
+	const article = await getArticle({ courseSlug, articleSlug });
 
-	<meta name="description" content={`${article?.title}`} />
-	<meta property="og:description" content={`${article?.title}`} />
+	if (!article) return {};
 
-	<meta
-		property="og:image"
-		content="https://www.kodujemywbiurze.pl/content/kursy/javascript/kurs-podstawy-javascript-pierwsza-aplikacja-w-konsoli-screenshot.jpg"
-	/>
+	const { title } = article;
 
-	<meta
-		property="og:url"
-		content={`https://www.kodujemywbiurze.pl/kursy/${$page.params.course}/${$page.params.article}`}
-	/>
-	<meta property="og:type" content="article" />
-</svelte:head> */
+	return {
+		title: `Kodujemy w biurze | ${title}`,
+		/**
+		 * ❗❗❗ FIX THIS ❗❗❗
+		 * add descriptions for articles
+		 */
+		description: `Kodujemy w biurze | ${title}`,
+		openGraph: {
+			title: `Kodujemy w biurze | ${title}`,
+			description: `Kodujemy w biurze | ${title}`,
+			images: "https://www.kodujemywbiurze.pl/content/kursy/javascript/kurs-podstawy-javascript-pierwsza-aplikacja-w-konsoli-screenshot.jpg",
+			type: "article",
+			url: `https://www.kodujemywbiurze.pl/kursy/${courseSlug}/${articleSlug}`,
+		},
+	};
 }
 
 export async function generateStaticParams() {
 	const coursesSlugs = courses.map((c) => c.slug);
 	console.log(coursesSlugs);
 
-	const params: { course: string; article: string }[] = [];
+	const results = await Promise.all(
+		coursesSlugs.map(async (courseSlug) => {
+			const courseArticlesAndSections = await getArticlesAndSections({ course: courseSlug });
+			const { articles } = courseArticlesAndSections;
+			return { courseSlug, articles: articles || [] }
+		})
+	);
 
-	coursesSlugs.forEach(async (courseSlug) => {
-		const { articles } = await getArticlesAndSections({ course: courseSlug });
-
-		if (articles) {
-			console.log(articles.map((a) => a.slug));
-			articles.forEach((a) =>
-				params.push({ course: courseSlug, article: a.slug })
-			);
-		}
-	});
-
-	return params;
+	return results.flatMap(({ courseSlug, articles }) =>
+		articles.map((a) => ({ course: courseSlug, article: a.slug }))
+	);
 }
 
-export default async function ArticlePage({ params }: PageParams) {
+export default async function ArticlePage({ params }: { params: Promise<ArticleSlugPageParams> }) {
 	const { course: courseSlug, article: articleSlug } = await params;
-	const { articles } = await getArticlesAndSections({ course: courseSlug });
 
-	const article = articles?.find((a) => a.slug === articleSlug);
+	const article = await getArticle({ courseSlug, articleSlug });
 
 	if (!article)
 		return (
