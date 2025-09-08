@@ -1,0 +1,62 @@
+/* MEDIA QUERIES */
+
+/* MOBILE */
+
+.main-button {
+  margin-top: 2em;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 1em 2em;
+  border-radius: 18px;
+  color: rgb(0, 0, 0);
+}
+
+/* Small devices (landscape phones, 576px and up) */
+
+@media screen and (min-width: 576px) {
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media screen and (min-width: 768px) and (orientation: portrait) {
+}
+
+@media screen and (min-width: 768px) and (orientation: landscape) {
+}
+
+/* Large devices (desktops, 992px and up) */
+@media screen and (min-width: 992px) and (orientation: portrait) {
+  .main-button {
+    margin-top: 32px;
+
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 1.2em 2.4em;
+    border-radius: 20px;
+    color: rgb(0, 0, 0);
+  }
+}
+
+@media screen and (min-width: 992px) and (orientation: landscape) {
+  .main-button {
+    margin-top: 32px;
+
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 1.2em 2.4em;
+    border-radius: 20px;
+    color: rgb(0, 0, 0);
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media screen and (min-width: 1200px) and (orientation: landscape) {
+  .main-button {
+    margin-top: 32px;
+
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 1.2em 2.4em;
+    border-radius: 20px;
+    color: rgb(0, 0, 0);
+  }
+}

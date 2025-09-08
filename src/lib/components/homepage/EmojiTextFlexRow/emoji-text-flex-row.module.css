@@ -1,4 +1,4 @@
-* {
+.emoji-text-row-wrapper {
   font-size: 1.5rem;
   line-height: normal;
   background-color: var(--section-background-color);
@@ -28,13 +28,13 @@
   margin-top: 2rem;
 }
 
-h2 {
+.emoji-text-row-wrapper h2 {
   font-size: 2.5rem;
   padding-top: 1em;
 }
 
 @media screen and (max-width: 568px) {
-  h2 {
+  .emoji-text-row-wrapper h2 {
     font-size: 2rem;
     line-height: normal;
   }

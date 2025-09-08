@@ -1,9 +1,9 @@
 "use client";
 
+import styles from "./about-section.module.css";
 import { HtmlLogo } from "@/lib/logos/HtmlLogo";
 import { JavaScriptLogo } from "@/lib/logos/JavaScriptLogo";
 import { EmojiTextFlexRow } from "../EmojiTextFlexRow";
-import styled from "styled-components";
 
 const questions = [
 	{
@@ -82,32 +82,27 @@ const benefits = [
 	},
 ];
 
-const StyledParagraph = styled.p`
-	font-size: 1.5rem;
-	line-height: normal;
-`;
-
 export function AboutSection() {
 	return (
-		<section className="about-section" style={{ textAlign: "center" }}>
+		<section className={styles["about-section"]}>
 			<EmojiTextFlexRow items={questions} header="" />
-			<StyledParagraph
+			<p
 				style={{ fontSize: "3rem", padding: "1em 0" }}
-				className="container"
+				className={`${styles["p"]} container`}
 			>
 				<strong>Zamień scrollowanie na kodowanie!</strong>😈
-			</StyledParagraph>
+			</p>
 			<EmojiTextFlexRow items={pros} header="Programowanie jest..." />
-			<StyledParagraph
+			<p
 				style={{ padding: "1em 0", lineHeight: "2.0" }}
-				className="container"
+				className={`${styles["p"]} container`}
 			>
 				<strong style={{ fontSize: "2rem" }}>
 					Poznaj podstawy web developmentu -
 				</strong>
 				<br />
 				sztuki tworzenia stron internetowych i aplikacji webowych!
-			</StyledParagraph>
+			</p>
 			{/* <!-- LANGUAGES --> */}
 			<div
 				className="container"
@@ -119,20 +114,20 @@ export function AboutSection() {
 				}}
 			>
 				<div>
-					<div className="logo">
+					<div className={styles["logo"]}>
 						<HtmlLogo />
 					</div>
-					<StyledParagraph>
+					<p className={styles["p"]}>
 						<strong>HTML</strong>
-					</StyledParagraph>
+					</p>
 				</div>
 				<div>
-					<div className="logo">
+					<div className={styles["logo"]}>
 						<JavaScriptLogo />
 					</div>
-					<StyledParagraph>
+					<p className={styles["p"]}>
 						<strong>JavaScript</strong>
-					</StyledParagraph>
+					</p>
 				</div>
 			</div>
 			{/* <!-- LANGUAGES END --> */}

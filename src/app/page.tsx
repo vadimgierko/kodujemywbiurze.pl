@@ -1,13 +1,13 @@
-"use client"
+"use client";
 
+import styles from "./main-button.module.css";
 import { HeroSection } from "@/lib/components/HeroSection";
 import { AboutSection } from "@/lib/components/homepage/AboutSection";
 import Link from "next/link";
-import styled from "styled-components";
 
 export default function Home() {
 	return (
-		<StyledMain>
+		<main>
 			<HeroSection
 				courseSlug={undefined}
 				h1FirstSmallText="Witaj na stronie"
@@ -35,76 +35,13 @@ export default function Home() {
 
 			<div className="text-center">
 				<Link href="/kursy/programowanie-aplikacji-webowych">
-					<button className="bg-primary">Przejdź do kursu!</button>
+					<button className={`${styles["main-button"]} bg-primary`}>
+						Przejdź do kursu!
+					</button>
 				</Link>
 			</div>
 
 			<br />
-		</StyledMain>
+		</main>
 	);
 }
-
-const StyledMain = styled.main`
-	/* MEDIA QUERIES */
-
-	/* MOBILE */
-
-	button {
-		margin-top: 2em;
-		font-size: 1rem;
-		font-weight: 600;
-		padding: 1em 2em;
-		border-radius: 18px;
-		color: rgb(0, 0, 0);
-	}
-
-	/* Small devices (landscape phones, 576px and up) */
-
-	@media screen and (min-width: 576px) {
-	}
-
-	/* Medium devices (tablets, 768px and up) */
-	@media screen and (min-width: 768px) and (orientation: portrait) {
-	}
-
-	@media screen and (min-width: 768px) and (orientation: landscape) {
-	}
-
-	/* Large devices (desktops, 992px and up) */
-	@media screen and (min-width: 992px) and (orientation: portrait) {
-		button {
-			margin-top: 32px;
-
-			font-size: 1.2rem;
-			font-weight: 600;
-			padding: 1.2em 2.4em;
-			border-radius: 20px;
-			color: rgb(0, 0, 0);
-		}
-	}
-
-	@media screen and (min-width: 992px) and (orientation: landscape) {
-		button {
-			margin-top: 32px;
-
-			font-size: 1.2rem;
-			font-weight: 600;
-			padding: 1.2em 2.4em;
-			border-radius: 20px;
-			color: rgb(0, 0, 0);
-		}
-	}
-
-	/* Extra large devices (large desktops, 1200px and up) */
-	@media screen and (min-width: 1200px) and (orientation: landscape) {
-		button {
-			margin-top: 32px;
-
-			font-size: 1.2rem;
-			font-weight: 600;
-			padding: 1.2em 2.4em;
-			border-radius: 20px;
-			color: rgb(0, 0, 0);
-		}
-	}
-`;
