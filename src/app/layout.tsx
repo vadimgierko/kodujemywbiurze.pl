@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import "./custom-framework.css"; /** THIS GOES BEFORE GLOBAL (AT LEAST IN SVELTE VERSION) */
 import "./globals.css";
 import { UiStoreProvider } from "@/context/useUiStore";
 import { Layout } from "@/lib/layout";

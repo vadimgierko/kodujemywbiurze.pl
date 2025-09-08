@@ -1,5 +1,5 @@
 "use client";
-import "./style.css";
+import styles from "./navbar.module.css";
 
 import { useUiStore } from "@/context/useUiStore";
 import { FacebookIcon } from "@/lib/icons/FacebookIcon";
@@ -13,6 +13,28 @@ import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 
 type Theme = "light" | "dark";
+
+const NAV_LINKS: {
+	href: string;
+	value: string;
+}[] = [
+	{
+		href: "/kursy/javascript",
+		value: "1️⃣ js",
+	},
+	{
+		href: "/kursy/local-storage",
+		value: "2️⃣ storage",
+	},
+	{
+		href: "/kursy/html",
+		value: "3️⃣ html",
+	},
+	{
+		href: "/kursy/html-javascript-dom",
+		value: "4️⃣ html + js",
+	},
+];
 
 export function Navbar() {
 	const params = useParams();
@@ -56,52 +78,49 @@ export function Navbar() {
 	}, [theme]);
 
 	return (
-		<header id="navbar">
+		<header className={styles.header}>
 			<div className="container">
-				<div className="header-content">
+				<div className={styles["header-content"]}>
 					<div
-						className="left-section"
+						className={styles["left-section"]}
 						style={{ display: isIndexPage ? "none" : "inline" }}
 					>
 						{/* <!-- MENU TOGGLE --> */}
 						<span
 							onClick={() => setShowOffset(!showOffset)}
-							className="icon"
+							className={`icon ${styles["header-icon"]} ${styles["span"]}`}
 							id="menu-toggle"
 						>
 							{showOffset ? <ThreeDotsHorizontal /> : <ThreeDotsVertical />}
 						</span>
 					</div>
 
-					<div className="center-section">
+					<div className={styles["center-section"]}>
 						{/* <!-- NAV BRAND --> */}
-						<Link href="/" id="nav-brand" className="nav-link">
+						<Link
+							href="/"
+							id="nav-brand"
+							className={`${styles["nav-brand"]} ${styles["nav-link"]}`}
+						>
 							<strong>kodujemywbiurze.pl</strong>
 						</Link>
 					</div>
 
-					<div className="right-section">
+					<div className={styles["right-section"]}>
 						{!isScreenLessThan992 && (
 							<>
-								<Link href="/kursy/javascript" className="nav-link">
-									1️⃣ js
-								</Link>
-								<Link href="/kursy/local-storage" className="nav-link">
-									2️⃣ storage
-								</Link>
-								<Link href="/kursy/html" className="nav-link">
-									3️⃣ html
-								</Link>
-								<Link href="/kursy/html-javascript-dom" className="nav-link">
-									4️⃣ html + js
-								</Link>
+								{NAV_LINKS.map(({ href, value }) => (
+									<Link key={href} href={href} className={styles["nav-link"]}>
+										{value}
+									</Link>
+								))}
 							</>
 						)}
 
 						{/* <!-- THEME TOGGLE --> */}
 						<span
 							onClick={switchMode}
-							className="icon nav-link"
+							className={`${styles["span"]} icon ${styles["header-icon"]} ${styles["nav-link"]}`}
 							id="theme-toggle"
 						>
 							{theme === "dark" ? <SunIcon /> : <MoonIcon />}
@@ -112,14 +131,14 @@ export function Navbar() {
 								<a
 									href="https://www.facebook.com/kodujemywbiurze"
 									target="_blank"
-									className="nav-link"
+									className={styles["nav-link"]}
 								>
 									<FacebookIcon />
 								</a>
 								<a
 									href="https://www.linkedin.com/company/kodujemywbiurze"
 									target="_blank"
-									className="nav-link"
+									className={styles["nav-link"]}
 								>
 									<LinkedInIcon />
 								</a>
@@ -133,7 +152,7 @@ export function Navbar() {
 								paddingLeft: isScreenLessThan992 ? "0.5em" : "",
 							}}
 							onClick={toggleNavbar}
-							className="icon"
+							className={`icon ${styles["header-icon"]}`}
 							id="navbar-toggle"
 						>
 							{isNavbarExpanded ? (
@@ -148,49 +167,31 @@ export function Navbar() {
 				{isScreenLessThan992 && isNavbarExpanded && (
 					<>
 						<hr />
-						<div className="expanded-nav-section">
-							<Link
-								href="/kursy/javascript"
-								className="nav-link"
-								onClick={toggleNavbar}
-							>
-								1️⃣ javascript
-							</Link>
-							<Link
-								href="/kursy/local-storage"
-								className="nav-link"
-								onClick={toggleNavbar}
-							>
-								2️⃣ local storage
-							</Link>
-							<Link
-								href="/kursy/html"
-								className="nav-link"
-								onClick={toggleNavbar}
-							>
-								3️⃣ html
-							</Link>
-							<Link
-								href="/kursy/html-javascript-dom"
-								className="nav-link"
-								onClick={toggleNavbar}
-							>
-								4️⃣ html + javascript
-							</Link>
+						<div className={styles["expanded-nav-section"]}>
+							{NAV_LINKS.map(({ href, value }) => (
+								<Link
+									key={href}
+									href={href}
+									className={styles["nav-link"]}
+									onClick={toggleNavbar}
+								>
+									{value}
+								</Link>
+							))}
 
 							<hr />
 
 							<a
 								href="https://www.facebook.com/kodujemywbiurze"
 								target="_blank"
-								className="nav-link"
+								className={styles["nav-link"]}
 							>
 								<FacebookIcon />
 							</a>
 							<a
 								href="https://www.linkedin.com/company/kodujemywbiurze"
 								target="_blank"
-								className="nav-link"
+								className={styles["nav-link"]}
 							>
 								<LinkedInIcon />
 							</a>

@@ -1,4 +1,4 @@
-header {
+.header { /* <header> */
   background-color: var(--header-background-color);
   line-height: 2em;
   min-height: 40px;
@@ -7,24 +7,21 @@ header {
   width: 100%;
 }
 
-header .header-content {
-  background-color: var(--header-background-color);
-}
-
 .header-content {
+  background-color: var(--header-background-color);
   display: flex;
   color: white;
   align-items: center;
 }
 
-#nav-brand {
+.nav-brand {
   text-decoration: none;
   font-size: large;
 }
 
 .header-content,
 .nav-link,
-.icon {
+.header-icon {
   color: white;
 }
 
@@ -38,7 +35,7 @@ header .header-content {
 
 .header-content,
 .nav-link:hover,
-.icon:hover {
+.header-icon:hover {
   color: rgba(255, 255, 255, 0.7);
 }
 
@@ -60,7 +57,7 @@ header .header-content {
 }
 
 /* Style for icons, logos, or other spans */
-span {
+.span {
   display: inline-block;
   vertical-align: middle;
 }
