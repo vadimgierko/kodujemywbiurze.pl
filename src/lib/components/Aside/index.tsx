@@ -1,46 +1,11 @@
 "use client";
 
+import styles from "./aside.module.css";
 import { useUiStore } from "@/context/useUiStore";
-import { Article, Section } from "../types";
 import { useState } from "react";
 import Link from "next/link";
-import styled from "styled-components";
 import { usePathname } from "next/navigation";
-
-const StyledAside = styled.aside`
-	.active-link {
-		font-weight: bold;
-	}
-
-	:global(html[data-theme="light"] .active-link) {
-		color: black;
-	}
-
-	:global(html[data-theme="dark"] .active-link) {
-		color: var(--primary);
-	}
-
-	ul {
-		list-style: none;
-		padding-left: 0;
-	}
-
-	box-sizing: border-box;
-	font-size: smaller;
-	height: calc(100% - 40px);
-	padding: 0 2em;
-
-	margin-top: 40px;
-	position: fixed;
-	z-index: 1;
-	top: 0;
-	left: 0;
-	overflow-x: hidden;
-
-	a {
-		text-decoration: none;
-	}
-`;
+import { Article, Section } from "@/lib/types";
 
 type AsideProps = {
 	articles: Article[] | null;
@@ -56,8 +21,8 @@ export function Aside({ articles, sections, courseSlug }: AsideProps) {
 	const pathName = usePathname();
 
 	return (
-		<StyledAside
-			className="text-center"
+		<aside
+			className={styles["aside"]}
 			style={{
 				display: showOffset ? "block" : "none",
 				width: isScreenLessThan992 ? "60%" : "30%",
@@ -92,7 +57,9 @@ export function Aside({ articles, sections, courseSlug }: AsideProps) {
 											<Link
 												href={`/kursy/${courseSlug}/${article.slug}`}
 												className={
-													courseSlug.includes(article.slug) ? "active-link" : ""
+													courseSlug.includes(article.slug)
+														? styles["active-link"]
+														: ""
 												}
 											>
 												{article[titleType]}
@@ -120,7 +87,9 @@ export function Aside({ articles, sections, courseSlug }: AsideProps) {
 									<Link
 										href={`/kursy/${courseSlug}/${article.slug}`}
 										className={
-											pathName.includes(article.slug) ? "active-link" : ""
+											pathName.includes(article.slug)
+												? styles["active-link"]
+												: ""
 										}
 									>
 										{article[titleType]}
@@ -132,45 +101,6 @@ export function Aside({ articles, sections, courseSlug }: AsideProps) {
 					</ul>
 				</nav>
 			)}
-		</StyledAside>
+		</aside>
 	);
-}
-
-{
-	/* <style scoped>
-	.active-link {
-		font-weight: bold;
-	}
-
-	:global(html[data-theme='light'] .active-link) {
-		color: black;
-	}
-
-	:global(html[data-theme='dark'] .active-link) {
-		color: var(--primary);
-	}
-
-	ul {
-		list-style: none;
-		padding-left: 0;
-	}
-
-	aside {
-		box-sizing: border-box;
-		font-size: smaller;
-		height: calc(100% - 40px);
-		padding: 0 2em;
-
-		margin-top: 40px;
-		position: fixed;
-		z-index: 1;
-		top: 0;
-		left: 0;
-		overflow-x: hidden;
-	}
-
-	aside a {
-		text-decoration: none;
-	}
-</style> */
 }

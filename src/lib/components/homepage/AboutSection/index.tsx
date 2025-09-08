@@ -1,5 +1,3 @@
-"use client";
-
 import styles from "./about-section.module.css";
 import { HtmlLogo } from "@/lib/logos/HtmlLogo";
 import { JavaScriptLogo } from "@/lib/logos/JavaScriptLogo";

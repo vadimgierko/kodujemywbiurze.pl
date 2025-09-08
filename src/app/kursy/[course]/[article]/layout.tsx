@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 import { getArticlesAndSections } from "./getArticlesAndSections";
-import { Aside } from "@/lib/components/Aside";
 import { MainWrapper } from "./MainWrapper";
+import { Aside } from "@/lib/components/Aside";
 
 type ArticleLayoutParams = {
 	children: ReactNode;

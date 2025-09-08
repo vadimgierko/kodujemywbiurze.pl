@@ -187,29 +187,3 @@ export default function Page() {
 		</main>
 	);
 }
-
-{
-	/* <style scoped>
-	main {
-		text-align: center;
-	}
-
-	.avatar-container {
-		max-width: 200px;
-		margin: 0 auto;
-		padding-top: 2em;
-
-		& img {
-			border-radius: 50%;
-		}
-	}
-
-	h1 {
-		font-size: 2.5rem;
-	}
-
-	h2 {
-		padding: 1em 0;
-	}
-</style> */
-}

@@ -1,5 +1,3 @@
-"use client";
-
 import styles from "./main-button.module.css";
 import { HeroSection } from "@/lib/components/HeroSection";
 import { AboutSection } from "@/lib/components/homepage/AboutSection";

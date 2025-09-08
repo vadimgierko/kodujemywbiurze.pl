@@ -1,9 +1,15 @@
 - ### 1. 🚀 NEXT ACTION 🚀 things to do to publish new next.js (dirty) rewrite ASAP:
   - rewrite css => modules => decompose everything & recompose gradually to fix style errors
+    - then remove styled components, uninstall it & remove all "use client"s needed previously for styled component
+  - rewrite `PrevNextArticle`
+  - CSS
+    - nav links in nav too small mx
+    - hero section img in / smaller than in original
   - add GA
   - fix highlighting code in light mode + not highlighted separated single line code snippets
   - README
-  - info about rewrite in next.js & prev svelte backup
+    - info about rewrite in next.js & prev svelte backup + general tech stack
+      - add tech stack & technical details as a route page article?
 - ### 2. try to remove context vars (showOffset, lessThan992) & rely on CSS only to rewrite as much as possible to server components
 - refactor content & CMS\
   because now articles are stored in md in /public, courses stored as const in js in /[course]
