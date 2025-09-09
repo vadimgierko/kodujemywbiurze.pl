@@ -3,6 +3,7 @@ import "./custom-framework.css"; /** THIS GOES BEFORE GLOBAL (AT LEAST IN SVELTE
 import "./globals.css";
 import { UiStoreProvider } from "@/context/useUiStore";
 import { Layout } from "@/lib/layout";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 export const metadata: Metadata = {
 	metadataBase: new URL("https://www.kodujemywbiurze.pl"),
@@ -23,6 +24,7 @@ export default function RootLayout({
 					<Layout>{children}</Layout>
 				</UiStoreProvider>
 			</body>
+			<GoogleAnalytics gaId="G-BPTQXJEJKT" />
 		</html>
 	);
 }

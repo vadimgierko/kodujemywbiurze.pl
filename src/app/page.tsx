@@ -16,7 +16,7 @@ export default function Home() {
 				]}
 				btnHref="/kursy/programowanie-aplikacji-webowych"
 				btnCTA="Przejdź do kursu!"
-				imgSrc="content/hero-img.png" //{heroImg}
+				imgSrc="content/hero-img-square.png" //{heroImg}
 				additionalClasses="container"
 			/>
 

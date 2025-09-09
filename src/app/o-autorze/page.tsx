@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 
-const title = "O autorze | kodujemywbiurze.pl";
+const title = "O autorze kursu | kodujemywbiurze.pl";
 const description =
 	"Cześć👋 Nazywam się Vadim Gierko. Pracuję w biurze 🏢 i programuję 💻 od końca 2020 r., stąd też pomysł na stworzenie tej strony!";
 
