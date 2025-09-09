@@ -27,7 +27,6 @@ export interface IHeroSection {
 	btnHref: string;
 	btnCTA: string;
 	imgSrc: string;
-	handleMount: () => void;
 }
 
 export interface IHead {

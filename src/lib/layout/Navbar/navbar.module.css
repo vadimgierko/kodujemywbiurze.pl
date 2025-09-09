@@ -1,0 +1,74 @@
+.header { /* <header> */
+  background-color: var(--header-background-color);
+  line-height: 2em;
+  min-height: 40px;
+  position: fixed;
+  z-index: 99;
+  width: 100%;
+}
+
+.header-content {
+  background-color: var(--header-background-color);
+  display: flex;
+  color: white;
+  align-items: center;
+}
+
+.nav-brand {
+  text-decoration: none;
+  font-size: large;
+}
+
+.header-content,
+.nav-link,
+.header-icon {
+  color: white;
+}
+
+.nav-link {
+  text-decoration: none;
+}
+
+.right-section .nav-link {
+  padding-left: 0.5em;
+}
+
+.header-content,
+.nav-link:hover,
+.header-icon:hover {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.left-section,
+.right-section {
+  flex: 1;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.right-section {
+  text-align: end;
+}
+
+.center-section {
+  /* If you want the center section to stay centered regardless of right content growth */
+  flex: 0 1 auto; /* This allows the center section to shrink and grow as needed, but not shrink smaller than its content */
+  margin: 0 auto; /* This centers the center section */
+}
+
+/* Style for icons, logos, or other spans */
+.span {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Style for links in the right section */
+.right-section a {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.expanded-nav-section {
+  display: flex;
+  flex-direction: column;
+}

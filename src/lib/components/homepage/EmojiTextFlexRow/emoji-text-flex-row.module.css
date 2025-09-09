@@ -1,0 +1,41 @@
+.emoji-text-row-wrapper {
+  font-size: 1.5rem;
+  line-height: normal;
+  background-color: var(--section-background-color);
+}
+
+.emoji-text-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 4rem 0;
+}
+
+.emoji-text-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  text-align: center;
+}
+
+.emoji {
+  font-size: 100px;
+  line-height: 1; /* Ensures proper vertical alignment */
+}
+
+.text {
+  margin-top: 2rem;
+}
+
+.emoji-text-row-wrapper h2 {
+  font-size: 2.5rem;
+  padding-top: 1em;
+}
+
+@media screen and (max-width: 568px) {
+  .emoji-text-row-wrapper h2 {
+    font-size: 2rem;
+    line-height: normal;
+  }
+}

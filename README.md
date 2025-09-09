@@ -74,3 +74,35 @@ Pamiętaj, że rozwój niniejszego projektu zależy od Twojego zainteresowania, 
 - 📢 udostępniania tej strony, by jak najwięcej osób mogło skorzystać z szansy na rozwój!
 
 *Happy Coding!*
+
+## Technologie użyte do napisania aplikacji (*Tech Stack*)
+
+Strona internetowa niniejszego kursu została napisana "od podszewki" pierwotnie (2023) z wykorzystaniem frameworka **Svelte/Sveltekit** (*tę wersję kodu można zobaczyć w [branchu svelte-legacy-version](https://github.com/vadimgierko/kodujemywbiurze.pl/tree/svelte-legacy-version)*), natomiast we wrześniu 2025 została przepisana w całości w technologiach i językach programowania wymienionych w poniższej tabeli:
+
+<table className="table table-bordered table-striped">
+  <tbody>
+    <tr>
+      <td>Frameworki</td>
+      <td>
+        <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" height="35">
+        <img src="https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" height="35">
+      </td>
+    </tr>
+    <tr>
+      <td>Języki</td>
+      <td>
+        <img src="https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white" height="35">
+        <img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" height="35">
+        <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" height="35">
+        <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" height="35">
+        <img src="https://img.shields.io/badge/Markdown-000000?style=for-the-badge&logo=markdown&logoColor=white" height="35">
+      </td>
+    </tr>
+    <tr>
+      <td>Udostępnienie w Internecie</td>
+      <td>
+        <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" height="35">
+      </td>
+    </tr>
+  </tbody>
+</table>
