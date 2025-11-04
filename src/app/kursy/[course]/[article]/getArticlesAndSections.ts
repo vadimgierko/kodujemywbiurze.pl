@@ -44,6 +44,10 @@ export async function getArticlesAndSections({ course }: { course: string }) {
                 } satisfies Section;
             })
         );
+        // also expose a flattened articles array so callers that expect `articles`
+        // (for example generateStaticParams and article pages) work the same
+        // for the javascript course
+        articles = sections.flatMap((s) => s.articles);
     } else {
         const filePath = path.join(
             process.cwd(),
