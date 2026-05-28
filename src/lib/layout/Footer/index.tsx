@@ -44,7 +44,7 @@ export function Footer() {
 		>
 			<hr />
 			<p>
-				&copy; 2023-2025 Vadim Gierko
+				&copy; 2023-2026 Vadim Gierko
 				<br />
 				<Link href="/o-autorze" className={styles["social-media-link"]}>
 					o autorze

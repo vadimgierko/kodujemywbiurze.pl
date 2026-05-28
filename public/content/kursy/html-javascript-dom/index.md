@@ -924,9 +924,13 @@ Nasz kod HTML musimy z kolei osadzić w szablonie HTML, co już robiliśmy <a hr
 
     <button onclick="deleteAllTasks()">wyczyść listę</button>
 
-    <!-- dodaj poniżej otwierający tag <script> -->
+    <!-- kod JavaScript (umieszczony pomiędzy tagami <script></script>) -->
+    <!--
+        1. dodaj poniżej otwierający tag <script>
+        2. od następnej linijki po otwierającycm tagu <script> wklej całość kodu JavaScript
+        3. po kodzie JavaScipt w nowej linijce dodaj zamykający tag </script>
+    -->
     <script>
-      /* tutaj wklejamy kod JavaScript pomiędzy otwierającym tagiem <script> i zamykającym tagiem </script> */
       console.clear();
 
       function getTasksFromLocalStorage() {
@@ -1021,8 +1025,6 @@ Nasz kod HTML musimy z kolei osadzić w szablonie HTML, co już robiliśmy <a hr
       }
 
       renderTasks();
-
-      /* dodaj poniżej zamykający tag </script> */
     </script>
   </body>
 </html>
@@ -1072,6 +1074,7 @@ Niemniej jednak, nasz plik HTML jest dość długi, a w związku z tym nieczytel
   </head>
 
   <body>
+    <!-- kod HTML -->
     <h1>Twoje zadania</h1>
 
     <hr>
@@ -1084,7 +1087,8 @@ Niemniej jednak, nasz plik HTML jest dość długi, a w związku z tym nieczytel
 
     <button onclick="deleteAllTasks()">wyczyść listę</button>
 
-    <!-- tutaj podpinamy plik script.js -->
+    <!-- kod JavaScript -->
+    <!-- podepnij plik .js 👇 -->
     <script src="script.js"></script>
   </body>
 </html>
@@ -1102,7 +1106,7 @@ Poświęć jeszcze chwilę na przeczytanie *Zakończenia* - następnego artykuł
 
 ---
 
-Jeśli dotarłeś/aś do tego miejsca, jestem z Ciebie niesamowicie dumny! Wykonałeś/aś kawał ogromnej roboty! I mimo że ja również wykonałem kawał ogromnej roboty, to nie jestem w stanie wyobrazić, co teraz czujesz, ponieważ swoje początki z kodowaniem miałem 3 lata temu.
+Jeśli dotarłeś/aś do tego miejsca, jestem z Ciebie niesamowicie dumny! Wykonałeś/aś kawał ogromnej roboty! I mimo że ja również wykonałem kawał ogromnej roboty, to nie jestem w stanie wyobrazić, co teraz czujesz, ponieważ swoje początki z kodowaniem miałem pod koniec 2020 roku...
 
 Dlatego zazdroszczę Ci - chciałbym zacząć naukę jeszcze raz, mądrzej, lepiej, szybciej, czyli dokładnie w taki sposób, w jaki zaprojektowałem i napisałem niniejszy kurs *(mam na myśli kurs, na który składają się wszystkie dotychczasowe kursy na tej stronie)*.
 

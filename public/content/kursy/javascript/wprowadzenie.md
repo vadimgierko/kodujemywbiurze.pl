@@ -28,9 +28,9 @@ To właśnie dzięki JavaScript strony i aplikacje są dynamiczne i interaktywne
 - Po pierwsze, dlatego że sam zacząłem naukę programowania od JavaScript 3 lata temu i to się sprawdziło.
 - Po drugie, owszem, szybciej i łatwiej jest nauczyć się wstawiania na stronę nagłówka i paragrafów w HTML, a potem ostylować ich za pomocą CSS *(spokojnie, nauczymy się tego w swoim czasie - po podstawach JavaScriptu będzie to łatwizna)*, ale... nie daje to poczucia... programowania właśnie. Dzięki JavaScript będziesz tworzyć realne polecenia, które będą przetwarzać różnego rodzaju dane i interakcje użytkownika, a dane i reakcje są życiodajną siłą Internetu (oraz ogólnie życia)!
 
-Ponieważ wolę **uczyć się nowych rzeczy w praktyce, widząc natychmiastowe rezultaty** mojej nauki i pracy, dlatego w trakcie tego kursu:
+Ponieważ wolę **uczyć się nowych rzeczy w praktyce, widząc natychmiastowe rezultaty** mojej nauki i pracy, dlatego w trakcie tego darmowego kursu:
 
-- od samego początku **będziemy tworzyć coraz bardziej rozbudowaną aplikację do zarządzania listą zadań do zrobienia, która będzie działać w konsoli naszej przeglądarki bezpośrednio na tej stronie** *(za chwilę dowiesz się, czym jest konsola i jak z niej korzystać)*, a potem zostanie przekształcona w samodzielną aplikację webową,
+- od samego początku **będziesz tworzyć coraz bardziej rozbudowaną aplikację do zarządzania listą zadań do zrobienia, która będzie działać w konsoli naszej przeglądarki bezpośrednio na tej stronie** *(za chwilę dowiesz się, czym jest konsola i jak z niej korzystać)*, a potem zostanie przekształcona w samodzielną aplikację webową,
 - **przy okazji** tworzenia aplikacji **opanujemy podstawy języka JavaScript**!
 
 **PS.** *de facto* stworzymy co najmniej kilka samodzielnych, samowystarczalnych i coraz bardziej rozbudowanych i zaawansowanych wersji wspomnianej aplikacji, rozbudowując ją przy okazji poznawania kolejnych zagadnień z języka JavaScript (a później też HTML i CSS w odrębnych kursach).
